@@ -14,6 +14,15 @@ language
 				["email"] = <"micaela.thierley@helse-bergen.no">
 			>
 		>
+		["sq"] = <
+			language = <[ISO_639-1::sq]>
+			author = <
+				["name"] = <"Mr Ocean">
+				["organisation"] = <"Ocean Informatics">
+				["email"] = <"sebastian.garde@oceaninformatics.com">
+			>
+			other_contributors = <"test1, tst", ...>
+		>
 	>
 description
 	original_author = <
@@ -46,6 +55,16 @@ The final score can either be calculated manually (entered by the clinician) or 
 			misuse = <"">
 			copyright = <"© Nasjonal IKT HF, openEHR Foundation">
 		>
+		["sq"] = <
+			language = <[ISO_639-1::sq]>
+			purpose = <"test">
+			use = <"*To be used for risk assessment of all patients over the age of 65 and other adults with neurological or cognitive conditions or significant visual impairment, within 24h of being admitted to a healtchare institution.
+
+The dataelements 'Transfer' and 'Mobility' under the cluster 'Transfer + Mobility' was in the original STRATIFY collected from the Barthel ADL Index. As STRATIFY and Barthel has diverged, is this archetype made independent of the Barthel archetype.
+
+The final score can either be calculated manually (entered by the clinician) or automatically (automatic calculation based on the values recorded).(en)">
+			misuse = <"">
+		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <"Anne Pauline Anderssen, Helse Nord RHF, Norway", "Vebjørn Arntzen, Oslo universitetssykehus HF, Norway", "Silje Ljosland Bakke, Nasjonal IKT HF, Norway (Nasjonal IKT redaktør)", "Lars Bitsch-Larsen, Haukeland University Hospital, Bergen, Norway", "Lisbeth Dahlhaug, Helse Midt - Norge IT, Norway", "Kåre Flø, DIPS ASA, Norway", "Einar Fosse, UNN HF, Norwegian Centre for Integrated Care and Telemedicine, Norway", "Bente Gjelsvik, Helse Bergen, Norway", "Nina Hauge, Helse Fonna, Norway", "Ingrid Heitmann, Oslo universitetssykehus HF, Norway", "Erling Are Hole, Helse Bergen, Norway", "Lars Morgan Karlsen, DIPS ASA, Norway", "Sabine Leh, Helse-Bergen, Norway", "Heather Leslie, Ocean Informatics, Australia", "Siv Marie Lien, DIPS ASA, Norway", "Hallvard Lærum, Oslo Universitetssykehus HF, Norway", "Lars Ivar Mehlum, Helse Bergen HF, Norway", "Hugo Nilssen, UNN HF K3K/Tromsø, Norway", "Bjørn Næss, DIPS ASA, Norway", "Rune Pedersen, Universitetssykehuset i Nord Norge, Norway", "Micaela Thierley, Helse Bergen, Norway", "John Tore Valand, Haukeland Universitetssjukehus, Norway (Nasjonal IKT redaktør)">
@@ -61,8 +80,8 @@ Sekretariatet for nasjonalt pasientsikkerhetsprogram, Helsedirektoratet. Forebyg
 		["original_namespace"] = <"org.openehrtest">
 		["original_publisher"] = <"openEHR">
 		["custodian_namespace"] = <"org.openehrtest">
-		["MD5-CAM-1.0.1"] = <"30B853B3E44BB4F06827CBD39E13025D">
-		["build_uid"] = <"b88a9ce8-08a7-4700-804e-2fb1f4383b17">
+		["MD5-CAM-1.0.1"] = <"464EE68E063D2F8443516C350438A65A">
+		["build_uid"] = <"0793b77d-0d60-44a5-80fe-41b7837c2cfe">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -139,6 +158,17 @@ definition
 					}
 				}
 			}
+		}
+		protocol matches {
+			ITEM_TREE[at0035] occurrences matches  {0..1} matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0036] occurrences matches {0..*} matches {    -- Extension
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+			ITEM_STRUCTURE [at0034] occurrences matches  {0..1} matches { * }
 		}
 	}
 
@@ -421,6 +451,134 @@ score 1 for Sann/ Ja.">
 					text = <"Tilleggsinformasjon">
 					description = <"Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.">
 					comment = <"For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR.">
+				>
+			>
+		>
+		["sq"] = <
+			items = <
+				["at0000"] = <
+					text = <"*STRATIFY Falls Risk Assessment Tool SG22(en)">
+					description = <"*Assessment tool for identifying falls risk in elderly patients admitted to hospital or other 24h healthcare institutions. This version of the tool is based on a modified Norwegian translation, which has been deployed by the The Norwegian Patient Safety Programme.(en)">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event(en)">
+					description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Falls during the last three months(en)">
+					description = <"*Has the patient fallen during the last 3 months?(en)">
+				>
+				["at0005"] = <
+					text = <"*Agitation(en)">
+					description = <"*Does the patient show agitated, desoriented or confused behaviour?(en)">
+				>
+				["at0006"] = <
+					text = <"*Visual impairments(en)">
+					description = <"*Is the patient visually impaired to the extent that everyday function is affected?(en)">
+				>
+				["at0007"] = <
+					text = <"*Frequent toileting(en)">
+					description = <"*Do you think the patient is in need of especially frequent toileting?(en)">
+				>
+				["at0009"] = <
+					text = <"*Total score(en)">
+					description = <"*Sum of the scores from all the elements.(en)">
+				>
+				["at0011"] = <
+					text = <"*No(en)">
+					description = <"*The patient hasn't had any falls during the last 3 months.(en)">
+				>
+				["at0012"] = <
+					text = <"*Yes(en)">
+					description = <"*The patient has had falls during the last 3 months.(en)">
+				>
+				["at0013"] = <
+					text = <"*No(en)">
+					description = <"*The patient doesn't show agitated behaviour.(en)">
+				>
+				["at0014"] = <
+					text = <"*Yes(en)">
+					description = <"*The patient shows agitated behaviour.(en)">
+				>
+				["at0015"] = <
+					text = <"*No(en)">
+					description = <"*The patient doesn't have significant visual impairments.(en)">
+				>
+				["at0017"] = <
+					text = <"*Yes(en)">
+					description = <"*The patient has significant visual impairments.(en)">
+				>
+				["at0018"] = <
+					text = <"*No(en)">
+					description = <"*The patient isn't in need of frequent toileting.(en)">
+				>
+				["at0019"] = <
+					text = <"*Yes(en)">
+					description = <"*The patient is in need of frequent toileting.(en)">
+				>
+				["at0022"] = <
+					text = <"*Transfer + Mobility(en)">
+					description = <"*The sum of the scores from the elements 'Transfer' and 'Mobility' are used in 'Points', which is then used in the 'Total score'.(en)">
+				>
+				["at0023"] = <
+					text = <"*Transfer(en)">
+					description = <"*Describe the patient's level of independence in transfer from bed to a chair.(en)">
+				>
+				["at0024"] = <
+					text = <"*Mobility(en)">
+					description = <"*Describe the patient's level of independent mobility.(en)">
+				>
+				["at0025"] = <
+					text = <"*Points(en)">
+					description = <"*The points from \"Transfer\" and \"Mobility\" are added together. If the sum is 0-2 or 5-6, 0 points are given. If the sum is 3-4, 1 point is given.(en)">
+				>
+				["at0026"] = <
+					text = <"*Unable to move(en)">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"*Needs major help(en)">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"*Needs minor help(en)">
+					description = <"">
+				>
+				["at0029"] = <
+					text = <"*Independent with or without aids(en)">
+					description = <"">
+				>
+				["at0030"] = <
+					text = <"*Immobile(en)">
+					description = <"">
+				>
+				["at0031"] = <
+					text = <"*Independent in a wheelchair(en)">
+					description = <"">
+				>
+				["at0032"] = <
+					text = <"*Uses a walking aid or walks with help of one person(en)">
+					description = <"">
+				>
+				["at0034"] = <
+					text = <"*Independent(en)">
+					description = <"">
+				>
+				["at0035"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0036"] = <
+					text = <"*Extension(en)">
+					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms.(en)">
 				>
 			>
 		>
