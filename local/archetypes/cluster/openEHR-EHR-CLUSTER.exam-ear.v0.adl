@@ -4,7 +4,7 @@ specialise
 	openEHR-EHR-CLUSTER.exam.v1
 
 concept
-	[at0000.1]	-- Examination of an ear
+	[at0000.1]	-- Examination of an ear making this a very long name
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -22,6 +22,7 @@ language
 				["organisation"] = <"Ocean Informatics">
 				["email"] = <"sebastian.garde@oceaninformatics.com">
 			>
+			version_last_translated = <"1.0.1">
 			other_contributors = <"Sebastian Garde, Ocean, Germany", ...>
 		>
 	>
@@ -93,8 +94,8 @@ Use to incorporate the narrative descriptions of clinical findings within existi
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"6A3592AEEC649DFE21976AACCE4DDCB9">
-		["build_uid"] = <"dff11e81-50eb-472d-85a8-63c9db0a7efb">
+		["MD5-CAM-1.0.1"] = <"DD8A86D85051C657DEA43CA310B57E3F">
+		["build_uid"] = <"9d38d41b-45c5-4504-b09b-475547e6385b">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -174,7 +175,7 @@ ontology
 					description = <"The right ear was examined.">
 				>
 				["at0000.1"] = <
-					text = <"Examination of an ear">
+					text = <"Examination of an ear making this a very long name">
 					description = <"Findings observed during the physical examination of a single ear.">
 				>
 				["at0001"] = <
