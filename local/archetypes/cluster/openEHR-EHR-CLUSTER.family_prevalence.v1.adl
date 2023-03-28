@@ -9,8 +9,9 @@ language
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			author = <
-				["name"] = <"Sarah Ballout">
-				["email"] = <"ballout.sarah@mh-hannover.de">
+				["name"] = <"Sarah Ballout, Mr Ocean">
+				["organisation"] = <"Ocean Informatics">
+				["email"] = <"ballout.sarah@mh-hannover.de, sebastian.garde@oceaninformatics.com">
 			>
 		>
 		["af"] = <
@@ -87,9 +88,9 @@ This archetype has specifically been designed to be used in the 'Detail' SLOT wi
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"A2AEAB2B82DF6B5372E97A8C8F6BAC47">
-		["build_uid"] = <"295beb87-317d-410b-8d08-c9ccc89b9f1d">
-		["revision"] = <"1.0.7">
+		["MD5-CAM-1.0.1"] = <"20B8E5DADAA99605BC1433473239CE86">
+		["build_uid"] = <"6a3d9296-6b6d-49a1-bb29-b9f4a3a5410c">
+		["revision"] = <"1.0.8">
 	>
 
 definition
@@ -361,7 +362,7 @@ ontology
 				>
 				["at0030"] = <
 					text = <"Beschreibung">
-					description = <"Beschreibung des Ereignis bei den Familienmitgliedern.">
+					description = <"">
 				>
 				["at0031"] = <
 					text = <"Betroffene Familienmitglieder">
