@@ -87,9 +87,9 @@ This archetype has specifically been designed to be used in the 'Detail' SLOT wi
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"9757AB90E117F391C14E43C7C91D12C9">
-		["build_uid"] = <"37e0cf0d-7979-4e68-9c88-0b6ffdfc200d">
-		["revision"] = <"1.0.6">
+		["MD5-CAM-1.0.1"] = <"A2AEAB2B82DF6B5372E97A8C8F6BAC47">
+		["build_uid"] = <"295beb87-317d-410b-8d08-c9ccc89b9f1d">
+		["revision"] = <"1.0.7">
 	>
 
 definition
@@ -451,7 +451,7 @@ ontology
 					description = <"*Summary information about the prevalence of a risk factor, problem or diagnosis in all family members.(en)">
 				>
 				["at0030"] = <
-					text = <"*Description(en)">
+					text = <"BeschreibungAfriokanas">
 					description = <"">
 				>
 				["at0031"] = <
