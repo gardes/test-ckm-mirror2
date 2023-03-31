@@ -63,8 +63,8 @@ http://dcm.nehta.org.au/ckm#showArchetype_1013.1.1288_1 (discontinued).">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"7227DFEBB5A303FB91FE38A566CB774C">
-		["build_uid"] = <"5026dc6d-ff97-4a94-be69-129be7256c70">
+		["MD5-CAM-1.0.1"] = <"E68BCBA3D9B91049C9F3D4A9E779ED54">
+		["build_uid"] = <"fad788cc-88ce-4c17-b803-0e6e9ada9e65">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -108,7 +108,7 @@ ontology
 		["af"] = <
 			items = <
 				["at0000"] = <
-					text = <"*Adhoc cluster heading(en)">
+					text = <"Adhoc cluster heading Translated">
 					description = <"">
 				>
 				["at0002"] = <
