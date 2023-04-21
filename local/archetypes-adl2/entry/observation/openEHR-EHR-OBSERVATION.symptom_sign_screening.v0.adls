@@ -1,0 +1,656 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=8f6656b9-5c1c-4d18-bb66-4336e5d7f334; build_uid=1f2679f4-eaab-44e6-8e40-4d0c2c3109d4)
+    openEHR-EHR-OBSERVATION.symptom_sign_screening.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["de"] = <
+            language = <[ISO_639-1::de]>
+            author = <
+                ["name"] = <"Sarah Ballout, Natalia Strauch">
+                ["organisation"] = <"Medizinische Hochschule Hannover">
+                ["email"] = <"ballout.sarah@mh-hannover.de, Strauch.Natalia@mh-hannover.de">
+            >
+        >
+        ["fi"] = <
+            language = <[ISO_639-1::fi]>
+        >
+        ["nb"] = <
+            language = <[ISO_639-1::nb]>
+            author = <
+                ["name"] = <"Marit Alice Venheim, Silje Ljosland Bakke">
+                ["organisation"] = <"Helse Vest IKT, Helse Vest IKT AS">
+                ["email"] = <"marit.alice.venheim@helse-vest-ikt.no, silje.ljosland.bakke@helse-vest-ikt.no">
+            >
+        >
+        ["it"] = <
+            language = <[ISO_639-1::it]>
+        >
+    >
+
+description
+    original_author = <
+        ["name"] = <"Heather Leslie">
+        ["organisation"] = <"Atomica Informatics">
+        ["email"] = <"heather.leslie@atomicainformatics.com">
+        ["date"] = <"2020-03-13">
+    >
+    original_namespace = <"org.openehr">
+    original_publisher = <"openEHR Foundation">
+    other_contributors = <"Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)">
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"org.openehr">
+    custodian_organisation = <"openEHR Foundation">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+    ip_acknowledgements = <
+        ["1"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
+    >
+    other_details = <
+        ["MD5-CAM-1.0.1"] = <"269EE020BE81616AF9DC9B47EB6BFFD6">
+    >
+    details = <
+        ["de"] = <
+            language = <[ISO_639-1::de]>
+            purpose = <"Zur Repräsentation der Antworten auf einen Fragebogen, der von einer Person ausgefüllt wurde. Hierbei werden die Symptome und Anzeichen abgefragt.">
+            use = <"Zur Repräsentation der Antworten auf einen Fragebogen, der von einer Person ausgefüllt wurde. Hierbei werden die Symptome und Anzeichen abgefragt.
+    
+    Wenn zusätzliche Informationen zu einem bestimmten Symptom dargestellt werden müssen, verwenden Sie den Archetyp CLUSTER.symptom_sign, der im SLOT \"Detaillierte Angaben zum Symptom/Anzeichen\" verschachtelt ist.
+    
+    Zu den häufigen Anwendungsfällen gehören u.a., aber nicht ausschließlich:
+    - Systematische Befragung bei jeder Konsultation; oder
+    - Spezifische Befragung im Zusammenhang mit der Überwachung von Infektionskrankheiten.">
+            misuse = <"">
+        >
+        ["fi"] = <
+            language = <[ISO_639-1::fi]>
+            purpose = <"*To record the responses to an individual- or self-reported questionnaire screening for symptoms and signs.(en)">
+            use = <"*Use to record the responses to an individual- or self-reported questionnaire screening for symptoms and signs.
+    
+    Common use cases include, but are not limited to:
+    - Systematic questioning in any consultation; or
+    - Specific questioning related to infectious disease surveillance.(en)">
+            misuse = <"">
+        >
+        ["nb"] = <
+            language = <[ISO_639-1::nb]>
+            purpose = <"For å registrere responsen i et individuelt- eller selvrapportert spørreskjema om symptomer og sykdomstegn.">
+            use = <"Brukes for å registrere responsen i et individuelt- eller selvrapportert spørreskjema om symptomer og sykdomstegn.
+    
+    Vanlige bruksområder inkluderer, men er ikke begrenset til:
+    - Systematisk spørring i enhver konsultasjon; eller
+    - Spesifikk spørring relatert til overvåkning av infeksjonssykdom.
+    ">
+            misuse = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"To record the responses to an individual- or self-reported questionnaire screening for symptoms and signs.">
+            use = <"Use to record the responses to an individual- or self-reported questionnaire screening for symptoms and signs.
+    
+    If additional details about a specific symptom need to be recorded, then use the CLUSTER.symptom_sign archetype nested within the 'Symptom/sign details' SLOT.
+    
+    Common use cases include, but are not limited to:
+    - Systematic questioning in any consultation; or
+    - Specific questioning related to infectious disease surveillance.">
+            misuse = <"">
+        >
+        ["it"] = <
+            language = <[ISO_639-1::it]>
+            purpose = <"Registrare le risposte a un questionario individuale o a un questionario autodenunciato per lo screening dei sintomi e dei segni.">
+            use = <"Utilizzare per registrare le risposte a un questionario individuale o a un questionario autodenunciato per lo screening dei sintomi e dei segni.
+    
+    I casi di uso comune includono, ma non sono limitati a:
+    - Interrogazione sistematica in qualsiasi consultazione; o
+    - Interrogazione specifica relativa alla sorveglianza delle malattie infettive.">
+            misuse = <"Da non utilizzare per registrare i dettagli di uno specifico sintomo o segno riportato come parte di una tipica consultazione clinica. Utilizzare CLUSTER.symptom_sign per questo scopo.">
+        >
+    >
+
+definition
+    OBSERVATION[id1] matches {    -- Symptom/sign screening questionnaire
+        data matches {
+            HISTORY[id2] matches {
+                events cardinality matches {0..*; unordered} matches {
+                    EVENT[id3] matches {    -- Any event
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[id35] occurrences matches {0..1} matches {    -- Screening purpose
+                                        value matches {
+                                            DV_TEXT[id9007] 
+                                        }
+                                    }
+                                    ELEMENT[id29] occurrences matches {0..1} matches {    -- Presence of any symptoms or signs?
+                                        value matches {
+                                            DV_CODED_TEXT[id9005] matches {
+                                                defining_code matches {[ac9004]}    -- Presence of any symptoms or signs? (synthesised)
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id30] occurrences matches {0..1} matches {    -- Onset of any symptoms or signs
+                                        value matches {
+                                            DV_DATE_TIME[id9006] 
+                                        }
+                                    }
+                                    ELEMENT[id37] occurrences matches {0..1} matches {    -- Description
+                                        value matches {
+                                            DV_TEXT[id9009] 
+                                        }
+                                    }
+                                    CLUSTER[id23] matches {    -- Specific symptom/sign
+                                        items cardinality matches {1..*; unordered} matches {
+                                            ELEMENT[id5] matches {    -- Symptom or sign name
+                                                value matches {
+                                                    DV_TEXT[id9001] 
+                                                }
+                                            }
+                                            ELEMENT[id6] occurrences matches {0..1} matches {    -- Presence?
+                                                value matches {
+                                                    DV_CODED_TEXT[id9002] matches {
+                                                        defining_code matches {[ac9000]}    -- Presence? (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            allow_archetype CLUSTER[id27] matches {     -- Symptom/sign details
+                                                include
+                                                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.symptom_sign(-[a-zA-Z0-9_]+)*\.v1\..*/}
+                                            }
+                                            ELEMENT[id36] occurrences matches {0..1} matches {    -- Comment
+                                                value matches {
+                                                    DV_TEXT[id9008] 
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id26] occurrences matches {0..1} matches {    -- Overall comment
+                                        value matches {
+                                            DV_TEXT[id9004] 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id8] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    allow_archetype CLUSTER[id22] matches {     -- Extension
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["de"] = <
+            ["ac9004"] = <
+                text = <"Sind Symptome oder Anzeichen vorhanden? (synthesised)">
+                description = <"Vorhandensein relevanter Symptome oder Anzeichen. (synthesised)">
+            >
+            ["ac9000"] = <
+                text = <"Vorhanden? (synthesised)">
+                description = <"Das Symptom oder Anzeichen ist vorhanden. (synthesised)">
+            >
+            ["id37"] = <
+                text = <"Beschreibung">
+                description = <"Beschreibung aller Symptome oder Anzeichen.">
+            >
+            ["id36"] = <
+                text = <"Kommentar">
+                description = <"Zusätzliche Informationen über das spezifische Symptom oder Anzeichen, die nicht in anderen Bereichen dargestellt wurden.">
+            >
+            ["id35"] = <
+                text = <"Zweck des Screenings">
+                description = <"Der Grund für das gesamte Screening.">
+                comment = <"Zum Beispiel: Screening auf eine Infektionskrankheit, wie SARS-COV-2.">
+            >
+            ["at34"] = <
+                text = <"Unbekannt">
+                description = <"Es ist nicht bekannt, ob Symptome oder Anzeichen vorhanden sind oder nicht.">
+            >
+            ["at33"] = <
+                text = <"Nicht vorhanden">
+                description = <"Keine Symptome oder Anzeichen sind vorhanden.">
+            >
+            ["at32"] = <
+                text = <"Vorhanden">
+                description = <"Symptome oder Anzeichen sind vorhanden.">
+            >
+            ["id30"] = <
+                text = <"Auftreten von Symptomen oder Anzeichen">
+                description = <"Datum/Uhrzeit, wann die ersten Symptome oder Anzeichen bemerkt wurden.">
+                comment = <"Erlaubt sind Angaben als Teildatum.">
+            >
+            ["id29"] = <
+                text = <"Sind Symptome oder Anzeichen vorhanden?">
+                description = <"Vorhandensein relevanter Symptome oder Anzeichen.">
+            >
+            ["at28"] = <
+                text = <"Unbekannt">
+                description = <"Es ist nicht bekannt, ob das Symptom oder Anzeichen vorhanden ist oder nicht.">
+            >
+            ["id27"] = <
+                text = <"Detaillierte Angaben zum Symptom/Anzeichen">
+                description = <"Zusätzliche strukturierte Informationen zu einem bestimmten Symptom oder Anzeichen.">
+            >
+            ["id26"] = <
+                text = <"Allgemeiner Kommentar">
+                description = <"Zusätzliche Beschreibungen über die Symptome oder Anzeichen, die nicht in anderen Bereichen dargestellt wurden.">
+            >
+            ["at25"] = <
+                text = <"Nicht vorhanden">
+                description = <"Das spezifische Symptom oder Anzeichen ist nicht vorhanden.">
+            >
+            ["at24"] = <
+                text = <"Vorhanden">
+                description = <"Das spezifische Symptom oder Anzeichen ist vorhanden.">
+            >
+            ["id23"] = <
+                text = <"Spezifisches Symptom/Anzeichen">
+                description = <"Gruppierung von Datenelementen bezogen auf Screening auf ein einzelnes Symptom oder Anzeichen.">
+            >
+            ["id22"] = <
+                text = <"Erweiterung">
+                description = <"Zusätzliche Informationen zur Erfassung lokaler Inhalte oder Anpassung an andere Referenzmodelle/Formalismen.">
+                comment = <"Zum Beispiel: Lokaler Informationsbedarf oder zusätzliche Metadaten zur Anpassung an FHIR-Ressourcen oder CIMI-Modelle.">
+            >
+            ["id6"] = <
+                text = <"Vorhanden?">
+                description = <"Das Symptom oder Anzeichen ist vorhanden.">
+            >
+            ["id5"] = <
+                text = <"Bezeichnung des Symptoms oder Anzeichens.">
+                description = <"Name des Symptoms oder Anzeichens, das geprüft wird.">
+            >
+            ["id3"] = <
+                text = <"Beliebiges Ereignis">
+                description = <"Standardwert, ein undefinierter/s Zeitpunkt oder Intervallereignis, das explizit im Template oder zur Laufzeit der Anwendung definiert werden kann.">
+            >
+            ["id1"] = <
+                text = <"Screening-Fragebogen zur Symptomen/Anzeichen">
+                description = <"Ein Personen- oder Selbstbeurteilungs-Screening-Fragebogen zur Ermittlung von Symptomen und Anzeichen.">
+            >
+        >
+        ["fi"] = <
+            ["ac9004"] = <
+                text = <"Oireen tai tuntemuksen olemassaolo (synthesised)">
+                description = <"*Presence of any relevant symptoms or signs. (en) (synthesised)">
+            >
+            ["ac9000"] = <
+                text = <"Olemassalolo (synthesised)">
+                description = <"Oireen tai tuntemuksen olemassaolo (synthesised)">
+            >
+            ["id37"] = <
+                text = <"*Description(en)">
+                description = <"*Narrative description about all symptoms or signs.(en)">
+            >
+            ["id36"] = <
+                text = <"*Comment(en)">
+                description = <"*Additional narrative about the specific symptom or sign, not captured in other fields.(en)">
+            >
+            ["id35"] = <
+                text = <"*Screening purpose(en)">
+                description = <"*The reason for overall screening.(en)">
+                comment = <"*For example: screening for an infectious disease, such as SARS-COV-2.(en)">
+            >
+            ["at34"] = <
+                text = <"Unknown">
+                description = <"*It is unknown whether any symptoms or signs are present or absent.(en)">
+            >
+            ["at33"] = <
+                text = <"Poissa">
+                description = <"Oire / tuntemusta ei ole olemassa">
+            >
+            ["at32"] = <
+                text = <"Olemassa">
+                description = <"Oire / tuntemus on olemassa">
+            >
+            ["id30"] = <
+                text = <"Toteamisen ajankohta">
+                description = <"Aika jolloin oireet tai tuntemukset olivat havaittu ensimmäisen kerran.">
+                comment = <"*Partial dates are allowed.(en)">
+            >
+            ["id29"] = <
+                text = <"Oireen tai tuntemuksen olemassaolo">
+                description = <"*Presence of any relevant symptoms or signs. (en)">
+            >
+            ["at28"] = <
+                text = <"Unknown">
+                description = <"*It is unknown whether any symptoms or signs are present or absent.(en)">
+            >
+            ["id27"] = <
+                text = <"*Symptom/sign details (en)">
+                description = <"*Additional structured details related to a specific symptom or sign. (en)">
+            >
+            ["id26"] = <
+                text = <"*Overall comment (en)">
+                description = <"Lisätietoa tarkentamaan oireita tai tuntemuksia.">
+            >
+            ["at25"] = <
+                text = <"*Absent(en)">
+                description = <"Yksilöityä oiretta ei ole havaittavissa / olemassa">
+            >
+            ["at24"] = <
+                text = <"*Present(en)">
+                description = <"Yksilöity oire on olemassa / havaittavissa">
+            >
+            ["id23"] = <
+                text = <"Oire / tuntemus ryhmitys">
+                description = <"*Grouping of data elements related to screening for a single symptom or sign.(en)">
+            >
+            ["id22"] = <
+                text = <"*Extension(en)">
+                description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
+                comment = <"*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.(en)">
+            >
+            ["id6"] = <
+                text = <"Olemassalolo">
+                description = <"Oireen tai tuntemuksen olemassaolo">
+            >
+            ["id5"] = <
+                text = <"Oire tai tuntemuksen nimi">
+                description = <"Oireen tai tuntemuksen nimi jota arvioidaan">
+            >
+            ["id3"] = <
+                text = <"*Any event(en)">
+                description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)">
+            >
+            ["id1"] = <
+                text = <"Oire / tuntemus seulontakysely">
+                description = <"Kysely arvioimaan oiretta tai sen mahdollista olemassaoloa.">
+            >
+        >
+        ["nb"] = <
+            ["ac9004"] = <
+                text = <"Tilstedeværelse av noen symptomer/sykdomstegn? (synthesised)">
+                description = <"Tilstedeværelse av noen relevante symptomer eller sykdomstegn. (synthesised)">
+            >
+            ["ac9000"] = <
+                text = <"Tilstede? (synthesised)">
+                description = <"Tilstedeværelse av symptom eller tegn. (synthesised)">
+            >
+            ["id37"] = <
+                text = <"Beskrivelse">
+                description = <"Fritekstbeskrivelse om alle symptomene eller tegnene.">
+            >
+            ["id36"] = <
+                text = <"Kommentar">
+                description = <"Ytterligere kommentar til det spesifikke symptomet eller tegnet, som ikke er fanget opp i andre felt.">
+            >
+            ["id35"] = <
+                text = <"Registreringsformål">
+                description = <"Årsaken til registreringen.">
+                comment = <"For eksempel: Screening for en infeksjonssykdom, som SARS-COV-2.">
+            >
+            ["at34"] = <
+                text = <"Ukjent">
+                description = <"Det er ukjent om noen symptomer eller tegn er til stede eller fraværende.">
+            >
+            ["at33"] = <
+                text = <"Fraværende">
+                description = <"Symptomer eller tegn er ikke tiltstede.">
+            >
+            ["at32"] = <
+                text = <"Tilstede">
+                description = <"Symptomer eller tegn er tilstede.">
+            >
+            ["id30"] = <
+                text = <"Debut av noen symptomer/sykdomstegn">
+                description = <"Dato/klokkeslett når symptom(er) eller tegn først ble oppdaget.">
+                comment = <"Delvis dato er tillatt.">
+            >
+            ["id29"] = <
+                text = <"Tilstedeværelse av noen symptomer/sykdomstegn?">
+                description = <"Tilstedeværelse av noen relevante symptomer eller sykdomstegn.">
+            >
+            ["at28"] = <
+                text = <"Ukjent">
+                description = <"Det er ukjent om symptomet eller tegnet er tilstede eller fraværende.">
+            >
+            ["id27"] = <
+                text = <"Ytterligere detaljer">
+                description = <"Ytterligere strukturerte detaljer relatert til et spesifikt symptom eller sykdomstegn.">
+            >
+            ["id26"] = <
+                text = <"Kommentar">
+                description = <"Ytterligere kommentar til symptomene eller tegnene som ikke er fanget opp i andre felt.">
+            >
+            ["at25"] = <
+                text = <"Fraværende">
+                description = <"Det spesifikke symptomet eller tegnet er ikke tilstede.">
+            >
+            ["at24"] = <
+                text = <"Tilstede">
+                description = <"Det spesifikke symptomet eller tegnet er tilstede.">
+            >
+            ["id23"] = <
+                text = <"Spesifikt symptom/sykdomstegn">
+                description = <"Gruppering av dataelementer relatert til screeningen for et enkelt symptom eller tegn.">
+            >
+            ["id22"] = <
+                text = <"Tilleggsinformasjon">
+                description = <"Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.">
+                comment = <"For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR eller CIMI.">
+            >
+            ["id6"] = <
+                text = <"Tilstede?">
+                description = <"Tilstedeværelse av symptom eller tegn.">
+            >
+            ["id5"] = <
+                text = <"Navn på symptom/sykdomstegn">
+                description = <"Navnet til symptomet eller tegnet som blir screenet.">
+            >
+            ["id3"] = <
+                text = <"Uspesifisert hendelse">
+                description = <"Standard, uspesifisert tidspunkt eller tidsintervall som kan defineres mer eksplisitt i et templat eller i en applikasjon.">
+            >
+            ["id1"] = <
+                text = <"Spørreskjema for symptomer/sykdomstegn">
+                description = <"Et individuelt- eller selvrapportert spørreskjema om symptomer og sykdomstegn.">
+            >
+        >
+        ["en"] = <
+            ["ac9004"] = <
+                text = <"Presence of any symptoms or signs? (synthesised)">
+                description = <"Presence of any relevant symptoms or signs. (synthesised)">
+            >
+            ["ac9000"] = <
+                text = <"Presence? (synthesised)">
+                description = <"Presence of the symptom or sign. (synthesised)">
+            >
+            ["id37"] = <
+                text = <"Description">
+                description = <"Narrative description about all symptoms or signs.">
+            >
+            ["id36"] = <
+                text = <"Comment">
+                description = <"Additional narrative about the specific symptom or sign, not captured in other fields.">
+            >
+            ["id35"] = <
+                text = <"Screening purpose">
+                description = <"The reason for overall screening.">
+                comment = <"For example: screening for an infectious disease, such as SARS-COV-2.">
+            >
+            ["at34"] = <
+                text = <"Unknown">
+                description = <"It is not known whether any symptoms or signs are present or absent.">
+            >
+            ["at33"] = <
+                text = <"Absent">
+                description = <"Symptoms or signs are not present.">
+            >
+            ["at32"] = <
+                text = <"Present">
+                description = <"Symptoms or signs are present.">
+            >
+            ["id30"] = <
+                text = <"Onset of any symptoms or signs">
+                description = <"The date/time when any symptoms or signs were first noticed.">
+                comment = <"Partial dates are allowed.">
+            >
+            ["id29"] = <
+                text = <"Presence of any symptoms or signs?">
+                description = <"Presence of any relevant symptoms or signs.">
+            >
+            ["at28"] = <
+                text = <"Unknown">
+                description = <"It is not known whether the symptom or sign is present or absent.">
+            >
+            ["id27"] = <
+                text = <"Symptom/sign details">
+                description = <"Additional structured details related to a specific symptom or sign.">
+            >
+            ["id26"] = <
+                text = <"Overall comment">
+                description = <"Additional narrative about the symptoms and signs, not captured in other fields.">
+            >
+            ["at25"] = <
+                text = <"Absent">
+                description = <"The specific symptom or sign is not present.">
+            >
+            ["at24"] = <
+                text = <"Present">
+                description = <"The specific symptom or sign is present.">
+            >
+            ["id23"] = <
+                text = <"Specific symptom/sign">
+                description = <"Grouping of data elements related to screening for a single symptom or sign.">
+            >
+            ["id22"] = <
+                text = <"Extension">
+                description = <"Additional information required to capture local content or to align with other reference models/formalisms.">
+                comment = <"For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.">
+            >
+            ["id6"] = <
+                text = <"Presence?">
+                description = <"Presence of the symptom or sign.">
+            >
+            ["id5"] = <
+                text = <"Symptom or sign name">
+                description = <"Name of the symptom or sign being screened.">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
+            >
+            ["id1"] = <
+                text = <"Symptom/sign screening questionnaire">
+                description = <"An individual- or self-reported questionnaire screening for symptoms and signs.">
+            >
+        >
+        ["it"] = <
+            ["ac9004"] = <
+                text = <"Presenza di sintomi o segni? (synthesised)">
+                description = <"Presenza di sintomi o segni rilevanti.  (synthesised)">
+            >
+            ["ac9000"] = <
+                text = <"Presenza? (synthesised)">
+                description = <"Presenza del sintomo o del segno (synthesised)">
+            >
+            ["id37"] = <
+                text = <"Descrizione">
+                description = <"Descrizione narrativa di tutti i sintomi o segni.">
+            >
+            ["id36"] = <
+                text = <"Commento">
+                description = <"Descrizione aggiuntiva dei sintomi e dei segni, non rilevata in altri campi.">
+            >
+            ["id35"] = <
+                text = <"Scopo dello screening">
+                description = <"Motivazione dello screening complessivo. ">
+                comment = <"Ad esempio: screening per una malattia infettiva, come la SARS-COV-2. ">
+            >
+            ["at34"] = <
+                text = <"Indeterminato">
+                description = <"Non è possibile sapere se sono presenti o assenti sintomi o segni. ">
+            >
+            ["at33"] = <
+                text = <"Assenza">
+                description = <"Non sono presenti sintomi o segni.">
+            >
+            ["at32"] = <
+                text = <"Presenza">
+                description = <"Sono presenti sintomi o segni.">
+            >
+            ["id30"] = <
+                text = <"Inizio di qualsiasi sintomo o segno">
+                description = <"La data e l'ora in cui i sintomi o i segni sono stati notati per la prima volta. ">
+                comment = <"Sono ammesse date parziali">
+            >
+            ["id29"] = <
+                text = <"Presenza di sintomi o segni?">
+                description = <"Presenza di sintomi o segni rilevanti. ">
+            >
+            ["at28"] = <
+                text = <"Indeterminato">
+                description = <"Non è possibile sapere se il sintomo o il segno è presente o assente.">
+            >
+            ["id27"] = <
+                text = <"Dettagli aggiuntivi">
+                description = <"Ulteriori dettagli strutturati relativi allo screening dei sintomi.">
+            >
+            ["id26"] = <
+                text = <"Commento">
+                description = <"Descrizione aggiuntiva dei sintomi e dei segni, non rilevata in altri campi.">
+            >
+            ["at25"] = <
+                text = <"Assenza">
+                description = <"Il sintomo o segno specifico non è presente.">
+            >
+            ["at24"] = <
+                text = <"Presenza">
+                description = <"Il sintomo o segno specifico è presente.">
+            >
+            ["id23"] = <
+                text = <"Sintomo/segno specifico">
+                description = <"Raggruppamento di elementi di dati relativi allo screening per un singolo sintomo o segno.">
+            >
+            ["id22"] = <
+                text = <"Estensione">
+                description = <"Informazioni aggiuntive necessarie per raccogliere contenuti locali o per allinearsi con altri modelli/formalismi di riferimento.">
+                comment = <"Ad esempio: requisiti informativi locali o metadati aggiuntivi per allinearsi agli equivalenti FHIR o CIMI. ">
+            >
+            ["id6"] = <
+                text = <"Presenza?">
+                description = <"Presenza del sintomo o del segno">
+            >
+            ["id5"] = <
+                text = <"Nome del sintomo o del segno">
+                description = <"Nome del sintomo o del segno sottoposto a screening.">
+            >
+            ["id3"] = <
+                text = <"Qualsiasi evento">
+                description = <"Evento predefinito, non specificato nel tempo o nell'intervallo di tempo, che può essere definito esplicitamente in un modello o in fase di esecuzione.">
+            >
+            ["id1"] = <
+                text = <"Questionario di screening dei sintomi/segni">
+                description = <"Un questionario individuale o autodichiarato per lo screening dei sintomi e dei segni.">
+            >
+        >
+    >
+    term_bindings = <
+        ["SNOMED-CT"] = <
+            ["at24"] = <http://snomed.info/id/410515003>
+            ["at25"] = <http://snomed.info/id/410516002>
+            ["at32"] = <http://snomed.info/id/410515003>
+            ["at33"] = <http://snomed.info/id/410516002>
+            ["at34"] = <http://snomed.info/id/261665006>
+            ["at28"] = <http://snomed.info/id/261665006>
+        >
+    >
+    value_sets = <
+        ["ac9000"] = <
+            id = <"ac9000">
+            members = <"at24", "at25", "at28">
+        >
+        ["ac9004"] = <
+            id = <"ac9004">
+            members = <"at32", "at33", "at34">
+        >
+    >

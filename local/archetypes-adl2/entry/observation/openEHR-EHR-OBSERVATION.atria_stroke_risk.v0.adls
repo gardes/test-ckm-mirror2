@@ -1,0 +1,551 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=39b62cd8-fcd4-4d0d-ad74-fa52fed27410; build_uid=3f09b7ad-374b-4342-940d-ae20bdd41450)
+    openEHR-EHR-OBSERVATION.atria_stroke_risk.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["sv"] = <
+            language = <[ISO_639-1::sv]>
+            author = <
+                ["name"] = <"Dennis Forslund">
+                ["organisation"] = <"Cambio Healthcare Systems">
+            >
+        >
+    >
+
+description
+    original_author = <
+        ["name"] = <"Eneimi Allwell-Brown">
+        ["organisation"] = <"Cambio Healthcare Systems">
+        ["email"] = <"models@cambiocds.com">
+        ["date"] = <"2016-11-30">
+    >
+    original_namespace = <"org.openehr">
+    original_publisher = <"openEHR Foundation">
+    other_contributors = <"Heather Leslie, Atomica Informatics, Australia", ...>
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"org.openehr">
+    custodian_organisation = <"openEHR Foundation">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+    references = <
+        ["1"] = <"Singer DE, Chang Y, Borowsky LH, Fang MC, Pomernacki NK, Udaltsova N, Reynolds K, Go AS. A new risk scheme to predict ischemic stroke and other thromboembolism in atrial fibrillation: the ATRIA study stroke risk score. Journal of the American Heart Association. 2013 Jun 18;2(3):e000250.">
+    >
+    other_details = <
+        ["MD5-CAM-1.0.1"] = <"DF585DAD0F22EA48A82FF3021D9D57F4">
+    >
+    details = <
+        ["sv"] = <
+            language = <[ISO_639-1::sv]>
+            purpose = <"Att registrera poäng genererad i enlighet med ATRIA stroke risk score. Instrumentet baseras på åtta faktorer; tidigare stroke, ålder, kön, komorbiditet, proteinuri och eGFR < 45ml/min (alt terminal njursvikt). Instrumentet är validerat, och används för uppskattning av strokerisk och som riktlinje för optimal behandling med antikoagulantia hos patienter med förmaksflimmer. ">
+            keywords = <"förmaksflimmer", "stroke", "ATRIA">
+            use = <"Registrera poäng genererad i enlighet med ATRIA stroke risk score, samt enskilda poäng för varje inkluderad faktor;
+     - förekomst av diabetes mellitus, hjärtsvikt, hypertoni, proteinuri (U-albumin ≥30 mg/dl eller U-albumin:kreatinin-kvot ≥30 mg/g), eGFR < 45ml/min (eller terminal njursvikt) = 1 poäng vardera, och 0p om ej föreliggande;
+     - kvinnligt kön = 1 poäng, och 0p om manligt; 
+     - ålder <65 år (utan tidigare stroke = 0p, med tidigare stroke = 8p), 65-74 år (utan tidigare stroke = 3p, med tidigare stroke = 7p), 75-84 år (utan tidigare stroke = 5p, med tidigare stroke = 7 p), ≥85 år (utan tidigare stroke = 6p, med tidigare stroke = 9p).
+    
+    Råvärden genereras med hjälp av separata arketyper för respektive faktor. Själva utvärderingen i enlighet med ATRIA stroke risk score återfinns även den i en separat arketyp - openEHR-EHR-EVALUATION.atria_stroke_risk.v1.
+    ">
+            misuse = <"Endast avsedd för patienter med diagnosticerat förmaksflimmer.">
+            copyright = <"© Cambio Healthcare Systems, openEHR Foundation">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"To record the results for each component parameter and their total sum for the ATRIA stroke risk score.">
+            keywords = <"atrial fibrillation", "stroke risk", "thromboembolism risk">
+            use = <"Use to record the results for each component parameter and their total sum for the ATRIA stroke risk score.">
+            misuse = <"Do not use if the patient does not have atrial fibrillation.">
+            copyright = <"© Cambio Healthcare Systems, openEHR Foundation">
+        >
+    >
+
+definition
+    OBSERVATION[id1] matches {    -- ATRIA stroke risk score
+        data matches {
+            HISTORY[id2] matches {
+                events cardinality matches {1..*; unordered} matches {
+                    EVENT[id3] occurrences matches {0..1} matches {    -- Any event
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[id5] occurrences matches {0..1} matches {    -- History of stroke
+                                        value matches {
+                                            DV_ORDINAL[id9008] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at33]}],
+                                                    [{1}, {[at34]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id6] occurrences matches {0..1} matches {    -- Age
+                                        value matches {
+                                            DV_ORDINAL[id9009] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at14]}],
+                                                    [{3}, {[at15]}],
+                                                    [{5}, {[at16]}],
+                                                    [{6}, {[at17]}],
+                                                    [{7}, {[at18]}],
+                                                    [{8}, {[at19]}],
+                                                    [{9}, {[at20]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id7] occurrences matches {0..1} matches {    -- Sex
+                                        value matches {
+                                            DV_ORDINAL[id9010] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at21]}],
+                                                    [{1}, {[at22]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id8] occurrences matches {0..1} matches {    -- History of diabetes mellitus
+                                        value matches {
+                                            DV_ORDINAL[id9011] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at31]}],
+                                                    [{1}, {[at32]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id9] occurrences matches {0..1} matches {    -- History of congestive heart failure
+                                        value matches {
+                                            DV_ORDINAL[id9012] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at29]}],
+                                                    [{1}, {[at30]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id10] occurrences matches {0..1} matches {    -- History of hypertension
+                                        value matches {
+                                            DV_ORDINAL[id9013] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at27]}],
+                                                    [{1}, {[at28]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id11] occurrences matches {0..1} matches {    -- Proteinuria
+                                        value matches {
+                                            DV_ORDINAL[id9014] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at25]}],
+                                                    [{1}, {[at26]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id12] occurrences matches {0..1} matches {    -- eGFR
+                                        value matches {
+                                            DV_ORDINAL[id9015] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at23]}],
+                                                    [{1}, {[at24]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id13] occurrences matches {0..1} matches {    -- Total score
+                                        value matches {
+                                            DV_COUNT[id9016] matches {
+                                                magnitude matches {|0..15|}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id35] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    allow_archetype CLUSTER[id36] matches {     -- Extension
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["sv"] = <
+            ["ac9000"] = <
+                text = <"Tidigare stroke (synthesised)">
+                description = <"Har individen tidigare genomgått cerebrovaskulär sjukdom/stroke? (synthesised)">
+            >
+            ["ac9001"] = <
+                text = <"Ålder (synthesised)">
+                description = <"Patientens ålder sammanvägd med tidigare stroke. (synthesised)">
+            >
+            ["ac9002"] = <
+                text = <"Kön (synthesised)">
+                description = <"Patientens kön. (synthesised)">
+            >
+            ["ac9003"] = <
+                text = <"Diabetes Mellitus (synthesised)">
+                description = <"Är patienten diagnosticerad med diabetes mellitus? (synthesised)">
+            >
+            ["ac9004"] = <
+                text = <"Hjärtsvikt (synthesised)">
+                description = <"Är patienten diagnosticerad med hjärtsvikt/hjärtinsufficiens? (synthesised)">
+            >
+            ["ac9005"] = <
+                text = <"Hypertoni (synthesised)">
+                description = <"Är patienten diagnosticerad med hypertoni? (synthesised)">
+            >
+            ["ac9006"] = <
+                text = <"Proteinuri (synthesised)">
+                description = <"Förekomst av proteinuri. (synthesised)">
+            >
+            ["ac9007"] = <
+                text = <"eGFR (synthesised)">
+                description = <"Patientens uppskattade GFR alternativt terminal njursvikt. (synthesised)">
+            >
+            ["id36"] = <
+                text = <"*Extension (en)">
+                description = <"*Additional information required to capture local content or to align with other reference models/formalisms. (en)">
+                comment = <"*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents. (en)">
+            >
+            ["at34"] = <
+                text = <"Ja">
+                description = <"*Has a history of stroke.(en)">
+            >
+            ["at33"] = <
+                text = <"Nej">
+                description = <"*No history of stroke.(en)">
+            >
+            ["at32"] = <
+                text = <"Ja">
+                description = <"*Positive history of diabetes mellitus.(en)">
+            >
+            ["at31"] = <
+                text = <"Nej">
+                description = <"*No history of diabetes mellitus.(en)">
+            >
+            ["at30"] = <
+                text = <"Ja">
+                description = <"*Positive history of congestive heart failure.(en)">
+            >
+            ["at29"] = <
+                text = <"Nej">
+                description = <"*No history of congestive heart failure.(en)">
+            >
+            ["at28"] = <
+                text = <"Ja">
+                description = <"*Positive history of hypertension.(en)">
+            >
+            ["at27"] = <
+                text = <"Nej">
+                description = <"*No history of hypertension.(en)">
+            >
+            ["at26"] = <
+                text = <"Ja">
+                description = <"*Proteinuria present.(en)">
+            >
+            ["at25"] = <
+                text = <"Nej">
+                description = <"*Proteinuria absent.(en)">
+            >
+            ["at24"] = <
+                text = <"eGFR <45">
+                description = <"*Estimated GFR less than 45 ml/min/1.73m2 or presence of end-stage renal disease (ESRD)(en)">
+            >
+            ["at23"] = <
+                text = <"eGFR ≥45">
+                description = <"*Estimated GFR equal or greater than 45 ml/min/1.73m2(en)">
+            >
+            ["at22"] = <
+                text = <"Kvinna">
+                description = <"*Individual is female.(en)">
+            >
+            ["at21"] = <
+                text = <"Man">
+                description = <"*Individual is male.(en)">
+            >
+            ["at20"] = <
+                text = <"Ålder ≥85 år med tidigare stroke">
+                description = <"*">
+            >
+            ["at19"] = <
+                text = <"Ålder <65 år med tidigare stroke">
+                description = <"*">
+            >
+            ["at18"] = <
+                text = <"Ålder 65-84 år med tidigare stroke">
+                description = <"*">
+            >
+            ["at17"] = <
+                text = <"Ålder ≥85 år utan tidigare stroke">
+                description = <"*">
+            >
+            ["at16"] = <
+                text = <"Ålder 75-84 år utan tidigare stroke">
+                description = <"*">
+            >
+            ["at15"] = <
+                text = <"Ålder 65-74 år utan tidigare stroke">
+                description = <"*">
+            >
+            ["at14"] = <
+                text = <"Ålder <65 år utan tidigare stroke">
+                description = <"*">
+            >
+            ["id13"] = <
+                text = <"*Total score (en)">
+                description = <"*Sum of points assigned for each of the component parameters. (en)">
+            >
+            ["id12"] = <
+                text = <"eGFR">
+                description = <"Patientens uppskattade GFR alternativt terminal njursvikt.">
+            >
+            ["id11"] = <
+                text = <"Proteinuri">
+                description = <"Förekomst av proteinuri.">
+            >
+            ["id10"] = <
+                text = <"Hypertoni">
+                description = <"Är patienten diagnosticerad med hypertoni?">
+            >
+            ["id9"] = <
+                text = <"Hjärtsvikt">
+                description = <"Är patienten diagnosticerad med hjärtsvikt/hjärtinsufficiens?">
+            >
+            ["id8"] = <
+                text = <"Diabetes Mellitus">
+                description = <"Är patienten diagnosticerad med diabetes mellitus?">
+            >
+            ["id7"] = <
+                text = <"Kön">
+                description = <"Patientens kön.">
+            >
+            ["id6"] = <
+                text = <"Ålder">
+                description = <"Patientens ålder sammanvägd med tidigare stroke.">
+            >
+            ["id5"] = <
+                text = <"Tidigare stroke">
+                description = <"Har individen tidigare genomgått cerebrovaskulär sjukdom/stroke?">
+            >
+            ["id3"] = <
+                text = <"*Any event(en)">
+                description = <"**(en)">
+            >
+            ["id1"] = <
+                text = <"ATRIA stroke risk score">
+                description = <"ATRIA (anticoagulation and risk factors in atrial fibrillation) stroke risk score används för att uppskatta strokerisk hos patienter med förmaksflimmer. Instrumentet baseras på ett antal kända riskfaktorer: tidigare stroke, ålder, kön, komorbiditet, proteinuri och eGFR < 45ml/min (alt terminal njursvikt). Poängen uppgår till maximalt 15p. En poäng om 0-5 indikerar mindre än 1%, 6p 1->2% och >6p >2% risk för stroke. ">
+            >
+        >
+        ["en"] = <
+            ["ac9000"] = <
+                text = <"History of stroke (synthesised)">
+                description = <"Does the individual have a history of cerebrovascular accident/stroke? (synthesised)">
+            >
+            ["ac9001"] = <
+                text = <"Age (synthesised)">
+                description = <"What is the age and has the individual ever had a prior stroke? (synthesised)">
+            >
+            ["ac9002"] = <
+                text = <"Sex (synthesised)">
+                description = <"Is the individual male or female? (synthesised)">
+            >
+            ["ac9003"] = <
+                text = <"History of diabetes mellitus (synthesised)">
+                description = <"Does the individual have a history of diabetes mellitus? (synthesised)">
+            >
+            ["ac9004"] = <
+                text = <"History of congestive heart failure (synthesised)">
+                description = <"Does the individual have a history of congestive heart failure? (synthesised)">
+            >
+            ["ac9005"] = <
+                text = <"History of hypertension (synthesised)">
+                description = <"Does the individual have a history of hypertension? (synthesised)">
+            >
+            ["ac9006"] = <
+                text = <"Proteinuria (synthesised)">
+                description = <"Does the individual have proteinuria? (synthesised)">
+            >
+            ["ac9007"] = <
+                text = <"eGFR (synthesised)">
+                description = <"The estimated glomerular filtration rate (based on MDRD equation) or presence of end-stage renal disease (ESRD). (synthesised)">
+            >
+            ["id36"] = <
+                text = <"Extension">
+                description = <"Additional information required to capture local content or to align with other reference models/formalisms.">
+                comment = <"For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.">
+            >
+            ["at34"] = <
+                text = <"Yes">
+                description = <"Has a history of stroke.">
+            >
+            ["at33"] = <
+                text = <"No">
+                description = <"No history of stroke.">
+            >
+            ["at32"] = <
+                text = <"Yes">
+                description = <"Positive history of diabetes mellitus.">
+            >
+            ["at31"] = <
+                text = <"No">
+                description = <"No history of diabetes mellitus.">
+            >
+            ["at30"] = <
+                text = <"Yes">
+                description = <"Positive history of congestive heart failure.">
+            >
+            ["at29"] = <
+                text = <"No">
+                description = <"No history of congestive heart failure.">
+            >
+            ["at28"] = <
+                text = <"Yes">
+                description = <"Positive history of hypertension.">
+            >
+            ["at27"] = <
+                text = <"No">
+                description = <"No history of hypertension.">
+            >
+            ["at26"] = <
+                text = <"Yes">
+                description = <"Proteinuria present.">
+            >
+            ["at25"] = <
+                text = <"No">
+                description = <"Proteinuria absent.">
+            >
+            ["at24"] = <
+                text = <"eGFR <45">
+                description = <"Estimated GFR less than 45 ml/min/1.73m2 or presence of end-stage renal disease (ESRD)">
+            >
+            ["at23"] = <
+                text = <"eGFR ≥45">
+                description = <"Estimated GFR equal or greater than 45 ml/min/1.73m2">
+            >
+            ["at22"] = <
+                text = <"Female">
+                description = <"Individual is female.">
+            >
+            ["at21"] = <
+                text = <"Male">
+                description = <"Individual is male.">
+            >
+            ["at20"] = <
+                text = <"Age ≥85 years with a history of stroke.">
+                description = <"*">
+            >
+            ["at19"] = <
+                text = <"Age <65 years with a history of stroke.">
+                description = <"*">
+            >
+            ["at18"] = <
+                text = <"Age 65-84 years with a history of stroke.">
+                description = <"*">
+            >
+            ["at17"] = <
+                text = <"Age ≥85 years with no history of stroke.">
+                description = <"*">
+            >
+            ["at16"] = <
+                text = <"Age 75-84 years with no history of stroke.">
+                description = <"*">
+            >
+            ["at15"] = <
+                text = <"Age 65-74 years with no history of stroke.">
+                description = <"*">
+            >
+            ["at14"] = <
+                text = <"Age <65 years with no history of stroke.">
+                description = <"*">
+            >
+            ["id13"] = <
+                text = <"Total score">
+                description = <"Sum of points assigned for each of the component parameters.">
+            >
+            ["id12"] = <
+                text = <"eGFR">
+                description = <"The estimated glomerular filtration rate (based on MDRD equation) or presence of end-stage renal disease (ESRD).">
+            >
+            ["id11"] = <
+                text = <"Proteinuria">
+                description = <"Does the individual have proteinuria?">
+            >
+            ["id10"] = <
+                text = <"History of hypertension">
+                description = <"Does the individual have a history of hypertension?">
+            >
+            ["id9"] = <
+                text = <"History of congestive heart failure">
+                description = <"Does the individual have a history of congestive heart failure?">
+            >
+            ["id8"] = <
+                text = <"History of diabetes mellitus">
+                description = <"Does the individual have a history of diabetes mellitus?">
+            >
+            ["id7"] = <
+                text = <"Sex">
+                description = <"Is the individual male or female?">
+            >
+            ["id6"] = <
+                text = <"Age">
+                description = <"What is the age and has the individual ever had a prior stroke?">
+            >
+            ["id5"] = <
+                text = <"History of stroke">
+                description = <"Does the individual have a history of cerebrovascular accident/stroke?">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"*">
+            >
+            ["id1"] = <
+                text = <"ATRIA stroke risk score">
+                description = <"An assessment tool used to determine the risk of stroke in patients with atrial fibrillation.">
+            >
+        >
+    >
+    value_sets = <
+        ["ac9002"] = <
+            id = <"ac9002">
+            members = <"at21", "at22">
+        >
+        ["ac9001"] = <
+            id = <"ac9001">
+            members = <"at14", "at15", "at16", "at17", "at18", "at19", "at20">
+        >
+        ["ac9000"] = <
+            id = <"ac9000">
+            members = <"at33", "at34">
+        >
+        ["ac9006"] = <
+            id = <"ac9006">
+            members = <"at25", "at26">
+        >
+        ["ac9005"] = <
+            id = <"ac9005">
+            members = <"at27", "at28">
+        >
+        ["ac9004"] = <
+            id = <"ac9004">
+            members = <"at29", "at30">
+        >
+        ["ac9003"] = <
+            id = <"ac9003">
+            members = <"at31", "at32">
+        >
+        ["ac9007"] = <
+            id = <"ac9007">
+            members = <"at23", "at24">
+        >
+    >

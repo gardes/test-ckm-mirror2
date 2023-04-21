@@ -1,0 +1,309 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=e49667c0-0b22-4970-afc7-0902ef9dba46; build_uid=6cf75583-1dea-4141-ac17-abce4cbabf7f)
+    openEHR-EHR-OBSERVATION.electroretinogram.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["name"] = <"Hildegard Franke">
+        ["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+        ["email"] = <"hildi@freshehr.com">
+        ["date"] = <"2017-01-11">
+    >
+    original_namespace = <"uk.org.clinicalmodels">
+    original_publisher = <"UK Clinical Models">
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"uk.org.clinicalmodels">
+    custodian_organisation = <"UK Clinical Models">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+    other_details = <
+        ["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
+        ["MD5-CAM-1.0.1"] = <"5C8FCA49B794FC4AC373E92BD3FA075C">
+    >
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"For the recording of detailed findings in an electroretinagram.">
+            use = <"">
+            misuse = <"">
+            copyright = <"© Clinical Models UK">
+        >
+    >
+
+definition
+    OBSERVATION[id1] matches {    -- Electroretinogram
+        data matches {
+            HISTORY[id2] matches {
+                events cardinality matches {1..*; unordered} matches {
+                    POINT_EVENT[id3] occurrences matches {0..1} matches {    -- Point in time
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    CLUSTER[id5] matches {    -- By eye
+                                        items cardinality matches {1..*; unordered} matches {
+                                            ELEMENT[id6] occurrences matches {0..1} matches {    -- Laterality
+                                                value matches {
+                                                    DV_CODED_TEXT[id9007] matches {
+                                                        defining_code matches {[ac9000]}    -- Laterality (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id9] occurrences matches {0..1} matches {    -- A-wave implicit time
+                                                value matches {
+                                                    DV_QUANTITY[id9008] matches {
+                                                        property matches {[at9001]}    -- Time
+                                                        units matches {"millisec"}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id10] occurrences matches {0..1} matches {    -- A-wave amplitude
+                                                value matches {
+                                                    DV_QUANTITY[id9009] matches {
+                                                        property matches {[at9002]}    -- Voltage, electrical
+                                                        units matches {"mV"}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id11] occurrences matches {0..1} matches {    -- B-wave implicit time
+                                                value matches {
+                                                    DV_QUANTITY[id9010] matches {
+                                                        property matches {[at9001]}    -- Time
+                                                        units matches {"millisec"}
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id12] occurrences matches {0..1} matches {    -- B-wave amplitude
+                                                value matches {
+                                                    DV_QUANTITY[id9011] matches {
+                                                        property matches {[at9002]}    -- Voltage, electrical
+                                                        units matches {"mV"}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id13] occurrences matches {0..1} matches {    -- Electroretinogram response
+                                        value matches {
+                                            DV_CODED_TEXT[id9012] matches {
+                                                defining_code matches {[ac9003]}    -- Electroretinogram response (synthesised)
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id16] occurrences matches {0..1} matches {    -- Adaptation
+                                        value matches {
+                                            DV_CODED_TEXT[id9013] matches {
+                                                defining_code matches {[ac9004]}    -- Adaptation (synthesised)
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id19] occurrences matches {0..1} matches {    -- Stimulation
+                                        value matches {
+                                            DV_CODED_TEXT[id9014] matches {
+                                                defining_code matches {[ac9005]}    -- Stimulation (synthesised)
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id26] occurrences matches {0..1} matches {    -- Assessment
+                                        value matches {
+                                            DV_CODED_TEXT[id9015] matches {
+                                                defining_code matches {[ac9006]}    -- Assessment (synthesised)
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[id24] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[id25] matches {    -- Confounding factors
+                                        value matches {
+                                            DV_TEXT[id9016] 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id22] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    allow_archetype CLUSTER[id23] matches {     -- Extension
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["at9001"] = <
+                text = <"Time">
+                description = <"Time">
+            >
+            ["at9002"] = <
+                text = <"Voltage, electrical">
+                description = <"Voltage, electrical">
+            >
+            ["ac9000"] = <
+                text = <"Laterality (synthesised)">
+                description = <"Statement of which eye was examined. (synthesised)">
+            >
+            ["ac9003"] = <
+                text = <"Electroretinogram response (synthesised)">
+                description = <"Type of electroretinogram response. (synthesised)">
+            >
+            ["ac9004"] = <
+                text = <"Adaptation (synthesised)">
+                description = <"Type of adaptation used in electroretinogram. (synthesised)">
+            >
+            ["ac9005"] = <
+                text = <"Stimulation (synthesised)">
+                description = <"Type of stimulation used in electroretinogram. (synthesised)">
+            >
+            ["ac9006"] = <
+                text = <"Assessment (synthesised)">
+                description = <"Assessment of findings and clinical significance. (synthesised)">
+            >
+            ["at30"] = <
+                text = <"Abnormal unknown relevance">
+                description = <"The assessment of findings and clinical significance indicates an abnormality of unknown relevance to the patient's condition.">
+            >
+            ["at29"] = <
+                text = <"Abnormal relevant">
+                description = <"The assessment of findings and clinical significance indicates an abnormality relevant to the patient's condition.">
+            >
+            ["at28"] = <
+                text = <"Unknown">
+                description = <"The assessment of findings and clinical significance is unknown or no results are available.">
+            >
+            ["at27"] = <
+                text = <"Normal">
+                description = <"The assessment of findings and clinical significance is normal.">
+            >
+            ["id26"] = <
+                text = <"Assessment">
+                description = <"Assessment of findings and clinical significance.">
+            >
+            ["id25"] = <
+                text = <"Confounding factors">
+                description = <"Record any issues or factors that may impact on the result or assessment.">
+            >
+            ["id23"] = <
+                text = <"Extension">
+                description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+                comment = <"e.g. Local hospital departmental infomation or additional metadata to align with HL7 or CDISC equivalents.">
+            >
+            ["at21"] = <
+                text = <"Mixed or combined">
+                description = <"Mixed or combined stimulation is used.">
+            >
+            ["at20"] = <
+                text = <"Flicker">
+                description = <"Flicker stimulation is used.">
+            >
+            ["id19"] = <
+                text = <"Stimulation">
+                description = <"Type of stimulation used in electroretinogram.">
+            >
+            ["at18"] = <
+                text = <"Light">
+                description = <"Light adaptation is used in ERG.">
+            >
+            ["at17"] = <
+                text = <"Dark">
+                description = <"Dark adaptation is used in ERG.">
+            >
+            ["id16"] = <
+                text = <"Adaptation">
+                description = <"Type of adaptation used in electroretinogram.">
+            >
+            ["at15"] = <
+                text = <"Extinguished">
+                description = <"The response is extinguished.">
+            >
+            ["at14"] = <
+                text = <"Reduced">
+                description = <"The response is reduced.">
+            >
+            ["id13"] = <
+                text = <"Electroretinogram response">
+                description = <"Type of electroretinogram response.">
+            >
+            ["id12"] = <
+                text = <"B-wave amplitude">
+                description = <"The B-wave amplitude in micro-Volt.">
+            >
+            ["id11"] = <
+                text = <"B-wave implicit time">
+                description = <"B-wave implicit time in milliseconds.">
+            >
+            ["id10"] = <
+                text = <"A-wave amplitude">
+                description = <"The A-wave amplitude in micro-Volt.">
+            >
+            ["id9"] = <
+                text = <"A-wave implicit time">
+                description = <"A-wave implicit time in milliseconds.">
+            >
+            ["at8"] = <
+                text = <"Right">
+                description = <"Right eye.">
+            >
+            ["at7"] = <
+                text = <"Left">
+                description = <"Left eye.">
+            >
+            ["id6"] = <
+                text = <"Laterality">
+                description = <"Statement of which eye was examined.">
+            >
+            ["id5"] = <
+                text = <"By eye">
+                description = <"Grouping of measurements by eye.">
+            >
+            ["id3"] = <
+                text = <"Point in time">
+                description = <"A specific date and/or time which may be explicitly defined in a template or at run-time.">
+            >
+            ["id1"] = <
+                text = <"Electroretinogram">
+                description = <"Details of findings in an electroretinogram.">
+            >
+        >
+    >
+    term_bindings = <
+        ["openehr"] = <
+            ["at9001"] = <http://openehr.org/id/128>
+            ["at9002"] = <http://openehr.org/id/374>
+        >
+    >
+    value_sets = <
+        ["ac9000"] = <
+            id = <"ac9000">
+            members = <"at7", "at8">
+        >
+        ["ac9006"] = <
+            id = <"ac9006">
+            members = <"at27", "at28", "at29", "at30">
+        >
+        ["ac9005"] = <
+            id = <"ac9005">
+            members = <"at20", "at21">
+        >
+        ["ac9004"] = <
+            id = <"ac9004">
+            members = <"at17", "at18">
+        >
+        ["ac9003"] = <
+            id = <"ac9003">
+            members = <"at14", "at15">
+        >
+    >

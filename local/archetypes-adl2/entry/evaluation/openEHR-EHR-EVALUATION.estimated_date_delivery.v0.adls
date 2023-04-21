@@ -1,0 +1,161 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=d65a175e-00b9-4697-821e-0650696b1daf; build_uid=3e06f127-3d41-4613-a9ad-8cf3907bcf2c)
+    openEHR-EHR-EVALUATION.estimated_date_delivery.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["name"] = <"Heather Leslie">
+        ["organisation"] = <"Atomica Informatics">
+        ["email"] = <"heather.leslie@atomicainformatics.com">
+        ["date"] = <"2020-02-04">
+    >
+    original_namespace = <"org.openehr">
+    original_publisher = <"openEHR Foundation">
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"org.openehr">
+    custodian_organisation = <"openEHR Foundation">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+    other_details = <
+        ["MD5-CAM-1.0.1"] = <"5603F6C3A1BEFE2DCDA162BD004B4C54">
+    >
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"To record estimated due dated for a pregnancy, calculated or estimated by a variety of methods.">
+            keywords = <"EDD, EDB, EDC", ...>
+            use = <"Use to record one or more estimated date of delivery (EDD), calculated or estimated by a variety of methods during the span of a single pregnancy. 
+    
+    The agreed EDD is used as the basis for management of the pregnancy.">
+            misuse = <"">
+            copyright = <"© openEHR Foundation">
+        >
+    >
+
+definition
+    EVALUATION[id1] matches {    -- Estimated date of delivery
+        data matches {
+            ITEM_TREE[id3] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    ELEMENT[id4] occurrences matches {0..1} matches {    -- By date of conception
+                        value matches {
+                            DV_DATE_TIME[id9000] 
+                        }
+                    }
+                    ELEMENT[id5] occurrences matches {0..1} matches {    -- By cycle
+                        value matches {
+                            DV_DATE_TIME[id9001] 
+                        }
+                    }
+                    CLUSTER[id7] occurrences matches {0..1} matches {    -- By ultrasound
+                        items cardinality matches {1..*; unordered} matches {
+                            ELEMENT[id6] occurrences matches {0..1} matches {    -- Date of ultrasound
+                                value matches {
+                                    DV_DATE_TIME[id9002] 
+                                }
+                            }
+                            ELEMENT[id8] occurrences matches {0..1} matches {    -- Gestation by scan
+                                value matches {
+                                    DV_DURATION[id9003] 
+                                }
+                            }
+                            ELEMENT[id9] matches {    -- Estimated date by ultrasound
+                                value matches {
+                                    DV_DATE_TIME[id9004] 
+                                }
+                            }
+                        }
+                    }
+                    CLUSTER[id10] matches {    -- Agreed EDD
+                        items cardinality matches {1..*; unordered} matches {
+                            ELEMENT[id11] occurrences matches {0..1} matches {    -- Agreed date
+                                value matches {
+                                    DV_DATE_TIME[id9005] 
+                                }
+                            }
+                            ELEMENT[id12] occurrences matches {0..1} matches {    -- Rationale
+                                value matches {
+                                    DV_TEXT[id9006] 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id2] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    ELEMENT[id14] occurrences matches {0..1} matches {    -- Last updated
+                        value matches {
+                            DV_DATE_TIME[id9007] 
+                        }
+                    }
+                    allow_archetype CLUSTER[id13] matches {     -- Extension
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id14"] = <
+                text = <"Last updated">
+                description = <"The date any EDD was last updated.">
+            >
+            ["id13"] = <
+                text = <"Extension">
+                description = <"Additional information required to capture local content or to align with other reference models/formalisms.">
+                comment = <"For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.">
+            >
+            ["id12"] = <
+                text = <"Rationale">
+                description = <"The rationale which explains why the 'Agreed date' has been selected.">
+            >
+            ["id11"] = <
+                text = <"Agreed date">
+                description = <"The EDD which is to be used as the basis for clinical decision-making.">
+            >
+            ["id10"] = <
+                text = <"Agreed EDD">
+                description = <"Details about the agreed EDD which is used as the basis for clinical decision-making during the pregnancy.">
+            >
+            ["id9"] = <
+                text = <"Estimated date by ultrasound">
+                description = <"Details about an EDD estimated from the findings on a pregnancy ultrasound.">
+                comment = <"Only one 'Agreed EDD' is appropriate at any one time. If the agreed EDD needs to be revised then this should be captured in a new revision of this archetype within a health record.">
+            >
+            ["id8"] = <
+                text = <"Gestation by scan">
+                description = <"The gestation estimated from the scan.">
+            >
+            ["id7"] = <
+                text = <"By ultrasound">
+                description = <"Details about an EDD estimated from the findings on a pregnancy ultrasound.">
+                comment = <"Each ultrasound and estimated gestation pair will be captured as a separate instance of this CLUSTER.">
+            >
+            ["id6"] = <
+                text = <"Date of ultrasound">
+                description = <"The date on which the ultrasound was carried out.">
+            >
+            ["id5"] = <
+                text = <"By cycle">
+                description = <"The EDD estimated from an LNMP and characteristics of the menstrual cycle.">
+                comment = <"The details about the menstrual cycle will be recorded elsewhere in the health record, usually captured using the OBSERVATION.menstruation archetype.">
+            >
+            ["id4"] = <
+                text = <"By date of conception">
+                description = <"The EDD calculated from a known date of conception.">
+                comment = <"The date of conception will be recorded elsewhere in the health record, for example as part of the record for an IVF procedure.">
+            >
+            ["id1"] = <
+                text = <"Estimated date of delivery">
+                description = <"Estimated date of delivery for a pregnancy.">
+            >
+        >
+    >

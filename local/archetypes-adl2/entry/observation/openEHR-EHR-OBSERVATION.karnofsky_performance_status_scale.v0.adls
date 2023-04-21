@@ -1,0 +1,161 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=cb4520bb-1241-43b6-8f7e-7250557aeeac; build_uid=b4d19251-4573-4894-943f-d98712bd0e44)
+    openEHR-EHR-OBSERVATION.karnofsky_performance_status_scale.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["name"] = <"Syeeda S Farruque">
+        ["organisation"] = <"Cambio Healthcare Systems">
+        ["email"] = <"models@cambiocds.com">
+        ["date"] = <"2017-08-14">
+    >
+    original_namespace = <"org.openehr">
+    original_publisher = <"openEHR Foundation">
+    other_contributors = <"Heather Leslie, Atomica Informatics, Australia", ...>
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"org.openehr">
+    custodian_organisation = <"openEHR Foundation">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+    references = <
+        ["1"] = <"Karnofsky DA, Burchenal JH. The clinical evaluation of chemotherapeutic agents in cancer. In: MacLeod CM, ed. Evaluation of Chemotherapeutic Agents. New York, Columbia University Press, 1949.">
+    >
+    other_details = <
+        ["current_contact"] = <"Heather Leslie, heather.leslie@atomicainformatics.com">
+        ["MD5-CAM-1.0.1"] = <"D5E24B99F52E1F991C1B4FE9ECF43A5C">
+    >
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"To record the assessment using the Karnofsky performance status scale.">
+            keywords = <"Karnofsky performance status scale", "functional capacity">
+            use = <"Use to record the assessment using the Karnofsky performance status scale.">
+            misuse = <"">
+            copyright = <"© Cambio Healthcare Systems, openEHR Foundation">
+        >
+    >
+
+definition
+    OBSERVATION[id1] matches {    -- Karnofsky performance status scale
+        data matches {
+            HISTORY[id2] matches {
+                events cardinality matches {1..*; unordered} matches {
+                    EVENT[id3] occurrences matches {0..1} matches {    -- Any point in time event
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[id5] occurrences matches {0..1} matches {    -- Description
+                                        value matches {
+                                            DV_ORDINAL[id9001] matches {
+                                                [value, symbol] matches {
+                                                    [{100}, {[at16]}],
+                                                    [{90}, {[at15]}],
+                                                    [{80}, {[at14]}],
+                                                    [{70}, {[at13]}],
+                                                    [{60}, {[at12]}],
+                                                    [{50}, {[at11]}],
+                                                    [{40}, {[at10]}],
+                                                    [{30}, {[at9]}],
+                                                    [{20}, {[at8]}],
+                                                    [{10}, {[at7]}],
+                                                    [{0}, {[at6]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id17] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    allow_archetype CLUSTER[id18] matches {     -- Extension
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["ac9000"] = <
+                text = <"Description (synthesised)">
+                description = <" (synthesised)">
+            >
+            ["id18"] = <
+                text = <"Extension">
+                description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
+                comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
+            >
+            ["at16"] = <
+                text = <"Normal no complaints; no evidence of disease">
+                description = <"">
+            >
+            ["at15"] = <
+                text = <"Able to carry on normal activity; minor signs or symptoms of disease">
+                description = <"">
+            >
+            ["at14"] = <
+                text = <"Normal activity with effort; some signs or symptoms of disease">
+                description = <"">
+            >
+            ["at13"] = <
+                text = <"Cares for self; unable to carry on normal activity or to do active work">
+                description = <"">
+            >
+            ["at12"] = <
+                text = <"Requires occasional assistance, but is able to care for most of his personal needs">
+                description = <"">
+            >
+            ["at11"] = <
+                text = <"Requires considerable assistance and frequent medical care">
+                description = <"">
+            >
+            ["at10"] = <
+                text = <"Disabled; requires special care and assistance">
+                description = <"">
+            >
+            ["at9"] = <
+                text = <"Severely disabled; hospital admission is indicated although death not imminent">
+                description = <"">
+            >
+            ["at8"] = <
+                text = <"Very sick; hospital admission necessary; active supportive treatment neccessary">
+                description = <"">
+            >
+            ["at7"] = <
+                text = <"Moribund; fatal processes progressing rapidly">
+                description = <"">
+            >
+            ["at6"] = <
+                text = <"Dead">
+                description = <"">
+            >
+            ["id5"] = <
+                text = <"Description">
+                description = <"">
+            >
+            ["id3"] = <
+                text = <"Any point in time event">
+                description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
+            >
+            ["id1"] = <
+                text = <"Karnofsky performance status scale">
+                description = <"An assessment scale used to quantify functional impairment in an individual.">
+            >
+        >
+    >
+    value_sets = <
+        ["ac9000"] = <
+            id = <"ac9000">
+            members = <"at16", "at15", "at14", "at13", "at12", "at11", "at10", "at9", "at8", "at7", "at6">
+        >
+    >

@@ -1,0 +1,121 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=b081821a-2537-41b6-9071-290790edacfb; build_uid=dcddfd27-29ee-4de9-b906-ba747fa914dd)
+    openEHR-EHR-ADMIN_ENTRY.organ_donation_preferences.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["name"] = <"Hildegard Franke">
+        ["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+        ["email"] = <"hildi@freshehr.com">
+        ["date"] = <"2017-08-29">
+    >
+    original_namespace = <"uk.org.clinicalmodels">
+    original_publisher = <"UK Clinical Models">
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"uk.org.clinicalmodels">
+    custodian_organisation = <"UK Clinical Models">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+    other_details = <
+        ["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
+        ["MD5-CAM-1.0.1"] = <"153ABAC95C077A6068877649045426B1">
+    >
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"For the recording of organ donation preferences.">
+            use = <"Use to record organ donation preferences.">
+            misuse = <"">
+            copyright = <"© Clinical Models UK">
+        >
+    >
+
+definition
+    ADMIN_ENTRY[id1] matches {    -- Organ donation preferences
+        data matches {
+            ITEM_TREE[id2] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    ELEMENT[id3] matches {    -- Specific organs
+                        value matches {
+                            DV_CODED_TEXT[id9001] matches {
+                                defining_code matches {[ac9000]}    -- Specific organs (synthesised)
+                            }
+                            DV_TEXT[id9002] 
+                        }
+                    }
+                    ELEMENT[id13] occurrences matches {0..1} matches {    -- All organs
+                        value matches {
+                            DV_BOOLEAN[id9003] matches {
+                                value matches {True, False}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["ac9000"] = <
+                text = <"Specific organs (synthesised)">
+                description = <"Description of which organ or organs the subject wishes to donate. (synthesised)">
+            >
+            ["id13"] = <
+                text = <"All organs">
+                description = <"Statement whether the subject wishes to donate all organs.">
+            >
+            ["at12"] = <
+                text = <"Tissue">
+                description = <"The subject wishes to donate tissue.">
+            >
+            ["at11"] = <
+                text = <"Skin">
+                description = <"The subject wishes to donate their skin.">
+            >
+            ["at10"] = <
+                text = <"Corneas">
+                description = <"The subject wishes to donate their corneas.">
+            >
+            ["at9"] = <
+                text = <"Lungs">
+                description = <"The subject wishes to donate their lungs.">
+            >
+            ["at8"] = <
+                text = <"Small bowel">
+                description = <"The subject wishes to donate their small bowel.">
+            >
+            ["at7"] = <
+                text = <"Pancreas">
+                description = <"The subject wishes to donate their pancreas.">
+            >
+            ["at6"] = <
+                text = <"Liver">
+                description = <"The subject wishes to donate their liver.">
+            >
+            ["at5"] = <
+                text = <"Heart">
+                description = <"The subject wishes to donate their heart.">
+            >
+            ["at4"] = <
+                text = <"Kidneys">
+                description = <"The subject wishes to donate their kidneys.">
+            >
+            ["id3"] = <
+                text = <"Specific organs">
+                description = <"Description of which organ or organs the subject wishes to donate.">
+            >
+            ["id1"] = <
+                text = <"Organ donation preferences">
+                description = <"Organ donation preferences.">
+            >
+        >
+    >
+    value_sets = <
+        ["ac9000"] = <
+            id = <"ac9000">
+            members = <"at4", "at5", "at6", "at7", "at8", "at9", "at10", "at11", "at12">
+        >
+    >

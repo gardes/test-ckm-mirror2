@@ -1,0 +1,314 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=d6751f75-9f9a-43fa-baf4-8faf3c7ba239; build_uid=730ccdc2-2e2e-443f-a9e6-4ccc17160ef9)
+    openEHR-EHR-OBSERVATION.six_cit.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["name"] = <"Hildegard Franke">
+        ["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+        ["email"] = <"hildi@freshehr.com">
+        ["date"] = <"2016-02-26">
+    >
+    original_namespace = <"org.openehr">
+    original_publisher = <"openEHR Foundation">
+    other_contributors = <"Ian McNicoll, freshEHR Clinical Informatics Ltd.", ...>
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"org.openehr">
+    custodian_organisation = <"openEHR Foundation">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+    references = <
+        ["1"] = <"Derived from: https://ckm.apperta.org/ckm/archetypes/1051.32.384">
+        ["2"] = <"6CIT Test – Official Application Website. Available from: http://6cit.co.uk/ [cited 25 Feb 2021].">
+    >
+    other_details = <
+        ["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
+        ["MD5-CAM-1.0.1"] = <"7DE38A9939E135B570D72CE7D61A4F81">
+    >
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"To record the results for each component parameter and their total sum for the 6CIT.">
+            keywords = <"6CIT", "cognitive", "impairment", "dementia">
+            use = <"Use to record the results for each component parameter and their total sum for the 6CIT.
+    
+    While openEHR archetypes are all freely available under an open license, the specific content of this 6CIT archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. 
+    
+    The Kingshill Research Centre, Swindon, UK owns the copyright to The Kingshill Version 2000 of the 6CIT but allows free usage to healthcare professionals.
+    
+    Copyright information: https://6cit.co.uk/.">
+            misuse = <"">
+            copyright = <"© Apperta Foundation, openEHR Foundation">
+        >
+    >
+
+definition
+    OBSERVATION[id1] matches {    -- 6 Item Cognitive Impairment Test (6CIT)
+        data matches {
+            HISTORY[id2] matches {
+                events cardinality matches {1..*; unordered} matches {
+                    EVENT[id3] occurrences matches {0..1} matches {    -- Any event
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[id5] occurrences matches {0..1} matches {    -- What year is it?
+                                        value matches {
+                                            DV_ORDINAL[id9006] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at6]}],
+                                                    [{4}, {[at7]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id8] occurrences matches {0..1} matches {    -- What month is it?
+                                        value matches {
+                                            DV_ORDINAL[id9007] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at9]}],
+                                                    [{3}, {[at10]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id11] occurrences matches {0..1} matches {    -- About what time is it?
+                                        value matches {
+                                            DV_ORDINAL[id9008] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at12]}],
+                                                    [{3}, {[at13]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id14] occurrences matches {0..1} matches {    -- Count backwards from 20
+                                        value matches {
+                                            DV_ORDINAL[id9009] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at15]}],
+                                                    [{2}, {[at16]}],
+                                                    [{4}, {[at17]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id18] occurrences matches {0..1} matches {    -- Say the months of the year in reverse
+                                        value matches {
+                                            DV_ORDINAL[id9010] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at19]}],
+                                                    [{2}, {[at20]}],
+                                                    [{4}, {[at21]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id22] occurrences matches {0..1} matches {    -- Repeat address phrase
+                                        value matches {
+                                            DV_ORDINAL[id9011] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at23]}],
+                                                    [{2}, {[at24]}],
+                                                    [{4}, {[at25]}],
+                                                    [{6}, {[at26]}],
+                                                    [{8}, {[at27]}],
+                                                    [{10}, {[at28]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id29] occurrences matches {0..1} matches {    -- Total score
+                                        value matches {
+                                            DV_COUNT[id9012] matches {
+                                                magnitude matches {|0..28|}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id32] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    allow_archetype CLUSTER[id33] matches {     -- Extension
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["ac9000"] = <
+                text = <"What year is it? (synthesised)">
+                description = <" (synthesised)">
+            >
+            ["ac9001"] = <
+                text = <"What month is it? (synthesised)">
+                description = <" (synthesised)">
+            >
+            ["ac9002"] = <
+                text = <"About what time is it? (synthesised)">
+                description = <" (synthesised)">
+            >
+            ["ac9003"] = <
+                text = <"Count backwards from 20 (synthesised)">
+                description = <" (synthesised)">
+            >
+            ["ac9004"] = <
+                text = <"Say the months of the year in reverse (synthesised)">
+                description = <" (synthesised)">
+            >
+            ["ac9005"] = <
+                text = <"Repeat address phrase (synthesised)">
+                description = <" (synthesised)">
+            >
+            ["id33"] = <
+                text = <"Extension">
+                description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
+                comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
+            >
+            ["id29"] = <
+                text = <"Total score">
+                description = <"The total sum of each component parameter for the 6CIT.">
+            >
+            ["at28"] = <
+                text = <"All wrong">
+                description = <"">
+            >
+            ["at27"] = <
+                text = <"4 errors">
+                description = <"">
+            >
+            ["at26"] = <
+                text = <"3 errors">
+                description = <"">
+            >
+            ["at25"] = <
+                text = <"2 errors">
+                description = <"">
+            >
+            ["at24"] = <
+                text = <"1 error">
+                description = <"">
+            >
+            ["at23"] = <
+                text = <"Correct">
+                description = <"">
+            >
+            ["id22"] = <
+                text = <"Repeat address phrase">
+                description = <"">
+            >
+            ["at21"] = <
+                text = <"More than 1 error">
+                description = <"">
+            >
+            ["at20"] = <
+                text = <"1 error">
+                description = <"">
+            >
+            ["at19"] = <
+                text = <"Correct">
+                description = <"">
+            >
+            ["id18"] = <
+                text = <"Say the months of the year in reverse">
+                description = <"">
+            >
+            ["at17"] = <
+                text = <"More than 1 error">
+                description = <"">
+            >
+            ["at16"] = <
+                text = <"1 error">
+                description = <"">
+            >
+            ["at15"] = <
+                text = <"Correct">
+                description = <"">
+            >
+            ["id14"] = <
+                text = <"Count backwards from 20">
+                description = <"">
+            >
+            ["at13"] = <
+                text = <"Incorrect">
+                description = <"">
+            >
+            ["at12"] = <
+                text = <"Correct">
+                description = <"">
+            >
+            ["id11"] = <
+                text = <"About what time is it?">
+                description = <"">
+            >
+            ["at10"] = <
+                text = <"Incorrect">
+                description = <"">
+            >
+            ["at9"] = <
+                text = <"Correct">
+                description = <"">
+            >
+            ["id8"] = <
+                text = <"What month is it?">
+                description = <"">
+            >
+            ["at7"] = <
+                text = <"Incorrect">
+                description = <"">
+            >
+            ["at6"] = <
+                text = <"Correct">
+                description = <"">
+            >
+            ["id5"] = <
+                text = <"What year is it?">
+                description = <"">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
+            >
+            ["id1"] = <
+                text = <"6 Item Cognitive Impairment Test (6CIT)">
+                description = <"An assessment score used to screen for dementia.">
+            >
+        >
+    >
+    value_sets = <
+        ["ac9002"] = <
+            id = <"ac9002">
+            members = <"at12", "at13">
+        >
+        ["ac9001"] = <
+            id = <"ac9001">
+            members = <"at9", "at10">
+        >
+        ["ac9000"] = <
+            id = <"ac9000">
+            members = <"at6", "at7">
+        >
+        ["ac9005"] = <
+            id = <"ac9005">
+            members = <"at23", "at24", "at25", "at26", "at27", "at28">
+        >
+        ["ac9004"] = <
+            id = <"ac9004">
+            members = <"at19", "at20", "at21">
+        >
+        ["ac9003"] = <
+            id = <"ac9003">
+            members = <"at15", "at16", "at17">
+        >
+    >

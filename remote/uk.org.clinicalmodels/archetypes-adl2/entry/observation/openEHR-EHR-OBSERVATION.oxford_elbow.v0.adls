@@ -1,0 +1,721 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=18750850-20ef-48c5-ae7b-11fd56a0e1d7; build_uid=cc4439dc-8164-445f-8cef-fe684b265c0d)
+    openEHR-EHR-OBSERVATION.oxford_elbow.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["name"] = <"Hildegard Franke">
+        ["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+        ["email"] = <"hildi@freshehr.com">
+        ["date"] = <"2017-10-08">
+    >
+    original_namespace = <"uk.org.clinicalmodels">
+    original_publisher = <"Apperta UK">
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"uk.org.clinicalmodels">
+    custodian_organisation = <"Apperta UK">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+    references = <
+        ["1"] = <"https://innovation.ox.ac.uk/outcome-measures/the-oxford-elbow-score-oes/">
+    >
+    other_details = <
+        ["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
+        ["MD5-CAM-1.0.1"] = <"28BFD468452384AFC37B6A3E1EC657F6">
+    >
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"Use to capture and report Oxford Elbow Questionnaire (OSE) score details.">
+            use = <"Use to capture and report Oxford Elbow Questionnaire score.
+    
+    While openEHR archetypes are all freely available under an open license, the specific content of this archetype may be copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners where a copyright exists. 
+    
+    ">
+            misuse = <"Not to be used unless the terms of copyright have been observed (if a copyright exists).">
+            copyright = <"© Clinical Models UK, Apperta Foundation">
+        >
+    >
+
+definition
+    OBSERVATION[id1] matches {    -- Oxford Elbow Questionnaire Score (OSE)
+        data matches {
+            HISTORY[id2] matches {
+                events cardinality matches {1..*; unordered} matches {
+                    POINT_EVENT[id3] occurrences matches {0..1} matches {    -- Point in time
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[id9] occurrences matches {0..1} matches {    -- 1 Lifting
+                                        value matches {
+                                            DV_ORDINAL[id9013] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at110]}],
+                                                    [{1}, {[at10]}],
+                                                    [{2}, {[at11]}],
+                                                    [{3}, {[at12]}],
+                                                    [{4}, {[at13]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id158] occurrences matches {0..1} matches {    -- 2 Carrying bags
+                                        value matches {
+                                            DV_ORDINAL[id9014] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at159]}],
+                                                    [{1}, {[at160]}],
+                                                    [{2}, {[at161]}],
+                                                    [{3}, {[at162]}],
+                                                    [{4}, {[at163]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id164] occurrences matches {0..1} matches {    -- 3 Washing
+                                        value matches {
+                                            DV_ORDINAL[id9015] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at165]}],
+                                                    [{1}, {[at166]}],
+                                                    [{2}, {[at167]}],
+                                                    [{3}, {[at168]}],
+                                                    [{4}, {[at169]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id170] occurrences matches {0..1} matches {    -- 4 Dressing
+                                        value matches {
+                                            DV_ORDINAL[id9016] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at171]}],
+                                                    [{1}, {[at172]}],
+                                                    [{2}, {[at173]}],
+                                                    [{3}, {[at174]}],
+                                                    [{4}, {[at175]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id176] occurrences matches {0..1} matches {    -- 5 Controlling your life
+                                        value matches {
+                                            DV_ORDINAL[id9017] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at177]}],
+                                                    [{1}, {[at178]}],
+                                                    [{2}, {[at179]}],
+                                                    [{3}, {[at180]}],
+                                                    [{4}, {[at181]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id182] occurrences matches {0..1} matches {    -- 6 On your mind
+                                        value matches {
+                                            DV_ORDINAL[id9018] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at183]}],
+                                                    [{1}, {[at184]}],
+                                                    [{2}, {[at185]}],
+                                                    [{3}, {[at186]}],
+                                                    [{4}, {[at187]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id188] occurrences matches {0..1} matches {    -- 7 Pain at night
+                                        value matches {
+                                            DV_ORDINAL[id9019] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at189]}],
+                                                    [{1}, {[at190]}],
+                                                    [{2}, {[at191]}],
+                                                    [{3}, {[at192]}],
+                                                    [{4}, {[at193]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id194] occurrences matches {0..1} matches {    -- 8 Interfered with sleep
+                                        value matches {
+                                            DV_ORDINAL[id9020] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at195]}],
+                                                    [{1}, {[at196]}],
+                                                    [{2}, {[at197]}],
+                                                    [{3}, {[at198]}],
+                                                    [{4}, {[at199]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id200] occurrences matches {0..1} matches {    -- 9 Interfered with work
+                                        value matches {
+                                            DV_ORDINAL[id9021] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at201]}],
+                                                    [{1}, {[at202]}],
+                                                    [{2}, {[at203]}],
+                                                    [{3}, {[at204]}],
+                                                    [{4}, {[at205]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id206] occurrences matches {0..1} matches {    -- 10 Leisure
+                                        value matches {
+                                            DV_ORDINAL[id9022] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at207]}],
+                                                    [{1}, {[at208]}],
+                                                    [{2}, {[at209]}],
+                                                    [{3}, {[at210]}],
+                                                    [{4}, {[at211]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id212] occurrences matches {0..1} matches {    -- 11 Worst pain
+                                        value matches {
+                                            DV_ORDINAL[id9023] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at213]}],
+                                                    [{1}, {[at214]}],
+                                                    [{2}, {[at215]}],
+                                                    [{3}, {[at216]}],
+                                                    [{4}, {[at217]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id218] occurrences matches {0..1} matches {    -- 12 Usual pain
+                                        value matches {
+                                            DV_ORDINAL[id9024] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at219]}],
+                                                    [{1}, {[at220]}],
+                                                    [{2}, {[at221]}],
+                                                    [{3}, {[at222]}],
+                                                    [{4}, {[at223]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id105] occurrences matches {0..1} matches {    -- Total score
+                                        value matches {
+                                            DV_COUNT[id9025] matches {
+                                                magnitude matches {|0..48|}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id106] occurrences matches {0..1} matches {    -- Average score
+                                        value matches {
+                                            DV_COUNT[id9026] matches {
+                                                magnitude matches {|0..100|}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id224] occurrences matches {0..1} matches {    -- Grading
+                                        value matches {
+                                            DV_CODED_TEXT[id9027] matches {
+                                                defining_code matches {[ac9012]}    -- Grading (synthesised)
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id6] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    allow_archetype CLUSTER[id7] occurrences matches {0..1} matches {     -- Extension
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["ac9000"] = <
+                text = <"1 Lifting (synthesised)">
+                description = <"Patient-reported extent of difficulty lifting due to their elbow problem in the last 4 weeks. (synthesised)">
+            >
+            ["ac9001"] = <
+                text = <"2 Carrying bags (synthesised)">
+                description = <"Patient-reported extent of difficulty carrying bags due to their elbow problem in the last 4 weeks. (synthesised)">
+            >
+            ["ac9002"] = <
+                text = <"3 Washing (synthesised)">
+                description = <"Patient-reported extent of difficulty washing due to their elbow problem in the last 4 weeks. (synthesised)">
+            >
+            ["ac9003"] = <
+                text = <"4 Dressing (synthesised)">
+                description = <"Patient-reported extent of difficulty dressing due to their elbow problem in the last 4 weeks. (synthesised)">
+            >
+            ["ac9004"] = <
+                text = <"5 Controlling your life (synthesised)">
+                description = <"Patient-reported extent to which they feel their elbow problem is controlling their life. (synthesised)">
+            >
+            ["ac9005"] = <
+                text = <"6 On your mind (synthesised)">
+                description = <"Patient-reported extent to which they feel their elbow problem is on their mind over the last 4 weeks. (synthesised)">
+            >
+            ["ac9006"] = <
+                text = <"7 Pain at night (synthesised)">
+                description = <"Patient-reported extent to which they feel their elbow problem has troubled them at night over the last 4 weeks. (synthesised)">
+            >
+            ["ac9007"] = <
+                text = <"8 Interfered with sleep (synthesised)">
+                description = <"Patient-reported extent to which they feel their elbow problem has interfered with sleep over the last 4 weeks. (synthesised)">
+            >
+            ["ac9008"] = <
+                text = <"9 Interfered with work (synthesised)">
+                description = <"Patient-reported extent to which they feel their elbow problem has interfered with work over the last 4 weeks. (synthesised)">
+            >
+            ["ac9009"] = <
+                text = <"10 Leisure (synthesised)">
+                description = <"Patient-reported extent to which they feel their elbow problem has limited their ability to take part in leisure activities over the last 4 weeks. (synthesised)">
+            >
+            ["ac9010"] = <
+                text = <"11 Worst pain (synthesised)">
+                description = <"Patient-reported extent to which they feel the worst pain from elbow problem over the last 4 weeks. (synthesised)">
+            >
+            ["ac9011"] = <
+                text = <"12 Usual pain (synthesised)">
+                description = <"Patient-reported extent to which they usually feel pain from elbow problem over the last 4 weeks. (synthesised)">
+            >
+            ["ac9012"] = <
+                text = <"Grading (synthesised)">
+                description = <"Grading system for total score. (synthesised)">
+            >
+            ["at228"] = <
+                text = <"Satisfactory">
+                description = <"May indicate satisfactory joint function.">
+            >
+            ["at227"] = <
+                text = <"Moderate">
+                description = <"May indicate mild to moderate elbow arthritis.">
+            >
+            ["at226"] = <
+                text = <"Moderate to severe">
+                description = <"May indicate moderate to severe elbow arthritis.">
+            >
+            ["at225"] = <
+                text = <"Severe">
+                description = <"May indicate severe elbow arthritis.">
+            >
+            ["id224"] = <
+                text = <"Grading">
+                description = <"Grading system for total score.">
+            >
+            ["at223"] = <
+                text = <"No pain">
+                description = <"The patient found the no pain from their elbow problem during the last 4 weeks.">
+            >
+            ["at222"] = <
+                text = <"Mild pain">
+                description = <"The patient found the usual pain from their elbow problem mild during the last 4 weeks.">
+            >
+            ["at221"] = <
+                text = <"Moderate pain">
+                description = <"The patient found the usual pain from their elbow problem moderate during the last 4 weeks.">
+            >
+            ["at220"] = <
+                text = <"Severe pain">
+                description = <"The patient found the usual pain from their elbow problem severe during the last 4 weeks.">
+            >
+            ["at219"] = <
+                text = <"Unbearable">
+                description = <"The patient found the usual pain from their elbow problem unbearable during the last 4 weeks.">
+            >
+            ["id218"] = <
+                text = <"12 Usual pain">
+                description = <"Patient-reported extent to which they usually feel pain from elbow problem over the last 4 weeks.">
+                comment = <"Questionnaire wording: 
+    
+    How would you describe the pain you usually had from your elbow?">
+            >
+            ["at217"] = <
+                text = <"No pain">
+                description = <"The patient found the no pain from their elbow problem during the last 4 weeks.">
+            >
+            ["at216"] = <
+                text = <"Mild pain">
+                description = <"The patient found the worst pain from their elbow problem mild during the last 4 weeks.">
+            >
+            ["at215"] = <
+                text = <"Moderate pain">
+                description = <"The patient found the worst pain from their elbow problem moderate during the last 4 weeks.">
+            >
+            ["at214"] = <
+                text = <"Severe pain">
+                description = <"The patient found the worst pain from their elbow problem severe during the last 4 weeks.">
+            >
+            ["at213"] = <
+                text = <"Unbearable">
+                description = <"The patient found the worst pain from their elbow problem unbearable during the last 4 weeks.">
+            >
+            ["id212"] = <
+                text = <"11 Worst pain">
+                description = <"Patient-reported extent to which they feel the worst pain from elbow problem over the last 4 weeks.">
+                comment = <"Questionnaire wording: 
+    
+    How would you describe the worst pain you had from your elbow?">
+            >
+            ["at211"] = <
+                text = <"No, not at all">
+                description = <"The patients found their elbow problem had not limited their ability to take part in leisure activities during the last 4 weeks.">
+            >
+            ["at210"] = <
+                text = <"Occasionally">
+                description = <"The patients found their elbow problem had limited their ability to take part in leisure activities occasionally during the last 4 weeks.">
+            >
+            ["at209"] = <
+                text = <"Some days">
+                description = <"The patients found their elbow problem had limited their ability to take part in leisure activities some days during the last 4 weeks.">
+            >
+            ["at208"] = <
+                text = <"Most days">
+                description = <"The patients found their elbow problem had limited their ability to take part in leisure activities most days during the last 4 weeks.">
+            >
+            ["at207"] = <
+                text = <"Every day">
+                description = <"The patients found their elbow problem had limited their ability to take part in leisure activities every day during the last 4 weeks.">
+            >
+            ["id206"] = <
+                text = <"10 Leisure">
+                description = <"Patient-reported extent to which they feel their elbow problem has limited their ability to take part in leisure activities over the last 4 weeks.">
+                comment = <"Questionnaire wording: 
+    
+    Has your elbow problem limited your ability to take part in leisure activities that you enjoy doing?">
+            >
+            ["at205"] = <
+                text = <"No, not at all">
+                description = <"The patients found their elbow problem had not interfered with work during the last 4 weeks.">
+            >
+            ["at204"] = <
+                text = <"A little bit">
+                description = <"The patients found their elbow problem had interfered with work a little bit during the last 4 weeks.">
+            >
+            ["at203"] = <
+                text = <"Moderately">
+                description = <"The patients found their elbow problem had moderately interfered with work during the last 4 weeks.">
+            >
+            ["at202"] = <
+                text = <"Greatly">
+                description = <"The patients found their elbow problem had greatly interfered with work during the last 4 weeks.">
+            >
+            ["at201"] = <
+                text = <"Totally">
+                description = <"The patients found their elbow problem had totally interfered with work during the last 4 weeks.">
+            >
+            ["id200"] = <
+                text = <"9 Interfered with work">
+                description = <"Patient-reported extent to which they feel their elbow problem has interfered with work over the last 4 weeks.">
+                comment = <"Questionnaire wording: 
+    
+    How much has your elbow problem interfered with your usual work or everyday activities?">
+            >
+            ["at199"] = <
+                text = <"No, not at all">
+                description = <"The patients found their elbow problem was not interfering with sleep during the last 4 weeks.">
+            >
+            ["at198"] = <
+                text = <"Occasionally">
+                description = <"The patients found their elbow problem had interfered with sleep occasionally during the last 4 weeks.">
+            >
+            ["at197"] = <
+                text = <"Some days">
+                description = <"The patients found their elbow problem had interfered with sleep some days during the last 4 weeks.">
+            >
+            ["at196"] = <
+                text = <"Most days">
+                description = <"The patients found their elbow problem had interfered with sleep most days during the last 4 weeks.">
+            >
+            ["at195"] = <
+                text = <"Every day">
+                description = <"The patients found their elbow problem had interfered with sleep every day during the last 4 weeks.">
+            >
+            ["id194"] = <
+                text = <"8 Interfered with sleep">
+                description = <"Patient-reported extent to which they feel their elbow problem has interfered with sleep over the last 4 weeks.">
+                comment = <"Questionnaire wording: 
+    
+    How often has your elbow pain interfered with your sleeping?">
+            >
+            ["at193"] = <
+                text = <"No, not at all">
+                description = <"The patients found they were not troubled by elbow problem at night during the last 4 weeks.">
+            >
+            ["at192"] = <
+                text = <"1 or 2 nights">
+                description = <"The patients found they were troubled by elbow problem 1 or 2 nights during the last 4 weeks.">
+            >
+            ["at191"] = <
+                text = <"Some nights">
+                description = <"The patients found they were troubled by elbow problem some nights during the last 4 weeks.">
+            >
+            ["at190"] = <
+                text = <"Most nights">
+                description = <"The patients found they were troubled by elbow problem most nights during the last 4 weeks.">
+            >
+            ["at189"] = <
+                text = <"Every night">
+                description = <"The patients found they were troubled by elbow problem every night during the last 4 weeks.">
+            >
+            ["id188"] = <
+                text = <"7 Pain at night">
+                description = <"Patient-reported extent to which they feel their elbow problem has troubled them at night over the last 4 weeks.">
+                comment = <"Questionnaire wording: 
+    
+    Have you been troubled by pain from your elbow at night?">
+            >
+            ["at187"] = <
+                text = <"No, not at all">
+                description = <"The patients found their elbow problem was not on their mind time during the last 4 weeks.">
+            >
+            ["at186"] = <
+                text = <"A little of the time">
+                description = <"The patients found their elbow problem was on their mind a little of the time during the last 4 weeks.">
+            >
+            ["at185"] = <
+                text = <"Some of the time">
+                description = <"The patients found their elbow problem was on their mind some of the time during the last 4 weeks.">
+            >
+            ["at184"] = <
+                text = <"Most of the time">
+                description = <"The patients found their elbow problem was on their mind most the time during the last 4 weeks.">
+            >
+            ["at183"] = <
+                text = <"All of the time">
+                description = <"The patients found their elbow problem was on their mind all of the time during the last 4 weeks.">
+            >
+            ["id182"] = <
+                text = <"6 On your mind">
+                description = <"Patient-reported extent to which they feel their elbow problem is on their mind over the last 4 weeks.">
+                comment = <"Questionnaire wording: 
+    
+    How much has your elbow problem been \"on your mind\"?">
+            >
+            ["at181"] = <
+                text = <"No, not at all">
+                description = <"The patients found their elbow problem was not controlling their life during the last 4 weeks.">
+            >
+            ["at180"] = <
+                text = <"Occasionally">
+                description = <"The patients found their elbow problem was controlling their life occasionally during the last 4 weeks.">
+            >
+            ["at179"] = <
+                text = <"Some days">
+                description = <"The patients found their elbow problem was controlling their life some days during the last 4 weeks.">
+            >
+            ["at178"] = <
+                text = <"Most days">
+                description = <"The patients found their elbow problem was controlling their life most days during the last 4 weeks.">
+            >
+            ["at177"] = <
+                text = <"Every day">
+                description = <"The patients found their elbow problem was controlling their life every day during the last 4 weeks.">
+            >
+            ["id176"] = <
+                text = <"5 Controlling your life">
+                description = <"Patient-reported extent to which they feel their elbow problem is controlling their life.">
+                comment = <"Questionnaire wording: 
+    
+    Have you felt that your elbow problem is \"controlling your life\"?">
+            >
+            ["at175"] = <
+                text = <"No difficulty">
+                description = <"The patients had no difficulty dressing due to their elbow problem during the last 4 weeks.">
+            >
+            ["at174"] = <
+                text = <"A little bit difficult">
+                description = <"The patients found it a little difficult dressing due to their elbow problem during the last 4 weeks.">
+            >
+            ["at173"] = <
+                text = <"Moderate difficulty">
+                description = <"The patients had moderate difficulty dressing due to their elbow problem during the last 4 weeks.">
+            >
+            ["at172"] = <
+                text = <"Extreme difficulty">
+                description = <"The patients had extreme difficulty dressing due to their elbow problem during the last 4 weeks.">
+            >
+            ["at171"] = <
+                text = <"No, impossible">
+                description = <"The patients found it impossible to dress due to their elbow problem during the last 4 weeks.">
+            >
+            ["id170"] = <
+                text = <"4 Dressing">
+                description = <"Patient-reported extent of difficulty dressing due to their elbow problem in the last 4 weeks.">
+                comment = <"Questionnaire wording: 
+    
+    Have you had any difficulty dressing yourself, because of your elbow problem?">
+            >
+            ["at169"] = <
+                text = <"No difficulty">
+                description = <"The patients had no difficulty washing all over due to their elbow problem during the last 4 weeks.">
+            >
+            ["at168"] = <
+                text = <"A little bit difficult">
+                description = <"The patients found it a little difficult washing all over due to their elbow problem during the last 4 weeks.">
+            >
+            ["at167"] = <
+                text = <"Moderate difficulty">
+                description = <"The patients had moderate difficulty washing all over due to their elbow problem during the last 4 weeks.">
+            >
+            ["at166"] = <
+                text = <"Extreme difficulty">
+                description = <"The patients had extreme difficulty washing all over due to their elbow problem during the last 4 weeks.">
+            >
+            ["at165"] = <
+                text = <"Impossible to do">
+                description = <"The patients found it impossible to wash all over due to their elbow problem during the last 4 weeks.">
+            >
+            ["id164"] = <
+                text = <"3 Washing">
+                description = <"Patient-reported extent of difficulty washing due to their elbow problem in the last 4 weeks.">
+                comment = <"Questionnaire wording: 
+    
+    Have you had any difficulty washing yourself all over, because of our elbow problem?">
+            >
+            ["at163"] = <
+                text = <"No difficulty">
+                description = <"The patients had no difficulty carrying bags of shopping due to their elbow problem during the last 4 weeks.">
+            >
+            ["at162"] = <
+                text = <"A little bit difficult">
+                description = <"The patients found it a little difficult to carry bags of shopping due to their elbow problem during the last 4 weeks.">
+            >
+            ["at161"] = <
+                text = <"Moderate difficulty">
+                description = <"The patients had moderate difficulty carrying bags of shopping due to their elbow problem during the last 4 weeks.">
+            >
+            ["at160"] = <
+                text = <"Extreme difficulty">
+                description = <"The patients had extreme difficulty carrying bags of shopping due to their elbow problem during the last 4 weeks.">
+            >
+            ["at159"] = <
+                text = <"Impossible to do">
+                description = <"The patients found it impossible to carry bags of shopping due to their elbow problem during the last 4 weeks.">
+            >
+            ["id158"] = <
+                text = <"2 Carrying bags">
+                description = <"Patient-reported extent of difficulty carrying bags due to their elbow problem in the last 4 weeks.">
+                comment = <"Questionnaire wording: 
+    
+    Have you had difficulty carrying bags of shopping because of your elbow problem?">
+            >
+            ["at110"] = <
+                text = <"Impossible to do">
+                description = <"The patients found it impossible to lift things in the home due to their elbow problem during the last 4 weeks.">
+            >
+            ["id106"] = <
+                text = <"Average score">
+                description = <"Average score from Questions 1-12.">
+            >
+            ["id105"] = <
+                text = <"Total score">
+                description = <"Total score from Questions 1 to 12.">
+            >
+            ["at13"] = <
+                text = <"No difficulty">
+                description = <"The patients had no difficulty lifting things in the home due to their elbow problem during the last 4 weeks.">
+            >
+            ["at12"] = <
+                text = <"A little bit difficult">
+                description = <"The patients found it a little difficult lifting things in the home due to their elbow problem during the last 4 weeks.">
+            >
+            ["at11"] = <
+                text = <"Moderate difficulty">
+                description = <"The patients had moderate difficulty lifting things in the home due to their elbow problem during the last 4 weeks.">
+            >
+            ["at10"] = <
+                text = <"Extreme difficulty">
+                description = <"The patients had extreme difficulty lifting things in the home due to their elbow problem during the last 4 weeks.">
+            >
+            ["id9"] = <
+                text = <"1 Lifting">
+                description = <"Patient-reported extent of difficulty lifting due to their elbow problem in the last 4 weeks.">
+                comment = <"Questionnaire wording: 
+    
+    Have you had any difficulty lifting things in your home, such as putting out the rubbish, because of your elbow problem?">
+            >
+            ["id7"] = <
+                text = <"Extension">
+                description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+                comment = <"e.g. Local hospital departmental infomation or additional metadata to align with HL7 or CDISC equivalents.">
+            >
+            ["id3"] = <
+                text = <"Point in time">
+                description = <"A specific date and/or time which may be explicitly defined in a template or at run-time.">
+            >
+            ["id1"] = <
+                text = <"Oxford Elbow Questionnaire Score (OSE)">
+                description = <"Oxford Elbow Questionnaire Score.">
+            >
+        >
+    >
+    value_sets = <
+        ["ac9012"] = <
+            id = <"ac9012">
+            members = <"at225", "at226", "at227", "at228">
+        >
+        ["ac9011"] = <
+            id = <"ac9011">
+            members = <"at219", "at220", "at221", "at222", "at223">
+        >
+        ["ac9010"] = <
+            id = <"ac9010">
+            members = <"at213", "at214", "at215", "at216", "at217">
+        >
+        ["ac9009"] = <
+            id = <"ac9009">
+            members = <"at207", "at208", "at209", "at210", "at211">
+        >
+        ["ac9008"] = <
+            id = <"ac9008">
+            members = <"at201", "at202", "at203", "at204", "at205">
+        >
+        ["ac9007"] = <
+            id = <"ac9007">
+            members = <"at195", "at196", "at197", "at198", "at199">
+        >
+        ["ac9002"] = <
+            id = <"ac9002">
+            members = <"at165", "at166", "at167", "at168", "at169">
+        >
+        ["ac9001"] = <
+            id = <"ac9001">
+            members = <"at159", "at160", "at161", "at162", "at163">
+        >
+        ["ac9000"] = <
+            id = <"ac9000">
+            members = <"at110", "at10", "at11", "at12", "at13">
+        >
+        ["ac9006"] = <
+            id = <"ac9006">
+            members = <"at189", "at190", "at191", "at192", "at193">
+        >
+        ["ac9005"] = <
+            id = <"ac9005">
+            members = <"at183", "at184", "at185", "at186", "at187">
+        >
+        ["ac9004"] = <
+            id = <"ac9004">
+            members = <"at177", "at178", "at179", "at180", "at181">
+        >
+        ["ac9003"] = <
+            id = <"ac9003">
+            members = <"at171", "at172", "at173", "at174", "at175">
+        >
+    >

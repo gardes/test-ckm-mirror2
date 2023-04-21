@@ -1,0 +1,107 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=572d005b-9244-4f9c-9af7-48ffd2da3a6e; build_uid=908b6b9d-80de-4633-b3da-013eedac62ec)
+    openEHR-EHR-OBSERVATION.exclusion_pregnancy.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["name"] = <"Heather Leslie">
+        ["organisation"] = <"Atomica Informatics">
+        ["email"] = <"heather.leslie@atomicainformatics.com">
+        ["date"] = <"2020-08-18">
+    >
+    original_namespace = <"org.openehr">
+    original_publisher = <"openEHR Foundation">
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"org.openehr">
+    custodian_organisation = <"openEHR Foundation">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+    other_details = <
+        ["MD5-CAM-1.0.1"] = <"B0C1C43A94047494FFAEE9C66ECD2619">
+    >
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"To record an explicit statement that a pregnancy was not present at a specified point in time or over a period of time.">
+            keywords = <"pregnancy", "exclusion">
+            use = <"Use to record an explicit statement that a pregnancy was not present at a specified point in time or over a period of time.">
+            misuse = <"Not to be used to record details about a known pregnancy.">
+            copyright = <"© openEHR Foundation">
+        >
+    >
+
+definition
+    OBSERVATION[id1] matches {    -- Exclusion of pregnancy
+        data matches {
+            HISTORY[id2] matches {
+                events cardinality matches {0..*; unordered} matches {
+                    EVENT[id3] matches {    -- Any event
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[id7] occurrences matches {0..1} matches {    -- Exclusion statement
+                                        value matches {
+                                            DV_TEXT[id9000] 
+                                        }
+                                    }
+                                    ELEMENT[id8] occurrences matches {0..1} matches {    -- Rationale
+                                        value matches {
+                                            DV_TEXT[id9001] 
+                                        }
+                                    }
+                                    ELEMENT[id9] occurrences matches {0..1} matches {    -- Indefinite
+                                        value matches {
+                                            DV_BOOLEAN[id9002] 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id5] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    allow_archetype CLUSTER[id6] matches {     -- Extension
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["id9"] = <
+                text = <"Indefinite">
+                description = <"Flag to indicate it is not possible for the individual to become pregnant in the future.">
+                comment = <"For example: post hysterectomy.">
+            >
+            ["id8"] = <
+                text = <"Rationale">
+                description = <"Justification, rationale or evidence for excluding a pregnancy.">
+            >
+            ["id7"] = <
+                text = <"Exclusion statement">
+                description = <"An overall statement of exclusion about the state of pregnancy.">
+            >
+            ["id6"] = <
+                text = <"Extension">
+                description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
+                comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"">
+            >
+            ["id1"] = <
+                text = <"Exclusion of pregnancy">
+                description = <"Statement to explicitly record that a pregnancy was not present.">
+            >
+        >
+    >

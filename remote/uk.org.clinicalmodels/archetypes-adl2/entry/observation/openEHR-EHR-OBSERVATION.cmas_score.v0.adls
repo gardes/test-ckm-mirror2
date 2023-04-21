@@ -1,0 +1,762 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=abf8c695-2a92-4346-905a-6a57f4b561b5; build_uid=0003d27f-0970-4a56-9219-52a41f6e31a3)
+    openEHR-EHR-OBSERVATION.cmas_score.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["name"] = <"Hildegard Franke">
+        ["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+        ["email"] = <"hildi@freshehr.com">
+        ["date"] = <"2016-10-13">
+    >
+    original_namespace = <"uk.org.clinicalmodels">
+    original_publisher = <"UK Clinical Models">
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"uk.org.clinicalmodels">
+    custodian_organisation = <"UK Clinical Models">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+    references = <
+        ["1"] = <"IMACS Form 05c: Childhood Myositis Assessment Scale (CMAS) Scoring Sheet, cited 13-Oct-2016 https://www.niehs.nih.gov/research/resources/assets/docs/cmas_508.pdf">
+    >
+    other_details = <
+        ["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
+        ["MD5-CAM-1.0.1"] = <"36091214657271E71BBCE039394AD494">
+    >
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"To record the findings of the Childhood Myositis Assessment Scale for the assessment of muscle function in children with idiopathic inflammatory myopathies.">
+            use = <"To be used for the recording of findings obtained in the Childhood Myositis Assessment Scale.">
+            misuse = <"">
+            copyright = <"© Clinical Models UK">
+        >
+    >
+
+definition
+    OBSERVATION[id1] matches {    -- Childhood Myositis Assessment Scale
+        data matches {
+            HISTORY[id2] matches {
+                events cardinality matches {1..*; unordered} matches {
+                    POINT_EVENT[id3] occurrences matches {0..1} matches {    -- Point in time
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[id5] occurrences matches {0..1} matches {    -- 1.Head lift
+                                        value matches {
+                                            DV_ORDINAL[id9014] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at6]}],
+                                                    [{1}, {[at7]}],
+                                                    [{2}, {[at8]}],
+                                                    [{3}, {[at9]}],
+                                                    [{4}, {[at10]}],
+                                                    [{5}, {[at11]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id12] occurrences matches {0..1} matches {    -- Number of seconds head lift
+                                        value matches {
+                                            DV_COUNT[id9015] matches {
+                                                magnitude matches {|>=0|}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id13] occurrences matches {0..1} matches {    -- 2.Leg raise/touch object
+                                        value matches {
+                                            DV_ORDINAL[id9016] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at14]}],
+                                                    [{1}, {[at15]}],
+                                                    [{2}, {[at16]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id17] occurrences matches {0..1} matches {    -- 3.Straight leg lift
+                                        value matches {
+                                            DV_ORDINAL[id9017] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at18]}],
+                                                    [{1}, {[at19]}],
+                                                    [{2}, {[at20]}],
+                                                    [{3}, {[at21]}],
+                                                    [{4}, {[at22]}],
+                                                    [{5}, {[at23]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id24] occurrences matches {0..1} matches {    -- Number of seconds leg lift
+                                        value matches {
+                                            DV_COUNT[id9018] matches {
+                                                magnitude matches {|>=0|}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id25] occurrences matches {0..1} matches {    -- 4.Supine to prone
+                                        value matches {
+                                            DV_ORDINAL[id9019] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at26]}],
+                                                    [{1}, {[at27]}],
+                                                    [{2}, {[at28]}],
+                                                    [{3}, {[at29]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id30] matches {    -- 5.Sit-ups
+                                        value matches {
+                                            DV_CODED_TEXT[id9020] matches {
+                                                defining_code matches {[ac9004]}    -- 5.Sit-ups (synthesised)
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id40] occurrences matches {0..1} matches {    -- Total sit-up score
+                                        value matches {
+                                            DV_COUNT[id9021] matches {
+                                                magnitude matches {|0..6|}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id41] occurrences matches {0..1} matches {    -- 6.Supine to sit
+                                        value matches {
+                                            DV_ORDINAL[id9022] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at42]}],
+                                                    [{1}, {[at43]}],
+                                                    [{2}, {[at44]}],
+                                                    [{3}, {[at45]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id46] occurrences matches {0..1} matches {    -- 7.Arm raise/straighten
+                                        value matches {
+                                            DV_ORDINAL[id9023] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at47]}],
+                                                    [{1}, {[at48]}],
+                                                    [{2}, {[at49]}],
+                                                    [{3}, {[at50]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id51] occurrences matches {0..1} matches {    -- 8.Arm raise duration
+                                        value matches {
+                                            DV_ORDINAL[id9024] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at52]}],
+                                                    [{1}, {[at53]}],
+                                                    [{2}, {[at54]}],
+                                                    [{3}, {[at55]}],
+                                                    [{4}, {[at56]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id57] occurrences matches {0..1} matches {    -- Number of seconds arm raised
+                                        value matches {
+                                            DV_COUNT[id9025] matches {
+                                                magnitude matches {|>=0|}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id58] occurrences matches {0..1} matches {    -- 9.Floor sit
+                                        value matches {
+                                            DV_ORDINAL[id9026] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at59]}],
+                                                    [{1}, {[at60]}],
+                                                    [{2}, {[at61]}],
+                                                    [{3}, {[at62]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id63] occurrences matches {0..1} matches {    -- 10.All fours maneuver
+                                        value matches {
+                                            DV_ORDINAL[id9027] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at64]}],
+                                                    [{1}, {[at65]}],
+                                                    [{2}, {[at66]}],
+                                                    [{3}, {[at67]}],
+                                                    [{4}, {[at68]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id69] occurrences matches {0..1} matches {    -- 11.Floor rise
+                                        value matches {
+                                            DV_ORDINAL[id9028] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at70]}],
+                                                    [{1}, {[at71]}],
+                                                    [{2}, {[at72]}],
+                                                    [{3}, {[at73]}],
+                                                    [{4}, {[at74]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id75] occurrences matches {0..1} matches {    -- 12.Chair rise
+                                        value matches {
+                                            DV_ORDINAL[id9029] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at76]}],
+                                                    [{1}, {[at77]}],
+                                                    [{2}, {[at78]}],
+                                                    [{3}, {[at79]}],
+                                                    [{4}, {[at80]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id81] occurrences matches {0..1} matches {    -- 13.Stool step
+                                        value matches {
+                                            DV_ORDINAL[id9030] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at82]}],
+                                                    [{1}, {[at83]}],
+                                                    [{2}, {[at84]}],
+                                                    [{3}, {[at85]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id86] occurrences matches {0..1} matches {    -- 14.Pick-up
+                                        value matches {
+                                            DV_ORDINAL[id9031] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at87]}],
+                                                    [{1}, {[at88]}],
+                                                    [{2}, {[at89]}],
+                                                    [{3}, {[at90]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id91] occurrences matches {0..1} matches {    -- Total CMAS score
+                                        value matches {
+                                            DV_COUNT[id9032] matches {
+                                                magnitude matches {|0..52|}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id96] occurrences matches {0..1} matches {    -- Clinical interpretation
+                                        value matches {
+                                            DV_TEXT[id9033] 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[id92] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[id93] matches {    -- Confounding factors
+                                        value matches {
+                                            DV_TEXT[id9034] 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id94] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    allow_archetype CLUSTER[id95] matches {     -- Extension
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["ac9000"] = <
+                text = <"1.Head lift (synthesised)">
+                description = <"Duration of head lift. (synthesised)">
+            >
+            ["ac9001"] = <
+                text = <"2.Leg raise/touch object (synthesised)">
+                description = <"Assessment of leg raise and object touch capabilities. (synthesised)">
+            >
+            ["ac9002"] = <
+                text = <"3.Straight leg lift (synthesised)">
+                description = <"Duration of straight leg lift. (synthesised)">
+            >
+            ["ac9003"] = <
+                text = <"4.Supine to prone (synthesised)">
+                description = <"Assesment of subject's ability to turn from supine to prone. (synthesised)">
+            >
+            ["ac9004"] = <
+                text = <"5.Sit-ups (synthesised)">
+                description = <"Assessment of the subject's ability to do sit-ups. (synthesised)">
+            >
+            ["ac9005"] = <
+                text = <"6.Supine to sit (synthesised)">
+                description = <"Assessment of the subject's ability to sit up from the supine position. (synthesised)">
+            >
+            ["ac9006"] = <
+                text = <"7.Arm raise/straighten (synthesised)">
+                description = <"Assessment of the subject's ability to raise and straighten wrists and arms. (synthesised)">
+            >
+            ["ac9007"] = <
+                text = <"8.Arm raise duration (synthesised)">
+                description = <"Duration of ability to maintain wrists above top of head. (synthesised)">
+            >
+            ["ac9008"] = <
+                text = <"9.Floor sit (synthesised)">
+                description = <"Assessment of the subject's ability to go from a standing position to a sitting position on the floor. (synthesised)">
+            >
+            ["ac9009"] = <
+                text = <"10.All fours maneuver (synthesised)">
+                description = <"Assessment of the subject's ability to perform all fours maneuvers. (synthesised)">
+            >
+            ["ac9010"] = <
+                text = <"11.Floor rise (synthesised)">
+                description = <"Assessment of the subject's ability to going from a kneeling position on the floor to a standing position. (synthesised)">
+            >
+            ["ac9011"] = <
+                text = <"12.Chair rise (synthesised)">
+                description = <"Assessment of the subject's ability to rise up from a chair. (synthesised)">
+            >
+            ["ac9012"] = <
+                text = <"13.Stool step (synthesised)">
+                description = <"Assessment of the subject's ability to step on a stool. (synthesised)">
+            >
+            ["ac9013"] = <
+                text = <"14.Pick-up (synthesised)">
+                description = <"Assessment of the subject's ability to pick up a pencil off the floor. (synthesised)">
+            >
+            ["id96"] = <
+                text = <"Clinical interpretation">
+                description = <"Narrative description of clinical interpretation of assessment.">
+            >
+            ["id95"] = <
+                text = <"Extension">
+                description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+                comment = <"e.g. Local hospital departmental infomation or additional metadata to align with HL7 or CDISC equivalents.">
+            >
+            ["id93"] = <
+                text = <"Confounding factors">
+                description = <"Record any issues or factors that may impact on the assessment and the score.">
+            >
+            ["id91"] = <
+                text = <"Total CMAS score">
+                description = <"The total score for the 14 maneuvers.">
+            >
+            ["at90"] = <
+                text = <"No difficulty">
+                description = <"The subject is able to pick up pencil off floor without any difficulty or compensatory maneuvers.">
+            >
+            ["at89"] = <
+                text = <"Some difficulty">
+                description = <"The subject is able to pick up pencil off floor, but needs to at least minimally and briefly place hand(s) on knees or thighs for support, is somewhat slow.">
+            >
+            ["at88"] = <
+                text = <"Much difficulty">
+                description = <"The subject is able to pick up pencil off floor, but relies heavily on support gained by placing hands on knees or thighs.">
+            >
+            ["at87"] = <
+                text = <"Unable">
+                description = <"The subject is unable to bend over and pick up pencil off floor.">
+            >
+            ["id86"] = <
+                text = <"14.Pick-up">
+                description = <"Assessment of the subject's ability to pick up a pencil off the floor.">
+            >
+            ["at85"] = <
+                text = <"Able">
+                description = <"The subject is able to step on a stool and does not need to use exam table or hand on knee or thigh.">
+            >
+            ["at84"] = <
+                text = <"Some difficulty">
+                description = <"The subject is able to step on a stool and does not need to use exam table for support, but needs to hand on knee or thigh.">
+            >
+            ["at83"] = <
+                text = <"Much difficulty">
+                description = <"The subject is able to step on a stool, but needs to place one hand on exam table or examiner's hand.">
+            >
+            ["at82"] = <
+                text = <"Unable">
+                description = <"The subject is unable to step on a stool.">
+            >
+            ["id81"] = <
+                text = <"13.Stool step">
+                description = <"Assessment of the subject's ability to step on a stool.">
+            >
+            ["at80"] = <
+                text = <"No difficulty">
+                description = <"The subject is able to rise up from chair without any difficulty at all.">
+            >
+            ["at79"] = <
+                text = <"Mild difficulty">
+                description = <"The subject is able to rise up from chair and does not need to place hands on knees, thighs or seat, but has at least some difficulty during ascent.">
+            >
+            ["at78"] = <
+                text = <"Moderate difficulty">
+                description = <"The subject is able to rise up from chair, but needs to place hands on knees or thighs, does not need to place hands on sides of seat.">
+            >
+            ["at77"] = <
+                text = <"Much difficulty">
+                description = <"The subject is able to rise up from chair, but needs to place hands on sides of chair and is unable to rise up from chair if not allowed to place hands on sides of seat.">
+            >
+            ["at76"] = <
+                text = <"Unable">
+                description = <"The subject is unable to rise up from chair, even if allowed to place hands on chair seat.">
+            >
+            ["id75"] = <
+                text = <"12.Chair rise">
+                description = <"Assessment of the subject's ability to rise up from a chair.">
+            >
+            ["at74"] = <
+                text = <"No difficulty">
+                description = <"The subject is able to go from a kneeling position on the floor to a standing position without any difficulty.">
+            >
+            ["at73"] = <
+                text = <"Mild difficulty">
+                description = <"The subject is able to get up and does not need to place hands on knees, thighs or floor, but has at least some difficulty during ascent.">
+            >
+            ["at72"] = <
+                text = <"Moderate difficulty">
+                description = <"The subject is able to get up without using a chair for supports, but needs to place one or both hands on thighs or knees or floor (unable without using hands).">
+            >
+            ["at71"] = <
+                text = <"Much difficulty">
+                description = <"The subject is able to go from a kneeling position on the floor to a standing position but needs to use a chair for support and is unable if not allowed to use a chair.">
+            >
+            ["at70"] = <
+                text = <"Unable">
+                description = <"The subject is unable to go from a kneeling position on the floor to a standing position even if allowed to use a chair for support.">
+            >
+            ["id69"] = <
+                text = <"11.Floor rise">
+                description = <"Assessment of the subject's ability to going from a kneeling position on the floor to a standing position.">
+            >
+            ["at68"] = <
+                text = <"Maintains balance with lift and extend">
+                description = <"The subject is able to maintain balance while lifting and extending one leg.">
+            >
+            ["at67"] = <
+                text = <"Maintain with creep or crawl">
+                description = <"The subject is able to maintain all-fours position, look straight ahead and creep or crawl forward.">
+            >
+            ["at66"] = <
+                text = <"Maintain without ability to creep or crawl">
+                description = <"The subject is able to maintain all-fours position with back straight and head reaised (so as to look straight ahead), but cannot creep or crawl forward.">
+            >
+            ["at65"] = <
+                text = <"Barely able">
+                description = <"The subject is barely able to assume and maintain an all-fours position and is unable to raise head to look straight ahead.">
+            >
+            ["at64"] = <
+                text = <"Unable">
+                description = <"The subject is unable to go from a prone to an all-fours position.">
+            >
+            ["id63"] = <
+                text = <"10.All fours maneuver">
+                description = <"Assessment of the subject's ability to perform all fours maneuvers.">
+            >
+            ["at62"] = <
+                text = <"No difficulty">
+                description = <"The subject is able to go from a standing position to a sitting position on the floor withour requiring any compensatory maneuvering.">
+            >
+            ["at61"] = <
+                text = <"Some difficulty">
+                description = <"The subject is able to go from a standing position to a sitting position on the floor without using a chair for support, but has at least some difficulty during descent. May need Gower's, descends somewhat slowly and apprehensively, may not have full contril or balance as maneuvers into a sit.">
+            >
+            ["at60"] = <
+                text = <"Much difficulty">
+                description = <"The subject is able to go from a standing position to a sitting position on the floor, but needs to hold onto a chair for support during descent. Unable or unwilling to try if not allowed a chair for support.">
+            >
+            ["at59"] = <
+                text = <"Unable">
+                description = <"The subject is unable to go from a standing position to a sitting position on the floor. Afraid to even try, even if allowed a chair for support. Child fears that he or she will collapse, fall into a sit or harm self.">
+            >
+            ["id58"] = <
+                text = <"9.Floor sit">
+                description = <"Assessment of the subject's ability to go from a standing position to a sitting position on the floor.">
+            >
+            ["id57"] = <
+                text = <"Number of seconds arm raised">
+                description = <"The total number of seconds the subject is able to maintain wrists above top of head.">
+            >
+            ["at56"] = <
+                text = <"More than 60 sec">
+                description = <"The subject is able to maintain wrists above top of head for more than 60 seconds.">
+            >
+            ["at55"] = <
+                text = <"30-59 sec">
+                description = <"The subject is able to maintain wrists above top of head for 30 to 59 seconds.">
+            >
+            ["at54"] = <
+                text = <"10-29 sec">
+                description = <"The subject is able to maintain wrists above top of head for 10 to 29 seconds.">
+            >
+            ["at53"] = <
+                text = <"1-9 sec">
+                description = <"The subject is able to maintain wrists above top of head for 1 to 9 seconds.">
+            >
+            ["at52"] = <
+                text = <"Unable">
+                description = <"The subject is unable to maintain wrists above top of head.">
+            >
+            ["id51"] = <
+                text = <"8.Arm raise duration">
+                description = <"Duration of ability to maintain wrists above top of head.">
+            >
+            ["at50"] = <
+                text = <"Elbows in full extension">
+                description = <"The subject is able to raise arms straight above head so that elbows are in full extension.">
+            >
+            ["at49"] = <
+                text = <"Above top of head">
+                description = <"The subject is able to raise wrists above top of head, but cannot raise arm straight above head so that elbows are in full extension.">
+            >
+            ["at48"] = <
+                text = <"Up to A-C joint">
+                description = <"The subject is able to raise wrists at least up to the level of the A-C joint, but not above top of head.">
+            >
+            ["at47"] = <
+                text = <"Unable">
+                description = <"The subject cannot raise wrist up to the level of the A-C joint.">
+            >
+            ["id46"] = <
+                text = <"7.Arm raise/straighten">
+                description = <"Assessment of the subject's ability to raise and straighten wrists and arms.">
+            >
+            ["at45"] = <
+                text = <"No difficulty">
+                description = <"The subject is able to sit up from supine position without any difficulty.">
+            >
+            ["at44"] = <
+                text = <"Able">
+                description = <"The subject is able to sit up from supine position with some difficulty, somewhat slow, struggles some.">
+            >
+            ["at43"] = <
+                text = <"Almost unable">
+                description = <"The subject is able to sit up from supine position with much difficulty, very slow, struggles greatly, barely makes it.">
+            >
+            ["at42"] = <
+                text = <"Unable by self">
+                description = <"The subject is not able to sit up from supine position by himself or herself.">
+            >
+            ["id41"] = <
+                text = <"6.Supine to sit">
+                description = <"Assessment of the subject's ability to sit up from the supine position.">
+            >
+            ["id40"] = <
+                text = <"Total sit-up score">
+                description = <"The total sit-up score calculated from the sum of each sit-up capability achieved, i.e. each achieved capability scores 1 point.">
+            >
+            ["at39"] = <
+                text = <"Hands behind head without counterbalance">
+                description = <"The subject is able to sit up with hands behind the head and without counterbalance.">
+            >
+            ["at38"] = <
+                text = <"Hands across chest without counterbalance">
+                description = <"The subject is able to sit up with hands across the chest and without counterbalance.">
+            >
+            ["at37"] = <
+                text = <"Hands across thighs without counterbalance">
+                description = <"The subject is able to sit up with hands across the thighs and without counterbalance.">
+            >
+            ["at36"] = <
+                text = <"Hands behind head with counterbalance">
+                description = <"The subject is able to sit up with hands behind the head and counterbalance.">
+            >
+            ["at35"] = <
+                text = <"Hands across chest with counterbalance">
+                description = <"The subject is able to sit up with hands across chest and counterbalance.">
+            >
+            ["at34"] = <
+                text = <"Hands on thighs with counterbalance">
+                description = <"The subject is able to sit up with hands on thighs with counterbalance.">
+            >
+            ["id30"] = <
+                text = <"5.Sit-ups">
+                description = <"Assessment of the subject's ability to do sit-ups.">
+                comment = <"Each selected item scores one point.">
+            >
+            ["at29"] = <
+                text = <"Easily">
+                description = <"The subject turns over easily, fully frees right arm with no difficulty.">
+            >
+            ["at28"] = <
+                text = <"Easily with difficulty freeing arm">
+                description = <"The subject turns onto side easily, has some difficulty freeing arm, but fully frees arm and fully assumes a prone position.">
+            >
+            ["at27"] = <
+                text = <"Fairly easily, but unable to free arm">
+                description = <"The subject turns onto side faily easily, but cannot fully free right arm and is unable to fully assume a prone position.">
+            >
+            ["at26"] = <
+                text = <"Unable">
+                description = <"The subject has difficulty even turning on one side, able to pull right arm under torso only slightly or not at all.">
+            >
+            ["id25"] = <
+                text = <"4.Supine to prone">
+                description = <"Assesment of subject's ability to turn from supine to prone.">
+            >
+            ["id24"] = <
+                text = <"Number of seconds leg lift">
+                description = <"The total number of seconds the subject is able to lift his or her leg.">
+            >
+            ["at23"] = <
+                text = <"More than 2 min">
+                description = <"The subject is able to lift his or her leg for more than 2 minutes.">
+            >
+            ["at22"] = <
+                text = <"60-119 sec">
+                description = <"The subject is able to lift his or her leg for 60 to 119 seconds.">
+            >
+            ["at21"] = <
+                text = <"30-59 sec">
+                description = <"The subject is able to lift his or her leg for 30 to 59 seconds.">
+            >
+            ["at20"] = <
+                text = <"10-29 sec">
+                description = <"The subject is able to lift his or her leg for 10 to 29 seconds.">
+            >
+            ["at19"] = <
+                text = <"1-9 sec">
+                description = <"The subject is able to lift his or her leg for 1 to 9 seconds.">
+            >
+            ["at18"] = <
+                text = <"Unable">
+                description = <"The subject is unable to lift his or her leg.">
+            >
+            ["id17"] = <
+                text = <"3.Straight leg lift">
+                description = <"Duration of straight leg lift.">
+            >
+            ["at16"] = <
+                text = <"Able and touch">
+                description = <"The subject is able to lift leg high enough to touch object (examiner's hand).">
+            >
+            ["at15"] = <
+                text = <"Able but no touch">
+                description = <"The subject is able to clear the table but cannot touch object (examiner's hand).">
+            >
+            ["at14"] = <
+                text = <"Unable">
+                description = <"The subject is unable to lift leg off the table.">
+            >
+            ["id13"] = <
+                text = <"2.Leg raise/touch object">
+                description = <"Assessment of leg raise and object touch capabilities.">
+            >
+            ["id12"] = <
+                text = <"Number of seconds head lift">
+                description = <"The total number of seconds the subject is able to lift his or her head.">
+            >
+            ["at11"] = <
+                text = <"More than 2 min">
+                description = <"The subject is able to lift his or her head for more than 2 minutes.">
+            >
+            ["at10"] = <
+                text = <"60-119 sec">
+                description = <"The subject is able to lift his or her head for 60 to 119 seconds.">
+            >
+            ["at9"] = <
+                text = <"30-59 sec">
+                description = <"The subject is able to lift his or her head for 30 to 59 seconds.">
+            >
+            ["at8"] = <
+                text = <"10-29 sec">
+                description = <"The subject is able to lift his or her head for 10 to 29 seconds.">
+            >
+            ["at7"] = <
+                text = <"1-9 sec">
+                description = <"The subject is able to lift his or her head for 1 to 9 seconds.">
+            >
+            ["at6"] = <
+                text = <"Unable">
+                description = <"The subject is unable to lift his or her head.">
+            >
+            ["id5"] = <
+                text = <"1.Head lift">
+                description = <"Duration of head lift.">
+            >
+            ["id3"] = <
+                text = <"Point in time">
+                description = <"A specific date and/or time which may be explicitly defined in a template or at run-time.">
+            >
+            ["id1"] = <
+                text = <"Childhood Myositis Assessment Scale">
+                description = <"The Childhood Myositis Assessment Scale (CMAS).">
+            >
+        >
+    >
+    value_sets = <
+        ["ac9013"] = <
+            id = <"ac9013">
+            members = <"at87", "at88", "at89", "at90">
+        >
+        ["ac9012"] = <
+            id = <"ac9012">
+            members = <"at82", "at83", "at84", "at85">
+        >
+        ["ac9011"] = <
+            id = <"ac9011">
+            members = <"at76", "at77", "at78", "at79", "at80">
+        >
+        ["ac9010"] = <
+            id = <"ac9010">
+            members = <"at70", "at71", "at72", "at73", "at74">
+        >
+        ["ac9009"] = <
+            id = <"ac9009">
+            members = <"at64", "at65", "at66", "at67", "at68">
+        >
+        ["ac9008"] = <
+            id = <"ac9008">
+            members = <"at59", "at60", "at61", "at62">
+        >
+        ["ac9007"] = <
+            id = <"ac9007">
+            members = <"at52", "at53", "at54", "at55", "at56">
+        >
+        ["ac9002"] = <
+            id = <"ac9002">
+            members = <"at18", "at19", "at20", "at21", "at22", "at23">
+        >
+        ["ac9001"] = <
+            id = <"ac9001">
+            members = <"at14", "at15", "at16">
+        >
+        ["ac9000"] = <
+            id = <"ac9000">
+            members = <"at6", "at7", "at8", "at9", "at10", "at11">
+        >
+        ["ac9006"] = <
+            id = <"ac9006">
+            members = <"at47", "at48", "at49", "at50">
+        >
+        ["ac9005"] = <
+            id = <"ac9005">
+            members = <"at42", "at43", "at44", "at45">
+        >
+        ["ac9004"] = <
+            id = <"ac9004">
+            members = <"at34", "at35", "at36", "at37", "at38", "at39">
+        >
+        ["ac9003"] = <
+            id = <"ac9003">
+            members = <"at26", "at27", "at28", "at29">
+        >
+    >

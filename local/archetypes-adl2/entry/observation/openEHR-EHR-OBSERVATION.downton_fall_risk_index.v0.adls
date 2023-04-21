@@ -1,0 +1,292 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=f81715c3-cea2-41e8-b274-a947c2ad5a4c; build_uid=d86231cb-7bf0-4cba-8eb2-251ed544859c)
+    openEHR-EHR-OBSERVATION.downton_fall_risk_index.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["name"] = <"Heather Leslie">
+        ["organisation"] = <"Atomica Informatics">
+        ["email"] = <"heather.leslie@atomicainformatics.com">
+        ["date"] = <"2021-01-18">
+    >
+    original_namespace = <"org.openehr">
+    original_publisher = <"openEHR Foundation">
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"org.openehr">
+    custodian_organisation = <"openEHR Foundation">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+    references = <
+        ["1"] = <"Downton JH, Andrews K. Prevalence, characteristics and factors associated with falls among the elderly living at home. Aging (Milano). 1991 Sep;3(3):219-28. doi: 10.1007/BF03324009. PMID: 1764490.">
+        ["2"] = <"Rosendahl E, Lundin-Olsson L, Kallin K, Jensen J, Gustafson Y, Nyberg L. Prediction of falls among older people in residential care facilities by the Downton index. Aging Clin Exp Res. 2003 Apr;15(2):142-7. doi: 10.1007/BF03324492. PMID: 12889846. Available from: https://www.researchgate.net/publication/6432597_Prediction_of_falls_among_older_people_in_residential_care_facilities_by_the_Downton_index.">
+    >
+    other_details = <
+        ["current_contact"] = <"Heather Leslie, Atomica Informatics, Australia">
+        ["MD5-CAM-1.0.1"] = <"FA498221E455F39C87297B60D44A04B2">
+    >
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"To record the results of the DFRI risk assessment.">
+            keywords = <"Downton Fall Risk Index", "DFRI", "elderly", "fall", "risk", "Senior Alert">
+            use = <"Use to record the results of the DFRI risk assessment.">
+            misuse = <"">
+            copyright = <"© openEHR Foundation">
+        >
+    >
+
+definition
+    OBSERVATION[id1] matches {    -- Downton Fall Risk Index (DFRI)
+        data matches {
+            HISTORY[id2] matches {
+                events cardinality matches {1..*; unordered} matches {
+                    EVENT[id3] occurrences matches {0..1} matches {    -- Any event
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[id5] occurrences matches {0..1} matches {    -- Known previous falls
+                                        value matches {
+                                            DV_ORDINAL[id9005] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at6]}],
+                                                    [{1}, {[at7]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id8] occurrences matches {0..1} matches {    -- Medications
+                                        value matches {
+                                            DV_ORDINAL[id9006] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at9]}],
+                                                    [{1}, {[at10]}],
+                                                    [{1}, {[at11]}],
+                                                    [{1}, {[at12]}],
+                                                    [{1}, {[at13]}],
+                                                    [{1}, {[at14]}],
+                                                    [{0}, {[at15]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id16] occurrences matches {0..1} matches {    -- Sensory deficits
+                                        value matches {
+                                            DV_ORDINAL[id9007] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at17]}],
+                                                    [{1}, {[at18]}],
+                                                    [{1}, {[at19]}],
+                                                    [{1}, {[at20]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id21] occurrences matches {0..1} matches {    -- Mental state
+                                        value matches {
+                                            DV_ORDINAL[id9008] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at22]}],
+                                                    [{1}, {[at23]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id24] occurrences matches {0..1} matches {    -- Ambulation
+                                        value matches {
+                                            DV_ORDINAL[id9009] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at25]}],
+                                                    [{0}, {[at26]}],
+                                                    [{1}, {[at27]}],
+                                                    [{0}, {[at28]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id29] occurrences matches {0..1} matches {    -- Total score
+                                        value matches {
+                                            DV_COUNT[id9010] matches {
+                                                magnitude matches {|0..11|}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id30] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    allow_archetype CLUSTER[id31] matches {     -- Extension
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["ac9000"] = <
+                text = <"Known previous falls (synthesised)">
+                description = <" (synthesised)">
+            >
+            ["ac9001"] = <
+                text = <"Medications (synthesised)">
+                description = <" (synthesised)">
+            >
+            ["ac9002"] = <
+                text = <"Sensory deficits (synthesised)">
+                description = <" (synthesised)">
+            >
+            ["ac9003"] = <
+                text = <"Mental state (synthesised)">
+                description = <" (synthesised)">
+            >
+            ["ac9004"] = <
+                text = <"Ambulation (synthesised)">
+                description = <" (synthesised)">
+            >
+            ["id31"] = <
+                text = <"Extension">
+                description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
+                comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
+            >
+            ["id29"] = <
+                text = <"Total score">
+                description = <"The total sum of each component parameter for the DFRI.">
+            >
+            ["at28"] = <
+                text = <"Unable to walk">
+                description = <"">
+            >
+            ["at27"] = <
+                text = <"Unsafe">
+                description = <"With or without walking aids.">
+            >
+            ["at26"] = <
+                text = <"Safe with walking aids">
+                description = <"">
+            >
+            ["at25"] = <
+                text = <"Normal">
+                description = <"Safe without walking aids.">
+            >
+            ["id24"] = <
+                text = <"Ambulation">
+                description = <"">
+            >
+            ["at23"] = <
+                text = <"Confused (cognitively impaired)">
+                description = <"Cognitively impaired, MMSE score <24/30.">
+            >
+            ["at22"] = <
+                text = <"Oriented">
+                description = <"">
+            >
+            ["id21"] = <
+                text = <"Mental state">
+                description = <"">
+            >
+            ["at20"] = <
+                text = <"Limb impairment">
+                description = <"">
+            >
+            ["at19"] = <
+                text = <"Hearing impairment">
+                description = <"">
+            >
+            ["at18"] = <
+                text = <"Visual impairment">
+                description = <"">
+            >
+            ["at17"] = <
+                text = <"None">
+                description = <"">
+            >
+            ["id16"] = <
+                text = <"Sensory deficits">
+                description = <"">
+            >
+            ["at15"] = <
+                text = <"Other medications">
+                description = <"">
+            >
+            ["at14"] = <
+                text = <"Antidepressants">
+                description = <"">
+            >
+            ["at13"] = <
+                text = <"Antiparkinsonian drugs">
+                description = <"">
+            >
+            ["at12"] = <
+                text = <"Antihypertensives (other than diuretics)">
+                description = <"">
+            >
+            ["at11"] = <
+                text = <"Diuretics">
+                description = <"">
+            >
+            ["at10"] = <
+                text = <"Tranquillisers/sedatives">
+                description = <"">
+            >
+            ["at9"] = <
+                text = <"None">
+                description = <"">
+            >
+            ["id8"] = <
+                text = <"Medications">
+                description = <"">
+            >
+            ["at7"] = <
+                text = <"Yes">
+                description = <"">
+            >
+            ["at6"] = <
+                text = <"No">
+                description = <"">
+            >
+            ["id5"] = <
+                text = <"Known previous falls">
+                description = <"">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
+            >
+            ["id1"] = <
+                text = <"Downton Fall Risk Index (DFRI)">
+                description = <"A validated assessment tool used to identify risk factors for falls.">
+            >
+        >
+    >
+    value_sets = <
+        ["ac9002"] = <
+            id = <"ac9002">
+            members = <"at17", "at18", "at19", "at20">
+        >
+        ["ac9001"] = <
+            id = <"ac9001">
+            members = <"at9", "at10", "at11", "at12", "at13", "at14", "at15">
+        >
+        ["ac9000"] = <
+            id = <"ac9000">
+            members = <"at6", "at7">
+        >
+        ["ac9004"] = <
+            id = <"ac9004">
+            members = <"at25", "at26", "at27", "at28">
+        >
+        ["ac9003"] = <
+            id = <"ac9003">
+            members = <"at22", "at23">
+        >
+    >

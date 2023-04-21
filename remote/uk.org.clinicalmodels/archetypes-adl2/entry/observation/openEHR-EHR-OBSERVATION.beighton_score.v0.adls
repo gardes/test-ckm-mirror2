@@ -1,0 +1,387 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=d927b25c-6074-48f2-90cb-76cad5437682; build_uid=47bf82cf-256d-4958-96b2-f95ace7660e7)
+    openEHR-EHR-OBSERVATION.beighton_score.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["name"] = <"Hildegard Franke">
+        ["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+        ["email"] = <"hildi@freshehr.com">
+        ["date"] = <"2016-10-12">
+    >
+    original_namespace = <"uk.org.clinicalmodels">
+    original_publisher = <"UK Clinical Models">
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"uk.org.clinicalmodels">
+    custodian_organisation = <"UK Clinical Models">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+    other_details = <
+        ["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
+        ["MD5-CAM-1.0.1"] = <"285F96E506C9C4349CCE148658119238">
+    >
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"For recording the details of the Beighton hypermobility score for quantifying joint laxity and hypermobility.">
+            keywords = <"beighton", "hypermobility", "joint laxity", "BHJS">
+            use = <"To be used to record a the Beighton hypermobility score as one of the criteria in diagnosing benign joint hypermobility syndrome.">
+            misuse = <"">
+            copyright = <"© Clinical Models UK">
+        >
+    >
+
+definition
+    OBSERVATION[id1] matches {    -- Beighton hypermobility score
+        data matches {
+            HISTORY[id2] matches {
+                events cardinality matches {1..*; unordered} matches {
+                    POINT_EVENT[id3] occurrences matches {0..1} matches {    -- Point in time
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[id5] occurrences matches {0..1} matches {    -- Left little finger
+                                        value matches {
+                                            DV_ORDINAL[id9009] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at6]}],
+                                                    [{1}, {[at7]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id8] occurrences matches {0..1} matches {    -- Right little finger
+                                        value matches {
+                                            DV_ORDINAL[id9010] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at9]}],
+                                                    [{1}, {[at10]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id15] occurrences matches {0..1} matches {    -- Left thumb
+                                        value matches {
+                                            DV_ORDINAL[id9011] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at16]}],
+                                                    [{1}, {[at17]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id18] occurrences matches {0..1} matches {    -- Right thumb
+                                        value matches {
+                                            DV_ORDINAL[id9012] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at19]}],
+                                                    [{1}, {[at20]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id21] occurrences matches {0..1} matches {    -- Left elbow
+                                        value matches {
+                                            DV_ORDINAL[id9013] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at22]}],
+                                                    [{1}, {[at23]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id24] occurrences matches {0..1} matches {    -- Right elbow
+                                        value matches {
+                                            DV_ORDINAL[id9014] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at25]}],
+                                                    [{1}, {[at26]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id27] occurrences matches {0..1} matches {    -- Left knee
+                                        value matches {
+                                            DV_ORDINAL[id9015] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at28]}],
+                                                    [{1}, {[at29]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id30] occurrences matches {0..1} matches {    -- Right knee
+                                        value matches {
+                                            DV_ORDINAL[id9016] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at34]}],
+                                                    [{1}, {[at35]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id31] occurrences matches {0..1} matches {    -- Trunk
+                                        value matches {
+                                            DV_ORDINAL[id9017] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at32]}],
+                                                    [{1}, {[at33]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id36] occurrences matches {0..1} matches {    -- Total score
+                                        value matches {
+                                            DV_COUNT[id9018] matches {
+                                                magnitude matches {|0..9|}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id37] occurrences matches {0..1} matches {    -- Clinical interpretation
+                                        value matches {
+                                            DV_TEXT[id9019] 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[id11] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[id12] matches {    -- Confounding factors
+                                        value matches {
+                                            DV_TEXT[id9020] 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id13] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    allow_archetype CLUSTER[id14] matches {     -- Extension
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["ac9000"] = <
+                text = <"Left little finger (synthesised)">
+                description = <"Assessment of passive dorsiflexion in the left little (fifth) finger. (synthesised)">
+            >
+            ["ac9001"] = <
+                text = <"Right little finger (synthesised)">
+                description = <"Assessment of passive dorsiflexion in the right little (fifth) finger. (synthesised)">
+            >
+            ["ac9002"] = <
+                text = <"Left thumb (synthesised)">
+                description = <"Assessment of passive dorsiflexion of the left thumb. (synthesised)">
+            >
+            ["ac9003"] = <
+                text = <"Right thumb (synthesised)">
+                description = <"Assessment of passive dorsiflexion of the right thumb. (synthesised)">
+            >
+            ["ac9004"] = <
+                text = <"Left elbow (synthesised)">
+                description = <"Assessment of hyperextension in left elbow. (synthesised)">
+            >
+            ["ac9005"] = <
+                text = <"Right elbow (synthesised)">
+                description = <"Assessment of hyperextension in right elbow. (synthesised)">
+            >
+            ["ac9006"] = <
+                text = <"Left knee (synthesised)">
+                description = <"Assessment of hyperextension in left knee. (synthesised)">
+            >
+            ["ac9007"] = <
+                text = <"Right knee (synthesised)">
+                description = <"Assessment of hyperextension in right knee. (synthesised)">
+            >
+            ["ac9008"] = <
+                text = <"Trunk (synthesised)">
+                description = <"Assessment of forward flexion of trunk with knees fully extended. (synthesised)">
+            >
+            ["id37"] = <
+                text = <"Clinical interpretation">
+                description = <"Narrative interpretation of assessment.">
+            >
+            ["id36"] = <
+                text = <"Total score">
+                description = <"Total score of all 9 elements of Beighton test.">
+            >
+            ["at35"] = <
+                text = <"Beyond 10 degrees">
+                description = <"Hyperextension in left knee is observed to be beyond 10 degrees.">
+            >
+            ["at34"] = <
+                text = <"Less than or equal to 10 degrees">
+                description = <"Hyperextension in right knee is observed to be less than or equal to 10 degrees.">
+            >
+            ["at33"] = <
+                text = <"Resting flat">
+                description = <"Palms and hands are observed to rest flat on the floor.">
+            >
+            ["at32"] = <
+                text = <"Not resting flat">
+                description = <"Palms and hands are observed to not rest flat on the floor.">
+            >
+            ["id31"] = <
+                text = <"Trunk">
+                description = <"Assessment of forward flexion of trunk with knees fully extended.">
+            >
+            ["id30"] = <
+                text = <"Right knee">
+                description = <"Assessment of hyperextension in right knee.">
+            >
+            ["at29"] = <
+                text = <"Beyond 10 degrees">
+                description = <"Hyperextension in left knee is observed to be beyond 10 degrees.">
+            >
+            ["at28"] = <
+                text = <"Less than or equal to 10 degrees">
+                description = <"Hyperextension in left knee is observed to be less than or equal to 10 degrees.">
+            >
+            ["id27"] = <
+                text = <"Left knee">
+                description = <"Assessment of hyperextension in left knee.">
+            >
+            ["at26"] = <
+                text = <"Beyond 10 degrees">
+                description = <"Hyperextension in right elbow is observed to be beyond 10 degrees.">
+            >
+            ["at25"] = <
+                text = <"Less than or equal to 10 degrees">
+                description = <"Hyperextension in right elbow is observed to be less than or equal to 10 degrees.">
+            >
+            ["id24"] = <
+                text = <"Right elbow">
+                description = <"Assessment of hyperextension in right elbow.">
+            >
+            ["at23"] = <
+                text = <"Beyond 10 degrees">
+                description = <"Hyperextension in left elbow is observed to be beyond 10 degrees.">
+            >
+            ["at22"] = <
+                text = <"Less than or equal to 10 degrees">
+                description = <"Hyperextension in left elbow is observed to be less than or equal to 10 degrees.">
+            >
+            ["id21"] = <
+                text = <"Left elbow">
+                description = <"Assessment of hyperextension in left elbow.">
+            >
+            ["at20"] = <
+                text = <"Passive dorsiflexion to flexor">
+                description = <"Passive dorsiflexion in right thumb is observed to be to the flexor aspect of the forearm.">
+            >
+            ["at19"] = <
+                text = <"No passive dorsiflexion to flexor">
+                description = <"Passive dorsiflexion in right thumb is not observed to be to the flexor aspect of the forearm.">
+            >
+            ["id18"] = <
+                text = <"Right thumb">
+                description = <"Assessment of passive dorsiflexion of the right thumb.">
+            >
+            ["at17"] = <
+                text = <"Passive dorsiflexion to flexor">
+                description = <"Passive dorsiflexion in left thumb is observed to be to the flexor aspect of the forearm.">
+            >
+            ["at16"] = <
+                text = <"No passive dorsiflexion to flexor">
+                description = <"Passive dorsiflexion in left thumb is not observed to be to the flexor aspect of the forearm.">
+            >
+            ["id15"] = <
+                text = <"Left thumb">
+                description = <"Assessment of passive dorsiflexion of the left thumb.">
+            >
+            ["id14"] = <
+                text = <"Extension">
+                description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+                comment = <"e.g. Local hospital departmental infomation or additional metadata to align with HL7 or CDISC equivalents.">
+            >
+            ["id12"] = <
+                text = <"Confounding factors">
+                description = <"Narrative record of any issues or factors that may have contributed to the Beighton score.">
+            >
+            ["at10"] = <
+                text = <"Beyond 90 degrees">
+                description = <"Passive dorsiflexion in the right little finger is beyond 90 degrees.">
+            >
+            ["at9"] = <
+                text = <"Less than or equal to 90 degrees">
+                description = <"Passive dorsiflexion in the right little finger is less than or equal to 90 degrees.">
+            >
+            ["id8"] = <
+                text = <"Right little finger">
+                description = <"Assessment of passive dorsiflexion in the right little (fifth) finger.">
+            >
+            ["at7"] = <
+                text = <"Beyond 90 degrees">
+                description = <"Passive dorsiflexion in the left little finger is beyond 90 degrees.">
+            >
+            ["at6"] = <
+                text = <"Less than or equal to 90 degrees">
+                description = <"Passive dorsiflexion in the left little finger is less than or equal to 90 degrees.">
+            >
+            ["id5"] = <
+                text = <"Left little finger">
+                description = <"Assessment of passive dorsiflexion in the left little (fifth) finger.">
+            >
+            ["id3"] = <
+                text = <"Point in time">
+                description = <"A specific date and/or time which may be explicitly defined in a template or at run-time.">
+            >
+            ["id1"] = <
+                text = <"Beighton hypermobility score">
+                description = <"The Beighton hypermobility score for quantifying joint laxity and hypermobility.">
+            >
+        >
+    >
+    value_sets = <
+        ["ac9002"] = <
+            id = <"ac9002">
+            members = <"at16", "at17">
+        >
+        ["ac9001"] = <
+            id = <"ac9001">
+            members = <"at9", "at10">
+        >
+        ["ac9000"] = <
+            id = <"ac9000">
+            members = <"at6", "at7">
+        >
+        ["ac9006"] = <
+            id = <"ac9006">
+            members = <"at28", "at29">
+        >
+        ["ac9005"] = <
+            id = <"ac9005">
+            members = <"at25", "at26">
+        >
+        ["ac9004"] = <
+            id = <"ac9004">
+            members = <"at22", "at23">
+        >
+        ["ac9003"] = <
+            id = <"ac9003">
+            members = <"at19", "at20">
+        >
+        ["ac9008"] = <
+            id = <"ac9008">
+            members = <"at32", "at33">
+        >
+        ["ac9007"] = <
+            id = <"ac9007">
+            members = <"at34", "at35">
+        >
+    >

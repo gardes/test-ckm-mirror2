@@ -1,0 +1,376 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=7aaa9b2d-0785-4de6-b145-562625975172; build_uid=2f9abbf9-29af-4eb0-9646-15ff595345b1)
+    openEHR-EHR-OBSERVATION.alcohol_use.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["de"] = <
+            language = <[ISO_639-1::de]>
+            author = <
+                ["name"] = <"Martha Ocean">
+                ["organisation"] = <"Ocean Infodsåæâß">
+                ["email"] = <"sebastian.garde@oceaninformatics.com">
+            >
+        >
+    >
+
+description
+    original_author = <
+        ["name"] = <"Heather Leslie">
+        ["organisation"] = <"Ocean Informatics">
+        ["email"] = <"heather.leslie@oceaninformatics.com">
+        ["date"] = <"2011-07-15">
+    >
+    original_namespace = <"org.openehr">
+    original_publisher = <"openEHR Foundation">
+    other_contributors = <"Rita Apelt, Department of Health,NT, Australia", "Stephen Chu, NEHTA, Australia", "Tim Garden, NTG Department of Health, Australia", "Sam Heard, Ocean Informatics, Australia (Editor)", "Heather Leslie, Ocean Informatics, Australia (Editor)", "Ian McNicoll, Ocean Informatics UK, United Kingdom", "Jeremy Oats, NT Health, Australia", "Jo Wright, NT Dept of Health, Australia (Editor)">
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"org.openehr">
+    custodian_organisation = <"openEHR Foundation">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+    references = <
+        ["1"] = <"openEHR Clinical Knowledge Manager [Internet]. London: openEHR Foundation. [Draft OBSERVATION archetype] Alcohol Consumption; [authored 2009 May 06, cited 2011 Jul 15]. Available from: http://www.openehr.org/knowledge/OKM.html#showArchetype_1013.1.146_3.">
+    >
+    other_details = <
+        ["MD5-CAM-1.0.1"] = <"5AF23CB138F1FC52812727FB4FF2EE61">
+    >
+    details = <
+        ["de"] = <
+            language = <[ISO_639-1::de]>
+            purpose = <"ädöüßQewe€xxc">
+            use = <"*Use to record details of the use of all forms of alcohol, including actual consumption and behaviour at a specific point in time and average consumption over intervals of time. 
+    
+    An alcohol consumption diary could be built up over time by recording the consumption of alcohol on multiple, sequential days - recording actual consumptions using the 'Specified Day' event for each daily entry.
+    
+    A record of typical alcohol use during a period can be recorded by recording the amount of alcohol consumed using the 'Average use' event - the mean use over a specified period of time.
+    
+    Data that might be used to assess the risk of alcohol abuse or dependence will be recorded using two archetypes: this OBSERVATION archetype (recording the repeatable observations/measurements) and in the EVALUATION.alcohol_use_summary archetype (recording the summary and persisting data).
+    
+    Binge drinking is not directly referred to in this archetype, yet this archetype will be a key resource used to support the identification of binge drinking through the accurate recording of the amount and frequency of drinking, triggers and social/cultureal context of consumption. The assessment of 'binge drinking' may be recorded as part of a 'Problem List'.(en)">
+            misuse = <"*Not to be used for recording persistent, summary details about alcohol consumption - this should be captured using the EVALUATION.alcohol_use_summary archetype.
+    
+    Not to be used to record information about consumption of other substances other than alcohol.(en)">
+            copyright = <"© openEHR Foundation">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"To record details about the actual consumption of alcohol and related behaviour.">
+            keywords = <"alcohol", "beer", "wine", "spirits", "fortified", "consumption", "use", "abuse", "binge">
+            use = <"Use to record details of the use of all forms of alcohol, including actual consumption and behaviour at a specific point in time and average consumption over intervals of time. 
+    
+    An alcohol consumption diary could be built up over time by recording the consumption of alcohol on multiple, sequential days - recording actual consumptions using the 'Specified Day' event for each daily entry.
+    
+    A record of typical alcohol use during a period can be recorded by recording the amount of alcohol consumed using the 'Average use' event - the mean use over a specified period of time.
+    
+    Data that might be used to assess the risk of alcohol abuse or dependence will be recorded using two archetypes: this OBSERVATION archetype (recording the repeatable observations/measurements)  and in the EVALUATION.alcohol_use_summary archetype (recording the summary and persisting data).
+    
+    Binge drinking is not directly referred to in this archetype, yet this archetype will be a key resource used to support the identification of binge drinking through the accurate recording of the amount and frequency of drinking, triggers and social/cultureal context of consumption. The assessment of 'binge drinking' may be recorded as part of a 'Problem List'.">
+            misuse = <"Not to be used for recording persistent, summary details about alcohol consumption - this should be captured using the EVALUATION.alcohol_use_summary archetype.
+    
+    Not to be used to record information about consumption of other substances other than alcohol.">
+            copyright = <"© openEHR Foundation">
+        >
+    >
+
+definition
+    OBSERVATION[id1] matches {    -- Alcohol Use
+        data matches {
+            HISTORY[id2] matches {
+                events cardinality matches {1..*; unordered} matches {
+                    EVENT[id3] occurrences matches {0..1} matches {    -- Any event
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    CLUSTER[id6] matches {    -- Consumption Details
+                                        items cardinality matches {1..*; unordered} matches {
+                                            ELEMENT[id7] occurrences matches {0..1} matches {    -- Form
+                                                value matches {
+                                                    DV_TEXT[id9004] 
+                                                }
+                                            }
+                                            CLUSTER[id16] occurrences matches {0..1} matches {    -- Amount
+                                                items cardinality matches {1; unordered} matches {
+                                                    ELEMENT[id15] matches {    -- Standard Drinks
+                                                        value matches {
+                                                            DV_QUANTITY[id9005] matches {
+                                                                property matches {[at9000]}    -- Frequency
+                                                                [units] matches {
+                                                                    [{"/h"}],
+                                                                    [{"/d"}],
+                                                                    [{"/wk"}],
+                                                                    [{"/mo"}]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    ELEMENT[id17] matches {    -- Grams Consumed
+                                                        value matches {
+                                                            DV_QUANTITY[id9006] matches {
+                                                                property matches {[at9001]}    -- Flow rate, mass
+                                                                [units] matches {
+                                                                    [{"gm/d"}],
+                                                                    [{"gm/wk"}]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id18] occurrences matches {0..1} matches {    -- Triggers
+                                                value matches {
+                                                    DV_TEXT[id9007] 
+                                                }
+                                            }
+                                            ELEMENT[id19] occurrences matches {0..1} matches {    -- Context
+                                                value matches {
+                                                    DV_TEXT[id9008] 
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id20] occurrences matches {0..1} matches {    -- Behavioural Issues
+                                        value matches {
+                                            DV_TEXT[id9009] 
+                                        }
+                                    }
+                                    allow_archetype CLUSTER[id28] matches {     -- Readiness for Change
+                                        include
+                                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.change(-[a-zA-Z0-9_]+)*\.v1\..*/}
+                                    }
+                                    ELEMENT[id22] occurrences matches {0..1} matches {    -- Comment
+                                        value matches {
+                                            DV_TEXT[id9010] 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    POINT_EVENT[id24] matches {    -- Specified Day
+                        data matches {
+                            use_node ITEM_TREE[id9011] /data[id2]/events[id3]/data[id4]
+                        }
+                    }
+                    INTERVAL_EVENT[id23] matches {    -- Average Consumption Interval
+                        math_function matches {
+                            DV_CODED_TEXT[id9012] matches {
+                                defining_code matches {[at9002]}    -- mean
+                            }
+                        }
+                        data matches {
+                            use_node ITEM_TREE[id9013] /data[id2]/events[id3]/data[id4]
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id25] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    ELEMENT[id26] occurrences matches {0..1} matches {    -- Standard Drink Definition
+                        value matches {
+                            DV_QUANTITY[id9014] matches {
+                                property matches {[at9003]}    -- Mass
+                                units matches {"gm"}
+                            }
+                        }
+                    }
+                    ELEMENT[id27] occurrences matches {0..1} matches {    -- Average Use Frequency
+                        value matches {
+                            DV_QUANTITY[id9015] matches {
+                                property matches {[at9000]}    -- Frequency
+                                [units] matches {
+                                    [{"/d"}],
+                                    [{"/wk"}],
+                                    [{"/mo"}]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["de"] = <
+            ["at9003"] = <
+                text = <"* Mass (en)">
+                description = <"* Mass (en)">
+            >
+            ["at9002"] = <
+                text = <"* mean (en)">
+                description = <"* mean (en)">
+            >
+            ["at9001"] = <
+                text = <"* Flow rate, mass (en)">
+                description = <"* Flow rate, mass (en)">
+            >
+            ["at9000"] = <
+                text = <"* Frequency (en)">
+                description = <"* Frequency (en)">
+            >
+            ["id28"] = <
+                text = <"*Readiness for Change(en)">
+                description = <"*Details about readiness to change use or consumption of alcohol.(en)">
+            >
+            ["id27"] = <
+                text = <"*Average Use Frequency(en)">
+                description = <"*Frequency of 'Average Use' per time interval.(en)">
+            >
+            ["id26"] = <
+                text = <"*Standard Drink Definition(en)">
+                description = <"*Amount of alcohol defining a standard drink.(en)">
+            >
+            ["id24"] = <
+                text = <"*Specified Day(en)">
+                description = <"*Actual alcohol consumption on a specified day. Supports recording consumption in a Alcohol Diary.(en)">
+            >
+            ["id23"] = <
+                text = <"*Average Consumption Interval(en)">
+                description = <"*Average, or typical, consumption over a specified time interval. For example, allows recording of average number of standard drinks consumed per week for the previous 10 years.(en)">
+            >
+            ["id22"] = <
+                text = <"*Comment(en)">
+                description = <"*Additional narrative about the alcohol consumption not captured in other fields.(en)">
+            >
+            ["id20"] = <
+                text = <"*Behavioural Issues(en)">
+                description = <"*Narrative description of any behavioural issues that may indicate alcohol abuse or dependence.(en)">
+            >
+            ["id19"] = <
+                text = <"w">
+                description = <"rfew">
+            >
+            ["id18"] = <
+                text = <"*Triggers(en)">
+                description = <"*Identified triggers which stimulate or cause consumption of this form of alcohol.(en)">
+            >
+            ["id17"] = <
+                text = <"*Grams Consumed(en)">
+                description = <"*Grams of alcohol consumed.(en)">
+            >
+            ["id16"] = <
+                text = <"*Amount(en)">
+                description = <"*Amount of alcohol consumed.(en)">
+            >
+            ["id15"] = <
+                text = <"*Standard Drinks(en)">
+                description = <"*Number of standard drinks of alcohol consumed.(en)">
+            >
+            ["id7"] = <
+                text = <"*Form(en)">
+                description = <"*Form of alcohol consumed.(en)">
+            >
+            ["id6"] = <
+                text = <"*Consumption Details(en)">
+                description = <"*Details about the consumption of specific forms of alcohol.(en)">
+            >
+            ["id3"] = <
+                text = <"*Any event(en)">
+                description = <"*An unspecified event.(en)">
+            >
+            ["id1"] = <
+                text = <"*Alcohol Use(en)">
+                description = <"*Details about use of all forms of alcohol at a specified point in time or over a specified period of time.(en)">
+            >
+        >
+        ["en"] = <
+            ["at9003"] = <
+                text = <"Mass">
+                description = <"Mass">
+            >
+            ["at9002"] = <
+                text = <"mean">
+                description = <"mean">
+            >
+            ["at9001"] = <
+                text = <"Flow rate, mass">
+                description = <"Flow rate, mass">
+            >
+            ["at9000"] = <
+                text = <"Frequency">
+                description = <"Frequency">
+            >
+            ["id28"] = <
+                text = <"Readiness for Change">
+                description = <"Details about readiness to change use or consumption of alcohol.">
+            >
+            ["id27"] = <
+                text = <"Average Use Frequency">
+                description = <"Frequency of 'Average Use' per time interval.">
+                comment = <"Typical use: to support the assessment of binge drinking. This is done by recording the typical consumption of alcohol per day using the 'Standard Drinks' data element within the 'Average Use Interval' event - for example, 8 standard drinks per day. Additional use of this 'Average Use Frequency' data element allows recording of the number of days per time interval that the patient is consuming, for example an average of 8 standard drinks on 3 days/week.">
+            >
+            ["id26"] = <
+                text = <"Standard Drink Definition">
+                description = <"Amount of alcohol defining a standard drink.">
+            >
+            ["id24"] = <
+                text = <"Specified Day">
+                description = <"Actual alcohol consumption on a specified day. Supports recording consumption in a Alcohol Diary.">
+            >
+            ["id23"] = <
+                text = <"Average Consumption Interval">
+                description = <"Average, or typical, consumption over a specified time interval. For example, allows recording of average number of standard drinks consumed per week for the previous 10 years.">
+            >
+            ["id22"] = <
+                text = <"Comment">
+                description = <"Additional narrative about the alcohol consumption not captured in other fields.">
+            >
+            ["id20"] = <
+                text = <"Behavioural Issues">
+                description = <"Narrative description of any  behavioural issues that may indicate  alcohol abuse or dependence.">
+                comment = <"For example: binge drinking; neglecting responsibilities; legal problems or relationship issues related to drinking behaviour; drinking in inappropriate or dangerous situations; or needing a drink in the morning to steady 'the nerves'.">
+            >
+            ["id19"] = <
+                text = <"Context">
+                description = <"Description about the social or cultural context that contributed to the consumption of this form of alcohol.">
+                comment = <"For example, when at a party or with a meal.">
+            >
+            ["id18"] = <
+                text = <"Triggers">
+                description = <"Identified triggers which stimulate or cause consumption of this form of alcohol.">
+                comment = <"For example, relationship issues or work stress.">
+            >
+            ["id17"] = <
+                text = <"Grams Consumed">
+                description = <"Grams of alcohol consumed.">
+            >
+            ["id16"] = <
+                text = <"Amount">
+                description = <"Amount of alcohol consumed.">
+                comment = <"Only one option allowed - either number or standard drinks or weight consumed - per form of alcohol.">
+            >
+            ["id15"] = <
+                text = <"Standard Drinks">
+                description = <"Number of standard drinks of alcohol consumed.">
+                comment = <"Optional definition of a standard drink is available in the Protocol, as this varies internationally.">
+            >
+            ["id7"] = <
+                text = <"Form">
+                description = <"Form of alcohol consumed.">
+                comment = <"Coding of the form of alcohol with a terminology is desirable, where possible.">
+            >
+            ["id6"] = <
+                text = <"Consumption Details">
+                description = <"Details about the consumption of specific forms of alcohol.">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"An unspecified event.">
+            >
+            ["id1"] = <
+                text = <"Alcohol Use">
+                description = <"Details about use of all forms of alcohol at a specified point in time or over a specified period of time.">
+            >
+        >
+    >
+    term_bindings = <
+        ["openehr"] = <
+            ["at9003"] = <http://openehr.org/id/124>
+            ["at9002"] = <http://openehr.org/id/146>
+            ["at9001"] = <http://openehr.org/id/347>
+            ["at9000"] = <http://openehr.org/id/382>
+        >
+    >

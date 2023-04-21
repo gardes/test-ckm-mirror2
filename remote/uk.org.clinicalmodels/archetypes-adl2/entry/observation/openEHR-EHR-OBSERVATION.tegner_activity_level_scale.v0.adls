@@ -1,0 +1,275 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=a0cd7906-3d18-4cb0-8c7a-9218dfd6de09; build_uid=af07879d-cf9d-4725-b62d-4d6afa293b75)
+    openEHR-EHR-OBSERVATION.tegner_activity_level_scale.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["name"] = <"Alan Fish">
+        ["organisation"] = <"The Apperta Foundation CIC">
+        ["email"] = <"alan.fish@apperta.org">
+        ["date"] = <"2019-07-18">
+    >
+    original_namespace = <"uk.org.clinicalmodels">
+    original_publisher = <"Apperta UK">
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"uk.org.clinicalmodels">
+    custodian_organisation = <"Apperta UK">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+    other_details = <
+        ["MD5-CAM-1.0.1"] = <"8CA3C57E61E984DE0B7FF2DDA8D227A3">
+    >
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"For the recording and reporting of patient-reported outcome information following knee operations.">
+            keywords = <"Outcome, knee, questionnaire", ...>
+            use = <"Used tor record patient-reported outcome information following knee operations.
+    While openEHR archetypes are all freely available under an open license, the specific content of this archetype may be copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners where a copyright exists. ">
+            misuse = <"Not to be used unless the terms of copyright have been observed (if a copyright exists).">
+            copyright = <"© Apperta Foundation">
+        >
+    >
+
+definition
+    OBSERVATION[id1] matches {    -- Tegner Activity Level Scale
+        data matches {
+            HISTORY[id2] matches {    -- History
+                events cardinality matches {0..*; unordered} matches {
+                    POINT_EVENT[id3] occurrences matches {1..*} matches {    -- Point in time
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[id29] occurrences matches {0..1} matches {    -- Before Level
+                                        value matches {
+                                            DV_ORDINAL[id9002] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at31]}],
+                                                    [{1}, {[at30]}],
+                                                    [{2}, {[at32]}],
+                                                    [{3}, {[at33]}],
+                                                    [{4}, {[at34]}],
+                                                    [{5}, {[at35]}],
+                                                    [{6}, {[at36]}],
+                                                    [{7}, {[at37]}],
+                                                    [{8}, {[at38]}],
+                                                    [{9}, {[at39]}],
+                                                    [{10}, {[at40]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id41] occurrences matches {0..1} matches {    -- Current Level
+                                        value matches {
+                                            DV_ORDINAL[id9003] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at42]}],
+                                                    [{1}, {[at43]}],
+                                                    [{2}, {[at44]}],
+                                                    [{3}, {[at45]}],
+                                                    [{4}, {[at46]}],
+                                                    [{5}, {[at47]}],
+                                                    [{6}, {[at48]}],
+                                                    [{7}, {[at49]}],
+                                                    [{8}, {[at50]}],
+                                                    [{9}, {[at51]}],
+                                                    [{10}, {[at52]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id20] occurrences matches {0..1} matches {    -- Any other operations on operated knee?
+                                        value matches {
+                                            DV_BOOLEAN[id9004] 
+                                        }
+                                    }
+                                    ELEMENT[id27] occurrences matches {0..1} matches {    -- Details
+                                        value matches {
+                                            DV_TEXT[id9005] 
+                                        }
+                                    }
+                                    ELEMENT[id53] occurrences matches {0..1} matches {    -- Date of surgery
+                                        value matches {
+                                            DV_DATE_TIME[id9006] 
+                                        }
+                                    }
+                                    ELEMENT[id54] occurrences matches {0..1} matches {    -- Who performed surgery?
+                                        value matches {
+                                            DV_TEXT[id9007] 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id6] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    allow_archetype CLUSTER[id7] occurrences matches {0..1}
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["ac9000"] = <
+                text = <"Before Level (synthesised)">
+                description = <"Patient described level of the highest level of activity before injury. (synthesised)">
+            >
+            ["ac9001"] = <
+                text = <"Current Level (synthesised)">
+                description = <"Patient described level of the highest level of activity currently. (synthesised)">
+            >
+            ["id54"] = <
+                text = <"Who performed surgery?">
+                description = <"Details of who performed the surgery.">
+                comment = <"Who performed the surgery?">
+            >
+            ["id53"] = <
+                text = <"Date of surgery">
+                description = <"Details of surgery date.">
+                comment = <"When was the surgery performed? ">
+            >
+            ["at52"] = <
+                text = <"Level 10">
+                description = <"Competitive sports- soccer, football, rugby (national elite).">
+            >
+            ["at51"] = <
+                text = <"Level 9">
+                description = <"Competitive sports- soccer, football, rugby (lower divisions), ice hockey, wrestling, gymnastics, basketball.">
+            >
+            ["at50"] = <
+                text = <"Level 8">
+                description = <"Competitive sports- racquetball or bandy, squash or badminton, track and field athletics (jumping, etc.), down-hill skiing.">
+            >
+            ["at49"] = <
+                text = <"Level 7">
+                description = <"Competitive sports- tennis, running, motorcars speedway, handball.  Recreational sports- soccer, football, rugby, bandy, ice hockey, basketball, squash, racquetball, running.">
+            >
+            ["at48"] = <
+                text = <"Level 6">
+                description = <"Recreational sports- tennis and badminton, handball, racquetball, down-hill skiing, jogging at least 5 times per week.">
+            >
+            ["at47"] = <
+                text = <"Level 5">
+                description = <"Work- heavy labour (construction, etc.) Competitive sports- cycling, cross-country skiing. Recreational sports- jogging on uneven ground at least twice weekly.">
+            >
+            ["at46"] = <
+                text = <"Level 4">
+                description = <"Work- moderately heavy labour (e.g. truck driving, etc.).">
+            >
+            ["at45"] = <
+                text = <"Level 3">
+                description = <"Work- light labour (nursing, etc.).">
+            >
+            ["at44"] = <
+                text = <"Level 2">
+                description = <"Work- light labour. Walking on uneven ground possible, but impossible to back pack or hike.">
+            >
+            ["at43"] = <
+                text = <"Level 1">
+                description = <"Work- sedentary (secretarial, etc.).">
+            >
+            ["at42"] = <
+                text = <"Level 0">
+                description = <"Sick leave or disability pension because of knee problems.">
+            >
+            ["id41"] = <
+                text = <"Current Level">
+                description = <"Patient described level of the highest level of activity currently.">
+                comment = <"Question:
+    Please indicate in the spaces below the HIGHEST level of activity that you participated in BEFORE YOUR INJURY and the highest level you are able to participate in CURRENTLY.">
+            >
+            ["at40"] = <
+                text = <"Level 10">
+                description = <"Competitive sports- soccer, football, rugby (national elite).">
+            >
+            ["at39"] = <
+                text = <"Level 9">
+                description = <"Competitive sports- soccer, football, rugby (lower divisions), ice hockey, wrestling, gymnastics, basketball.">
+            >
+            ["at38"] = <
+                text = <"Level 8">
+                description = <"Competitive sports- racquetball or bandy, squash or badminton, track and field athletics (jumping, etc.), down-hill skiing.">
+            >
+            ["at37"] = <
+                text = <"Level 7">
+                description = <"Competitive sports- tennis, running, motorcars speedway, handball.  Recreational sports- soccer, football, rugby, bandy, ice hockey, basketball, squash, racquetball, running.">
+            >
+            ["at36"] = <
+                text = <"Level 6">
+                description = <"Recreational sports- tennis and badminton, handball, racquetball, down-hill skiing, jogging at least 5 times per week.">
+            >
+            ["at35"] = <
+                text = <"Level 5">
+                description = <"Work- heavy labour (construction, etc.) Competitive sports- cycling, cross-country skiing. Recreational sports- jogging on uneven ground at least twice weekly.">
+            >
+            ["at34"] = <
+                text = <"Level 4">
+                description = <"Work- moderately heavy labour (e.g. truck driving, etc.).">
+            >
+            ["at33"] = <
+                text = <"Level 3">
+                description = <"Work- light labour (nursing, etc.).">
+            >
+            ["at32"] = <
+                text = <"Level 2">
+                description = <"Work- light labour. Walking on uneven ground possible, but impossible to back pack or hike.">
+            >
+            ["at31"] = <
+                text = <"Level 0">
+                description = <"Sick leave or disability pension because of knee problems.">
+            >
+            ["at30"] = <
+                text = <"Level 1">
+                description = <"Work- sedentary (secretarial, etc.).">
+            >
+            ["id29"] = <
+                text = <"Before Level">
+                description = <"Patient described level of the highest level of activity before injury.">
+                comment = <"Question:
+    Please indicate in the spaces below the HIGHEST level of activity that you participated in BEFORE YOUR INJURY and the highest level you are able to participate in CURRENTLY.">
+            >
+            ["id27"] = <
+                text = <"Details">
+                description = <"Patient provided details of other problems, other operations and other useful operation information to supplement yes answers to previous questions.">
+            >
+            ["id20"] = <
+                text = <"Any other operations on operated knee?">
+                description = <"Patient reported statement whether they had any other operations on operated knee since last operation.">
+            >
+            ["id7"] = <
+                text = <"Extension">
+                description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+                comment = <"e.g. Local hospital departmental information or additional metadata to align with HL7 or CDISC equivalents.">
+            >
+            ["id3"] = <
+                text = <"Point in time">
+                description = <"A specific date and/or time which may be explicitly defined in a template or at run-time.">
+            >
+            ["id2"] = <
+                text = <"History">
+                description = <"*">
+            >
+            ["id1"] = <
+                text = <"Tegner Activity Level Scale">
+                description = <"Tegner Activity Level Scale.">
+            >
+        >
+    >
+    value_sets = <
+        ["ac9001"] = <
+            id = <"ac9001">
+            members = <"at42", "at43", "at44", "at45", "at46", "at47", "at48", "at49", "at50", "at51", "at52">
+        >
+        ["ac9000"] = <
+            id = <"ac9000">
+            members = <"at31", "at30", "at32", "at33", "at34", "at35", "at36", "at37", "at38", "at39", "at40">
+        >
+    >

@@ -1,0 +1,759 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=fc5a7bde-b9f1-4481-94ab-615c9481f5cb; build_uid=74434747-262c-4951-b7c3-97330df1b9de)
+    openEHR-EHR-OBSERVATION.grace_discharge.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["sv"] = <
+            language = <[ISO_639-1::sv]>
+            author = <
+                ["name"] = <"Dennis Forslund">
+                ["organisation"] = <"Cambio Healthcare Systems">
+            >
+        >
+    >
+
+description
+    original_author = <
+        ["name"] = <"Syeeda Farruque">
+        ["organisation"] = <"Cambio Healthcare Systems">
+        ["email"] = <"models@cambiocds.com">
+        ["date"] = <"2017-02-18">
+    >
+    original_namespace = <"org.openehr">
+    original_publisher = <"openEHR Foundation">
+    other_contributors = <"Heather Leslie, Atomica Informatics, Australia", ...>
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"org.openehr">
+    custodian_organisation = <"openEHR Foundation">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+    references = <
+        ["1"] = <"Abu-Assi E, García-Acuña JM, Peña-Gil C, González-Juanatey JR. Validation of the GRACE risk score for predicting death within 6 months of follow-up in a contemporary cohort of patients with acute coronary syndrome. Rev Esp Cardiol. 2010;63(6):640–648. doi:10.1016/s1885-5857(10)70138-9.">
+        ["2"] = <"Eagle KA, Lim MJ, Dabbous OH, et al. A validated prediction model for all forms of acute coronary syndrome: estimating the risk of 6-month postdischarge death in an international registry. JAMA. 2004;291(22):2727–2733. doi:10.1001/jama.291.22.2727.">
+        ["3"] = <"Fox KA, Dabbous OH, Goldberg RJ, et al. Prediction of risk of death and myocardial infarction in the six months after presentation with acute coronary syndrome: prospective multinational observational study (GRACE). BMJ. 2006;333(7578):1091. doi:10.1136/bmj.38985.646481.55.">
+    >
+    other_details = <
+        ["MD5-CAM-1.0.1"] = <"a0d42a362dcf8eb6c15c388ce9979284">
+    >
+    details = <
+        ["sv"] = <
+            language = <[ISO_639-1::sv]>
+            purpose = <"Att uppskatta 6-månadersmortalitet hos nyligen mottagna patienter med akut koronart syndrom.">
+            keywords = <"GRACE ACS Risk Score", "GRACE", "STEMI", "NSTEMI", "akut koronart syndrom", "akut kranskärlssjukdom", "kardiologi">
+            use = <"Använd för att uppskatta 6-månadersmortalitet hos nyligen mottagna patienter med akut koronart syndrom. Instrumentet baseras på följande åtta faktorer:
+    
+    Ålder
+    Hjärtfrekvens
+    Systoliskt blodtryck
+    Kreatininvärde, angivet i mg/dl
+    Hjärtstopp vid ankomst till sjukhus
+    Patologiska ST-förändringar på EKG
+    Förhöjda/avvikande hjärtmarkörer
+    Killip-klassificering (Klass I - ingen hjärtsvikt, klass II - rassel och/eller halsvenstas, klass III - lungödem, klass IV - kardiogen chock)
+    
+    Resultatet uppgår till maximalt 372p - för detaljerad beskrivning av poängsystemet vänligen se (1). Resultatet tolkas enligt:
+    
+    Non-STEMI inlagd på sjukhus:
+    1-108p - låg risk (<1% risk att avlida på sjukhuset)
+    109-140p - mellanrisk (1-3% risk att avlida på sjukhuset)
+    141-372p - hög risk (>3% risk att avlida på sjukhuset)
+    
+    För detaljerad beskrivning av denna tolkning, vänligen se (2).">
+            misuse = <"Instrumentet är ej avsett för att identifiera patienter med akut koronart syndrom och ska endast användas i samråd med utförlig klinisk utredning.">
+            copyright = <"© Cambio Healthcare Systems, openEHR Foundation">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"To record the results for each component parameter, the total sum and grade for the GRACE score recorded at or after discharge.">
+            keywords = <"GRACE", "ACS", "Risk", "score", "STEMI", "NSTEMI", "ACS", "Acute Coronary Syndrome", "cardiology">
+            use = <"Use to record the results for each component parameter, the total sum and grade for the GRACE score recorded at or after discharge.">
+            misuse = <"Not to be used to record details about the initial GRACE score recorded during admission - use the OBSERVATION.grace_admission for this purpose.
+    
+    Not to be used to record details about the GRACE 2.0 score.">
+            copyright = <"© Apperta Foundation / Wales Cardiac Network, openEHR Foundation">
+        >
+    >
+
+definition
+    OBSERVATION[id1] matches {    -- GRACE score (discharge)
+        data matches {
+            HISTORY[id2] matches {
+                events cardinality matches {1..*; unordered} matches {
+                    EVENT[id3] occurrences matches {0..1} matches {    -- Any point in time event
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[id5] occurrences matches {0..1} matches {    -- Age
+                                        value matches {
+                                            DV_ORDINAL[id9009] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at15]}],
+                                                    [{0}, {[at16]}],
+                                                    [{18}, {[at17]}],
+                                                    [{36}, {[at18]}],
+                                                    [{55}, {[at19]}],
+                                                    [{73}, {[at20]}],
+                                                    [{91}, {[at21]}],
+                                                    [{100}, {[at22]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id57] occurrences matches {0..1} matches {    -- History of heart failure
+                                        value matches {
+                                            DV_ORDINAL[id9010] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at58]}],
+                                                    [{24}, {[at59]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id60] occurrences matches {0..1} matches {    -- History of AMI
+                                        value matches {
+                                            DV_ORDINAL[id9011] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at61]}],
+                                                    [{12}, {[at62]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id6] occurrences matches {0..1} matches {    -- Heart rate at presentation
+                                        value matches {
+                                            DV_ORDINAL[id9012] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at23]}],
+                                                    [{3}, {[at24]}],
+                                                    [{9}, {[at25]}],
+                                                    [{14}, {[at26]}],
+                                                    [{23}, {[at27]}],
+                                                    [{35}, {[at28]}],
+                                                    [{43}, {[at29]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id7] occurrences matches {0..1} matches {    -- Systolic blood pressure at presentation
+                                        value matches {
+                                            DV_ORDINAL[id9013] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at30]}],
+                                                    [{4}, {[at31]}],
+                                                    [{10}, {[at32]}],
+                                                    [{14}, {[at33]}],
+                                                    [{18}, {[at34]}],
+                                                    [{22}, {[at35]}],
+                                                    [{24}, {[at36]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id10] occurrences matches {0..1} matches {    -- Depressed ST segment at presentation
+                                        value matches {
+                                            DV_ORDINAL[id9014] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at47]}],
+                                                    [{11}, {[at48]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id8] occurrences matches {0..1} matches {    -- Creatinine level at presentation
+                                        value matches {
+                                            DV_ORDINAL[id9015] matches {
+                                                [value, symbol] matches {
+                                                    [{1}, {[at38]}],
+                                                    [{3}, {[at39]}],
+                                                    [{5}, {[at40]}],
+                                                    [{7}, {[at41]}],
+                                                    [{9}, {[at42]}],
+                                                    [{15}, {[at43]}],
+                                                    [{20}, {[at44]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id11] occurrences matches {0..1} matches {    -- Elevated cardiac enzymes or markers
+                                        value matches {
+                                            DV_ORDINAL[id9016] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at49]}],
+                                                    [{15}, {[at50]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id12] occurrences matches {0..1} matches {    -- Percutaneous revascularisation
+                                        value matches {
+                                            DV_ORDINAL[id9017] matches {
+                                                [value, symbol] matches {
+                                                    [{14}, {[at51]}],
+                                                    [{0}, {[at52]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id13] occurrences matches {0..1} matches {    -- Total score
+                                        value matches {
+                                            DV_COUNT[id9018] matches {
+                                                magnitude matches {|0..263|}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id55] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    allow_archetype CLUSTER[id56] matches {     -- Extension
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["sv"] = <
+            ["ac9000"] = <
+                text = <"*Age (en) (synthesised)">
+                description = <"*Age at assessment. (en) (synthesised)">
+            >
+            ["ac9001"] = <
+                text = <"*History of heart failure (en) (synthesised)">
+                description = <"*Known history of congestive heart failure? (en) (synthesised)">
+            >
+            ["ac9002"] = <
+                text = <"*History of AMI (en) (synthesised)">
+                description = <"* (synthesised)">
+            >
+            ["ac9003"] = <
+                text = <"*Heart rate at presentation (en) (synthesised)">
+                description = <"*Category of heart rate at initial hospital presentation. (en) (synthesised)">
+            >
+            ["ac9004"] = <
+                text = <"*Systolic blood pressure at presentation (en) (synthesised)">
+                description = <"*Category of systolic blood pressure at initial hospital presentation. (en) (synthesised)">
+            >
+            ["ac9005"] = <
+                text = <"*Depressed ST segment at presentation (en) (synthesised)">
+                description = <"*ST segment depression at initial hospital presentation. (en) (synthesised)">
+            >
+            ["ac9006"] = <
+                text = <"*Creatinine level at presentation (en) (synthesised)">
+                description = <"*Category of serum creatinine measurement at initial hospital presentation. (en) (synthesised)">
+            >
+            ["ac9007"] = <
+                text = <"*Elevated cardiac enzymes or markers (en) (synthesised)">
+                description = <"*Raised cardiac enzymes or markers during hospitalisation. (en) (synthesised)">
+            >
+            ["ac9008"] = <
+                text = <"*Percutaneous revascularisation (en) (synthesised)">
+                description = <"*In-hospital percutaneous coronary intervention. (en) (synthesised)">
+            >
+            ["at62"] = <
+                text = <"*Yes (en)">
+                description = <"*Knowne history of AMI. (en)">
+            >
+            ["at61"] = <
+                text = <"*No (en)">
+                description = <"*No history of AMI. (en)">
+            >
+            ["id60"] = <
+                text = <"*History of AMI (en)">
+                description = <"*">
+            >
+            ["at59"] = <
+                text = <"*Yes (en)">
+                description = <"*History of heart failure. (en)">
+            >
+            ["at58"] = <
+                text = <"*No (en)">
+                description = <"*No history of heart failure. (en)">
+            >
+            ["id57"] = <
+                text = <"*History of heart failure (en)">
+                description = <"*Known history of congestive heart failure? (en)">
+            >
+            ["id56"] = <
+                text = <"*Extension (en)">
+                description = <"*Additional information required to extend the model with local content or to align with other reference models/formalisms. (en)">
+                comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
+            >
+            ["at52"] = <
+                text = <"Klass 2">
+                description = <"*">
+            >
+            ["at51"] = <
+                text = <"Klass 1">
+                description = <"*">
+            >
+            ["at50"] = <
+                text = <"Ja">
+                description = <"*">
+            >
+            ["at49"] = <
+                text = <"Nej">
+                description = <"*">
+            >
+            ["at48"] = <
+                text = <"Ja">
+                description = <"*">
+            >
+            ["at47"] = <
+                text = <"Nej">
+                description = <"*">
+            >
+            ["at44"] = <
+                text = <"> 4.0 mg/dl">
+                description = <"*">
+            >
+            ["at43"] = <
+                text = <"2.0-3.99 mg/dl">
+                description = <"*">
+            >
+            ["at42"] = <
+                text = <"1.60-1.99 mg/dl">
+                description = <"*">
+            >
+            ["at41"] = <
+                text = <"1.20-1.59 mg/dl">
+                description = <"*">
+            >
+            ["at40"] = <
+                text = <"0.8-1.19 mg/dl">
+                description = <"*">
+            >
+            ["at39"] = <
+                text = <"0.4-0.79 mg/dl">
+                description = <"*">
+            >
+            ["at38"] = <
+                text = <"0-0.39 mg/dl">
+                description = <"*">
+            >
+            ["at36"] = <
+                text = <"≤ 80 mmHg">
+                description = <"*">
+            >
+            ["at35"] = <
+                text = <"80-99 mmHg">
+                description = <"*">
+            >
+            ["at34"] = <
+                text = <"100-119 mmHg">
+                description = <"*">
+            >
+            ["at33"] = <
+                text = <"120-139 mmHg">
+                description = <"*">
+            >
+            ["at32"] = <
+                text = <"140-159 mmHg">
+                description = <"*">
+            >
+            ["at31"] = <
+                text = <"160-199 mmHg">
+                description = <"*">
+            >
+            ["at30"] = <
+                text = <"≥ 200 mmHg">
+                description = <"*">
+            >
+            ["at29"] = <
+                text = <"≥ 200">
+                description = <"*">
+            >
+            ["at28"] = <
+                text = <"150-199">
+                description = <"*">
+            >
+            ["at27"] = <
+                text = <"110-149">
+                description = <"*">
+            >
+            ["at26"] = <
+                text = <"90-109">
+                description = <"*">
+            >
+            ["at25"] = <
+                text = <"70-89">
+                description = <"*">
+            >
+            ["at24"] = <
+                text = <"50-69">
+                description = <"*">
+            >
+            ["at23"] = <
+                text = <"≤ 50">
+                description = <"*">
+            >
+            ["at22"] = <
+                text = <"≥ 90 år">
+                description = <"*">
+            >
+            ["at21"] = <
+                text = <"80-89 år">
+                description = <"*">
+            >
+            ["at20"] = <
+                text = <"70-79 år">
+                description = <"*">
+            >
+            ["at19"] = <
+                text = <"60-69 år">
+                description = <"*">
+            >
+            ["at18"] = <
+                text = <"50-59 år">
+                description = <"*">
+            >
+            ["at17"] = <
+                text = <"40-49 år">
+                description = <"*">
+            >
+            ["at16"] = <
+                text = <"30-39 år">
+                description = <"*">
+            >
+            ["at15"] = <
+                text = <"≤ 30 år">
+                description = <"*">
+            >
+            ["id13"] = <
+                text = <"Resultat">
+                description = <"*Sum of points assigned for each of the component parameters. (en)">
+            >
+            ["id12"] = <
+                text = <"*Percutaneous revascularisation (en)">
+                description = <"*In-hospital percutaneous coronary intervention. (en)">
+            >
+            ["id11"] = <
+                text = <"*Elevated cardiac enzymes or markers (en)">
+                description = <"*Raised cardiac enzymes or markers during hospitalisation. (en)">
+            >
+            ["id10"] = <
+                text = <"*Depressed ST segment at presentation (en)">
+                description = <"*ST segment depression at initial hospital presentation. (en)">
+            >
+            ["id8"] = <
+                text = <"*Creatinine level at presentation (en)">
+                description = <"*Category of serum creatinine measurement at initial hospital presentation. (en)">
+            >
+            ["id7"] = <
+                text = <"*Systolic blood pressure at presentation (en)">
+                description = <"*Category of systolic blood pressure at initial hospital presentation. (en)">
+            >
+            ["id6"] = <
+                text = <"*Heart rate at presentation (en)">
+                description = <"*Category of heart rate at initial hospital presentation. (en)">
+            >
+            ["id5"] = <
+                text = <"*Age (en)">
+                description = <"*Age at assessment. (en)">
+            >
+            ["id3"] = <
+                text = <"*Any point in time event (en)">
+                description = <"*Default, unspecified point in time event which may be explicitly defined in a template or at run-time. (en)">
+            >
+            ["id1"] = <
+                text = <"*Grace score (discharge) (en)">
+                description = <"*The original 9 variable version of an assessment tool used to risk stratify patients diagnosed with Acute Coronary Syndrome - specifically to estimate their risk of death on discharge and up to 6 months after the ACS event. (en)">
+                comment = <"*GRACE is an acronym for Global Registry of Acute Coronary Events. (en)">
+            >
+        >
+        ["en"] = <
+            ["ac9000"] = <
+                text = <"Age (synthesised)">
+                description = <"Age at assessment. (synthesised)">
+            >
+            ["ac9001"] = <
+                text = <"History of heart failure (synthesised)">
+                description = <"Known history of congestive heart failure? (synthesised)">
+            >
+            ["ac9002"] = <
+                text = <"History of AMI (synthesised)">
+                description = <"Known history of acute myocardial infarction? (synthesised)">
+            >
+            ["ac9003"] = <
+                text = <"Heart rate at presentation (synthesised)">
+                description = <"Category of heart rate at initial hospital presentation. (synthesised)">
+            >
+            ["ac9004"] = <
+                text = <"Systolic blood pressure at presentation (synthesised)">
+                description = <"Category of systolic blood pressure at initial hospital presentation. (synthesised)">
+            >
+            ["ac9005"] = <
+                text = <"Depressed ST segment at presentation (synthesised)">
+                description = <"ST segment depression at initial hospital presentation. (synthesised)">
+            >
+            ["ac9006"] = <
+                text = <"Creatinine level at presentation (synthesised)">
+                description = <"Category of serum creatinine measurement at initial hospital presentation. (synthesised)">
+            >
+            ["ac9007"] = <
+                text = <"Elevated cardiac enzymes or markers (synthesised)">
+                description = <"Raised cardiac enzymes or markers during hospitalisation. (synthesised)">
+            >
+            ["ac9008"] = <
+                text = <"Percutaneous revascularisation (synthesised)">
+                description = <"In-hospital percutaneous coronary intervention. (synthesised)">
+            >
+            ["at62"] = <
+                text = <"Yes">
+                description = <"Knowne history of AMI.">
+            >
+            ["at61"] = <
+                text = <"No">
+                description = <"No history of AMI.">
+            >
+            ["id60"] = <
+                text = <"History of AMI">
+                description = <"Known history of acute myocardial infarction?">
+            >
+            ["at59"] = <
+                text = <"Yes">
+                description = <"Known history of heart failure.">
+            >
+            ["at58"] = <
+                text = <"No">
+                description = <"No history of heart failure.">
+            >
+            ["id57"] = <
+                text = <"History of heart failure">
+                description = <"Known history of congestive heart failure?">
+            >
+            ["id56"] = <
+                text = <"Extension">
+                description = <"Additional information required to extend the model with local content or to align with other reference models/formalisms.">
+                comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
+            >
+            ["at52"] = <
+                text = <"Yes">
+                description = <"Intervention performed.">
+            >
+            ["at51"] = <
+                text = <"No">
+                description = <"No intervention performed.">
+            >
+            ["at50"] = <
+                text = <"Yes">
+                description = <"Cardiac enzymes or markers are raised.">
+            >
+            ["at49"] = <
+                text = <"No">
+                description = <"Cardiac enzymes or markers are in the normal range.">
+            >
+            ["at48"] = <
+                text = <"Yes">
+                description = <"ST segment depression observed on ECG.">
+            >
+            ["at47"] = <
+                text = <"No">
+                description = <"No ST segment depression observed on ECG.">
+            >
+            ["at44"] = <
+                text = <"> 4.0 mg/dL">
+                description = <"Greater than 4.0 mg/dL.">
+            >
+            ["at43"] = <
+                text = <"2.00-3.99 mg/dL">
+                description = <"Between 2.00 and 3.99 mg/dL.">
+            >
+            ["at42"] = <
+                text = <"1.60-1.99 mg/dL">
+                description = <"Between 1.60 and 1.99 mg/dL.">
+            >
+            ["at41"] = <
+                text = <"1.20-1.59 mg/dL">
+                description = <"Between 1.20 and 1.59 mg/dL.">
+            >
+            ["at40"] = <
+                text = <"0.8-1.19 mg/dL">
+                description = <"Between 0.8 and 1.19 mg/dL.">
+            >
+            ["at39"] = <
+                text = <"0.4-0.79 mg/dL">
+                description = <"Between 0.4 and 0.79 mg/dL.">
+            >
+            ["at38"] = <
+                text = <"0-0.39 mg/dL">
+                description = <"Between 0 and 0.39 mg/dL.">
+            >
+            ["at36"] = <
+                text = <"≤ 80 mmHg">
+                description = <"Less than 80 mmHg.">
+            >
+            ["at35"] = <
+                text = <"80-99 mmHg">
+                description = <"Between 80 and 99 mmHg.">
+            >
+            ["at34"] = <
+                text = <"100-119 mmHg">
+                description = <"Between 100 and 119 mmHg.">
+            >
+            ["at33"] = <
+                text = <"120-139 mmHg">
+                description = <"Between 120 and 139 mmHg.">
+            >
+            ["at32"] = <
+                text = <"140-159 mmHg">
+                description = <"Between 140 and 159 mmHg.">
+            >
+            ["at31"] = <
+                text = <"160-199 mmHg">
+                description = <"Between 160 and 199 mmHg.">
+            >
+            ["at30"] = <
+                text = <"≥ 200 mmHg">
+                description = <"Greater than 200 mmHg.">
+            >
+            ["at29"] = <
+                text = <"≥ 200 bpm">
+                description = <"Greater than 200 beats per minute.">
+            >
+            ["at28"] = <
+                text = <"150-199 bpm">
+                description = <"Between 150 and 199 beats per minute.">
+            >
+            ["at27"] = <
+                text = <"110-149 bpm">
+                description = <"Between 110 and 149 beats per minute.">
+            >
+            ["at26"] = <
+                text = <"90-109 bpm">
+                description = <"Between 90 and 109 beats per minute.">
+            >
+            ["at25"] = <
+                text = <"70-89 bpm">
+                description = <"Between 70 and 89 beats per minute.">
+            >
+            ["at24"] = <
+                text = <"50-69 bpm">
+                description = <"Between 50 and 69 beats per minute.">
+            >
+            ["at23"] = <
+                text = <"≤ 50 bpm">
+                description = <"Less than 50 beats per minute.">
+            >
+            ["at22"] = <
+                text = <"≥ 90 years">
+                description = <"Patient is aged ≥ 90 years.">
+            >
+            ["at21"] = <
+                text = <"80-89 years">
+                description = <"Patient is aged 80-89 years.">
+            >
+            ["at20"] = <
+                text = <"70-79 years">
+                description = <"Patient is aged 70-79 years.">
+            >
+            ["at19"] = <
+                text = <"60-69 years">
+                description = <"Patient is aged 60-69 years.">
+            >
+            ["at18"] = <
+                text = <"50-59 years">
+                description = <"Patient is aged 50-59 years.">
+            >
+            ["at17"] = <
+                text = <"40-49 years">
+                description = <"Patient is aged 40-49 years.">
+            >
+            ["at16"] = <
+                text = <"30-39 years">
+                description = <"Patient is aged 30-39 years.">
+            >
+            ["at15"] = <
+                text = <"≤ 30 years">
+                description = <"Patient is aged ≤ 30 years.">
+            >
+            ["id13"] = <
+                text = <"Total score">
+                description = <"Sum of points assigned for each of the component parameters.">
+            >
+            ["id12"] = <
+                text = <"Percutaneous revascularisation">
+                description = <"In-hospital percutaneous coronary intervention.">
+            >
+            ["id11"] = <
+                text = <"Elevated cardiac enzymes or markers">
+                description = <"Raised cardiac enzymes or markers during hospitalisation.">
+            >
+            ["id10"] = <
+                text = <"Depressed ST segment at presentation">
+                description = <"ST segment depression at initial hospital presentation.">
+            >
+            ["id8"] = <
+                text = <"Creatinine level at presentation">
+                description = <"Category of serum creatinine measurement at initial hospital presentation.">
+            >
+            ["id7"] = <
+                text = <"Systolic blood pressure at presentation">
+                description = <"Category of systolic blood pressure at initial hospital presentation.">
+            >
+            ["id6"] = <
+                text = <"Heart rate at presentation">
+                description = <"Category of heart rate at initial hospital presentation.">
+            >
+            ["id5"] = <
+                text = <"Age">
+                description = <"Age at assessment.">
+            >
+            ["id3"] = <
+                text = <"Any point in time event">
+                description = <"Default, unspecified point in time event which may be explicitly defined in a template or at run-time.">
+            >
+            ["id1"] = <
+                text = <"GRACE score (discharge)">
+                description = <"The original 9 variable version of an assessment tool used to risk stratify patients diagnosed with Acute Coronary Syndrome - specifically to estimate their risk of death on discharge and up to 6 months after the ACS event.">
+                comment = <"GRACE is an acronym for Global Registry of Acute Coronary Events.">
+            >
+        >
+    >
+    value_sets = <
+        ["ac9002"] = <
+            id = <"ac9002">
+            members = <"at61", "at62">
+        >
+        ["ac9001"] = <
+            id = <"ac9001">
+            members = <"at58", "at59">
+        >
+        ["ac9000"] = <
+            id = <"ac9000">
+            members = <"at15", "at16", "at17", "at18", "at19", "at20", "at21", "at22">
+        >
+        ["ac9006"] = <
+            id = <"ac9006">
+            members = <"at38", "at39", "at40", "at41", "at42", "at43", "at44">
+        >
+        ["ac9005"] = <
+            id = <"ac9005">
+            members = <"at47", "at48">
+        >
+        ["ac9004"] = <
+            id = <"ac9004">
+            members = <"at30", "at31", "at32", "at33", "at34", "at35", "at36">
+        >
+        ["ac9003"] = <
+            id = <"ac9003">
+            members = <"at23", "at24", "at25", "at26", "at27", "at28", "at29">
+        >
+        ["ac9008"] = <
+            id = <"ac9008">
+            members = <"at51", "at52">
+        >
+        ["ac9007"] = <
+            id = <"ac9007">
+            members = <"at49", "at50">
+        >
+    >
