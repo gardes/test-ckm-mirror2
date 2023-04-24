@@ -9,9 +9,9 @@ language
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			author = <
-				["name"] = <"Antje Wulff, test test">
-				["organisation"] = <"PLRI for Medical Informatics Medical School Hannover and TU Braunschweig, Ocean">
-				["email"] = <"wulff.antje@mh-hannover.de, test@openehr.de">
+				["name"] = <"Antje Wulff, test test, Mr Ocean">
+				["organisation"] = <"PLRI for Medical Informatics Medical School Hannover and TU Braunschweig, Ocean, Ocean Informatics">
+				["email"] = <"wulff.antje@mh-hannover.de, test@openehr.de, sebastian.garde@oceaninformatics.com">
 			>
 		>
 		["sv"] = <
@@ -54,7 +54,7 @@ description
 
 Diese Skala ist eine Verfeinerung der ursprünglichen AVPU, die 2017 durch Hinzufügen eines \"C\" aktualisiert wurde, wobei C für \"ein neues Auftreten oder eine sich verschlimmernde Verwirrung, ein Delirium oder eine andere veränderte Mentalität\" steht.
 
-Diese Skala wird jetzt als Bestandteil von NEWS2 veröffentlicht, um den Grad des Bewusstseins einer Person zu erfassen. 2">
+Diese Skala wird jetzt als Bestandteil von NEWS2 veröffentlicht, um den Grad des Bewusstseins einer Person zu erfassen. 23">
 			keywords = <"avpu", "Alarm", "Stimme", "Schmerz", "nicht ansprechbar", "wach", "Rede", "Schmerz", "unbewusst", "Stimme", "Bewusstsein", "verbal", "halbkomatös", "bewusst", "Bewusstseinsebene", "komatös", "Verwirrung", "news2">
 			misuse = <"">
 		>
@@ -115,8 +115,8 @@ National Early Warning Score (NEWS) 2. Pasientsikkerhetsprogrammet [cited 2019.0
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"AA6232E6DBBA8AEF3C96D7DF012D723E">
-		["build_uid"] = <"091270ca-ad5f-4859-a226-bc300f2105f0">
+		["MD5-CAM-1.0.1"] = <"3B873F41DB4524416A6691CC149A07DD">
+		["build_uid"] = <"b0599911-2490-43c4-bd74-3de4e8550f3e">
 		["revision"] = <"1.0.1-alpha">
 	>
 
