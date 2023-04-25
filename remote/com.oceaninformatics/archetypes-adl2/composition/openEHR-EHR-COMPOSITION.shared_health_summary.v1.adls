@@ -1,5 +1,5 @@
-archetype (adl_version=2.0.6; rm_release=1.1.0; generated; build_uid=c9095579-7b95-4fbd-a2a1-15e4dc898ae2)
-    openEHR-EHR-COMPOSITION.shared_health_summary.v0.0.1-alpha
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=d5eebcdc-32be-4a41-8a03-77b361a892a3; build_uid=94efae53-de3f-4f95-8d88-df88139ee340)
+    openEHR-EHR-COMPOSITION.shared_health_summary.v1.0.0
 
 language
     original_language = <[ISO_639-1::en]>
@@ -14,13 +14,12 @@ description
     original_namespace = <"com.oceaninformatics">
     original_publisher = <"Ocean Informatics">
     other_contributors = <"Eric Browne, NEHTA", "Stephen Chu, NEHTA", "cka cka, Test Organisation, Australia (Test Editor)", "Project Editor, Antigua & Barbuda (Test Editor)", "Sebastian Garde, Ocean Health Systems, Germany (Test Editor)", "Sarmad Kufaishi, Ocean Health Systems, Australia (Test Editor)", "Robert L'egan, NEHTA", "Sebastianåæâß Ocean, Ocean Infws, Germany (Test Editor)", "Ning Pan, NEHTA", "Stephen Royce, NEHTA", "Eleanor Royle, NEHTA", "Don Stewart, NEHTA">
-    lifecycle_state = <"in_development">
+    lifecycle_state = <"published">
     custodian_namespace = <"com.oceaninformatics">
     custodian_organisation = <"Ocean Informatics">
     licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
     other_details = <
-        ["MD5-CAM-1.0.1"] = <"F7072524570EE37245640082C861CBF6">
-        ["oid"] = <"1.2.36.1.2001.1001.100.120.1.0">
+        ["MD5-CAM-1.0.1"] = <"69561BA083CE155AF5EE841EC585CD71">
     >
     details = <
         ["en"] = <
