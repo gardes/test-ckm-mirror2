@@ -1,4 +1,4 @@
-archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=978c3513-b3ff-43eb-b42a-4e5863041810; build_uid=e0efc774-d2e0-4982-b135-d3438dba3b53)
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=978c3513-b3ff-43eb-b42a-4e5863041810; build_uid=cc3f6470-1101-4581-8d7a-8757cf2cbbd3)
     openEHR-EHR-COMPOSITION.self_reported_data.v0.0.1-alpha
 
 language
@@ -10,9 +10,9 @@ language
         ["de"] = <
             language = <[ISO_639-1::de]>
             author = <
-                ["name"] = <"Natalia Strauch">
-                ["organisation"] = <"Medizinische Hochschule Hannover">
-                ["email"] = <"Strauch.Natalia@mh-hannover.de">
+                ["name"] = <"Natalia Strauch, Mr Ocean">
+                ["organisation"] = <"Medizinische Hochschule Hannover, Ocean Informatics">
+                ["email"] = <"Strauch.Natalia@mh-hannover.de, sebastian.garde@oceaninformatics.com">
             >
         >
         ["sv"] = <
@@ -67,7 +67,7 @@ description
         ["1"] = <"Derivat de: <Afegeix aquí una referència al recurs original>">
     >
     other_details = <
-        ["MD5-CAM-1.0.1"] = <"748345B1A05792C6FE46D45A6CE8597A">
+        ["MD5-CAM-1.0.1"] = <"C4AB97515FDDDAE9C603DF8B2A810360">
     >
     details = <
         ["nn"] = <
@@ -96,7 +96,7 @@ description
         >
         ["de"] = <
             language = <[ISO_639-1::de]>
-            purpose = <"Ein Container für Informationen, die von einer Person bereitgestellt werden, um patientengenerierten von klinisch generierten Gesundheitsdaten zu unterscheiden.">
+            purpose = <"Ein Container für Informationen, die von einer Person bereitgestellt werden, um patientengenerierten von klinisch generierten Gesundheitsdaten zu unterscheiden. TEST">
             keywords = <"Fragebogen, Selbstauskunft, Selbstbericht, Formular, Bogen, Umfrage, PROM, PREM, PRO, Tagebuch, Diary", ...>
             use = <"Zur Verwendung als genirischer Container zur Repräsentation von Informationen, die von einer Person bereitgestellt werden, um patientengenerierten von klinisch generierten Gesundheitsdaten zu unterscheiden.
     
