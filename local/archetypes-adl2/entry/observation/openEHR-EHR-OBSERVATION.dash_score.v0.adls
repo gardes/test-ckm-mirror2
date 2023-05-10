@@ -1,0 +1,285 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=2d9a2fe7-0466-4016-87ff-27028c73b670; build_uid=23e80409-1755-4fc8-9a0b-3a30a4c334a4)
+    openEHR-EHR-OBSERVATION.dash_score.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["sv"] = <
+            language = <[ISO_639-1::sv]>
+            author = <
+                ["name"] = <"Dennis Forslund">
+                ["organisation"] = <"Cambio Healthcare Systems">
+            >
+        >
+    >
+
+description
+    original_author = <
+        ["name"] = <"Dennis Forslund">
+        ["organisation"] = <"Cambio Healthcare Systems">
+        ["email"] = <"models@cambiocds.com">
+        ["date"] = <"2016-12-07">
+    >
+    original_namespace = <"org.openehr">
+    original_publisher = <"openEHR Foundation">
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"org.openehr">
+    custodian_organisation = <"openEHR Foundation">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+    references = <
+        ["1"] = <"Kearon C, Iorio A, Palareti G; Subcommittee on Control of Anticoagulation of the SSC of the ISTH. Risk of recurrent venous thromboembolism after stopping treatment in cohort studies: recommendation for acceptable rates and standardized reporting. J Thromb Haemost. 2010 Oct;8(10):2313-5. doi: 10.1111/j.1538-7836.2010.03991.x. PMID: 20738761.">
+        ["2"] = <"Tosetto A, Iorio A, Marcucci M, Baglin T, Cushman M, Eichinger S, Palareti G, Poli D, Tait RC, Douketis J. Predicting disease recurrence in patients with previous unprovoked venous thromboembolism: a proposed prediction score (DASH). J Thromb Haemost. 2012 Jun;10(6):1019-25. doi: 10.1111/j.1538-7836.2012.04735.x. PMID: 22489957.">
+    >
+    other_details = <
+        ["MD5-CAM-1.0.1"] = <"E05A219AD49EA7DF45FB2C6D142BAF20">
+    >
+    details = <
+        ["sv"] = <
+            language = <[ISO_639-1::sv]>
+            purpose = <"*To record individual DASH prediction score parameters and total score. (en)">
+            use = <"*Use to record individual DASH prediction score parameters and total score as part of an evaluation for the need for ongoing anticoagulant therapy. (en)">
+            misuse = <"">
+            copyright = <"© Cambio Healthcare Systems, openEHR Foundation">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"To record individual DASH prediction score parameters and total score.">
+            use = <"Use to record individual DASH prediction score parameters and total score as part of an evaluation for the need for ongoing anticoagulant therapy.">
+            misuse = <"">
+            copyright = <"© Cambio Healthcare Systems, openEHR Foundation">
+        >
+    >
+
+definition
+    OBSERVATION[id1] matches {    -- DASH prediction score
+        data matches {
+            HISTORY[id2] matches {
+                events cardinality matches {1..*; unordered} matches {
+                    EVENT[id3] occurrences matches {0..1} matches {    -- Any event
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[id5] occurrences matches {0..1} matches {    -- D-Dimer abnormal
+                                        value matches {
+                                            DV_ORDINAL[id9003] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at6]}],
+                                                    [{2}, {[at7]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id8] occurrences matches {0..1} matches {    -- Age ≤ 50 years
+                                        value matches {
+                                            DV_ORDINAL[id9004] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at9]}],
+                                                    [{1}, {[at10]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id11] occurrences matches {0..1} matches {    -- Male patient
+                                        value matches {
+                                            DV_ORDINAL[id9005] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at9]}],
+                                                    [{1}, {[at10]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id14] occurrences matches {0..1} matches {    -- Hormone use at VTE onset
+                                        value matches {
+                                            DV_ORDINAL[id9006] matches {
+                                                [value, symbol] matches {
+                                                    [{-2}, {[at16]}],
+                                                    [{0}, {[at15]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id17] occurrences matches {0..1} matches {    -- Total score
+                                        value matches {
+                                            DV_COUNT[id9007] 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id18] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    allow_archetype CLUSTER[id19] matches {     -- Extension
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["sv"] = <
+            ["ac9000"] = <
+                text = <"Förhöjd D-Dimer (synthesised)">
+                description = <"*Measured ~1 month after stopping anticoagulation. (en) (synthesised)">
+            >
+            ["ac9001"] = <
+                text = <"Ålder ≤ 50 år (synthesised)">
+                description = <" (synthesised)">
+            >
+            ["ac9002"] = <
+                text = <"Hormonbehandling vid VTE (synthesised)">
+                description = <" (synthesised)">
+            >
+            ["id19"] = <
+                text = <"*Extension (en)">
+                description = <"">
+            >
+            ["id17"] = <
+                text = <"*Total score (en)">
+                description = <"*The total sum of each component parameter for the  DASH score. (en)">
+            >
+            ["at16"] = <
+                text = <"Föreligger">
+                description = <"*">
+            >
+            ["at15"] = <
+                text = <"Frånvarande">
+                description = <"*">
+            >
+            ["id14"] = <
+                text = <"Hormonbehandling vid VTE">
+                description = <"">
+                comment = <"*Female only. If male patient, select 'No'. (en)">
+            >
+            ["id11"] = <
+                text = <"*Male patient (en)">
+                description = <"Är patienten av manligt kön?">
+            >
+            ["at10"] = <
+                text = <"*Present(en)">
+                description = <"**(en)">
+            >
+            ["at9"] = <
+                text = <"*Absent(en)">
+                description = <"**(en)">
+            >
+            ["id8"] = <
+                text = <"Ålder ≤ 50 år">
+                description = <"">
+            >
+            ["at7"] = <
+                text = <"Föreligger">
+                description = <"*">
+            >
+            ["at6"] = <
+                text = <"Frånvarande">
+                description = <"*">
+            >
+            ["id5"] = <
+                text = <"Förhöjd D-Dimer">
+                description = <"*Measured ~1 month after stopping anticoagulation. (en)">
+            >
+            ["id3"] = <
+                text = <"*Any event(en)">
+                description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time. (en)">
+            >
+            ["id1"] = <
+                text = <"*DASH prediction score (en)">
+                description = <"*Assessment tool used to predict the risk of recurring venous thromboembolism (VTE). (en)">
+            >
+        >
+        ["en"] = <
+            ["ac9000"] = <
+                text = <"D-Dimer abnormal (synthesised)">
+                description = <"Measured ~1 month after stopping anticoagulation. (synthesised)">
+            >
+            ["ac9001"] = <
+                text = <"Age ≤ 50 years (synthesised)">
+                description = <" (synthesised)">
+            >
+            ["ac9002"] = <
+                text = <"Hormone use at VTE onset (synthesised)">
+                description = <" (synthesised)">
+            >
+            ["id19"] = <
+                text = <"Extension">
+                description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
+                comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
+            >
+            ["id17"] = <
+                text = <"Total score">
+                description = <"The total sum of each component parameter for the DASH score.">
+            >
+            ["at16"] = <
+                text = <"Yes">
+                description = <"">
+            >
+            ["at15"] = <
+                text = <"No">
+                description = <"">
+            >
+            ["id14"] = <
+                text = <"Hormone use at VTE onset">
+                description = <"">
+                comment = <"Female only. If male patient, select 'No'.">
+            >
+            ["id11"] = <
+                text = <"Male patient">
+                description = <"">
+            >
+            ["at10"] = <
+                text = <"Yes">
+                description = <"">
+            >
+            ["at9"] = <
+                text = <"No">
+                description = <"">
+            >
+            ["id8"] = <
+                text = <"Age ≤ 50 years">
+                description = <"">
+            >
+            ["at7"] = <
+                text = <"Yes">
+                description = <"">
+            >
+            ["at6"] = <
+                text = <"No">
+                description = <"">
+            >
+            ["id5"] = <
+                text = <"D-Dimer abnormal">
+                description = <"Measured ~1 month after stopping anticoagulation.">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
+            >
+            ["id1"] = <
+                text = <"DASH prediction score">
+                description = <"Assessment tool used to predict the risk of recurring venous thromboembolism (VTE).">
+            >
+        >
+    >
+    value_sets = <
+        ["ac9002"] = <
+            id = <"ac9002">
+            members = <"at16", "at15">
+        >
+        ["ac9001"] = <
+            id = <"ac9001">
+            members = <"at9", "at10">
+        >
+        ["ac9000"] = <
+            id = <"ac9000">
+            members = <"at6", "at7">
+        >
+    >

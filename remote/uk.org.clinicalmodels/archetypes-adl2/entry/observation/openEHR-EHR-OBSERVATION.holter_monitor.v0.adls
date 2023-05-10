@@ -1,0 +1,257 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=d62f3c72-982d-4bba-81db-bc92e5c36935; build_uid=c7d518f0-4584-49f6-9f24-dc35285ee0f9)
+    openEHR-EHR-OBSERVATION.holter_monitor.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["name"] = <"Hildegard Franke">
+        ["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+        ["email"] = <"hildi@freshehr.com">
+        ["date"] = <"2017-01-11">
+    >
+    original_namespace = <"uk.org.clinicalmodels">
+    original_publisher = <"UK Clinical Models">
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"uk.org.clinicalmodels">
+    custodian_organisation = <"UK Clinical Models">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+    other_details = <
+        ["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
+        ["MD5-CAM-1.0.1"] = <"B1A888F61C750A00D1601A3649D52098">
+    >
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"For the recording and reporting of the results of the Holter monitor test.">
+            use = <"">
+            misuse = <"">
+            copyright = <"© Clinical Models UK">
+        >
+    >
+
+definition
+    OBSERVATION[id1] matches {    -- Holter monitor
+        data matches {
+            HISTORY[id2] matches {
+                events cardinality matches {1..*; unordered} matches {
+                    POINT_EVENT[id3] occurrences matches {0..1} matches {    -- Point in time
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[id10] occurrences matches {0..1} matches {    -- VPB burden per 24 hours
+                                        value matches {
+                                            DV_COUNT[id9004] matches {
+                                                magnitude matches {|>=0|}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id11] occurrences matches {0..1} matches {    -- Dynamic type 1 ECG pattern
+                                        value matches {
+                                            DV_CODED_TEXT[id9005] matches {
+                                                defining_code matches {[ac9000]}    -- Dynamic type 1 ECG pattern (synthesised)
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id15] occurrences matches {0..1} matches {    -- QT abnormalities detected
+                                        value matches {
+                                            DV_CODED_TEXT[id9006] matches {
+                                                defining_code matches {[ac9001]}    -- QT abnormalities detected (synthesised)
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id19] occurrences matches {0..1} matches {    -- QT abnormality description
+                                        value matches {
+                                            DV_TEXT[id9007] 
+                                        }
+                                    }
+                                    ELEMENT[id20] occurrences matches {0..1} matches {    -- Holter monitor abnormalities
+                                        value matches {
+                                            DV_CODED_TEXT[id9008] matches {
+                                                defining_code matches {[ac9002]}    -- Holter monitor abnormalities (synthesised)
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id25] occurrences matches {0..1} matches {    -- Assessment
+                                        value matches {
+                                            DV_CODED_TEXT[id9009] matches {
+                                                defining_code matches {[ac9003]}    -- Assessment (synthesised)
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[id8] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[id9] matches {    -- Confounding factors
+                                        value matches {
+                                            DV_TEXT[id9010] 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id5] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    ELEMENT[id6] occurrences matches {0..1} matches {    -- Technique or protocol
+                        value matches {
+                            DV_TEXT[id9011] 
+                        }
+                    }
+                    allow_archetype CLUSTER[id7] matches {     -- Extension
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["ac9000"] = <
+                text = <"Dynamic type 1 ECG pattern (synthesised)">
+                description = <"Statement whether dynamic type 1 ECG pattern was observed. (synthesised)">
+            >
+            ["ac9001"] = <
+                text = <"QT abnormalities detected (synthesised)">
+                description = <"Statement whether QT abnormalities were detectd. (synthesised)">
+            >
+            ["ac9002"] = <
+                text = <"Holter monitor abnormalities (synthesised)">
+                description = <"Statement about Holter monitor abnormalities. (synthesised)">
+            >
+            ["ac9003"] = <
+                text = <"Assessment (synthesised)">
+                description = <"Assessment of findings and clinical significance. (synthesised)">
+            >
+            ["at29"] = <
+                text = <"Abnormal unknown relevance">
+                description = <"The assessment of findings and clinical significance indicates an abnormality of unknown relevance to the patient's condition.">
+            >
+            ["at28"] = <
+                text = <"Abnormal relevant">
+                description = <"The assessment of findings and clinical significance indicates an abnormality relevant to the patient's condition.">
+            >
+            ["at27"] = <
+                text = <"Unknown">
+                description = <"The assessment of findings and clinical significance is unknown or no results are available.">
+            >
+            ["at26"] = <
+                text = <"Normal">
+                description = <"The assessment of findings and clinical significance is normal.">
+            >
+            ["id25"] = <
+                text = <"Assessment">
+                description = <"Assessment of findings and clinical significance.">
+            >
+            ["at24"] = <
+                text = <"Unknown">
+                description = <"It is not known whether the Holter monitor showed any abnormalities.">
+            >
+            ["at23"] = <
+                text = <"Nil">
+                description = <"The Holter monitor showed nil abnormalities.">
+            >
+            ["at22"] = <
+                text = <"Non-sustained VT">
+                description = <"The Holter monitor showed non-sustained ventricular tachycardia.">
+            >
+            ["at21"] = <
+                text = <"Atrial fibrillation">
+                description = <"The Holter monitor showed atrial fibrillation.">
+            >
+            ["id20"] = <
+                text = <"Holter monitor abnormalities">
+                description = <"Statement about Holter monitor abnormalities.">
+            >
+            ["id19"] = <
+                text = <"QT abnormality description">
+                description = <"Narrative description of any detected QT abnormalities.">
+            >
+            ["at18"] = <
+                text = <"Unknown">
+                description = <"It is not known whether QT abnormalities were detected.">
+            >
+            ["at17"] = <
+                text = <"No">
+                description = <"QT abnormalities were not detected.">
+            >
+            ["at16"] = <
+                text = <"Yes">
+                description = <"QT abnormalities were detected.">
+            >
+            ["id15"] = <
+                text = <"QT abnormalities detected">
+                description = <"Statement whether QT abnormalities were detectd.">
+            >
+            ["at14"] = <
+                text = <"Unknown">
+                description = <"It is not known whether dynamic type 1 ECG pattern was observed.">
+            >
+            ["at13"] = <
+                text = <"No">
+                description = <"Dynamic type 1 ECG pattern was not observed.">
+            >
+            ["at12"] = <
+                text = <"Yes">
+                description = <"Dynamic type 1 ECG pattern was observed.">
+            >
+            ["id11"] = <
+                text = <"Dynamic type 1 ECG pattern">
+                description = <"Statement whether dynamic type 1 ECG pattern was observed.">
+            >
+            ["id10"] = <
+                text = <"VPB burden per 24 hours">
+                description = <"The observed number of ventricular premature beats per 24 hours.">
+            >
+            ["id9"] = <
+                text = <"Confounding factors">
+                description = <"Record any issues or factors that may impact on the test or result.">
+            >
+            ["id7"] = <
+                text = <"Extension">
+                description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+                comment = <"e.g. Local hospital departmental infomation or additional metadata to align with HL7 or CDISC equivalents.">
+            >
+            ["id6"] = <
+                text = <"Technique or protocol">
+                description = <"The non-imaging diagnostic technique or protocol used for the test.">
+            >
+            ["id3"] = <
+                text = <"Point in time">
+                description = <"A specific date and/or time which may be explicitly defined in a template or at run-time.">
+            >
+            ["id1"] = <
+                text = <"Holter monitor">
+                description = <"Holter monitor test.">
+            >
+        >
+    >
+    value_sets = <
+        ["ac9002"] = <
+            id = <"ac9002">
+            members = <"at21", "at22", "at23", "at24">
+        >
+        ["ac9001"] = <
+            id = <"ac9001">
+            members = <"at16", "at17", "at18">
+        >
+        ["ac9000"] = <
+            id = <"ac9000">
+            members = <"at12", "at13", "at14">
+        >
+        ["ac9003"] = <
+            id = <"ac9003">
+            members = <"at26", "at27", "at28", "at29">
+        >
+    >

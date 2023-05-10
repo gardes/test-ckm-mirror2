@@ -1,0 +1,463 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=493f3255-3365-44ca-aff4-129da225e063; build_uid=7ba6e9e8-3d26-4d56-9bf2-651a9941c7af)
+    openEHR-EHR-OBSERVATION.social_screening.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["fi"] = <
+            language = <[ISO_639-1::fi]>
+        >
+        ["nb"] = <
+            language = <[ISO_639-1::nb]>
+        >
+        ["it"] = <
+            language = <[ISO_639-1::it]>
+        >
+    >
+
+description
+    original_author = <
+        ["name"] = <"Heather Leslie">
+        ["organisation"] = <"Atomica Informatics">
+        ["email"] = <"heather.leslie@atomicainformatics.com">
+        ["date"] = <"2020-03-13">
+    >
+    original_namespace = <"org.openehr">
+    original_publisher = <"openEHR Foundation">
+    other_contributors = <"Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)">
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"org.openehr">
+    custodian_organisation = <"openEHR Foundation">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+    other_details = <
+        ["MD5-CAM-1.0.1"] = <"0C16495B150D274E5A9586FD73BF17B7">
+    >
+    details = <
+        ["fi"] = <
+            language = <[ISO_639-1::fi]>
+            purpose = <"*To record the responses to an individual- or self-reported questionnaire screening for social issues. (en)">
+            use = <"*Use to record the responses to an individual- or self-reported questionnaire screening for social issues.
+    
+    Common use cases include, but are not limited to:
+    - Systematic questioning in any consultation; or
+    - Specific questioning related to social determinants of health (en)">
+            misuse = <"*Not to be used to record details about a specific social context-related concepts. For example: housing, education, occupation, social supports and social network. Use specific archetypes for this purpose. (en)">
+            copyright = <"© openEHR Foundation">
+        >
+        ["nb"] = <
+            language = <[ISO_639-1::nb]>
+            purpose = <"*To record the responses to an individual- or self-reported questionnaire screening for social issues. (en)">
+            use = <"*Use to record the responses to an individual- or self-reported questionnaire screening for social issues.
+    
+    Common use cases include, but are not limited to:
+    - Systematic questioning in any consultation; or
+    - Specific questioning related to social determinants of health (en)">
+            misuse = <"*Not to be used to record details about a specific social context-related concepts. For example: housing, education, occupation, social supports and social network. Use specific archetypes for this purpose. (en)">
+            copyright = <"© openEHR Foundation">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"To record the responses to an individual- or self-reported questionnaire screening for social issues.">
+            use = <"Use to record the responses to an individual- or self-reported questionnaire screening for social issues.
+    
+    Common use cases include, but are not limited to:
+    - Systematic questioning in any consultation; or
+    - Specific questioning related to social determinants of health">
+            misuse = <"Not to be used to record details about a specific social context-related concepts. For example: housing, education, occupation, social supports and social network. Use specific archetypes for this purpose.">
+            copyright = <"© openEHR Foundation">
+        >
+        ["it"] = <
+            language = <[ISO_639-1::it]>
+            purpose = <"*To record the responses to an individual- or self-reported questionnaire screening for social issues. (en)">
+            use = <"*Use to record the responses to an individual- or self-reported questionnaire screening for social issues.
+    
+    Common use cases include, but are not limited to:
+    - Systematic questioning in any consultation; or
+    - Specific questioning related to social determinants of health (en)">
+            misuse = <"*Not to be used to record details about a specific social context-related concepts. For example: housing, education, occupation, social supports and social network. Use specific archetypes for this purpose. (en)">
+            copyright = <"© openEHR Foundation">
+        >
+    >
+
+definition
+    OBSERVATION[id1] matches {    -- Social context screening questionnaire
+        data matches {
+            HISTORY[id2] matches {
+                events cardinality matches {0..*; unordered} matches {
+                    EVENT[id3] matches {    -- Any event
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[id35] occurrences matches {0..1} matches {    -- Screening purpose
+                                        value matches {
+                                            DV_TEXT[id9002] 
+                                        }
+                                    }
+                                    ELEMENT[id29] occurrences matches {0..1} matches {    -- Presence of any social issues?
+                                        value matches {
+                                            DV_CODED_TEXT[id9003] matches {
+                                                defining_code matches {[ac9000]}    -- Presence of any social issues? (synthesised)
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id23] matches {    -- Specific social issue
+                                        items cardinality matches {1..*; unordered} matches {
+                                            ELEMENT[id5] matches {    -- Social issue name
+                                                value matches {
+                                                    DV_TEXT[id9006] 
+                                                }
+                                            }
+                                            ELEMENT[id6] occurrences matches {0..1} matches {    -- Presence?
+                                                value matches {
+                                                    DV_CODED_TEXT[id9007] matches {
+                                                        defining_code matches {[ac9001]}    -- Presence? (synthesised)
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    allow_archetype CLUSTER[id27] matches {     -- Additional details
+                                        include
+                                            archetype_id/value matches {/.*/}
+                                    }
+                                    ELEMENT[id26] occurrences matches {0..1} matches {    -- Comment
+                                        value matches {
+                                            DV_TEXT[id9010] 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id8] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    allow_archetype CLUSTER[id22] matches {     -- Extension
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["fi"] = <
+            ["ac9000"] = <
+                text = <"*Presence of any social issues? (en) (synthesised)">
+                description = <"Oireiden tai tuntemuksien vahva näyttö (synthesised)">
+            >
+            ["ac9001"] = <
+                text = <"Olemassalolo (synthesised)">
+                description = <"Oireen tai tuntemuksen olemassaolo (synthesised)">
+            >
+            ["id35"] = <
+                text = <"*Screening purpose(en)">
+                description = <"*The reason for overall screening.(en)">
+                comment = <"*For example: screening for an infectious disease, such as SARS-COV-2.(en)">
+            >
+            ["at34"] = <
+                text = <"Määrittelemätön">
+                description = <"On mahdotonta päätellä onko oire / tuntemus olemassa vai ei">
+            >
+            ["at33"] = <
+                text = <"Poissa">
+                description = <"Oire / tuntemusta ei ole olemassa">
+            >
+            ["at32"] = <
+                text = <"Olemassa">
+                description = <"Oire / tuntemus on olemassa">
+            >
+            ["id29"] = <
+                text = <"*Presence of any social issues? (en)">
+                description = <"Oireiden tai tuntemuksien vahva näyttö">
+            >
+            ["at28"] = <
+                text = <"Määrittelemätön">
+                description = <"Ei ole mahdollista varmistaa, onko oire tai tuntemus olemassa vaiko ei.">
+            >
+            ["id27"] = <
+                text = <"Lisätietoa">
+                description = <"*Additional structured details related to social issue screening. (en)">
+            >
+            ["id26"] = <
+                text = <"Kommentit">
+                description = <"Lisätietoa tarkentamaan oireita tai tuntemuksia.">
+            >
+            ["at25"] = <
+                text = <"*Absent(en)">
+                description = <"Yksilöityä oiretta ei ole havaittavissa / olemassa">
+            >
+            ["at24"] = <
+                text = <"*Present(en)">
+                description = <"Yksilöity oire on olemassa / havaittavissa">
+            >
+            ["id23"] = <
+                text = <"*Specific social issue (en)">
+                description = <"*Grouping of data elements related to screening for a single symptom or sign.(en)">
+            >
+            ["id22"] = <
+                text = <"*Extension(en)">
+                description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
+                comment = <"*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.(en)">
+            >
+            ["id6"] = <
+                text = <"Olemassalolo">
+                description = <"Oireen tai tuntemuksen olemassaolo">
+            >
+            ["id5"] = <
+                text = <"*Social issue name (en)">
+                description = <"Oireen tai tuntemuksen nimi jota arvioidaan">
+            >
+            ["id3"] = <
+                text = <"*Any event(en)">
+                description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)">
+            >
+            ["id1"] = <
+                text = <"*Social context screening questionnaire (en)">
+                description = <"*An individual- or self-reported questionnaire screening for social issues. (en)">
+            >
+        >
+        ["nb"] = <
+            ["ac9000"] = <
+                text = <"*Presence of any social issues? (en) (synthesised)">
+                description = <"*Presence of the any relevant symptoms or signs.(en) (synthesised)">
+            >
+            ["ac9001"] = <
+                text = <"Tilstede? (synthesised)">
+                description = <"*Presence of the symptom or sign.(en) (synthesised)">
+            >
+            ["id35"] = <
+                text = <"Formål med screeningen">
+                description = <"*The reason for overall screening.(en)">
+                comment = <"*For example: screening for an infectious disease, such as SARS-COV-2.(en)">
+            >
+            ["at34"] = <
+                text = <"Ubestemmelig">
+                description = <"*It is not possible to know if any symptoms or signs are present or absent.(en)">
+            >
+            ["at33"] = <
+                text = <"Fraværende">
+                description = <"*Symptoms or signs are not present.(en)">
+            >
+            ["at32"] = <
+                text = <"Tilstede">
+                description = <"*Symptoms or signs are present.(en)">
+            >
+            ["id29"] = <
+                text = <"*Presence of any social issues? (en)">
+                description = <"*Presence of the any relevant symptoms or signs.(en)">
+            >
+            ["at28"] = <
+                text = <"Ubestemmelig">
+                description = <"*It is not possible to know if the symptom or sign is present or absent.(en)">
+            >
+            ["id27"] = <
+                text = <"Ytterligere detaljer">
+                description = <"*Additional structured details related to social issue screening. (en)">
+            >
+            ["id26"] = <
+                text = <"Kommentar">
+                description = <"*Additional narrative about the symptoms and signs, not captured in other fields.(en)">
+            >
+            ["at25"] = <
+                text = <"Fraværende">
+                description = <"*The specific symptom or sign is not present.(en)">
+            >
+            ["at24"] = <
+                text = <"Tilstede">
+                description = <"*The specific symptom or sign is present.(en)">
+            >
+            ["id23"] = <
+                text = <"*Specific social issue (en)">
+                description = <"*Grouping of data elements related to screening for a single symptom or sign.(en)">
+            >
+            ["id22"] = <
+                text = <"Tilleggsinformasjon">
+                description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
+                comment = <"*For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.(en)">
+            >
+            ["id6"] = <
+                text = <"Tilstede?">
+                description = <"*Presence of the symptom or sign.(en)">
+            >
+            ["id5"] = <
+                text = <"*Social issue name (en)">
+                description = <"*Name of the symptom or sign being screened.(en)">
+            >
+            ["id3"] = <
+                text = <"Uspesifikk hendelse">
+                description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)">
+            >
+            ["id1"] = <
+                text = <"*Social context screening questionnaire (en)">
+                description = <"*An individual- or self-reported questionnaire screening for social issues. (en)">
+            >
+        >
+        ["en"] = <
+            ["ac9000"] = <
+                text = <"Presence of any social issues? (synthesised)">
+                description = <"Presence of the any relevant symptoms or signs. (synthesised)">
+            >
+            ["ac9001"] = <
+                text = <"Presence? (synthesised)">
+                description = <"Presence of the symptom or sign. (synthesised)">
+            >
+            ["id35"] = <
+                text = <"Screening purpose">
+                description = <"The reason for overall screening.">
+                comment = <"For example: screening for an infectious disease, such as SARS-COV-2.">
+            >
+            ["at34"] = <
+                text = <"Indeterminate">
+                description = <"It is not possible to know if any symptoms or signs are present or absent.">
+            >
+            ["at33"] = <
+                text = <"Absent">
+                description = <"Symptoms or signs are not present.">
+            >
+            ["at32"] = <
+                text = <"Present">
+                description = <"Symptoms or signs are present.">
+            >
+            ["id29"] = <
+                text = <"Presence of any social issues?">
+                description = <"Presence of the any relevant symptoms or signs.">
+            >
+            ["at28"] = <
+                text = <"Indeterminate">
+                description = <"It is not possible to know if the symptom or sign is present or absent.">
+            >
+            ["id27"] = <
+                text = <"Additional details">
+                description = <"Additional structured details related to social issue screening.">
+            >
+            ["id26"] = <
+                text = <"Comment">
+                description = <"Additional narrative about the symptoms and signs, not captured in other fields.">
+            >
+            ["at25"] = <
+                text = <"Absent">
+                description = <"The specific symptom or sign is not present.">
+            >
+            ["at24"] = <
+                text = <"Present">
+                description = <"The specific symptom or sign is present.">
+            >
+            ["id23"] = <
+                text = <"Specific social issue">
+                description = <"Grouping of data elements related to screening for a single symptom or sign.">
+            >
+            ["id22"] = <
+                text = <"Extension">
+                description = <"Additional information required to capture local content or to align with other reference models/formalisms.">
+                comment = <"For example: local information requirements or additional metadata to align with FHIR or CIMI equivalents.">
+            >
+            ["id6"] = <
+                text = <"Presence?">
+                description = <"Presence of the symptom or sign.">
+            >
+            ["id5"] = <
+                text = <"Social issue name">
+                description = <"Name of the symptom or sign being screened.">
+            >
+            ["id3"] = <
+                text = <"Any event">
+                description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
+            >
+            ["id1"] = <
+                text = <"Social context screening questionnaire">
+                description = <"An individual- or self-reported questionnaire screening for social issues.">
+            >
+        >
+        ["it"] = <
+            ["ac9000"] = <
+                text = <"*Presence of any social issues? (en) (synthesised)">
+                description = <"Presenza di sintomi o segni rilevanti.  (synthesised)">
+            >
+            ["ac9001"] = <
+                text = <"Presenza? (synthesised)">
+                description = <"Presenza del sintomo o del segno (synthesised)">
+            >
+            ["id35"] = <
+                text = <"Scopo dello screening">
+                description = <"Motivazione dello screening complessivo. ">
+                comment = <"Ad esempio: screening per una malattia infettiva, come la SARS-COV-2. ">
+            >
+            ["at34"] = <
+                text = <"Indeterminato">
+                description = <"Non è possibile sapere se sono presenti o assenti sintomi o segni. ">
+            >
+            ["at33"] = <
+                text = <"Assenza">
+                description = <"Non sono presenti sintomi o segni.">
+            >
+            ["at32"] = <
+                text = <"Presenza">
+                description = <"Sono presenti sintomi o segni.">
+            >
+            ["id29"] = <
+                text = <"*Presence of any social issues? (en)">
+                description = <"Presenza di sintomi o segni rilevanti. ">
+            >
+            ["at28"] = <
+                text = <"Indeterminato">
+                description = <"Non è possibile sapere se il sintomo o il segno è presente o assente.">
+            >
+            ["id27"] = <
+                text = <"Dettagli aggiuntivi">
+                description = <"*Additional structured details related to social issue screening. (en)">
+            >
+            ["id26"] = <
+                text = <"Commento">
+                description = <"Descrizione aggiuntiva dei sintomi e dei segni, non rilevata in altri campi.">
+            >
+            ["at25"] = <
+                text = <"Assenza">
+                description = <"Il sintomo o segno specifico non è presente.">
+            >
+            ["at24"] = <
+                text = <"Presenza">
+                description = <"Il sintomo o segno specifico è presente.">
+            >
+            ["id23"] = <
+                text = <"*Specific social issue (en)">
+                description = <"Raggruppamento di elementi di dati relativi allo screening per un singolo sintomo o segno.">
+            >
+            ["id22"] = <
+                text = <"Estensione">
+                description = <"Informazioni aggiuntive necessarie per raccogliere contenuti locali o per allinearsi con altri modelli/formalismi di riferimento.">
+                comment = <"Ad esempio: requisiti informativi locali o metadati aggiuntivi per allinearsi agli equivalenti FHIR o CIMI. ">
+            >
+            ["id6"] = <
+                text = <"Presenza?">
+                description = <"Presenza del sintomo o del segno">
+            >
+            ["id5"] = <
+                text = <"*Social issue name (en)">
+                description = <"Nome del sintomo o del segno sottoposto a screening.">
+            >
+            ["id3"] = <
+                text = <"Qualsiasi evento">
+                description = <"Evento predefinito, non specificato nel tempo o nell'intervallo di tempo, che può essere definito esplicitamente in un modello o in fase di esecuzione.">
+            >
+            ["id1"] = <
+                text = <"*Social context screening questionnaire (en)">
+                description = <"*An individual- or self-reported questionnaire screening for social issues. (en)">
+            >
+        >
+    >
+    value_sets = <
+        ["ac9001"] = <
+            id = <"ac9001">
+            members = <"at24", "at25", "at28">
+        >
+        ["ac9000"] = <
+            id = <"ac9000">
+            members = <"at32", "at33", "at34">
+        >
+    >

@@ -1,0 +1,1004 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=b016cdb3-d685-4f86-a623-dba44ebe1586; build_uid=0ab3a4c8-9f06-4de5-9f75-a11670372d16)
+    openEHR-EHR-ACTION.informed_consent.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["de"] = <
+            language = <[ISO_639-1::de]>
+            author = <
+                ["name"] = <"Aurelie Tomczak, Natalia Strauch">
+                ["organisation"] = <"Institute of Pathology, University Hospital Heidelberg, Germany, Medizinische Hochschule Hannover">
+                ["email"] = <"au.tomczak@yahoo.com, Strauch.Natalia@mh-hannover.de">
+            >
+        >
+        ["ru"] = <
+            language = <[ISO_639-1::ru]>
+            author = <
+                ["name"] = <"Art Latyp; Латыпов Артур Шамилевич">
+                ["organisation"] = <"RusBITech РусБИТех">
+            >
+            accreditation = <"hmm">
+        >
+    >
+
+description
+    original_author = <
+        ["name"] = <"Heather Leslie">
+        ["organisation"] = <"Atomica Informatics">
+        ["email"] = <"heather.leslie@atomicainformatics.com">
+        ["date"] = <"09-10-2012">
+    >
+    original_namespace = <"org.openehr">
+    original_publisher = <"openEHR Foundation">
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"org.openehr">
+    custodian_organisation = <"openEHR Foundation">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+    references = <
+        ["1"] = <"ASTM Standard E2369 - 05, \"Standard Specification for Continuity of Care Record (CCR)\", ASTM International, West Conshohocken, PA, 2003, DOI: 10.1520/E2369-05E02, www.astm.org.">
+    >
+    other_details = <
+        ["current_contact"] = <"Heather Leslie, Atomica Informatics, heather.leslie@atomicainformatics.com">
+        ["MD5-CAM-1.0.1"] = <"7BBC86CAADB4F437CDEE78008B003763">
+    >
+    details = <
+        ["de"] = <
+            language = <[ISO_639-1::de]>
+            purpose = <"Zur Statusdarstellung einer Anforderung oder Aufzeichnung der Einwilligungserklärung vor der Durchführung einer Prozedur, einer klinischen Studie/Prüfung oder einer Aktivität im Zusammenhang mit dem Gesundheitswesen.">
+            keywords = <"Einwilligung", "Einverständnis", "Einverständniserklärung", "Aufklärung", "Zustimmung", "informiert", "Vorbehalt">
+            use = <"Zur Statusdarstellung einer Anforderung, um eine Einverständniserklärung zu erhalten, einschließlich was geplant, angefordert, bereitgestellt oder zurückgezogen wurde.
+    
+    Dieser Archetyp wurde als Framework entwickelt, das zum Anfordern und Aufzeichnen einer einfachen Einwilligung geeignet ist, es jedoch zulässt, dass zusätzliche Details optional im SLOT \"Details\" hinzugefügt werden, um die spezifischen Anforderungen eines komplexeren klinischen Szenarios zu erfüllen. Beispielsweise können zusätzliche Zustimmungsdetails unter Verwendung des Archetyps CLUSTER.consent_details eingefügt werden. Andere Archetypen können entwickelt und optional im selben SLOT enthalten sein, um spezifische Details über das Verfahren, den Versuch oder die Aktivität aufzuzeichnen.
+    
+    Der Status der Einwilligungserklärung spiegelt sich in den einzelnen Schritten wider - angefordert, abgelehnt, bereitgestellt, zurückgezogen usw.
+    ">
+            misuse = <"">
+        >
+        ["ru"] = <
+            language = <[ISO_639-1::ru]>
+            purpose = <"Записать необходимость или наличие информированного согласия на выполнение процедуры, клинического теста или другой связанной со сдоровьем активности">
+            keywords = <"согласие", "информированное", "отказ">
+            use = <"Используется для записи статуса информированного согласия, включая планируемое, назначенное, запрошенное, предложенное, полученное. 
+    Этот архетип разработан как рабочая зона, достаточная для того, чтобы  запросить и записать простое согласие, но, в то же время, позволяющая добавить специфические детали в слоте \"Детали\" при  необходимости более сложного клинического сценария. Например, такие детали могут содержать архетип КЛАСТЕР.детали_согласия. В этот же слот могут быть добавлены другие архетипы для описания процедуры, исследования или активности.
+    Статус информированного согласия отражает этапы его получения: необходимость, запрос, отказ, подписание и т.д.       ">
+            misuse = <"">
+            copyright = <"© openEHR Foundation">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"To record the status of a request for, or record of, informed consent prior to performing a procedure, clinical trial or healthcare-related activity.">
+            keywords = <"consent", "informed", "caveat">
+            use = <"Use to record the status of an order to obtain informed consent, including what is planned, scheduled, requested, provided, or withdrawn.
+    
+    This archetype has been designed to be a framework that will be adequate for requesting and recording a simple consent, but allow for additional details to be optionally added within the 'Details' SLOT to meet the specific requirements of a more complex clinical scenario.  For example, additional consent details can be included using the CLUSTER.consent_details archetype. Other archetypes can be developed and optionally included in the same SLOT for the purpose of recording specific details about the procedure, trial or activity. 
+    
+    The status of the informed consent is reflected by the pathway steps - requested, refused, provided, withdrawn etc.">
+            misuse = <"">
+            copyright = <"© openEHR Foundation">
+        >
+    >
+
+definition
+    ACTION[id1] matches {    -- Informed consent
+        ism_transition matches {
+            ISM_TRANSITION[id14] matches {    -- Planned
+                current_state matches {
+                    DV_CODED_TEXT[id9051] matches {
+                        defining_code matches {[at9000]}    -- planned
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id9052] matches {
+                        defining_code matches {[at14]}    -- Planned
+                    }
+                }
+            }
+            ISM_TRANSITION[id20] matches {    -- Postponed
+                current_state matches {
+                    DV_CODED_TEXT[id9053] matches {
+                        defining_code matches {[at9001]}    -- postponed
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id9054] matches {
+                        defining_code matches {[at20]}    -- Postponed
+                    }
+                }
+            }
+            ISM_TRANSITION[id19] matches {    -- Cancelled
+                current_state matches {
+                    DV_CODED_TEXT[id9055] matches {
+                        defining_code matches {[at9002]}    -- cancelled
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id9056] matches {
+                        defining_code matches {[at19]}    -- Cancelled
+                    }
+                }
+            }
+            ISM_TRANSITION[id28] matches {    -- Appointment scheduled
+                current_state matches {
+                    DV_CODED_TEXT[id9057] matches {
+                        defining_code matches {[at9003]}    -- scheduled
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id9058] matches {
+                        defining_code matches {[at28]}    -- Appointment scheduled
+                    }
+                }
+            }
+            ISM_TRANSITION[id15] matches {    -- Informed consent requested
+                current_state matches {
+                    DV_CODED_TEXT[id9059] matches {
+                        defining_code matches {[ac9005]}    -- Informed consent requested (synthesised)
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id9060] matches {
+                        defining_code matches {[at15]}    -- Informed consent requested
+                    }
+                }
+            }
+            ISM_TRANSITION[id16] matches {    -- Informed consent provided
+                current_state matches {
+                    DV_CODED_TEXT[id9061] matches {
+                        defining_code matches {[at9004]}    -- active
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id9062] matches {
+                        defining_code matches {[at16]}    -- Informed consent provided
+                    }
+                }
+            }
+            ISM_TRANSITION[id22] matches {    -- Informed consent not obtained
+                current_state matches {
+                    DV_CODED_TEXT[id9063] matches {
+                        defining_code matches {[at9004]}    -- active
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id9064] matches {
+                        defining_code matches {[at22]}    -- Informed consent not obtained
+                    }
+                }
+            }
+            ISM_TRANSITION[id17] matches {    -- Informed consent refused
+                current_state matches {
+                    DV_CODED_TEXT[id9065] matches {
+                        defining_code matches {[at9006]}    -- aborted
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id9066] matches {
+                        defining_code matches {[at17]}    -- Informed consent refused
+                    }
+                }
+            }
+            ISM_TRANSITION[id18] matches {    -- Informed consent withdrawn
+                current_state matches {
+                    DV_CODED_TEXT[id9067] matches {
+                        defining_code matches {[at9006]}    -- aborted
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id9068] matches {
+                        defining_code matches {[at18]}    -- Informed consent withdrawn
+                    }
+                }
+            }
+            ISM_TRANSITION[id23] matches {    -- Completed
+                current_state matches {
+                    DV_CODED_TEXT[id9069] matches {
+                        defining_code matches {[at9007]}    -- complete
+                    }
+                }
+                careflow_step matches {
+                    DV_CODED_TEXT[id9070] matches {
+                        defining_code matches {[at23]}    -- Completed
+                    }
+                }
+            }
+        }
+        description matches {
+            ITEM_TREE[id2] matches {
+                items cardinality matches {1..*; unordered} matches {
+                    ELEMENT[id3] occurrences matches {1..*} matches {    -- Procedure/Trial/Activity
+                        value matches {
+                            DV_TEXT[id9071] 
+                        }
+                    }
+                    ELEMENT[id31] occurrences matches {0..1} matches {    -- Procedure/Trial/Activity description
+                        value matches {
+                            DV_TEXT[id9081] 
+                        }
+                    }
+                    ELEMENT[id32] occurrences matches {0..1} matches {    -- Intent
+                        value matches {
+                            DV_TEXT[id9082] 
+                        }
+                    }
+                    ELEMENT[id12] occurrences matches {0..1} matches {    -- Consent description
+                        value matches {
+                            DV_TEXT[id9072] 
+                        }
+                    }
+                    allow_archetype CLUSTER[id4] matches {     -- Details
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.consent_details(-[a-zA-Z0-9_]+)*\.v1\..*|openEHR-EHR-CLUSTER\.procedure_details(-[a-zA-Z0-9_]+)*\.v1\..*/}
+                    }
+                    ELEMENT[id5] occurrences matches {0..1} matches {    -- Form of consent
+                        value matches {
+                            DV_CODED_TEXT[id9073] matches {
+                                defining_code matches {[ac9008]}    -- Form of consent (synthesised)
+                            }
+                        }
+                    }
+                    ELEMENT[id8] occurrences matches {0..1} matches {    -- Reason
+                        value matches {
+                            DV_TEXT[id9074] 
+                        }
+                    }
+                    ELEMENT[id9] occurrences matches {0..1} matches {    -- Start date
+                        value matches {
+                            DV_DATE_TIME[id9075] 
+                        }
+                    }
+                    ELEMENT[id10] occurrences matches {0..1} matches {    -- End date
+                        value matches {
+                            DV_DATE_TIME[id9076] 
+                        }
+                    }
+                    ELEMENT[id11] matches {    -- Caveat
+                        value matches {
+                            DV_TEXT[id9077] 
+                        }
+                    }
+                    ELEMENT[id13] occurrences matches {0..1} matches {    -- Evidence link
+                        value matches {
+                            DV_URI[id9087] 
+                        }
+                    }
+                    ELEMENT[id37] occurrences matches {0..1} matches {    -- Comment
+                        value matches {
+                            DV_TEXT[id9086] 
+                        }
+                    }
+                    allow_archetype CLUSTER[id38] matches {     -- Evidence details
+                        include
+                            archetype_id/value matches {/openEHR-EHR-CLUSTER\.multimedia\.v0\..*/}
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id25] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    ELEMENT[id26] occurrences matches {0..1} matches {    -- Consent document used
+                        value matches {
+                            DV_TEXT[id9079] 
+                        }
+                    }
+                    ELEMENT[id27] occurrences matches {0..1} matches {    -- Review date
+                        value matches {
+                            DV_DATE_TIME[id9080] 
+                        }
+                    }
+                    allow_archetype CLUSTER[id29] matches {     -- Consent requester
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                    allow_archetype CLUSTER[id30] matches {     -- Consent provider
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                    CLUSTER[id34] matches {    -- Patient information
+                        items cardinality matches {1..*; unordered} matches {
+                            ELEMENT[id33] occurrences matches {0..1} matches {    -- Name
+                                value matches {
+                                    DV_TEXT[id9083] 
+                                }
+                            }
+                            ELEMENT[id36] occurrences matches {0..1} matches {    -- Description
+                                value matches {
+                                    DV_TEXT[id9084] 
+                                }
+                            }
+                            allow_archetype CLUSTER[id39] matches {     -- Multimedia representation
+                                include
+                                    archetype_id/value matches {/.*/}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["de"] = <
+            ["at9004"] = <
+                text = <"* active (en)">
+                description = <"* active (en)">
+            >
+            ["at9000"] = <
+                text = <"* planned (en)">
+                description = <"* planned (en)">
+            >
+            ["at9001"] = <
+                text = <"* postponed (en)">
+                description = <"* postponed (en)">
+            >
+            ["at9002"] = <
+                text = <"* cancelled (en)">
+                description = <"* cancelled (en)">
+            >
+            ["at9003"] = <
+                text = <"* scheduled (en)">
+                description = <"* scheduled (en)">
+            >
+            ["at9006"] = <
+                text = <"* aborted (en)">
+                description = <"* aborted (en)">
+            >
+            ["at9007"] = <
+                text = <"* complete (en)">
+                description = <"* complete (en)">
+            >
+            ["ac9005"] = <
+                text = <"Einwilligung erbeten (synthesised)">
+                description = <"Die Einwilligungserklärung wurde vom Patienten oder seinem Vertreter angefragt, es ist jedoch keine Antwort eingegangen. (synthesised)">
+            >
+            ["ac9008"] = <
+                text = <"Form der Einwilligung (synthesised)">
+                description = <"Form der beantragten oder erteilten Einwilligung. (synthesised)">
+            >
+            ["id39"] = <
+                text = <"Multimedia-Darstellung">
+                description = <"Multimediale Darstellung des Einwilligungsnachweises.">
+            >
+            ["id38"] = <
+                text = <"Angaben zum Einwilligungsnachweis">
+                description = <"Digitale Darstellung des Einwilligungsnachweises.">
+                comment = <"Zum Beispiel: ein PDF eines Einwilligungsformulars oder eine Audiodatei.">
+            >
+            ["id37"] = <
+                text = <"Kommentar">
+                description = <"Zusätzliche Beschreibung der Prozedur der Einwilligungserklärung, die in anderen Bereichen nicht erfasst wurde.">
+            >
+            ["id36"] = <
+                text = <"Beschreibung">
+                description = <"Beschreibung der zur Verfügung gestellten Patienteninformation.">
+            >
+            ["id34"] = <
+                text = <"Patienteninformation">
+                description = <"Details zur Patienteninformation, die der Person oder dem Vertreter der Person zur Verfügung gestellt werden.">
+            >
+            ["id33"] = <
+                text = <"Name">
+                description = <"Identifizierung der zur Verfügung gestellten Information.">
+                comment = <"Zum Beispiel der Name des Formulars.">
+            >
+            ["id32"] = <
+                text = <"Absicht">
+                description = <"Beschreibung der Absicht der Prozedur, klinischen Prüfung oder der gesundheitsbezogenen Aktivität.">
+            >
+            ["id31"] = <
+                text = <"Beschreibung der Prozedur / Studie / Aktivität">
+                description = <"Beschreibung der Prozedur, klinischen Prüfung oder der gesundheitsbezogenen Aktivität.">
+            >
+            ["id30"] = <
+                text = <"Patient/Einwilligende Person">
+                description = <"Details zu der Person (oder dem Vertreter der Person), die um die Einwilligung zur Prozedur, klinischen Prüfung oder gesundheitsbezogenen Aktivität gebeten wird oder diese erteilt.">
+                comment = <"Fügen Sie archetypisierte demografische Details in diesen SLOT ein, wenn es nicht möglich ist, other_participations zu verwenden.">
+            >
+            ["id29"] = <
+                text = <"Anforderer der Einwilligungserklärung">
+                description = <"Angaben zum Gesundheitsdienstleister, der die Einwilligung anfordert oder aufzeichnet.">
+                comment = <"Fügen Sie archetypisierte demografische Details in diesen SLOT ein, wenn es nicht möglich ist, other_participations zu verwenden.">
+            >
+            ["id28"] = <
+                text = <"Termin geplant">
+                description = <"Es wurde ein Termin vereinbart, um die Zustimmung einzuholen.">
+            >
+            ["at28"] = <
+                text = <"Termin geplant">
+                description = <"Es wurde ein Termin vereinbart, um die Zustimmung einzuholen.">
+            >
+            ["id27"] = <
+                text = <"Prüfungsdatum">
+                description = <"Datum, an dem der Einwilligungsstatus überprüft werden muss.">
+            >
+            ["id26"] = <
+                text = <"Verwendetes Einwilligungsdokument">
+                description = <"Identifizierung des verwendeten Einwilligungsformulars oder Dokuments.">
+            >
+            ["id23"] = <
+                text = <"Abgeschlossen">
+                description = <"Der Patient oder sein Vertreter hat eine Einwilligungserklärung abgegeben und die Aktivität ist nun abgeschlossen.">
+            >
+            ["at23"] = <
+                text = <"Abgeschlossen">
+                description = <"Der Patient oder sein Vertreter hat eine Einwilligungserklärung abgegeben und die Aktivität ist nun abgeschlossen.">
+            >
+            ["id22"] = <
+                text = <"Einwilligung nicht erhalten">
+                description = <"Eine Einwilligungserklärung war weder vom Patienten noch vom Vertreter des Patienten erhältlich.">
+            >
+            ["at22"] = <
+                text = <"Einwilligung nicht erhalten">
+                description = <"Eine Einwilligungserklärung war weder vom Patienten noch vom Vertreter des Patienten erhältlich.">
+            >
+            ["id20"] = <
+                text = <"Verschoben">
+                description = <"Die Absicht, eine Einwilligungserklärung anzufordern, wurde verschoben.">
+            >
+            ["at20"] = <
+                text = <"Verschoben">
+                description = <"Die Absicht, eine Einwilligungserklärung anzufordern, wurde verschoben.">
+            >
+            ["id19"] = <
+                text = <"Abgesagt">
+                description = <"Die Absicht, eine Einwilligungserklärung anzufordern, wurde aufgehoben, bevor die Einwilligung des Patienten oder seines Vertreters angefordert wurde.">
+            >
+            ["at19"] = <
+                text = <"Abgesagt">
+                description = <"Die Absicht, eine Einwilligungserklärung anzufordern, wurde aufgehoben, bevor die Einwilligung des Patienten oder seines Vertreters angefordert wurde.">
+            >
+            ["id18"] = <
+                text = <"Einwilligung widerrufen">
+                description = <"Nach der ersten Übermittlung einer Einwilligungserklärung wurde diese vom Patienten oder seinem Vertreter widerrufen.">
+            >
+            ["at18"] = <
+                text = <"Einwilligung widerrufen">
+                description = <"Nach der ersten Übermittlung einer Einwilligungserklärung wurde diese vom Patienten oder seinem Vertreter widerrufen.">
+            >
+            ["id17"] = <
+                text = <"Einwilligung verweigert">
+                description = <"Als Antwort auf eine Anfrage zur Einwilligungserklärung, wurde sie vom Patienten oder seinem Vertreter abgelehnt.">
+            >
+            ["at17"] = <
+                text = <"Einwilligung verweigert">
+                description = <"Als Antwort auf eine Anfrage zur Einwilligungserklärung, wurde sie vom Patienten oder seinem Vertreter abgelehnt.">
+            >
+            ["id16"] = <
+                text = <"Einwilligung erteilt">
+                description = <"Die Einwilligungserklärung wurde vom Patienten oder seinem Vertreter erteilt.">
+            >
+            ["at16"] = <
+                text = <"Einwilligung erteilt">
+                description = <"Die Einwilligungserklärung wurde vom Patienten oder seinem Vertreter erteilt.">
+            >
+            ["id15"] = <
+                text = <"Einwilligung erbeten">
+                description = <"Die Einwilligungserklärung wurde vom Patienten oder seinem Vertreter angefragt, es ist jedoch keine Antwort eingegangen.">
+            >
+            ["at15"] = <
+                text = <"Einwilligung erbeten">
+                description = <"Die Einwilligungserklärung wurde vom Patienten oder seinem Vertreter angefragt, es ist jedoch keine Antwort eingegangen.">
+            >
+            ["id14"] = <
+                text = <"Geplant">
+                description = <"Die Notwendigkeit einer Einwilligungserklärung wird festgestellt.">
+            >
+            ["at14"] = <
+                text = <"Geplant">
+                description = <"Die Notwendigkeit einer Einwilligungserklärung wird festgestellt.">
+            >
+            ["id13"] = <
+                text = <"Einwilligungsnachweis">
+                description = <"Link zum Einwilligungsnachweis.">
+                comment = <"Beispielsweise wird eine Audio-Einwilligungserklärung angefordert oder ein Bild der schriftlichen Einwilligung erhalten.">
+            >
+            ["id12"] = <
+                text = <"Beschreibung der Einwilligung">
+                description = <"Beschreibung der Einwilligungserklärung, die erforderlich ist oder aufgezeichnet werden soll, bevor die vorgeschlagene Prozedur, klinische Prüfung oder gesundheitsbezogene Aktivitäten durchgeführt werden.">
+            >
+            ["id11"] = <
+                text = <"Vorbehalt">
+                description = <"Einzelheiten zu Bedingungen oder Ausnahmen der Einwilligungserklärung.">
+            >
+            ["id10"] = <
+                text = <"Endtermin">
+                description = <"Datum und optionale Uhrzeit, zu der die Gültigkeit der Einwilligungserklärung abgelaufen ist.">
+            >
+            ["id9"] = <
+                text = <"Beginn">
+                description = <"Datum und optionale Uhrzeit, zu der die Gültigkeit der Einwilligungserklärung wirksam wird.">
+            >
+            ["id8"] = <
+                text = <"Grund">
+                description = <"Grund, warum der Verlaufsschritt für die benannte Prozedur, klinische Studie oder die gesundheitsbezogene Aktivität durchgeführt wurde.">
+                comment = <"Zum Beispiel der Grund für \"Einwilligung verweigert\" oder \"Einwilligung widerrufen\".">
+            >
+            ["at7"] = <
+                text = <"Mündlich">
+                description = <"Das Format der Einwilligung ist mündlich.">
+            >
+            ["at6"] = <
+                text = <"Schriftlich">
+                description = <"Das Format der Einwilligung ist schriftlich.">
+            >
+            ["id5"] = <
+                text = <"Form der Einwilligung">
+                description = <"Form der beantragten oder erteilten Einwilligung.">
+            >
+            ["id4"] = <
+                text = <"Einzelheiten">
+                description = <"Zusätzliche strukturierte Details zur Prozedur / Studie / zur Aktivität selbst oder zusätzliche strukturierte Details der Einwilligung.">
+                comment = <"Zum Beispiel: Absicht / Zweck; anästhetische Details; Offenlegung wesentlicher Risiken; und diskutierte vorgeschlagene Vorteile.">
+            >
+            ["id3"] = <
+                text = <"Prozedur / Studie / Aktivität">
+                description = <"Identifizierung der Prozedur, klinischen Studie oder der gesundheitsbezogenen Aktivität (einschließlich der richtigen Stelle / des richtigen Standorts, falls zutreffend), für die der Einwilligungsstatus und Details aufgezeichnet werden.">
+            >
+            ["id1"] = <
+                text = <"Einwilligungserklärung">
+                description = <"Aufzeichnungen über den Status und Einzelheiten der Einwilligungserklärung eines Patienten (oder seines Vertreters) zur einen vorgeschlagenen Prozedur, Studie oder einen anderen gesundheitsbezogenen Aktivität (einschließlich Behandlungen und Untersuchungen) auf der Grundlage einer klaren Einschätzung und eines klaren Verständnisses der Fakten, Auswirkungen und möglichen zukünftigen Konsequenzen durch den Patienten oder dessen Vertreter.">
+            >
+        >
+        ["ru"] = <
+            ["at9004"] = <
+                text = <"* active (en)">
+                description = <"* active (en)">
+            >
+            ["at9000"] = <
+                text = <"* planned (en)">
+                description = <"* planned (en)">
+            >
+            ["at9001"] = <
+                text = <"* postponed (en)">
+                description = <"* postponed (en)">
+            >
+            ["at9002"] = <
+                text = <"* cancelled (en)">
+                description = <"* cancelled (en)">
+            >
+            ["at9003"] = <
+                text = <"* scheduled (en)">
+                description = <"* scheduled (en)">
+            >
+            ["at9006"] = <
+                text = <"* aborted (en)">
+                description = <"* aborted (en)">
+            >
+            ["at9007"] = <
+                text = <"* complete (en)">
+                description = <"* complete (en)">
+            >
+            ["ac9005"] = <
+                text = <"Запрошено (synthesised)">
+                description = <"Информированное согласие запрошено у пациента или его представителя, но ответ не получен (synthesised)">
+            >
+            ["ac9008"] = <
+                text = <"Форма согласия (synthesised)">
+                description = <"Форма согласия (synthesised)">
+            >
+            ["id39"] = <
+                text = <"*Multimedia representation (en)">
+                description = <"*Digital representation of the evidence of consent. (en)">
+            >
+            ["id38"] = <
+                text = <"*Evidence details (en)">
+                description = <"*Digital representation of the evidence of consent. (en)">
+                comment = <"*For example: a PDF of a consent authorisation form; or an audio file. (en)">
+            >
+            ["id37"] = <
+                text = <"*Comment (en)">
+                description = <"*Additional narrative about the informed consent activity, not captured in other fields. (en)">
+            >
+            ["id36"] = <
+                text = <"*Description(en)">
+                description = <"*Narrative description of the patient information made available.(en)">
+            >
+            ["id34"] = <
+                text = <"*Patient Information(en)">
+                description = <"*Details about Patient Information made available to the subject or subject's agent.(en)">
+            >
+            ["id33"] = <
+                text = <"*Name(en)">
+                description = <"*Identification of the information made available.(en)">
+            >
+            ["id32"] = <
+                text = <"Цель">
+                description = <"Описание цели процедуры/исследования или другой деятельности, связанной со здоровьем.">
+            >
+            ["id31"] = <
+                text = <"Описание действия">
+                description = <"Текстовое описание процедуры, действия или клинического исследования">
+            >
+            ["id30"] = <
+                text = <"*Consent Provider(en)">
+                description = <"*Details about the subject (or subject's agent) who is being requested for, or providing, the consent for the procedure, clinical trial or healthcare-related activity.(en)">
+            >
+            ["id29"] = <
+                text = <"Заказчик согласия">
+                description = <"*Details about the healthcare provider who is requesting or recording the consent.(en)">
+            >
+            ["id28"] = <
+                text = <"Запланирована встреча">
+                description = <"Запланирована встреча для получения согласия">
+            >
+            ["at28"] = <
+                text = <"Запланирована встреча">
+                description = <"Запланирована встреча для получения согласия">
+            >
+            ["id27"] = <
+                text = <"Дата пересмотра">
+                description = <"Дата, когда статус согласия был изменен">
+            >
+            ["id26"] = <
+                text = <"Используемый документ">
+                description = <"Идентификатор формы или документа согласия">
+            >
+            ["id23"] = <
+                text = <"Выполнено">
+                description = <"Информированное согласие было получено, и действие выполнено">
+            >
+            ["at23"] = <
+                text = <"Выполнено">
+                description = <"Информированное согласие было получено, и действие выполнено">
+            >
+            ["id22"] = <
+                text = <"Не получено">
+                description = <"Информированное согласие не получено">
+            >
+            ["at22"] = <
+                text = <"Не получено">
+                description = <"Информированное согласие не получено">
+            >
+            ["id20"] = <
+                text = <"Отложено">
+                description = <"Запрос на согласие отложен">
+            >
+            ["at20"] = <
+                text = <"Отложено">
+                description = <"Запрос на согласие отложен">
+            >
+            ["id19"] = <
+                text = <"Отменено">
+                description = <"Необходмиость в согласии отпала до того, как он было запрошено">
+            >
+            ["at19"] = <
+                text = <"Отменено">
+                description = <"Необходмиость в согласии отпала до того, как он было запрошено">
+            >
+            ["id18"] = <
+                text = <"Изъято">
+                description = <"Поле начального получения согласия, оно было изъято пациентом или его представителем">
+            >
+            ["at18"] = <
+                text = <"Изъято">
+                description = <"Поле начального получения согласия, оно было изъято пациентом или его представителем">
+            >
+            ["id17"] = <
+                text = <"Отказано">
+                description = <"В получении согласия отказано пациентом или его представиетелм">
+            >
+            ["at17"] = <
+                text = <"Отказано">
+                description = <"В получении согласия отказано пациентом или его представиетелм">
+            >
+            ["id16"] = <
+                text = <"Получено">
+                description = <"Информированное согласие получено от пациента ли его представителя">
+            >
+            ["at16"] = <
+                text = <"Получено">
+                description = <"Информированное согласие получено от пациента ли его представителя">
+            >
+            ["id15"] = <
+                text = <"Запрошено">
+                description = <"Информированное согласие запрошено у пациента или его представителя, но ответ не получен">
+            >
+            ["at15"] = <
+                text = <"Запрошено">
+                description = <"Информированное согласие запрошено у пациента или его представителя, но ответ не получен">
+            >
+            ["id14"] = <
+                text = <"Запланировано">
+                description = <"Установлена необходимость в информированном согласии">
+            >
+            ["at14"] = <
+                text = <"Запланировано">
+                description = <"Установлена необходимость в информированном согласии">
+            >
+            ["id13"] = <
+                text = <"Доказательства согласия">
+                description = <"Доказательства статуса согласия">
+                comment = <"Например, фотография рукописного согласия или аудиозапись устного согласия">
+            >
+            ["id12"] = <
+                text = <"Описание согласия">
+                description = <"текстовое описание информированного согласия, требующегося для проведения процедуры или других действий">
+            >
+            ["id11"] = <
+                text = <"Особые указания">
+                description = <"Подробности по любым уточнениям информированного согласия">
+            >
+            ["id10"] = <
+                text = <"Конец">
+                description = <"Дата (время), когда согласие утратило свою силу. ">
+            >
+            ["id9"] = <
+                text = <"Дата начала">
+                description = <"Дата, при необходимости, время, когда полученное согласие стало активным ">
+            >
+            ["id8"] = <
+                text = <"Причина">
+                description = <"Причина задержки получения согласия">
+                comment = <"например, почему согласие не подписано или изъято">
+            >
+            ["at7"] = <
+                text = <"на словах">
+                description = <"Согласие дано устно">
+            >
+            ["at6"] = <
+                text = <"Записанное">
+                description = <"Согласие написано от руки">
+            >
+            ["id5"] = <
+                text = <"Форма согласия">
+                description = <"Форма согласия">
+            >
+            ["id4"] = <
+                text = <"Подробности">
+                description = <"Дополнительные структурированные подробности процедуры (или другой деятельности, связанной со здоровьем)">
+                comment = <"например: цели и задачи; подробности анестезии; описание рисков; ожидаемая польза.">
+            >
+            ["id3"] = <
+                text = <"Процедура/дейстиве">
+                description = <"Название процедуры/действия (включая область), на которую записан статус согласия">
+            >
+            ["id1"] = <
+                text = <"Информированное согласие">
+                description = <"Запись о состоянии и  деталях информированного согласия пациента (доверенного лица) на предлагаемую процедуру, исследование или другую активность (включая лечение или обследование), основанного на полном понимании и принятии фактов, осложнений и возможных последствий. ">
+            >
+        >
+        ["en"] = <
+            ["at9004"] = <
+                text = <"active">
+                description = <"active">
+            >
+            ["at9000"] = <
+                text = <"planned">
+                description = <"planned">
+            >
+            ["at9001"] = <
+                text = <"postponed">
+                description = <"postponed">
+            >
+            ["at9002"] = <
+                text = <"cancelled">
+                description = <"cancelled">
+            >
+            ["at9003"] = <
+                text = <"scheduled">
+                description = <"scheduled">
+            >
+            ["at9006"] = <
+                text = <"aborted">
+                description = <"aborted">
+            >
+            ["at9007"] = <
+                text = <"complete">
+                description = <"complete">
+            >
+            ["ac9005"] = <
+                text = <"Informed consent requested (synthesised)">
+                description = <"Informed consent has been requested from the patient or patient's agent, but no response has been received. (synthesised)">
+            >
+            ["ac9008"] = <
+                text = <"Form of consent (synthesised)">
+                description = <"Form of the consent sought or provided. (synthesised)">
+            >
+            ["id39"] = <
+                text = <"Multimedia representation">
+                description = <"Digital representation of the evidence of consent.">
+            >
+            ["id38"] = <
+                text = <"Evidence details">
+                description = <"Digital representation of the evidence of consent.">
+                comment = <"For example: a PDF of a consent authorisation form; or an audio file.">
+            >
+            ["id37"] = <
+                text = <"Comment">
+                description = <"Additional narrative about the informed consent activity, not captured in other fields.">
+            >
+            ["id36"] = <
+                text = <"Description">
+                description = <"Narrative description of the patient information made available.">
+            >
+            ["id34"] = <
+                text = <"Patient information">
+                description = <"Details about Patient Information made available to the subject or subject's agent.">
+            >
+            ["id33"] = <
+                text = <"Name">
+                description = <"Identification of the information made available.">
+                comment = <"For example, the name of the form.">
+            >
+            ["id32"] = <
+                text = <"Intent">
+                description = <"Description of the intent of the procedure, clinical trial or healthcare-related activity.">
+            >
+            ["id31"] = <
+                text = <"Procedure/Trial/Activity description">
+                description = <"Narrative description of the procedure, clinical trial or healthcare-related activity.">
+            >
+            ["id30"] = <
+                text = <"Consent provider">
+                description = <"Details about the subject (or subject's agent) who is being requested for, or providing, the consent for the procedure, clinical trial or healthcare-related activity.">
+                comment = <"Insert archetyped demographic details in this SLOT if it is not possible to use other_participations.">
+            >
+            ["id29"] = <
+                text = <"Consent requester">
+                description = <"Details about the healthcare provider who is requesting or recording the consent.">
+                comment = <"Insert archetyped demographic details in this SLOT if it is not possible to use other_participations.">
+            >
+            ["id28"] = <
+                text = <"Appointment scheduled">
+                description = <"An appointment has been scheduled to request consent.">
+            >
+            ["at28"] = <
+                text = <"Appointment scheduled">
+                description = <"An appointment has been scheduled to request consent.">
+            >
+            ["id27"] = <
+                text = <"Review date">
+                description = <"Date when consent status is due for review.">
+            >
+            ["id26"] = <
+                text = <"Consent document used">
+                description = <"Identification of the form or document used to obtain consent.">
+            >
+            ["id23"] = <
+                text = <"Completed">
+                description = <"Informed consent has been provided by the patient or patient's agent and the activity is now complete.">
+            >
+            ["at23"] = <
+                text = <"Completed">
+                description = <"Informed consent has been provided by the patient or patient's agent and the activity is now complete.">
+            >
+            ["id22"] = <
+                text = <"Informed consent not obtained">
+                description = <"Informed consent was not obtainable from either the patient or patient's advocate.">
+            >
+            ["at22"] = <
+                text = <"Informed consent not obtained">
+                description = <"Informed consent was not obtainable from either the patient or patient's advocate.">
+            >
+            ["id20"] = <
+                text = <"Postponed">
+                description = <"Intent to request informed consent has been postponed.">
+            >
+            ["at20"] = <
+                text = <"Postponed">
+                description = <"Intent to request informed consent has been postponed.">
+            >
+            ["id19"] = <
+                text = <"Cancelled">
+                description = <"Intent to request informed consent has been cancelled, prior to requesting consent from patient or patient's agent..">
+            >
+            ["at19"] = <
+                text = <"Cancelled">
+                description = <"Intent to request informed consent has been cancelled, prior to requesting consent from patient or patient's agent..">
+            >
+            ["id18"] = <
+                text = <"Informed consent withdrawn">
+                description = <"Following initial provision of informed consent, it has been withrawn by the patient or patient's agent.">
+            >
+            ["at18"] = <
+                text = <"Informed consent withdrawn">
+                description = <"Following initial provision of informed consent, it has been withrawn by the patient or patient's agent.">
+            >
+            ["id17"] = <
+                text = <"Informed consent refused">
+                description = <"In response to a request for informed consent, it has been refused by patient or patient's agent.">
+            >
+            ["at17"] = <
+                text = <"Informed consent refused">
+                description = <"In response to a request for informed consent, it has been refused by patient or patient's agent.">
+            >
+            ["id16"] = <
+                text = <"Informed consent provided">
+                description = <"Informed consent has been provided by the patient or patient's agent.">
+            >
+            ["at16"] = <
+                text = <"Informed consent provided">
+                description = <"Informed consent has been provided by the patient or patient's agent.">
+            >
+            ["id15"] = <
+                text = <"Informed consent requested">
+                description = <"Informed consent has been requested from the patient or patient's agent, but no response has been received.">
+            >
+            ["at15"] = <
+                text = <"Informed consent requested">
+                description = <"Informed consent has been requested from the patient or patient's agent, but no response has been received.">
+            >
+            ["id14"] = <
+                text = <"Planned">
+                description = <"Need for informed consent is identified.">
+            >
+            ["at14"] = <
+                text = <"Planned">
+                description = <"Need for informed consent is identified.">
+            >
+            ["id13"] = <
+                text = <"Evidence link">
+                description = <"Link to evidence of consent.">
+                comment = <"For example, a hyperlink to the evidence held elsewhere in the health record.">
+            >
+            ["id12"] = <
+                text = <"Consent description">
+                description = <"Narrative description of the informed consent required or recorded prior to performing the proposed procedure, clinical trial or healthcare-related activity.">
+            >
+            ["id11"] = <
+                text = <"Caveat">
+                description = <"Details of any qualifications or exemptions to the informed consent.">
+            >
+            ["id10"] = <
+                text = <"End date">
+                description = <"Date, and optional time, when validity of the informed consent ceased.">
+            >
+            ["id9"] = <
+                text = <"Start date">
+                description = <"Date, and optional time, when validity of the informed consent becomes active.">
+            >
+            ["id8"] = <
+                text = <"Reason">
+                description = <"Reason that the care pathway step for the identified procedure, clinical trial or healthcare-related activity was carried out.">
+                comment = <"For example, the reason for 'consent refused' or 'consent withdrawn'.">
+            >
+            ["at7"] = <
+                text = <"Verbal">
+                description = <"Format of the consent is verbal.">
+            >
+            ["at6"] = <
+                text = <"Written">
+                description = <"Format of the consent is written.">
+            >
+            ["id5"] = <
+                text = <"Form of consent">
+                description = <"Form of the consent sought or provided.">
+            >
+            ["id4"] = <
+                text = <"Details">
+                description = <"Additional structured details about the procedure/trial/activity itself or additional structured consent details.">
+                comment = <"For example: intent/purpose; anaesthetic details; disclosure of material risks; and proposed benefits discussed.">
+            >
+            ["id3"] = <
+                text = <"Procedure/Trial/Activity">
+                description = <"Identification of the procedure, clinical trial or healthcare-related activity (including correct side/correct site, where appropriate) against which the consent status and details are recorded.">
+            >
+            ["id1"] = <
+                text = <"Informed consent">
+                description = <"Record of status and details of informed consent from an individual (or the individual's agent/proxy) for a proposed procedure, trial or other healthcare-related activity (including treatments and investigations), based upon a clear appreciation and understanding of the facts, implications, and possible future consequences by the consenting party.">
+            >
+        >
+    >
+    term_bindings = <
+        ["openehr"] = <
+            ["at9004"] = <http://openehr.org/id/245>
+            ["at9000"] = <http://openehr.org/id/526>
+            ["at9001"] = <http://openehr.org/id/527>
+            ["at9002"] = <http://openehr.org/id/528>
+            ["at9003"] = <http://openehr.org/id/529>
+            ["at9006"] = <http://openehr.org/id/531>
+            ["at9007"] = <http://openehr.org/id/532>
+        >
+    >
+    value_sets = <
+        ["ac9008"] = <
+            id = <"ac9008">
+            members = <"at6", "at7">
+        >
+        ["ac9005"] = <
+            id = <"ac9005">
+            members = <"at9004", "at9000">
+        >
+    >

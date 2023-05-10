@@ -1,0 +1,505 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=9d136b1b-c8af-44f0-b5ac-b561e937ccd6; build_uid=629cf0bb-1ced-466b-a488-c5dd32a5dff4)
+    openEHR-EHR-OBSERVATION.ipss.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["nb"] = <
+            language = <[ISO_639-1::nb]>
+            author = <
+                ["name"] = <"Mikkel Johan Gaup Grønmo">
+                ["organisation"] = <"Forvaltningssenter EPJ, Helse-Nord">
+                ["email"] = <"mikkel.johan.gaup.gronmo@helse-nord.no">
+            >
+            accreditation = <"Nasjonal IKT HF">
+        >
+    >
+
+description
+    original_author = <
+        ["name"] = <"Navin Ramachandran">
+        ["organisation"] = <"UCLH">
+        ["email"] = <"navinramachandran@nhs.net">
+        ["date"] = <"2015-05-31">
+    >
+    original_namespace = <"org.openehr">
+    original_publisher = <"openEHR Foundation">
+    other_contributors = <"Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "SB Bhattacharyya, Sudisa Consultancy Services, India", "Heather Grain, Llewelyn Grain Informatics, Australia", "Mikkel Johan Gaup Grønmo, Forvaltningssenter EPJ, Helse-Nord, Norway (openEHR Editor)", "Evelyn Hovenga, EJSH Consulting, Australia", "Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Navin Ramachandran, NHS, United Kingdom", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)">
+    lifecycle_state = <"published">
+    custodian_namespace = <"org.openehr">
+    custodian_organisation = <"openEHR Foundation">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+    ip_acknowledgements = <
+        ["1"] = <"Public domain">
+    >
+    references = <
+        ["1"] = <"Derived from: I-PSS Prostate Score, Draft archetype [Internet]. Apperta UK, Apperta UK Clinical Knowledge Manager [cited: 2020-11-11]. Available from: https://ckm.apperta.org/ckm/archetypes/1051.32.333">
+        ["2"] = <"		Badía X, García-Losa M, Dal-Ré R. Ten-language translation and harmonization of the International Prostate Symptom Score: developing a methodology for multinational clinical trials. Eur Urol. 1997;31(2):129-40. doi: 10.1159/000474438. PMID: 9076454.">
+    >
+    other_details = <
+        ["current_contact"] = <"Navin Ramachandran, UCLH, navinramachandran@nhs.net">
+        ["MD5-CAM-1.0.1"] = <"79DFAB532296B68FA60A861D61A89559">
+    >
+    details = <
+        ["nb"] = <
+            language = <[ISO_639-1::nb]>
+            purpose = <"Registrere verdier for prostatasymptomkomponentene og dets summerte verdi for I-PSS.">
+            keywords = <"I-PSS", "prostata", "ipss", "bph", "prostatahyperplasi", "vannlatningsbesvær">
+            use = <"Brukes for å registrere verdier for prostatasymptomkomponentene og dets summerte verdi for I-PSS.">
+            misuse = <"Brukes ikke for å registrere prostatarelatert symptomer - bruk CLUSTER.symptom_sign til dette formålet.">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"To record the results for each component parameter and their total sum for the IPSS.">
+            keywords = <"I-PSS", "IPSS", "prostate", "BPH">
+            use = <"Use to record the results for each component parameter and their total sum for the IPSS.">
+            misuse = <"Do not use to record prostate-related symptoms - use the CLUSTER.symptom_sign for this purpose.">
+            copyright = <"© Clinical Models UK, openEHR Foundation">
+        >
+    >
+
+definition
+    OBSERVATION[id1] matches {    -- International prostate symptom score (IPSS)
+        data matches {
+            HISTORY[id2] matches {
+                events cardinality matches {1..*; unordered} matches {
+                    POINT_EVENT[id3] occurrences matches {0..1} matches {    -- Any point in time event
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[id5] occurrences matches {0..1} matches {    -- Incomplete emptying
+                                        value matches {
+                                            DV_ORDINAL[id9003] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at6]}],
+                                                    [{1}, {[at7]}],
+                                                    [{2}, {[at8]}],
+                                                    [{3}, {[at9]}],
+                                                    [{4}, {[at10]}],
+                                                    [{5}, {[at11]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id12] occurrences matches {0..1} matches {    -- Frequency
+                                        value matches {
+                                            DV_ORDINAL[id9004] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at6]}],
+                                                    [{1}, {[at7]}],
+                                                    [{2}, {[at8]}],
+                                                    [{3}, {[at9]}],
+                                                    [{4}, {[at10]}],
+                                                    [{5}, {[at11]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id13] occurrences matches {0..1} matches {    -- Intermittency
+                                        value matches {
+                                            DV_ORDINAL[id9005] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at6]}],
+                                                    [{1}, {[at7]}],
+                                                    [{2}, {[at8]}],
+                                                    [{3}, {[at9]}],
+                                                    [{4}, {[at10]}],
+                                                    [{5}, {[at11]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id14] occurrences matches {0..1} matches {    -- Urgency
+                                        value matches {
+                                            DV_ORDINAL[id9006] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at6]}],
+                                                    [{1}, {[at7]}],
+                                                    [{2}, {[at8]}],
+                                                    [{3}, {[at9]}],
+                                                    [{4}, {[at10]}],
+                                                    [{5}, {[at11]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id15] occurrences matches {0..1} matches {    -- Weak Stream
+                                        value matches {
+                                            DV_ORDINAL[id9007] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at6]}],
+                                                    [{1}, {[at7]}],
+                                                    [{2}, {[at8]}],
+                                                    [{3}, {[at9]}],
+                                                    [{4}, {[at10]}],
+                                                    [{5}, {[at11]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id16] occurrences matches {0..1} matches {    -- Straining
+                                        value matches {
+                                            DV_ORDINAL[id9008] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at6]}],
+                                                    [{1}, {[at7]}],
+                                                    [{2}, {[at8]}],
+                                                    [{3}, {[at9]}],
+                                                    [{4}, {[at10]}],
+                                                    [{5}, {[at11]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id17] occurrences matches {0..1} matches {    -- Nocturia
+                                        value matches {
+                                            DV_ORDINAL[id9009] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at18]}],
+                                                    [{1}, {[at19]}],
+                                                    [{2}, {[at20]}],
+                                                    [{3}, {[at21]}],
+                                                    [{4}, {[at22]}],
+                                                    [{5}, {[at23]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id24] occurrences matches {0..1} matches {    -- Total score (S)
+                                        value matches {
+                                            DV_COUNT[id9010] matches {
+                                                magnitude matches {|0..35|}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id25] occurrences matches {0..1} matches {    -- Quality of life
+                                        value matches {
+                                            DV_ORDINAL[id9011] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at26]}],
+                                                    [{1}, {[at27]}],
+                                                    [{2}, {[at28]}],
+                                                    [{3}, {[at29]}],
+                                                    [{4}, {[at30]}],
+                                                    [{5}, {[at31]}],
+                                                    [{6}, {[at32]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id33] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    allow_archetype CLUSTER[id34] matches {     -- Extension
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["nb"] = <
+            ["ac9000"] = <
+                text = <"Ufullstendig tømming (synthesised)">
+                description = <"I løpet av de siste 30 dager, hvor ofte har du hatt følelsen av at urinblæren ikke er helt tom etter at du har latt vannet? (synthesised)">
+            >
+            ["ac9001"] = <
+                text = <"Nocturi (synthesised)">
+                description = <"I løpet av de siste 30 dager, hvor mange ganger har du vanligvis måttet stå opp for å late vannet fra du legger deg om kvelden til du står opp om morgenen? (synthesised)">
+            >
+            ["ac9002"] = <
+                text = <"Livskvalitet (synthesised)">
+                description = <"Hvis du måtte leve resten av livet med dagens prostataproblemer, hvordan ville du da føle deg? (synthesised)">
+            >
+            ["id34"] = <
+                text = <"Tilleggsinformasjon">
+                description = <"Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.">
+                comment = <"For eksempel: lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR.">
+            >
+            ["at32"] = <
+                text = <"Forferdelig">
+                description = <"Pasienten føler livskvaliteten er forferdelig.">
+            >
+            ["at31"] = <
+                text = <"Trist">
+                description = <"Pasienten er trist over livskvaliteten.">
+            >
+            ["at30"] = <
+                text = <"Stort sett misfornøyd">
+                description = <"Pasienten er stort sett misfornøyd med livskvaliteten.">
+            >
+            ["at29"] = <
+                text = <"Blandet">
+                description = <"Pasienten er like fornøyd som misfornøyd med livskvaliteten.">
+            >
+            ["at28"] = <
+                text = <"Stort sett fornøyd">
+                description = <"Pasienten er stort sett fornøyd med livskvaliteten.">
+            >
+            ["at27"] = <
+                text = <"Fornøyd">
+                description = <"Pasienten er fornøyd med livskvaliteten.">
+            >
+            ["at26"] = <
+                text = <"Godt fornøyd">
+                description = <"Pasienten er godt fornøyd med livskvaliteten.">
+            >
+            ["id25"] = <
+                text = <"Livskvalitet">
+                description = <"Hvis du måtte leve resten av livet med dagens prostataproblemer, hvordan ville du da føle deg?">
+            >
+            ["id24"] = <
+                text = <"Totalskår">
+                description = <"Totalsummen av hver komponentparameter i IPSS.">
+                comment = <"Ekskluderer \"Livskvalitet\"">
+            >
+            ["at23"] = <
+                text = <"Fem eller flere ganger">
+                description = <"Nocturi forekommer mer enn fem eller flere ganger per natt.">
+            >
+            ["at22"] = <
+                text = <"Fire ganger">
+                description = <"Nocturi forekommer fire ganger per natt.">
+            >
+            ["at21"] = <
+                text = <"Tre ganger">
+                description = <"Nocturi forekommer tre ganger per natt.">
+            >
+            ["at20"] = <
+                text = <"To ganger">
+                description = <"Nocturi forekommer to ganger per natt.">
+            >
+            ["at19"] = <
+                text = <"En gang">
+                description = <"Nocturi forekommer en gang per natt.">
+            >
+            ["at18"] = <
+                text = <"Ingen">
+                description = <"Symptomet forekommer omtrent halvparten av gangene.">
+            >
+            ["id17"] = <
+                text = <"Nocturi">
+                description = <"I løpet av de siste 30 dager, hvor mange ganger har du vanligvis måttet stå opp for å late vannet fra du legger deg om kvelden til du står opp om morgenen?">
+            >
+            ["id16"] = <
+                text = <"Anstrengelse">
+                description = <"I løpet av de siste 30 dager, hvor ofte har du måttet trykke på eller anstrenge deg for å starte vannlatingen?">
+            >
+            ["id15"] = <
+                text = <"Svak stråle">
+                description = <"I løpet av de siste 30 dager, hvor ofte har du hatt svak urinstråle?">
+            >
+            ["id14"] = <
+                text = <"Vannlatingstrang">
+                description = <"I løpet av de siste 30 dager, hvor ofte har du hatt vanskeligheter med å utsette vannlatingen?">
+            >
+            ["id13"] = <
+                text = <"Intermittere">
+                description = <"I løpet av de siste 30 dager, hvor ofte har du merket at du stoppet og startet igjen flere ganger under vannlatingen?">
+            >
+            ["id12"] = <
+                text = <"Frekvens">
+                description = <"I løpet av de siste 30 dager, hvor ofte har du måttet late vannet igjen mindre enn to timer etter forrige gang?">
+            >
+            ["at11"] = <
+                text = <"Nesten alltid">
+                description = <"Symptomet forekommer nesten alltid.">
+            >
+            ["at10"] = <
+                text = <"Mer enn halvparten av gangene">
+                description = <"Symptomet oppstår oftere enn halvparten av gangene.">
+            >
+            ["at9"] = <
+                text = <"Omtrent halvparten av gangene">
+                description = <"Symptomet forekommer omtrent halvparten av gangene.">
+            >
+            ["at8"] = <
+                text = <"Mindre enn halvparten av gangene">
+                description = <"Symptomet forekommer mindre enn halvparten av gangene.">
+            >
+            ["at7"] = <
+                text = <"Mindre enn 1 av 5 ganger">
+                description = <"Symptomet forekommer sjeldnere enn 20% av gangen.">
+            >
+            ["at6"] = <
+                text = <"Aldri">
+                description = <"Symptomet forekommer aldri.">
+            >
+            ["id5"] = <
+                text = <"Ufullstendig tømming">
+                description = <"I løpet av de siste 30 dager, hvor ofte har du hatt følelsen av at urinblæren ikke er helt tom etter at du har latt vannet?">
+            >
+            ["id3"] = <
+                text = <"Uspesifisert hendelse">
+                description = <"Standard, uspesifisert tidspunkt eller tidsintervall som kan defineres mer eksplisitt i et templat eller i en applikasjon.">
+            >
+            ["id1"] = <
+                text = <"Internasjonal prostata symptom skår (I-PSS)">
+                description = <"Vurderingsskår som brukes for å screene, dianostiesere og følge opp symptomer på benign prostatahyperplasi (BPH).">
+            >
+        >
+        ["en"] = <
+            ["ac9000"] = <
+                text = <"Incomplete emptying (synthesised)">
+                description = <"Over the past month how often have you had the sensation of not emptying your bladder completely after urinating? (synthesised)">
+            >
+            ["ac9001"] = <
+                text = <"Nocturia (synthesised)">
+                description = <"Over the past month how many times did you most typically get up each night to urinate, from the time you went to bed until the time you got up in the morning? (synthesised)">
+            >
+            ["ac9002"] = <
+                text = <"Quality of life (synthesised)">
+                description = <"If you were to spend the rest of your life with your urinary condition just the way it is now, how would you feel about that? (synthesised)">
+            >
+            ["id34"] = <
+                text = <"Extension">
+                description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
+                comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
+            >
+            ["at32"] = <
+                text = <"Terrible">
+                description = <"">
+            >
+            ["at31"] = <
+                text = <"Unhappy">
+                description = <"">
+            >
+            ["at30"] = <
+                text = <"Mostly dissatisfied">
+                description = <"">
+            >
+            ["at29"] = <
+                text = <"Equally satisfied/dissatisfied">
+                description = <"">
+            >
+            ["at28"] = <
+                text = <"Mostly satisfied">
+                description = <"">
+            >
+            ["at27"] = <
+                text = <"Pleased">
+                description = <"">
+            >
+            ["at26"] = <
+                text = <"Delighted">
+                description = <"">
+            >
+            ["id25"] = <
+                text = <"Quality of life">
+                description = <"If you were to spend the rest of your life with your urinary condition just the way it is now, how would you feel about that?">
+            >
+            ["id24"] = <
+                text = <"Total score (S)">
+                description = <"The total sum of each component parameter for the IPSS.">
+                comment = <"Excludes the 'Quality of life' item.">
+            >
+            ["at23"] = <
+                text = <"5 or more">
+                description = <"">
+            >
+            ["at22"] = <
+                text = <"4 times">
+                description = <"">
+            >
+            ["at21"] = <
+                text = <"3 times">
+                description = <"">
+            >
+            ["at20"] = <
+                text = <"2 times">
+                description = <"">
+            >
+            ["at19"] = <
+                text = <"1 time">
+                description = <"">
+            >
+            ["at18"] = <
+                text = <"None">
+                description = <"">
+            >
+            ["id17"] = <
+                text = <"Nocturia">
+                description = <"Over the past month how many times did you most typically get up each night to urinate, from the time you went to bed until the time you got up in the morning?">
+            >
+            ["id16"] = <
+                text = <"Straining">
+                description = <"Over the past month, how often have you had to push or strain to begin urination?">
+            >
+            ["id15"] = <
+                text = <"Weak Stream">
+                description = <"Over the last month, how often have you had a weak urinary stream?">
+            >
+            ["id14"] = <
+                text = <"Urgency">
+                description = <"Over the past month, how often have you found it difficult to postpone urination?">
+            >
+            ["id13"] = <
+                text = <"Intermittency">
+                description = <"Over the past month, how often have you found you stopped and started again several times when you urinated?">
+            >
+            ["id12"] = <
+                text = <"Frequency">
+                description = <"Over the past month, how often have you had to urinate again less than two hours after you finished urinating?">
+            >
+            ["at11"] = <
+                text = <"Almost always">
+                description = <"">
+            >
+            ["at10"] = <
+                text = <"More than half the time">
+                description = <"">
+            >
+            ["at9"] = <
+                text = <"About half the time">
+                description = <"">
+            >
+            ["at8"] = <
+                text = <"Less than half the time">
+                description = <"">
+            >
+            ["at7"] = <
+                text = <"Less than 1 time in 5">
+                description = <"">
+            >
+            ["at6"] = <
+                text = <"Not at all">
+                description = <"">
+            >
+            ["id5"] = <
+                text = <"Incomplete emptying">
+                description = <"Over the past month how often have you had the sensation of not emptying your bladder completely after urinating?">
+            >
+            ["id3"] = <
+                text = <"Any point in time event">
+                description = <"Default, unspecified point in time event which may be explicitly defined in a template or at run-time.">
+            >
+            ["id1"] = <
+                text = <"International prostate symptom score (IPSS)">
+                description = <"An assessment score used to screen for, diagnose, and track symptoms of benign prostatic hyperplasia (BPH).">
+            >
+        >
+    >
+    value_sets = <
+        ["ac9002"] = <
+            id = <"ac9002">
+            members = <"at26", "at27", "at28", "at29", "at30", "at31", "at32">
+        >
+        ["ac9001"] = <
+            id = <"ac9001">
+            members = <"at18", "at19", "at20", "at21", "at22", "at23">
+        >
+        ["ac9000"] = <
+            id = <"ac9000">
+            members = <"at6", "at7", "at8", "at9", "at10", "at11">
+        >
+    >

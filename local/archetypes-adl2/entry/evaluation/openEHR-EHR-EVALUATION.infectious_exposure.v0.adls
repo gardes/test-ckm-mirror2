@@ -1,0 +1,575 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=4893d690-2364-4e67-b6e2-df106a44eba3; build_uid=2ccf2f77-daf7-4b92-8f3f-75c2822e1c7a)
+    openEHR-EHR-EVALUATION.infectious_exposure.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["de"] = <
+            language = <[ISO_639-1::de]>
+            author = <
+                ["name"] = <"Sarah Ballout, Natalia Strauch">
+                ["organisation"] = <"Medizinische Hochschule Hannover">
+                ["email"] = <"ballout.sarah@mh-hannover.de, Strauch.Natalia@mh-hannover.de">
+            >
+        >
+        ["it"] = <
+            language = <[ISO_639-1::it]>
+        >
+    >
+
+description
+    original_author = <
+        ["name"] = <"Heather Leslie">
+        ["organisation"] = <"Atomica Informatics">
+        ["email"] = <"heather.leslie@atomicainformatics.com">
+        ["date"] = <"2013-01-01">
+    >
+    original_namespace = <"org.openehr">
+    original_publisher = <"openEHR Foundation">
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"org.openehr">
+    custodian_organisation = <"openEHR Foundation">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+    other_details = <
+        ["MD5-CAM-1.0.1"] = <"365FF276F84E80453823135E933A8453">
+    >
+    details = <
+        ["de"] = <
+            language = <[ISO_639-1::de]>
+            purpose = <"Zur Darstellung der Informationen zu einer Risikoeinschätzung für eine Person, die möglicherweise einem infektiösen Erreger ausgesetzt war.">
+            keywords = <"Infektion", "ansteckend", "infektiös", "Ausbruch", "Exposition", "Virus", "Ansteckung", "Pandemie">
+            use = <"Verwenden Sie diesen Archetyp, um Informationen zu einer Risikoeinschätzung für eine Person darzustellen, die möglicherweise einem Infektionserreger ausgesetzt war, insbesondere im Zusammenhang mit einem Ausbruch einer Infektionskrankheit.">
+            misuse = <"">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"To record details about a risk assessment for an individual who may have been exposed to an infectious agent.">
+            keywords = <"infection, infectious, outbreak, exposure, virus, contagion, pandemic", ...>
+            use = <"Use to record details about a risk assessment for an individual who may have been exposed to an infectious agent, especially in the context of an outbreak of infectious disease.">
+            misuse = <"">
+            copyright = <"© openEHR Foundation">
+        >
+        ["it"] = <
+            language = <[ISO_639-1::it]>
+            purpose = <"*To record details about a risk assessment for an individual who may have been exposed to an infectious agent. (en)">
+            keywords = <"*infection, infectious, outbreak, exposure, virus, contagion, pandemic (en)", ...>
+            use = <"*Use to record details about a risk assessment for an individual who may have been exposed to an infectious agent, especially in the context of an outbreak of infectious disease. (en)">
+            misuse = <"">
+        >
+    >
+
+definition
+    EVALUATION[id1] matches {    -- Infectious exposure investigation
+        data matches {
+            ITEM_TREE[id2] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    ELEMENT[id3] occurrences matches {0..1} matches {    -- Infectious agent
+                        value matches {
+                            DV_TEXT[id9001] 
+                        }
+                    }
+                    ELEMENT[id4] occurrences matches {0..1} matches {    -- Description
+                        value matches {
+                            DV_TEXT[id9002] 
+                        }
+                    }
+                    CLUSTER[id6] matches {    -- Specific exposure details
+                        items cardinality matches {1..*; unordered} matches {
+                            ELEMENT[id28] occurrences matches {0..1} matches {    -- Confirmed exposure?
+                                value matches {
+                                    DV_CODED_TEXT[id9003] matches {
+                                        defining_code matches {[ac9000]}    -- Confirmed exposure? (synthesised)
+                                    }
+                                }
+                            }
+                            ELEMENT[id25] occurrences matches {0..1} matches {    -- Exposure category
+                                value matches {
+                                    DV_TEXT[id9004] 
+                                }
+                            }
+                            ELEMENT[id7] occurrences matches {0..1} matches {    -- Description of exposure
+                                value matches {
+                                    DV_TEXT[id9005] 
+                                }
+                            }
+                            ELEMENT[id8] matches {    -- Date/time of exposure
+                                value matches {
+                                    DV_DATE_TIME[id9006] 
+                                }
+                            }
+                            ELEMENT[id19] occurrences matches {0..1} matches {    -- Exposed anatomical location
+                                value matches {
+                                    DV_TEXT[id9007] 
+                                }
+                            }
+                            allow_archetype CLUSTER[id20] matches {     -- Anatomical location details
+                                include
+                                    archetype_id/value matches {/openEHR-EHR-CLUSTER\.anatomical_location(-[a-zA-Z0-9_]+)*\.v1\..*/}
+                            }
+                            ELEMENT[id9] occurrences matches {0..1} matches {    -- Physical location category
+                                value matches {
+                                    DV_TEXT[id9008] 
+                                }
+                            }
+                            allow_archetype CLUSTER[id27] matches {     -- Structured location details
+                                include
+                                    archetype_id/value matches {/.*/}
+                            }
+                            ELEMENT[id10] matches {    -- Specific physical location
+                                value matches {
+                                    DV_TEXT[id9009] 
+                                }
+                            }
+                            ELEMENT[id21] occurrences matches {0..1} matches {    -- Activity category
+                                value matches {
+                                    DV_TEXT[id9010] 
+                                }
+                            }
+                            ELEMENT[id22] occurrences matches {0..1} matches {    -- Activity description
+                                value matches {
+                                    DV_TEXT[id9011] 
+                                }
+                            }
+                            allow_archetype CLUSTER[id23] matches {     -- Personal protective equipment
+                                include
+                                    archetype_id/value matches {/.*/}
+                            }
+                            ELEMENT[id12] occurrences matches {0..1} matches {    -- Duration of exposure
+                                value matches {
+                                    DV_DURATION[id9012] 
+                                    DV_TEXT[id9013] 
+                                }
+                            }
+                            ELEMENT[id13] occurrences matches {0..1} matches {    -- Proximity of contact
+                                value matches {
+                                    DV_TEXT[id9014] 
+                                }
+                            }
+                            allow_archetype CLUSTER[id16] matches {     -- Source individual details
+                                include
+                                    archetype_id/value matches {/.*/}
+                            }
+                            ELEMENT[id26] occurrences matches {0..1} matches {    -- Case identifier
+                                value matches {
+                                    DV_TEXT[id9015] 
+                                    DV_IDENTIFIER[id9016] 
+                                }
+                            }
+                            ELEMENT[id5] occurrences matches {0..1} matches {    -- Date of notification/report
+                                value matches {
+                                    DV_DATE_TIME[id9017] 
+                                }
+                            }
+                            allow_archetype CLUSTER[id17]
+                        }
+                    }
+                    ELEMENT[id31] occurrences matches {0..1} matches {    -- Total number of exposures
+                        value matches {
+                            DV_COUNT[id9018] 
+                        }
+                    }
+                    ELEMENT[id14] occurrences matches {0..1} matches {    -- Risk stratification
+                        value matches {
+                            DV_TEXT[id9019] 
+                        }
+                    }
+                    allow_archetype CLUSTER[id18] matches {     -- Exposed individual details
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id32] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    allow_archetype CLUSTER[id33] matches {     -- Extension
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["de"] = <
+            ["ac9000"] = <
+                text = <"Bestätigte Exposition? (synthesised)">
+                description = <"Wurde die Exposition bestätigt? (synthesised)">
+            >
+            ["id33"] = <
+                text = <"Erweiterung">
+                description = <"Zusätzliche Informationen zur Erfassung lokaler Inhalte oder Anpassung an andere Referenzmodelle/Formalismen.">
+                comment = <"Zum Beispiel: Lokaler Informationsbedarf oder zusätzliche Metadaten zur Anpassung an FHIR-Ressourcen.">
+            >
+            ["id31"] = <
+                text = <"Gesamtanzahl der Expositionen">
+                description = <"Die Gesamtanzahl der Expositionen gegenüber dem Infektionserreger oder die Gesamtzahl der infektiösen Kontakte.">
+            >
+            ["at30"] = <
+                text = <"Nicht bestätigt">
+                description = <"Die Exposition wurde nicht bestätigt.">
+            >
+            ["at29"] = <
+                text = <"Bestätigt">
+                description = <"Die Exposition wurde bestätigt.">
+            >
+            ["id28"] = <
+                text = <"Bestätigte Exposition?">
+                description = <"Wurde die Exposition bestätigt?">
+            >
+            ["id27"] = <
+                text = <"Strukturierte Angaben zum Ort">
+                description = <"Strukturierte Angaben über den physischen Ort der Exposition.">
+            >
+            ["id26"] = <
+                text = <"Fallkennung">
+                description = <"Die Kennung, die für die Angabe der Exposition verwendet wurde.">
+            >
+            ["id25"] = <
+                text = <"Expositionskategorie">
+                description = <"Die Art der Exposition.">
+            >
+            ["id23"] = <
+                text = <"Persönliche Schutzausrüstung">
+                description = <"Beschreibung der von der exponierten Person zum Zeitpunkt der Exposition verwendeter PSA.">
+            >
+            ["id22"] = <
+                text = <"Beschreibung der Tätigkeit">
+                description = <"Beschreibung der Tätigkeit, die zur Exposition geführt hat.">
+            >
+            ["id21"] = <
+                text = <"Art der Tätigkeit">
+                description = <"Die Art der Tätigkeit, die zur Exposition führte.">
+            >
+            ["id20"] = <
+                text = <"Angaben zur anatomischen Stelle">
+                description = <"Strukturierte Angaben über die exponierte anatomische Stelle.">
+            >
+            ["id19"] = <
+                text = <"Exponierte anatomische Stelle">
+                description = <"Die Körperstelle, an der die gefährdete Person exponiert wurde.">
+                comment = <"Zum Beispiel: Finger bei einer Nadelstichverletzung.">
+            >
+            ["id18"] = <
+                text = <"Angaben zur exponierten Person">
+                description = <"Strukturierte Angaben über die Person, die exponiert oder infiziert wurde.">
+            >
+            ["id17"] = <
+                text = <"Einflussfaktoren">
+                description = <"Faktoren, die zu dem infektiösen Kontakt beigetragen haben können.">
+            >
+            ["id16"] = <
+                text = <"Angaben zur Person als Quelle">
+                description = <"Strukturierte Angaben über die Person, von der die Exposition ausgeht.">
+            >
+            ["id14"] = <
+                text = <"Risikoeinschätzung">
+                description = <"Risikoeinschätzung über die Exposition zum Infektionserreger.">
+            >
+            ["id13"] = <
+                text = <"Nähe des Kontakts">
+                description = <"Enger Kontakt.">
+                comment = <"Zum Beispiel: direkter Kontakt, gemeinsamer Raum oder gemeinsame Station.">
+            >
+            ["id12"] = <
+                text = <"Expositionsdauer">
+                description = <"Die Dauer der Exposition.">
+            >
+            ["id10"] = <
+                text = <"Spezifischer physischer Ort">
+                description = <"Beschreibung der physischer Ortes der Exposition.">
+            >
+            ["id9"] = <
+                text = <"Kategorie des physischen Ortes">
+                description = <"Art des Ortes">
+            >
+            ["id8"] = <
+                text = <"Datum/Uhrzeit der Exposition">
+                description = <"Datum und Zeit der Exposition.">
+                comment = <"Kann in Template geklont und für ein bestimmtes Datum/eine bestimmte Uhrzeit bei Expositionsbeginn und -ende umbenannt werden.">
+            >
+            ["id7"] = <
+                text = <"Beschreibung der Exposition">
+                description = <"Angaben zur Expositionsmethode.">
+                comment = <"Zum Beispiel: Luftübertragung, direkter Kontakt oder Nadelstich.">
+            >
+            ["id6"] = <
+                text = <"Spezifische Details zur Exposition">
+                description = <"Details zu einer einzelnen Exposition.">
+                comment = <"Mehrere Expositionen können erfasst werden, wobei pro Exposition eine Instanz dieses Clusters verwendet wird.">
+            >
+            ["id5"] = <
+                text = <"Datum der Meldung / des Berichts">
+                description = <"Datum/Uhrzeit der Mitteilung oder des Berichts an die Behörden.">
+            >
+            ["id4"] = <
+                text = <"Beschreibung">
+                description = <"Beschreibung der Gesamtexposition.">
+            >
+            ["id3"] = <
+                text = <"Infektionserreger">
+                description = <"Identifizierung des Organismus, Stoffes, der Symptome oder des Zustands, dem die Person ausgesetzt war.">
+            >
+            ["id1"] = <
+                text = <"Ermittlung der infektiösen Exposition">
+                description = <"Risikoeinschätzung für eine Person, die möglicherweise einem Infektionserreger ausgesetzt war.">
+            >
+        >
+        ["en"] = <
+            ["ac9000"] = <
+                text = <"Confirmed exposure? (synthesised)">
+                description = <"Has exposure been confirmed? (synthesised)">
+            >
+            ["id33"] = <
+                text = <"Extension">
+                description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
+                comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
+            >
+            ["id31"] = <
+                text = <"Total number of exposures">
+                description = <"The total number of exposures to the infectious agent, or total number of infectious contacts.">
+            >
+            ["at30"] = <
+                text = <"Not confirmed">
+                description = <"Exposured has not been confirmed.">
+            >
+            ["at29"] = <
+                text = <"Confirmed">
+                description = <"Exposure has been confirmed.">
+            >
+            ["id28"] = <
+                text = <"Confirmed exposure?">
+                description = <"Has exposure been confirmed?">
+            >
+            ["id27"] = <
+                text = <"Structured location details">
+                description = <"Structured details about the physical location of the exposure.">
+            >
+            ["id26"] = <
+                text = <"Case identifier">
+                description = <"The identifier used to report the exposure.">
+            >
+            ["id25"] = <
+                text = <"Exposure category">
+                description = <"The type of exposure.">
+            >
+            ["id23"] = <
+                text = <"Personal protective equipment">
+                description = <"Description about PPE used by the exposed individual at the time of exposure.">
+            >
+            ["id22"] = <
+                text = <"Activity description">
+                description = <"Narrative description about the activity which resulted in exposure.">
+            >
+            ["id21"] = <
+                text = <"Activity category">
+                description = <"The type of activity which resulted in exposure.">
+            >
+            ["id20"] = <
+                text = <"Anatomical location details">
+                description = <"Structured details about the exposed anatomical location.">
+            >
+            ["id19"] = <
+                text = <"Exposed anatomical location">
+                description = <"The place on the body where the exposed individual has been exposed.">
+                comment = <"For example: finger in a needle stick injury.">
+            >
+            ["id18"] = <
+                text = <"Exposed individual details">
+                description = <"Structured details about the person who has been exposed or infected.">
+            >
+            ["id17"] = <
+                text = <"Contributory factors">
+                description = <"Factors which may have contributed to the infectious contact.">
+            >
+            ["id16"] = <
+                text = <"Source individual details">
+                description = <"Structured details about the person who is the source of infection.">
+            >
+            ["id14"] = <
+                text = <"Risk stratification">
+                description = <"Risk assessment about the exposure to the infectious agent.">
+            >
+            ["id13"] = <
+                text = <"Proximity of contact">
+                description = <"Closeness of contact.">
+                comment = <"For example: direct contact; shared room; or shared ward.">
+            >
+            ["id12"] = <
+                text = <"Duration of exposure">
+                description = <"The length of time of the exposure.">
+            >
+            ["id10"] = <
+                text = <"Specific physical location">
+                description = <"Narrative description about the physical location of the exposure.">
+            >
+            ["id9"] = <
+                text = <"Physical location category">
+                description = <"Type of location.">
+            >
+            ["id8"] = <
+                text = <"Date/time of exposure">
+                description = <"Date and time of exposure.">
+                comment = <" Can be cloned in template and renamed for specific Date/time at onset of exposure and cessation of exposure.">
+            >
+            ["id7"] = <
+                text = <"Description of exposure">
+                description = <"Details about the method of exposure.">
+                comment = <"For example: airborne, direct contact, or needle stick.">
+            >
+            ["id6"] = <
+                text = <"Specific exposure details">
+                description = <"Details about a single exposure.">
+                comment = <"Multiple exposures can be recorded, using one instance of this cluster per exposure.">
+            >
+            ["id5"] = <
+                text = <"Date of notification/report">
+                description = <"Date/time of notification or report to authorities.">
+            >
+            ["id4"] = <
+                text = <"Description">
+                description = <"Narrative description about the overall exposure.">
+            >
+            ["id3"] = <
+                text = <"Infectious agent">
+                description = <"Identification of the organism, material, symptoms or condition to which the individual has been exposed.">
+            >
+            ["id1"] = <
+                text = <"Infectious exposure investigation">
+                description = <"Risk assessment for an individual who may have been exposed to an infectious agent.">
+            >
+        >
+        ["it"] = <
+            ["ac9000"] = <
+                text = <"Esposizione confermata? (synthesised)">
+                description = <"L'esposizione è stata confermata? (synthesised)">
+            >
+            ["id33"] = <
+                text = <"*Extension (en)">
+                description = <"*">
+                comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
+            >
+            ["id31"] = <
+                text = <"*Total number of exposures(en)">
+                description = <"Numero totale di esposizioni.">
+            >
+            ["at30"] = <
+                text = <"Non confermata">
+                description = <"L'esposizione non è stata confermata. ">
+            >
+            ["at29"] = <
+                text = <"Confermata">
+                description = <"L'esposizione è stata confermata.">
+            >
+            ["id28"] = <
+                text = <"Esposizione confermata?">
+                description = <"L'esposizione è stata confermata?">
+            >
+            ["id27"] = <
+                text = <"Dettagli strutturati della posizione">
+                description = <"Dettagli strutturati sulla posizione fisica dell'esposizione.">
+            >
+            ["id26"] = <
+                text = <"Identificatore del caso">
+                description = <"L'identificatore utilizzato per segnalare l'esposizione.">
+            >
+            ["id25"] = <
+                text = <"Categoria d'esposizione">
+                description = <"Il tipo di esposizione.">
+            >
+            ["id23"] = <
+                text = <"Dispositivi di protezione individuale">
+                description = <"Descrizione dei DPI utilizzati dall'individuo esposto al momento dell'esposizione. ">
+            >
+            ["id22"] = <
+                text = <"Descrizione attività">
+                description = <"Descrizione narrativa dell'attività che ha portato all'esposizione.">
+            >
+            ["id21"] = <
+                text = <"Categoria attività">
+                description = <"Il tipo di attività che ha portato all'esposizione. ">
+            >
+            ["id20"] = <
+                text = <"Dettagli sulla porzione anatomica">
+                description = <"Dettagli strutturati sulla porzione anatomica esposta.">
+            >
+            ["id19"] = <
+                text = <"Porzione anatomica esposta">
+                description = <"Il punto del corpo in cui l'individuo esposto è stato esposto.">
+                comment = <"Ad esempio: dito in una ferita da puntura d'ago.">
+            >
+            ["id18"] = <
+                text = <"Dettagli dell'individuo esposto">
+                description = <"Dettagli strutturati sulla persona che è stata esposta o infettata.">
+            >
+            ["id17"] = <
+                text = <"Fattori collaterali">
+                description = <"Fattori che possono aver contribuito al contatto infettivo.">
+            >
+            ["id16"] = <
+                text = <"Dettagli individuali dell'origine">
+                description = <"Dettagli strutturati sulla persona che è la fonte dell'infezione.">
+            >
+            ["id14"] = <
+                text = <"Stratificazione del rischio">
+                description = <"Valutazione del rischio dell'esposizione all'agente infettivo.">
+            >
+            ["id13"] = <
+                text = <"Prossimità del contatto">
+                description = <"Vicinanza di contatto.">
+                comment = <"Per esempio: contatto diretto, stanza condivisa o reparto condiviso. ">
+            >
+            ["id12"] = <
+                text = <"Durata dell'esposizione">
+                description = <"Durata dell'esposizione.">
+            >
+            ["id10"] = <
+                text = <"Luogo fisico specifico">
+                description = <"Descrizione narrativa del luogo fisico dell'esposizione.">
+            >
+            ["id9"] = <
+                text = <"Categoria di luogo fisico">
+                description = <"Tipo di posizione">
+            >
+            ["id8"] = <
+                text = <"Data/ora dell'esposizione">
+                description = <"Data e ora dell'esposizione">
+                comment = <"Può essere clonato nel template e rinominato per una data e un'ora specifiche all'inizio dell'esposizione e alla fine dell'esposizione.">
+            >
+            ["id7"] = <
+                text = <"Descrizione dell'esposizione">
+                description = <"Dettagli sul metodo di esposizione. ">
+                comment = <"Ad esempio: in aria, a contatto diretto o ad ago.">
+            >
+            ["id6"] = <
+                text = <"*Specific exposure details(en)">
+                description = <"*Dettagli su una singola esposizione. ">
+                comment = <"È possibile registrare più esposizioni, utilizzando un'istanza di questo cluster per esposizione. ">
+            >
+            ["id5"] = <
+                text = <"Data di notifica/rapporto">
+                description = <"Data/ora della notifica o della segnalazione alle autorità. ">
+            >
+            ["id4"] = <
+                text = <"Descrizione">
+                description = <"Descrizione narrativa dell'esposizione complessiva. ">
+            >
+            ["id3"] = <
+                text = <"Agente patogeno">
+                description = <"Identificazione dell'organismo, del materiale, dei sintomi o della condizione a cui l'individuo è stato esposto. ">
+            >
+            ["id1"] = <
+                text = <"Indagine sull'esposizione infettiva">
+                description = <"*Risk assessment for an individual who may have been exposed to an infectious agent. (en)">
+            >
+        >
+    >
+    value_sets = <
+        ["ac9000"] = <
+            id = <"ac9000">
+            members = <"at29", "at30">
+        >
+    >

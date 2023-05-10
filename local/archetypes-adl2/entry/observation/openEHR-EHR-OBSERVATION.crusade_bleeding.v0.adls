@@ -1,0 +1,473 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=406da867-ee6b-4e1b-8765-009a2ef7f74b; build_uid=042cd698-77ba-4be5-9157-9f8ca71ca78a)
+    openEHR-EHR-OBSERVATION.crusade_bleeding.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["name"] = <"John Meredith">
+        ["organisation"] = <"NHS Wales Informatics Service">
+        ["email"] = <"john.meredith@wales.nhs.uk">
+        ["date"] = <"2019-04-03">
+    >
+    original_namespace = <"org.openehr">
+    original_publisher = <"openEHR Foundation">
+    other_contributors = <"Heather Leslie, Atomica Informatics, Australia", ...>
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"org.openehr">
+    custodian_organisation = <"openEHR Foundation">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+    references = <
+        ["1"] = <"Abu-Assi E, Gracía-Acuña JM, Ferreira-González I, Peña-Gil C, Gayoso-Diz P, González-Juanatey JR. Evaluating the Performance of the Can Rapid Risk Stratification of Unstable Angina Patients Suppress Adverse Outcomes With Early Implementation of the ACC/AHA Guidelines (CRUSADE) bleeding score in a contemporary Spanish cohort of patients with non-ST-segment elevation acute myocardial infarction. Circulation. 2010;121(22):2419–2426. doi:10.1161/CIRCULATIONAHA.109.925594.">
+        ["2"] = <"Abu-Assi E, Raposeiras-Roubin S, Lear P, et al. Comparing the predictive validity of three contemporary bleeding risk scores in acute coronary syndrome. Eur Heart J Acute Cardiovasc Care. 2012;1(3):222–231. doi:10.1177/2048872612453924.">
+        ["3"] = <"Ariza-Solé A, Sánchez-Elvira G, Sánchez-Salado JC, et al. CRUSADE bleeding risk score validation for ST-segment-elevation myocardial infarction undergoing primary percutaneous coronary intervention. Thromb Res. 2013;132(6):652–658. doi:10.1016/j.thromres.2013.09.019.">
+        ["4"] = <"Flores-Ríos X, Couto-Mallón D, Rodríguez-Garrido J, et al. Comparison of the performance of the CRUSADE, ACUITY-HORIZONS, and ACTION bleeding risk scores in STEMI undergoing primary PCI: insights from a cohort of 1391 patients. Eur Heart J Acute Cardiovasc Care. 2013;2(1):19–26. doi:10.1177/2048872612469885.">
+        ["5"] = <"Subherwal S, Bach RG, Chen AY, et al. Baseline risk of major bleeding in non-ST-segment-elevation myocardial infarction: the CRUSADE (Can Rapid risk stratification of Unstable angina patients Suppress ADverse outcomes with Early implementation of the ACC/AHA Guidelines) Bleeding Score. Circulation. 2009;119(14):1873–1882. doi:10.1161/CIRCULATIONAHA.108.828541.">
+    >
+    other_details = <
+        ["MD5-CAM-1.0.1"] = <"C406593C95354B2A415574B61DF67F98">
+    >
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"To record the results for each component parameter, the total sum and grade for the CRUSADE bleeding score.">
+            keywords = <"ACS, Acute coronary syndrome, Bleeding, CBRS, CRUSADE bleeding risk score, NSTEMI, Non-ST segment elevation myocardial infarction, PCI, percutaneous coronary intervention, prognosis, ST segment elevation myocardial infarction, STEMI, ischaemic heart disease, myocardial infarction, primary percutaneous coronary intervention, risk score", ...>
+            use = <"Use to record the results for each component parameter, the total sum and grade for the CRUSADE bleeding score.">
+            misuse = <"">
+            copyright = <"© Apperta Foundation, openEHR Foundation">
+        >
+    >
+
+definition
+    OBSERVATION[id1] matches {    -- CRUSADE bleeding score
+        data matches {
+            HISTORY[id2] matches {
+                events cardinality matches {1..*; unordered} matches {
+                    POINT_EVENT[id3] matches {    -- Any point in time event
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[id5] occurrences matches {0..1} matches {    -- Baseline haematocrit
+                                        value matches {
+                                            DV_ORDINAL[id9009] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at10]}],
+                                                    [{2}, {[at9]}],
+                                                    [{3}, {[at8]}],
+                                                    [{7}, {[at7]}],
+                                                    [{9}, {[at6]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id11] occurrences matches {0..1} matches {    -- Creatinine clearance
+                                        value matches {
+                                            DV_ORDINAL[id9010] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at17]}],
+                                                    [{7}, {[at16]}],
+                                                    [{17}, {[at15]}],
+                                                    [{28}, {[at14]}],
+                                                    [{35}, {[at13]}],
+                                                    [{39}, {[at12]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id18] occurrences matches {0..1} matches {    -- Heart rate
+                                        value matches {
+                                            DV_ORDINAL[id9011] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at19]}],
+                                                    [{1}, {[at20]}],
+                                                    [{3}, {[at21]}],
+                                                    [{6}, {[at22]}],
+                                                    [{8}, {[at23]}],
+                                                    [{10}, {[at24]}],
+                                                    [{11}, {[at25]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id26] occurrences matches {0..1} matches {    -- Sex
+                                        value matches {
+                                            DV_ORDINAL[id9012] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at28]}],
+                                                    [{8}, {[at27]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id29] occurrences matches {0..1} matches {    -- Signs of heart failure
+                                        value matches {
+                                            DV_ORDINAL[id9013] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at30]}],
+                                                    [{7}, {[at31]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id32] occurrences matches {0..1} matches {    -- Prior vascular disease
+                                        value matches {
+                                            DV_ORDINAL[id9014] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at33]}],
+                                                    [{7}, {[at34]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id35] occurrences matches {0..1} matches {    -- Diabetes mellitus
+                                        value matches {
+                                            DV_ORDINAL[id9015] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at36]}],
+                                                    [{6}, {[at37]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id74] occurrences matches {0..1} matches {    -- Systolic blood pressure
+                                        value matches {
+                                            DV_ORDINAL[id9016] matches {
+                                                [value, symbol] matches {
+                                                    [{1}, {[at78]}],
+                                                    [{3}, {[at79]}],
+                                                    [{5}, {[at77]}],
+                                                    [{8}, {[at76]}],
+                                                    [{10}, {[at75]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id65] occurrences matches {0..1} matches {    -- Total score
+                                        value matches {
+                                            DV_COUNT[id9017] matches {
+                                                magnitude matches {|0..91|}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id64] occurrences matches {0..1} matches {    -- Risk grade
+                                        value matches {
+                                            DV_ORDINAL[id9018] matches {
+                                                [value, symbol] matches {
+                                                    [{1}, {[at66]}],
+                                                    [{21}, {[at67]}],
+                                                    [{31}, {[at68]}],
+                                                    [{41}, {[at69]}],
+                                                    [{51}, {[at70]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id45] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    ELEMENT[id47] occurrences matches {0..1} matches {    -- Score version
+                        value matches {
+                            DV_TEXT[id9019] 
+                        }
+                    }
+                    allow_archetype CLUSTER[id72] matches {     -- Extension
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["ac9000"] = <
+                text = <"Baseline haematocrit (synthesised)">
+                description = <"Haematocrit measured in %. (synthesised)">
+            >
+            ["ac9001"] = <
+                text = <"Creatinine clearance (synthesised)">
+                description = <"Creatinine clearance estimated using the Cockcroft-Gault equation. (synthesised)">
+            >
+            ["ac9002"] = <
+                text = <"Heart rate (synthesised)">
+                description = <"Heart rate measured in beats/min. (synthesised)">
+            >
+            ["ac9003"] = <
+                text = <"Sex (synthesised)">
+                description = <"Patient sex. (synthesised)">
+            >
+            ["ac9004"] = <
+                text = <"Signs of heart failure (synthesised)">
+                description = <"Signs of congestive heart failure at presentation? (synthesised)">
+            >
+            ["ac9005"] = <
+                text = <"Prior vascular disease (synthesised)">
+                description = <"History of vascular disease? (synthesised)">
+            >
+            ["ac9006"] = <
+                text = <"Diabetes mellitus (synthesised)">
+                description = <"History of diabetes mellitus? (synthesised)">
+            >
+            ["ac9007"] = <
+                text = <"Systolic blood pressure (synthesised)">
+                description = <"Systolic blood pressure measured in mm Hg. (synthesised)">
+            >
+            ["ac9008"] = <
+                text = <"Risk grade (synthesised)">
+                description = <"Overall CRUSADE risk score. (synthesised)">
+            >
+            ["at79"] = <
+                text = <"181-200">
+                description = <"Between 181 and 200 mm Hg.">
+            >
+            ["at78"] = <
+                text = <"121-180">
+                description = <"Between 121 and 180 mm Hg.">
+            >
+            ["at77"] = <
+                text = <"101-120 or >=201">
+                description = <"Between 101 and 120 mm Hg or greater than or equal to 201.">
+            >
+            ["at76"] = <
+                text = <"91-100">
+                description = <"Between 91 and 100 mm Hg.">
+            >
+            ["at75"] = <
+                text = <"<=90">
+                description = <"Systolic blood pressure is less than or equal to 90 mm Hg.">
+            >
+            ["id74"] = <
+                text = <"Systolic blood pressure">
+                description = <"Systolic blood pressure measured in mm Hg.">
+                comment = <"Systolic blood pressure ordinal scores are duplicated between 101 and 120 mm Hg or greater than or equal to 201.">
+            >
+            ["id72"] = <
+                text = <"Extension">
+                description = <"Additional information required to extend the model with local content or to align with other reference models/formalisms.">
+                comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
+            >
+            ["at70"] = <
+                text = <">=51">
+                description = <"Very high risk.">
+            >
+            ["at69"] = <
+                text = <"41-50">
+                description = <"High risk.">
+            >
+            ["at68"] = <
+                text = <"31-40">
+                description = <"Moderate risk.">
+            >
+            ["at67"] = <
+                text = <"21-30">
+                description = <"Low risk.">
+            >
+            ["at66"] = <
+                text = <"<=20">
+                description = <"Very low risk.">
+            >
+            ["id65"] = <
+                text = <"Total score">
+                description = <"Sum of the individual scores assigned for each of the contributing variables.">
+            >
+            ["id64"] = <
+                text = <"Risk grade">
+                description = <"Overall CRUSADE risk score.">
+                comment = <"Relative % calculated by risk score quintiles">
+            >
+            ["id47"] = <
+                text = <"Score version">
+                description = <"The version of the score used, normally recorded as the year.">
+            >
+            ["at37"] = <
+                text = <"Yes">
+                description = <"Patient has history of diabetes mellitus.">
+            >
+            ["at36"] = <
+                text = <"No">
+                description = <"No history of diabetes mellitus.">
+            >
+            ["id35"] = <
+                text = <"Diabetes mellitus">
+                description = <"History of diabetes mellitus?">
+            >
+            ["at34"] = <
+                text = <"Yes">
+                description = <"Patient has history of vascular disease.">
+            >
+            ["at33"] = <
+                text = <"No">
+                description = <"No history of vascular disease.">
+            >
+            ["id32"] = <
+                text = <"Prior vascular disease">
+                description = <"History of vascular disease?">
+                comment = <"Prior vascular disease defined as peripheral artery disease or prior stroke.">
+            >
+            ["at31"] = <
+                text = <"Yes">
+                description = <"Signs of Congestive Heart Failure at presentation.">
+            >
+            ["at30"] = <
+                text = <"No">
+                description = <"No signs of congestive heart failure at presentation.">
+            >
+            ["id29"] = <
+                text = <"Signs of heart failure">
+                description = <"Signs of congestive heart failure at presentation?">
+            >
+            ["at28"] = <
+                text = <"Male">
+                description = <"Patient sex is male.">
+            >
+            ["at27"] = <
+                text = <"Female">
+                description = <"Patient sex is female.">
+            >
+            ["id26"] = <
+                text = <"Sex">
+                description = <"Patient sex.">
+            >
+            ["at25"] = <
+                text = <">=121">
+                description = <"Greater than or equal to 121.">
+            >
+            ["at24"] = <
+                text = <"111-120">
+                description = <"Between 111 and 120 bpm.">
+            >
+            ["at23"] = <
+                text = <"101-110">
+                description = <"Between 101 and 110 bpm.">
+            >
+            ["at22"] = <
+                text = <"91-100">
+                description = <"Between 91 and 100 bpm.">
+            >
+            ["at21"] = <
+                text = <"81-90">
+                description = <"Between 81 and 90 bpm.">
+            >
+            ["at20"] = <
+                text = <"71-80">
+                description = <"Between 71 and 80 bpm.">
+            >
+            ["at19"] = <
+                text = <"<=70">
+                description = <"Less than or equal to 70 bpm.">
+            >
+            ["id18"] = <
+                text = <"Heart rate">
+                description = <"Heart rate measured in beats/min.">
+            >
+            ["at17"] = <
+                text = <">120">
+                description = <"Greater than 120 mL/min.">
+            >
+            ["at16"] = <
+                text = <">90-120">
+                description = <"Greater than 90 to 120 mL/min.">
+            >
+            ["at15"] = <
+                text = <">60-90">
+                description = <"Greater than 60 to 90 mL/min.">
+            >
+            ["at14"] = <
+                text = <">30-60">
+                description = <"Greater than 30 to 60 mL/min.">
+            >
+            ["at13"] = <
+                text = <">15-30">
+                description = <"Greater than 15 to 30 mL/min.">
+            >
+            ["at12"] = <
+                text = <"<=15">
+                description = <"Less than or equal to 15 mL/min.">
+            >
+            ["id11"] = <
+                text = <"Creatinine clearance">
+                description = <"Creatinine clearance estimated using the Cockcroft-Gault equation.">
+            >
+            ["at10"] = <
+                text = <">=40">
+                description = <"Greater than or equal to 40%.">
+            >
+            ["at9"] = <
+                text = <"37-39.9">
+                description = <"Between 37 and 39.9%.">
+            >
+            ["at8"] = <
+                text = <"34-36.9">
+                description = <"Between 34 and 36.9%.">
+            >
+            ["at7"] = <
+                text = <"31-33.9">
+                description = <"Between 31 and 33.9%.">
+            >
+            ["at6"] = <
+                text = <"<31">
+                description = <"Less than 31%.">
+            >
+            ["id5"] = <
+                text = <"Baseline haematocrit">
+                description = <"Haematocrit measured in %.">
+            >
+            ["id3"] = <
+                text = <"Any point in time event">
+                description = <"Default, unspecified point in time event which may be explicitly defined in a template or at run-time.">
+            >
+            ["id1"] = <
+                text = <"CRUSADE bleeding score">
+                description = <"An assessment tool used to stratify risk for major bleeding in patients presenting with NSTEMI or STEMI prior to initiation of treatment.">
+                comment = <"CRUSADE is an acronym from the original study title: \"Can Rapid risk stratification of Unstable angina patients Suppress ADverse outcomes with Early implementation of the ACC/AHA Guidelines\".">
+            >
+        >
+    >
+    value_sets = <
+        ["ac9002"] = <
+            id = <"ac9002">
+            members = <"at19", "at20", "at21", "at22", "at23", "at24", "at25">
+        >
+        ["ac9001"] = <
+            id = <"ac9001">
+            members = <"at17", "at16", "at15", "at14", "at13", "at12">
+        >
+        ["ac9000"] = <
+            id = <"ac9000">
+            members = <"at10", "at9", "at8", "at7", "at6">
+        >
+        ["ac9006"] = <
+            id = <"ac9006">
+            members = <"at36", "at37">
+        >
+        ["ac9005"] = <
+            id = <"ac9005">
+            members = <"at33", "at34">
+        >
+        ["ac9004"] = <
+            id = <"ac9004">
+            members = <"at30", "at31">
+        >
+        ["ac9003"] = <
+            id = <"ac9003">
+            members = <"at28", "at27">
+        >
+        ["ac9008"] = <
+            id = <"ac9008">
+            members = <"at66", "at67", "at68", "at69", "at70">
+        >
+        ["ac9007"] = <
+            id = <"ac9007">
+            members = <"at78", "at79", "at77", "at76", "at75">
+        >
+    >

@@ -1,0 +1,1567 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=cc362638-ca43-4782-a935-b8b0006da2df; build_uid=83c5c54b-9836-4b80-b355-67123d9411a1)
+    openEHR-EHR-OBSERVATION.chaq.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["name"] = <"Hildegard Franke">
+        ["organisation"] = <"freshEHR Clinical Informatics Ltd.">
+        ["email"] = <"hildi@freshehr.com">
+        ["date"] = <"2016-10-26">
+    >
+    original_namespace = <"uk.org.clinicalmodels">
+    original_publisher = <"UK Clinical Models">
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"uk.org.clinicalmodels">
+    custodian_organisation = <"UK Clinical Models">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+    references = <
+        ["1"] = <"Childhood Health Assessment Questionnaire cited 26-Oct-2016 https://www.niehs.nih.gov/research/resources/assets/docs/chaq_instructions_508.pdf">
+        ["2"] = <"Childhood Health Assessment Questionnaire cited 26-Oct-2016 http://www.badbir.org/Website%20data/Ethical%20Approval/Amendment8/12.%20CHAQ%20form.pdf">
+    >
+    other_details = <
+        ["current_contact"] = <"Hildegard Franke, freshEHR Clinical Informatics Ltd.<hildi@freshehr.com>">
+        ["MD5-CAM-1.0.1"] = <"CCB533AE2CCAA434FD265FA57013935C">
+    >
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"For the recording of details of the Childhood Health Assessment Questionnaire used to assess how a child's arthritis affects his or her ability to function in daily life.">
+            use = <"To record the details of the Childhood Health Assessment Questionnaire used in Rare Diseases management settings to assess how a child's arthritis affects his or her ability to function in daily life.
+    
+    The questionnaire is completed by parents or carers of the child, and it is intended that the person completing the questionnaire checks the one response which best describes the child's usual activities (averaged over an entire day) OVER THE PAST WEEK. It is also intended that only those difficulties or limitations are noted which are due to illness. If most children at the child's age are not expected to do a certain activity, the responder should mark it as \"Not Applicable\". For example, if the child has difficulty in doing a certain activity or is unable to do it because he/she is too young but not because he/she is RESTRICTED BY ILLNESS, the activity should be marked as \"NOT Applicable\".">
+            misuse = <"">
+            copyright = <"© Clinical Models UK">
+        >
+    >
+
+definition
+    OBSERVATION[id1] matches {    -- Childhood Health Assessment Questionnaire
+        data matches {
+            HISTORY[id2] matches {
+                events cardinality matches {1..*; unordered} matches {
+                    POINT_EVENT[id3] occurrences matches {0..1} matches {    -- Point in time
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    CLUSTER[id9] occurrences matches {0..1} matches {    -- Dressing and grooming
+                                        items cardinality matches {1..*; unordered} matches {
+                                            ELEMENT[id5] occurrences matches {0..1} matches {    -- Dress
+                                                value matches {
+                                                    DV_CODED_TEXT[id9035] matches {
+                                                        defining_code matches {[ac9000]}    -- Dress (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id6] occurrences matches {0..1} matches {    -- Shampoo
+                                                value matches {
+                                                    DV_CODED_TEXT[id9036] matches {
+                                                        defining_code matches {[ac9001]}    -- Shampoo (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id7] occurrences matches {0..1} matches {    -- Remove socks
+                                                value matches {
+                                                    DV_CODED_TEXT[id9037] matches {
+                                                        defining_code matches {[ac9002]}    -- Remove socks (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id8] occurrences matches {0..1} matches {    -- Cut fingernails
+                                                value matches {
+                                                    DV_CODED_TEXT[id9038] matches {
+                                                        defining_code matches {[ac9003]}    -- Cut fingernails (synthesised)
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id30] occurrences matches {0..1} matches {    -- Arising
+                                        items cardinality matches {1..*; unordered} matches {
+                                            ELEMENT[id31] occurrences matches {0..1} matches {    -- Stand up
+                                                value matches {
+                                                    DV_CODED_TEXT[id9039] matches {
+                                                        defining_code matches {[ac9004]}    -- Stand up (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id37] occurrences matches {0..1} matches {    -- Get in and out of bed or stand up in crib
+                                                value matches {
+                                                    DV_CODED_TEXT[id9040] matches {
+                                                        defining_code matches {[ac9005]}    -- Get in and out of bed or stand up in crib (synthesised)
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id43] occurrences matches {0..1} matches {    -- Eating
+                                        items cardinality matches {1..*; unordered} matches {
+                                            ELEMENT[id44] occurrences matches {0..1} matches {    -- Cut meat
+                                                value matches {
+                                                    DV_CODED_TEXT[id9041] matches {
+                                                        defining_code matches {[ac9006]}    -- Cut meat (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id50] occurrences matches {0..1} matches {    -- Lift up cup or glass to mouth
+                                                value matches {
+                                                    DV_CODED_TEXT[id9042] matches {
+                                                        defining_code matches {[ac9007]}    -- Lift up cup or glass to mouth (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id56] occurrences matches {0..1} matches {    -- Open new cereal box
+                                                value matches {
+                                                    DV_CODED_TEXT[id9043] matches {
+                                                        defining_code matches {[ac9008]}    -- Open new cereal box (synthesised)
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id62] occurrences matches {0..1} matches {    -- Walking
+                                        items cardinality matches {1..*; unordered} matches {
+                                            ELEMENT[id63] occurrences matches {0..1} matches {    -- Walk outdoors on flat ground
+                                                value matches {
+                                                    DV_CODED_TEXT[id9044] matches {
+                                                        defining_code matches {[ac9009]}    -- Walk outdoors on flat ground (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id69] occurrences matches {0..1} matches {    -- Climb up five steps
+                                                value matches {
+                                                    DV_CODED_TEXT[id9045] matches {
+                                                        defining_code matches {[ac9010]}    -- Climb up five steps (synthesised)
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id75] matches {    -- Devices used
+                                        value matches {
+                                            DV_CODED_TEXT[id9046] matches {
+                                                defining_code matches {[ac9011]}    -- Devices used (synthesised)
+                                            }
+                                            DV_TEXT[id9047] 
+                                        }
+                                    }
+                                    ELEMENT[id83] matches {    -- Needs help from other person
+                                        value matches {
+                                            DV_CODED_TEXT[id9048] matches {
+                                                defining_code matches {[ac9012]}    -- Needs help from other person (synthesised)
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id88] occurrences matches {0..1} matches {    -- Hygiene
+                                        items cardinality matches {1..*; unordered} matches {
+                                            ELEMENT[id89] occurrences matches {0..1} matches {    -- Wash and dry entire body
+                                                value matches {
+                                                    DV_CODED_TEXT[id9049] matches {
+                                                        defining_code matches {[ac9013]}    -- Wash and dry entire body (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id95] occurrences matches {0..1} matches {    -- Take a tub bath
+                                                value matches {
+                                                    DV_CODED_TEXT[id9050] matches {
+                                                        defining_code matches {[ac9014]}    -- Take a tub bath (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id98] occurrences matches {0..1} matches {    -- Get on and off toilet or potty chair
+                                                value matches {
+                                                    DV_CODED_TEXT[id9051] matches {
+                                                        defining_code matches {[ac9015]}    -- Get on and off toilet or potty chair (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id102] occurrences matches {0..1} matches {    -- Brush teeth
+                                                value matches {
+                                                    DV_CODED_TEXT[id9052] matches {
+                                                        defining_code matches {[ac9016]}    -- Brush teeth (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id113] occurrences matches {0..1} matches {    -- Comb or brush hair
+                                                value matches {
+                                                    DV_CODED_TEXT[id9053] matches {
+                                                        defining_code matches {[ac9017]}    -- Comb or brush hair (synthesised)
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id119] occurrences matches {0..1} matches {    -- Reach
+                                        items cardinality matches {1..*; unordered} matches {
+                                            ELEMENT[id120] occurrences matches {0..1} matches {    -- Reach and get down heavy object
+                                                value matches {
+                                                    DV_CODED_TEXT[id9054] matches {
+                                                        defining_code matches {[ac9018]}    -- Reach and get down heavy object (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id126] occurrences matches {0..1} matches {    -- Bend down to pick up
+                                                value matches {
+                                                    DV_CODED_TEXT[id9055] matches {
+                                                        defining_code matches {[ac9019]}    -- Bend down to pick up (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id132] occurrences matches {0..1} matches {    -- Pull on sweater
+                                                value matches {
+                                                    DV_CODED_TEXT[id9056] matches {
+                                                        defining_code matches {[ac9020]}    -- Pull on sweater (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id138] occurrences matches {0..1} matches {    -- Turn neck
+                                                value matches {
+                                                    DV_CODED_TEXT[id9057] matches {
+                                                        defining_code matches {[ac9021]}    -- Turn neck (synthesised)
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id144] occurrences matches {0..1} matches {    -- Grip
+                                        items cardinality matches {1..*; unordered} matches {
+                                            ELEMENT[id145] occurrences matches {0..1} matches {    -- Write or scribble
+                                                value matches {
+                                                    DV_CODED_TEXT[id9058] matches {
+                                                        defining_code matches {[ac9022]}    -- Write or scribble (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id151] occurrences matches {0..1} matches {    -- Open car doors
+                                                value matches {
+                                                    DV_CODED_TEXT[id9059] matches {
+                                                        defining_code matches {[ac9023]}    -- Open car doors (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id157] occurrences matches {0..1} matches {    -- Open jars
+                                                value matches {
+                                                    DV_CODED_TEXT[id9060] matches {
+                                                        defining_code matches {[ac9024]}    -- Open jars (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id163] occurrences matches {0..1} matches {    -- Turn faucets on and off
+                                                value matches {
+                                                    DV_CODED_TEXT[id9061] matches {
+                                                        defining_code matches {[ac9025]}    -- Turn faucets on and off (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id169] occurrences matches {0..1} matches {    -- Push open door
+                                                value matches {
+                                                    DV_CODED_TEXT[id9062] matches {
+                                                        defining_code matches {[ac9026]}    -- Push open door (synthesised)
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    CLUSTER[id175] occurrences matches {0..1} matches {    -- Activities
+                                        items cardinality matches {1..*; unordered} matches {
+                                            ELEMENT[id176] occurrences matches {0..1} matches {    -- Run errands and shop
+                                                value matches {
+                                                    DV_CODED_TEXT[id9063] matches {
+                                                        defining_code matches {[ac9027]}    -- Run errands and shop (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id178] occurrences matches {0..1} matches {    -- Get in and out of car
+                                                value matches {
+                                                    DV_CODED_TEXT[id9064] matches {
+                                                        defining_code matches {[ac9028]}    -- Get in and out of car (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id188] occurrences matches {0..1} matches {    -- Ride bike or tricycle
+                                                value matches {
+                                                    DV_CODED_TEXT[id9065] matches {
+                                                        defining_code matches {[ac9029]}    -- Ride bike or tricycle (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id194] occurrences matches {0..1} matches {    -- Do household chores
+                                                value matches {
+                                                    DV_CODED_TEXT[id9066] matches {
+                                                        defining_code matches {[ac9030]}    -- Do household chores (synthesised)
+                                                    }
+                                                }
+                                            }
+                                            ELEMENT[id200] occurrences matches {0..1} matches {    -- Run and play
+                                                value matches {
+                                                    DV_CODED_TEXT[id9067] matches {
+                                                        defining_code matches {[ac9031]}    -- Run and play (synthesised)
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id206] matches {    -- Devices used
+                                        value matches {
+                                            DV_CODED_TEXT[id9068] matches {
+                                                defining_code matches {[ac9032]}    -- Devices used (synthesised)
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id213] occurrences matches {0..1} matches {    -- Needs help from other person
+                                        value matches {
+                                            DV_CODED_TEXT[id9069] matches {
+                                                defining_code matches {[ac9033]}    -- Needs help from other person (synthesised)
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id218] occurrences matches {0..1} matches {    -- Pain score
+                                        value matches {
+                                            DV_QUANTITY[id9070] matches {
+                                                property matches {[at9034]}    -- Qualified real
+                                                magnitude matches {|0.0..100.0|}
+                                                units matches {"1"}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id219] occurrences matches {0..1} matches {    -- Global evaluation
+                                        value matches {
+                                            DV_QUANTITY[id9071] matches {
+                                                property matches {[at9034]}    -- Qualified real
+                                                magnitude matches {|0.0..100.0|}
+                                                units matches {"1"}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id224] occurrences matches {0..1} matches {    -- Total score
+                                        value matches {
+                                            DV_QUANTITY[id9072] matches {
+                                                property matches {[at9034]}    -- Qualified real
+                                                magnitude matches {|0.0..24.0|}
+                                                units matches {"1"}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id225] occurrences matches {0..1} matches {    -- Disability Index
+                                        value matches {
+                                            DV_QUANTITY[id9073] matches {
+                                                property matches {[at9034]}    -- Qualified real
+                                                magnitude matches {|0.0..3.0|}
+                                                units matches {"1"}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id226] occurrences matches {0..1} matches {    -- Clinical interpretation
+                                        value matches {
+                                            DV_TEXT[id9074] 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        state matches {
+                            ITEM_TREE[id220] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[id221] matches {    -- Confounding factors
+                                        value matches {
+                                            DV_TEXT[id9075] 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id222] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    allow_archetype CLUSTER[id223] matches {     -- Extension
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["at9034"] = <
+                text = <"Qualified real">
+                description = <"Qualified real">
+            >
+            ["ac9000"] = <
+                text = <"Dress (synthesised)">
+                description = <"Assessment of child's ability to dress, including tying shoelaces and doing buttons. (synthesised)">
+            >
+            ["ac9001"] = <
+                text = <"Shampoo (synthesised)">
+                description = <"Assessment of the child's ability to shampoo his or her hair. (synthesised)">
+            >
+            ["ac9002"] = <
+                text = <"Remove socks (synthesised)">
+                description = <"Assessment of the child's ability to remove socks. (synthesised)">
+            >
+            ["ac9003"] = <
+                text = <"Cut fingernails (synthesised)">
+                description = <"Assessment of the child's ability to cut his or her fingernails. (synthesised)">
+            >
+            ["ac9004"] = <
+                text = <"Stand up (synthesised)">
+                description = <"Assessment of child's ability to stand up from low chair or floor. (synthesised)">
+            >
+            ["ac9005"] = <
+                text = <"Get in and out of bed or stand up in crib (synthesised)">
+                description = <"Assessment of the child's ability to get in and out of bed or stand up in a crib. (synthesised)">
+            >
+            ["ac9006"] = <
+                text = <"Cut meat (synthesised)">
+                description = <"Assessment of the child's ability to cut his or her own meat. (synthesised)">
+            >
+            ["ac9007"] = <
+                text = <"Lift up cup or glass to mouth (synthesised)">
+                description = <"Assessment of the child's ability to lift a cup or glass to mouth. (synthesised)">
+            >
+            ["ac9008"] = <
+                text = <"Open new cereal box (synthesised)">
+                description = <"Assessment of the child's ability to open a new cereal box. (synthesised)">
+            >
+            ["ac9009"] = <
+                text = <"Walk outdoors on flat ground (synthesised)">
+                description = <"Assessment of the child's ability to walk outdoors on flat ground. (synthesised)">
+            >
+            ["ac9010"] = <
+                text = <"Climb up five steps (synthesised)">
+                description = <"Assessment of the child's ability to climb up five steps. (synthesised)">
+            >
+            ["ac9011"] = <
+                text = <"Devices used (synthesised)">
+                description = <"Statement about the aids or devices usually used by the child for dressing, grooming, arising, eating and walking. (synthesised)">
+            >
+            ["ac9012"] = <
+                text = <"Needs help from other person (synthesised)">
+                description = <"Statement of which activity categories (dressing and grooming, arising, eating and walking) usually require help for the child from another person because of the child's illness. (synthesised)">
+            >
+            ["ac9013"] = <
+                text = <"Wash and dry entire body (synthesised)">
+                description = <"Assessment of the child's ability to wash and dry entire body. (synthesised)">
+            >
+            ["ac9014"] = <
+                text = <"Take a tub bath (synthesised)">
+                description = <"Assessment of the child's ability to take a tub bath including getting in and out of the tub). (synthesised)">
+            >
+            ["ac9015"] = <
+                text = <"Get on and off toilet or potty chair (synthesised)">
+                description = <"Assessment of the child's ability to get on and off the toilet or potty chair. (synthesised)">
+            >
+            ["ac9016"] = <
+                text = <"Brush teeth (synthesised)">
+                description = <"Assessment of the child's ability to brush his or her teeth. (synthesised)">
+            >
+            ["ac9017"] = <
+                text = <"Comb or brush hair (synthesised)">
+                description = <"Assessment of the child's ability to comb or brush his or her hair. (synthesised)">
+            >
+            ["ac9018"] = <
+                text = <"Reach and get down heavy object (synthesised)">
+                description = <"Assessment of the child's ability to reach and get down a heavy object such as a large game or books from just above his/her head. (synthesised)">
+            >
+            ["ac9019"] = <
+                text = <"Bend down to pick up (synthesised)">
+                description = <"Assessment of the child's ability to bend down to pick up clothing or a piece of paper from the floor. (synthesised)">
+            >
+            ["ac9020"] = <
+                text = <"Pull on sweater (synthesised)">
+                description = <"Assessment of the child's ability to pull on a sweater over his or her head. (synthesised)">
+            >
+            ["ac9021"] = <
+                text = <"Turn neck (synthesised)">
+                description = <"Assessment of the child's ability to turn his or her neck to look back over his or her shoulder. (synthesised)">
+            >
+            ["ac9022"] = <
+                text = <"Write or scribble (synthesised)">
+                description = <"Assessment of the child's ability to write or scribble with a pen or pencil. (synthesised)">
+            >
+            ["ac9023"] = <
+                text = <"Open car doors (synthesised)">
+                description = <"Assessment of the child's ability to open car doors. (synthesised)">
+            >
+            ["ac9024"] = <
+                text = <"Open jars (synthesised)">
+                description = <"Assessment of child's ability to open jars that have been previously opened. (synthesised)">
+            >
+            ["ac9025"] = <
+                text = <"Turn faucets on and off (synthesised)">
+                description = <"Assessment of child's ability to turn faucets on and off. (synthesised)">
+            >
+            ["ac9026"] = <
+                text = <"Push open door (synthesised)">
+                description = <"Assessment of the child's ability to push open a door when he or she has to turn a door knob. (synthesised)">
+            >
+            ["ac9027"] = <
+                text = <"Run errands and shop (synthesised)">
+                description = <"Assessment of the child's ability to run errands and shop. (synthesised)">
+            >
+            ["ac9028"] = <
+                text = <"Get in and out of car (synthesised)">
+                description = <"Assessment of the child's ability to get in and out of a car, toy car or school bus. (synthesised)">
+            >
+            ["ac9029"] = <
+                text = <"Ride bike or tricycle (synthesised)">
+                description = <"Assessment of the child's ability to ride a bike or tricycle. (synthesised)">
+            >
+            ["ac9030"] = <
+                text = <"Do household chores (synthesised)">
+                description = <"Assessment of the child's ability to do household chores (e.g. wash dishes, take out trash, vacuuming, yardwork, make bed, clean room). (synthesised)">
+            >
+            ["ac9031"] = <
+                text = <"Run and play (synthesised)">
+                description = <"Assessment of the child's ability to run and play. (synthesised)">
+            >
+            ["ac9032"] = <
+                text = <"Devices used (synthesised)">
+                description = <"Statement about the aids or devices usually used by the child for hygiene, reach, grip and activities. (synthesised)">
+            >
+            ["ac9033"] = <
+                text = <"Needs help from other person (synthesised)">
+                description = <"Statement of which activity categories (hygiene, reach, gripping and opening and errands and chores) usually require help for the child from another person because of the child's illness. (synthesised)">
+            >
+            ["id226"] = <
+                text = <"Clinical interpretation">
+                description = <"Narrative description of clinical interpretation.">
+            >
+            ["id225"] = <
+                text = <"Disability Index">
+                description = <"Calculated from the total score divided by the number of categories answered.">
+            >
+            ["id224"] = <
+                text = <"Total score">
+                description = <"Total score from the eight assessment categories, with the highest score in each category counting towards the total score. Use of devices always scores 2, but can be superceded by a 3 score in that category.">
+            >
+            ["id223"] = <
+                text = <"Extension">
+                description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+                comment = <"e.g. Local hospital departmental infomation or additional metadata to align with HL7 or CDISC equivalents.">
+            >
+            ["id221"] = <
+                text = <"Confounding factors">
+                description = <"Record any issues or factors that may impact on the questionnaire answers.">
+            >
+            ["id219"] = <
+                text = <"Global evaluation">
+                description = <"Rating of how child is doing, considering all the ways arthritis is affecting him or her, on a scale of 0 (very well) to 100 (very poor).">
+            >
+            ["id218"] = <
+                text = <"Pain score">
+                description = <"Rating of how much pain the  child has had because of his/her illness in the past week on a scale of 0 (no pain) to 100 (very severe pain).">
+            >
+            ["at217"] = <
+                text = <"Errands and chores">
+                description = <"The child usually needs help from another person for errands and chores because of his or her illness.">
+            >
+            ["at216"] = <
+                text = <"Gripping and opening things">
+                description = <"The child usually needs help from another person for gripping and opening things because of his or her illness.">
+            >
+            ["at215"] = <
+                text = <"Reach">
+                description = <"The child usually needs help from another person for reaching because of his or her illness.">
+            >
+            ["at214"] = <
+                text = <"Hygiene">
+                description = <"The child usually needs help from another person for hygiene because of his or her illness.">
+            >
+            ["id213"] = <
+                text = <"Needs help from other person">
+                description = <"Statement of which activity categories (hygiene, reach, gripping and opening and errands and chores) usually require help for the child from another person because of the child's illness.">
+            >
+            ["at212"] = <
+                text = <"Long-handled appliances in bathroom">
+                description = <"The child usually uses long-handled appliances in the bathroom.">
+            >
+            ["at211"] = <
+                text = <"Long-handled appliances for reach">
+                description = <"The child usually uses long-handled appliances for reach.">
+            >
+            ["at210"] = <
+                text = <"Bathtub bar">
+                description = <"The child usually uses a bathtub bar.">
+            >
+            ["at209"] = <
+                text = <"Jar opener">
+                description = <"The child usually uses a jar opener for jars that have been previously opened.">
+            >
+            ["at208"] = <
+                text = <"Bathtub seat">
+                description = <"The child usually uses a bathtub seat.">
+            >
+            ["at207"] = <
+                text = <"Raised toilet seat">
+                description = <"The child usually uses a raised toilet seat.">
+            >
+            ["id206"] = <
+                text = <"Devices used">
+                description = <"Statement about the aids or devices usually used by the child for hygiene, reach, grip and activities.">
+            >
+            ["at205"] = <
+                text = <"Not applicable">
+                description = <"The question is not applicable.">
+            >
+            ["at204"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to run and play.">
+            >
+            ["at203"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to run and play with much difficulty.">
+            >
+            ["at202"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to run and play with some difficulty.">
+            >
+            ["at201"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to run and play without any difficulty.">
+            >
+            ["id200"] = <
+                text = <"Run and play">
+                description = <"Assessment of the child's ability to run and play.">
+            >
+            ["at199"] = <
+                text = <"Not applicable">
+                description = <"The question is not applicable.">
+            >
+            ["at198"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to do household chores.">
+            >
+            ["at197"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to do household chores with much difficulty.">
+            >
+            ["at196"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to do household chores with some difficulty.">
+            >
+            ["at195"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to do household chores without any difficulty.">
+            >
+            ["id194"] = <
+                text = <"Do household chores">
+                description = <"Assessment of the child's ability to do household chores (e.g. wash dishes, take out trash, vacuuming, yardwork, make bed, clean room).">
+            >
+            ["at193"] = <
+                text = <"Not applicable">
+                description = <"The question is no applicable.">
+            >
+            ["at192"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to ride a bike or tricycle.">
+            >
+            ["at191"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to ride a bike or tricycle with much difficulty.">
+            >
+            ["at190"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to ride a bike or tricycle with some difficulty.">
+            >
+            ["at189"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to ride a bike or tricycle without any difficulty.">
+            >
+            ["id188"] = <
+                text = <"Ride bike or tricycle">
+                description = <"Assessment of the child's ability to ride a bike or tricycle.">
+            >
+            ["at187"] = <
+                text = <"Not applicable">
+                description = <"The question is not applicable.">
+            >
+            ["at186"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to get in and out of car, toy car or school bus.">
+            >
+            ["at185"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to get in and out of car, toy car or school bus with much difficulty.">
+            >
+            ["at184"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to get in and out of car, toy car or school bus with some difficulty.">
+            >
+            ["at183"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to get in and out of car, toy car or school bus without any difficulty.">
+            >
+            ["at182"] = <
+                text = <"Not applicable">
+                description = <"The question is not applicable.">
+            >
+            ["at181"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to run errands and shop.">
+            >
+            ["at180"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to run errands and shop with much difficulty.">
+            >
+            ["at179"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to run errands and shop with some difficulty.">
+            >
+            ["id178"] = <
+                text = <"Get in and out of car">
+                description = <"Assessment of the child's ability to get in and out of a car, toy car or school bus.">
+            >
+            ["at177"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to run errands and shop without any difficulty.">
+            >
+            ["id176"] = <
+                text = <"Run errands and shop">
+                description = <"Assessment of the child's ability to run errands and shop.">
+            >
+            ["id175"] = <
+                text = <"Activities">
+                description = <"Assessment of the child's ability to perform general activities.">
+            >
+            ["at174"] = <
+                text = <"Not applicable">
+                description = <"The question is not applicable.">
+            >
+            ["at173"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to push open a door when he or she has to turn a door knob.">
+            >
+            ["at172"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to push open a door when he or she has to turn a door knob with much difficulty.">
+            >
+            ["at171"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to push open a door when he or she has to turn a door knob with some difficulty.">
+            >
+            ["at170"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to push open a door when he or she has to turn a door knob without any difficulty.">
+            >
+            ["id169"] = <
+                text = <"Push open door">
+                description = <"Assessment of the child's ability to push open a door when he or she has to turn a door knob.">
+            >
+            ["at168"] = <
+                text = <"No applicable">
+                description = <"The question is not applicable.">
+            >
+            ["at167"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to turn faucets on and off.">
+            >
+            ["at166"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to turn faucets on and off with much difficulty.">
+            >
+            ["at165"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to turn faucets on and off with some difficulty.">
+            >
+            ["at164"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to turn faucets on and off without any difficulty.">
+            >
+            ["id163"] = <
+                text = <"Turn faucets on and off">
+                description = <"Assessment of child's ability to turn faucets on and off.">
+            >
+            ["at162"] = <
+                text = <"Not applicable">
+                description = <"The question is not applicable.">
+            >
+            ["at161"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to open jars that have been previously opened.">
+            >
+            ["at160"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to open jars that have been previously opened with much difficulty.">
+            >
+            ["at159"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to open jars that have been previously opened with some difficulty.">
+            >
+            ["at158"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to open jars that have been previously opened without any difficulty.">
+            >
+            ["id157"] = <
+                text = <"Open jars">
+                description = <"Assessment of child's ability to open jars that have been previously opened.">
+            >
+            ["at156"] = <
+                text = <"Not applicable">
+                description = <"The question is not applicable.">
+            >
+            ["at155"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to open car doors.">
+            >
+            ["at154"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to open car doors with much difficulty.">
+            >
+            ["at153"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to open car doors with some difficulty.">
+            >
+            ["at152"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to open car doors without any difficulty.">
+            >
+            ["id151"] = <
+                text = <"Open car doors">
+                description = <"Assessment of the child's ability to open car doors.">
+            >
+            ["at150"] = <
+                text = <"No applicable">
+                description = <"The question is not applicable.">
+            >
+            ["at149"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to write or scribble with a pen or pencil.">
+            >
+            ["at148"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to write or scribble with a pen or pencil with much difficulty.">
+            >
+            ["at147"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to write or scribble with a pen or pencil with some difficulty.">
+            >
+            ["at146"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to write or scribble with a pen or pencil without any difficulty.">
+            >
+            ["id145"] = <
+                text = <"Write or scribble">
+                description = <"Assessment of the child's ability to write or scribble with a pen or pencil.">
+            >
+            ["id144"] = <
+                text = <"Grip">
+                description = <"Assessment of the child's ability to perform functions related to gripping.">
+            >
+            ["at143"] = <
+                text = <"Not applicable">
+                description = <"The question is not applicable.">
+            >
+            ["at142"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to turn his or her neck to look back over his or her shoulder.">
+            >
+            ["at141"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to turn his or her neck to look back over his or her shoulder with much difficulty.">
+            >
+            ["at140"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to turn his or her neck to look back over his or her shoulder with some difficulty.">
+            >
+            ["at139"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to turn his or her neck to look back over his or her shoulder without any difficulty.">
+            >
+            ["id138"] = <
+                text = <"Turn neck">
+                description = <"Assessment of the child's ability to turn his or her neck to look back over his or her shoulder.">
+            >
+            ["at137"] = <
+                text = <"Not applicable">
+                description = <"The question is not applicable.">
+            >
+            ["at136"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to pull on a sweater over his or her head.">
+            >
+            ["at135"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to pull on a sweater over his or her head with much difficulty.">
+            >
+            ["at134"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to pull on a sweater over his or her head with some difficulty.">
+            >
+            ["at133"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to pull on a sweater over his or her head without any difficulty.">
+            >
+            ["id132"] = <
+                text = <"Pull on sweater">
+                description = <"Assessment of the child's ability to pull on a sweater over his or her head.">
+            >
+            ["at131"] = <
+                text = <"Not applicable">
+                description = <"The question is not applicable.">
+            >
+            ["at130"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to bend down to pick up clothing or a piece of paper from the floor.">
+            >
+            ["at129"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to bend down to pick up clothing or a piece of paper from the floor with much difficulty.">
+            >
+            ["at128"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to bend down to pick up clothing or a piece of paper from the floor with some difficulty.">
+            >
+            ["at127"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to bend down to pick up clothing or a piece of paper from the floor without any difficulty.">
+            >
+            ["id126"] = <
+                text = <"Bend down to pick up">
+                description = <"Assessment of the child's ability to bend down to pick up clothing or a piece of paper from the floor.">
+            >
+            ["at125"] = <
+                text = <"Not applicable">
+                description = <"The question is not applicable.">
+            >
+            ["at124"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to reach and get down a heavy object such as a large game or books from just above his/her head.">
+            >
+            ["at123"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to reach and get down a heavy object such as a large game or books from just above his/her head with much difficulty.">
+            >
+            ["at122"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to reach and get down a heavy object such as a large game or books from just above his/her head with some difficulty.">
+            >
+            ["at121"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to reach and get down a heavy object such as a large game or books from just above his/her head without any difficulty.">
+            >
+            ["id120"] = <
+                text = <"Reach and get down heavy object">
+                description = <"Assessment of the child's ability to reach and get down a heavy object such as a large game or books from just above his/her head.">
+            >
+            ["id119"] = <
+                text = <"Reach">
+                description = <"Assessment of the child's ability to perform functions related to reaching.">
+            >
+            ["at118"] = <
+                text = <"Not applicable">
+                description = <"The question is not applicable.">
+            >
+            ["at117"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to comb or brush his or her hair.">
+            >
+            ["at116"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to comb or brush his or her hair with much difficulty.">
+            >
+            ["at115"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to comb or brush his or her hair with some difficulty.">
+            >
+            ["at114"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to comb or brush his or her hair without any difficulty.">
+            >
+            ["id113"] = <
+                text = <"Comb or brush hair">
+                description = <"Assessment of the child's ability to comb or brush his or her hair.">
+            >
+            ["at112"] = <
+                text = <"Not applicable">
+                description = <"The question is not applicable.">
+            >
+            ["at111"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to brush his or her teeth.">
+            >
+            ["at110"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to brush his or her teeth with much difficulty.">
+            >
+            ["at109"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to brush his or her teeth with some difficulty.">
+            >
+            ["at108"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to brush his or her teeth without any difficulty.">
+            >
+            ["at107"] = <
+                text = <"Not applicable">
+                description = <"This question is not applicable.">
+            >
+            ["at106"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to get on and off toilet or potty chair.">
+            >
+            ["at105"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to get on and off toilet or potty chair with much difficulty.">
+            >
+            ["at104"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to get on and off toilet or potty chair with some difficulty.">
+            >
+            ["at103"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to get on and off toilet or potty chair without any difficulty.">
+            >
+            ["id102"] = <
+                text = <"Brush teeth">
+                description = <"Assessment of the child's ability to brush his or her teeth.">
+            >
+            ["at101"] = <
+                text = <"Not applicable">
+                description = <"This question is not applicable.">
+            >
+            ["at100"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to take a tub bath.">
+            >
+            ["at99"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to take a tub bath with much difficulty.">
+            >
+            ["id98"] = <
+                text = <"Get on and off toilet or potty chair">
+                description = <"Assessment of the child's ability to get on and off the toilet or potty chair.">
+            >
+            ["at97"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to take a tub bath with some difficulty.">
+            >
+            ["at96"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to take a tub bath without any difficulty.">
+            >
+            ["id95"] = <
+                text = <"Take a tub bath">
+                description = <"Assessment of the child's ability to take a tub bath including getting in and out of the tub).">
+            >
+            ["at94"] = <
+                text = <"Not applicable">
+                description = <"The question is not applicable.">
+            >
+            ["at93"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to wash and dry his or her entire body.">
+            >
+            ["at92"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to wash and dry his or her entire body with much difficulty.">
+            >
+            ["at91"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to wash and dry his or her entire body with some difficulty.">
+            >
+            ["at90"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to wash and dry his or her entire body without any difficulty.">
+            >
+            ["id89"] = <
+                text = <"Wash and dry entire body">
+                description = <"Assessment of the child's ability to wash and dry entire body.">
+            >
+            ["id88"] = <
+                text = <"Hygiene">
+                description = <"Assessment of the child's ability to perform functions related to hygiene.">
+            >
+            ["at87"] = <
+                text = <"Walking">
+                description = <"The child usually needs help from another person for walking because of his or her illness.">
+            >
+            ["at86"] = <
+                text = <"Eating">
+                description = <"The child usually needs help from another person for eating because of his or her illness.">
+            >
+            ["at85"] = <
+                text = <"Arising">
+                description = <"The child usually needs help from another person for arising because of his or her illness.">
+            >
+            ["at84"] = <
+                text = <"Dressing and grooming">
+                description = <"The child usually needs help from another person for dressing and grooming because of his or her illness.">
+            >
+            ["id83"] = <
+                text = <"Needs help from other person">
+                description = <"Statement of which activity categories (dressing and grooming, arising, eating and walking) usually require help for the child from another person because of the child's illness.">
+            >
+            ["at82"] = <
+                text = <"Special or built up chair">
+                description = <"The child usually uses a special or built-up chair.">
+            >
+            ["at81"] = <
+                text = <"Built up pencil or special utensils">
+                description = <"The child usually uses a built up pencil or special utensils.">
+            >
+            ["at80"] = <
+                text = <"Dressing aids">
+                description = <"The child usually using devices used dor dressing, such as button hook, zipper pull, long-handled shoe horn,etc.">
+            >
+            ["at79"] = <
+                text = <"Wheelchair">
+                description = <"The child usually uses a wheelchair.">
+            >
+            ["at78"] = <
+                text = <"Crutches">
+                description = <"The child usually uses crutches.">
+            >
+            ["at77"] = <
+                text = <"Walker">
+                description = <"The child usually uses a walker.">
+            >
+            ["at76"] = <
+                text = <"Cane">
+                description = <"The child usually uses a cane.">
+            >
+            ["id75"] = <
+                text = <"Devices used">
+                description = <"Statement about the aids or devices usually used by the child for dressing, grooming, arising, eating and walking.">
+            >
+            ["at74"] = <
+                text = <"Not applicable">
+                description = <"The question is not applicable.">
+            >
+            ["at73"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to climb up five steps.">
+            >
+            ["at72"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to climb up five steps with much difficulty.">
+            >
+            ["at71"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to climb up five steps with some difficulty.">
+            >
+            ["at70"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to climb up five steps without any difficulty.">
+            >
+            ["id69"] = <
+                text = <"Climb up five steps">
+                description = <"Assessment of the child's ability to climb up five steps.">
+            >
+            ["at68"] = <
+                text = <"Not applicable">
+                description = <"The question is not applicable.">
+            >
+            ["at67"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to walk outdoors on flat ground.">
+            >
+            ["at66"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to walk outdoors on flat ground with much difficulty.">
+            >
+            ["at65"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to walk outdoors on flat ground with some difficulty.">
+            >
+            ["at64"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to walk outdoors on flat ground without any difficulty.">
+            >
+            ["id63"] = <
+                text = <"Walk outdoors on flat ground">
+                description = <"Assessment of the child's ability to walk outdoors on flat ground.">
+            >
+            ["id62"] = <
+                text = <"Walking">
+                description = <"Assessment of the child's ability to perform functions related to walking.">
+            >
+            ["at61"] = <
+                text = <"Not applicable">
+                description = <"This question is not applicable.">
+            >
+            ["at60"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to open a new cereal box.">
+            >
+            ["at59"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to open a new cereal box with much difficulty.">
+            >
+            ["at58"] = <
+                text = <"WIth some difficulty">
+                description = <"The child is able to open a new cereal box with some difficulty.">
+            >
+            ["at57"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to open a new cereal box without any difficulty.">
+            >
+            ["id56"] = <
+                text = <"Open new cereal box">
+                description = <"Assessment of the child's ability to open a new cereal box.">
+            >
+            ["at55"] = <
+                text = <"Not applicable">
+                description = <"This question is not applicable.">
+            >
+            ["at54"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to lift a cup or glass to mouth.">
+            >
+            ["at53"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to lift a cup or glass to mouth with much difficulty.">
+            >
+            ["at52"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to lift a cup or glass to mouth with some difficulty.">
+            >
+            ["at51"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to lift a cup or glass to mouth without any difficulty.">
+            >
+            ["id50"] = <
+                text = <"Lift up cup or glass to mouth">
+                description = <"Assessment of the child's ability to lift a cup or glass to mouth.">
+            >
+            ["at49"] = <
+                text = <"Not applicable">
+                description = <"This question is not applicable.">
+            >
+            ["at48"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to cut his or her own meat.">
+            >
+            ["at47"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to cut his or her own meat with much difficulty.">
+            >
+            ["at46"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to cut his or her own meat with some difficulty.">
+            >
+            ["at45"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to cut his or her own meat without any difficulty.">
+            >
+            ["id44"] = <
+                text = <"Cut meat">
+                description = <"Assessment of the child's ability to cut his or her own meat.">
+            >
+            ["id43"] = <
+                text = <"Eating">
+                description = <"Assessment of the child's ability to perform functions related to eating.">
+            >
+            ["at42"] = <
+                text = <"Not applicable">
+                description = <"The question is not applicable.">
+            >
+            ["at41"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to get in and out of bed or stand up in a crib.">
+            >
+            ["at40"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to get in and out of bed or stand up in a crib with much difficulty.">
+            >
+            ["at39"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to get in and out of bed or stand up in a crib with some difficulty.">
+            >
+            ["at38"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to get in and out of bed or stand up in a crib without any difficulty.">
+            >
+            ["id37"] = <
+                text = <"Get in and out of bed or stand up in crib">
+                description = <"Assessment of the child's ability to get in and out of bed or stand up in a crib.">
+            >
+            ["at36"] = <
+                text = <"Not applicable">
+                description = <"This question is not applicable.">
+            >
+            ["at35"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to stand up from low chair or floor.">
+            >
+            ["at34"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to stand up from low chair or floor with much difficulty.">
+            >
+            ["at33"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to stand up from low chair or floor with some difficulty.">
+            >
+            ["at32"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to stand up from low chair or floor without any difficulty.">
+            >
+            ["id31"] = <
+                text = <"Stand up">
+                description = <"Assessment of child's ability to stand up from low chair or floor.">
+            >
+            ["id30"] = <
+                text = <"Arising">
+                description = <"Assessment of the child's ability to stand up from low chair or floor or get in and out of bed or stand up in a crib.">
+            >
+            ["at29"] = <
+                text = <"Not applicable">
+                description = <"This question is not applicable.">
+            >
+            ["at28"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to cut his or her fingernails.">
+            >
+            ["at27"] = <
+                text = <"With much difficulty">
+                description = <"The child is unable to cut his or her fingernails with much difficulty.">
+            >
+            ["at26"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to cut his or her fingernails with some difficulty.">
+            >
+            ["at25"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to cut his or her fingernails without any difficulty.">
+            >
+            ["at24"] = <
+                text = <"Not applicable">
+                description = <"This question is not applicable.">
+            >
+            ["at23"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to remove socks.">
+            >
+            ["at22"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to remove socks with much difficulty.">
+            >
+            ["at21"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to remove socks with some difficulty.">
+            >
+            ["at20"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to remove socks without any difficulty.">
+            >
+            ["at19"] = <
+                text = <"Not applicable">
+                description = <"This question is not applicable.">
+            >
+            ["at18"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to shampoo his or her hair.">
+            >
+            ["at17"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to shampoo his or her hair with much difficulty.">
+            >
+            ["at16"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to shampoo his or her hair with some difficulty.">
+            >
+            ["at15"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to shampoo his or her hair without any difficulty.">
+            >
+            ["at14"] = <
+                text = <"Not applicable">
+                description = <"This question is not applicable.">
+            >
+            ["at13"] = <
+                text = <"Unable to do">
+                description = <"The child is unable to dress.">
+            >
+            ["at12"] = <
+                text = <"With much difficulty">
+                description = <"The child is able to dress with much difficulty.">
+            >
+            ["at11"] = <
+                text = <"With some difficulty">
+                description = <"The child is able to dress with some difficulty.">
+            >
+            ["at10"] = <
+                text = <"Without any difficulty">
+                description = <"The child is able to dress without any difficulty.">
+            >
+            ["id9"] = <
+                text = <"Dressing and grooming">
+                description = <"Assessment of child's ability to perform functions related to dressing and grooming.">
+            >
+            ["id8"] = <
+                text = <"Cut fingernails">
+                description = <"Assessment of the child's ability to cut his or her fingernails.">
+            >
+            ["id7"] = <
+                text = <"Remove socks">
+                description = <"Assessment of the child's ability to remove socks.">
+            >
+            ["id6"] = <
+                text = <"Shampoo">
+                description = <"Assessment of the child's ability to shampoo his or her hair.">
+            >
+            ["id5"] = <
+                text = <"Dress">
+                description = <"Assessment of child's ability to dress, including tying shoelaces and doing buttons.">
+            >
+            ["id3"] = <
+                text = <"Point in time">
+                description = <"A specific date and/or time which may be explicitly defined in a template or at run-time.">
+            >
+            ["id1"] = <
+                text = <"Childhood Health Assessment Questionnaire">
+                description = <"The Childhood Health Assessment Questionnaire for arthritis.">
+            >
+        >
+    >
+    term_bindings = <
+        ["openehr"] = <
+            ["at9034"] = <http://openehr.org/id/380>
+        >
+    >
+    value_sets = <
+        ["ac9013"] = <
+            id = <"ac9013">
+            members = <"at90", "at91", "at92", "at93", "at94">
+        >
+        ["ac9012"] = <
+            id = <"ac9012">
+            members = <"at84", "at85", "at86", "at87">
+        >
+        ["ac9011"] = <
+            id = <"ac9011">
+            members = <"at76", "at77", "at78", "at79", "at80", "at81", "at82">
+        >
+        ["ac9010"] = <
+            id = <"ac9010">
+            members = <"at70", "at71", "at72", "at73", "at74">
+        >
+        ["ac9017"] = <
+            id = <"ac9017">
+            members = <"at114", "at115", "at116", "at117", "at118">
+        >
+        ["ac9016"] = <
+            id = <"ac9016">
+            members = <"at108", "at109", "at110", "at111", "at112">
+        >
+        ["ac9015"] = <
+            id = <"ac9015">
+            members = <"at103", "at104", "at105", "at106", "at107">
+        >
+        ["ac9014"] = <
+            id = <"ac9014">
+            members = <"at96", "at97", "at99", "at100", "at101">
+        >
+        ["ac9009"] = <
+            id = <"ac9009">
+            members = <"at64", "at65", "at66", "at67", "at68">
+        >
+        ["ac9008"] = <
+            id = <"ac9008">
+            members = <"at57", "at58", "at59", "at60", "at61">
+        >
+        ["ac9007"] = <
+            id = <"ac9007">
+            members = <"at51", "at52", "at53", "at54", "at55">
+        >
+        ["ac9020"] = <
+            id = <"ac9020">
+            members = <"at133", "at134", "at135", "at136", "at137">
+        >
+        ["ac9024"] = <
+            id = <"ac9024">
+            members = <"at158", "at159", "at160", "at161", "at162">
+        >
+        ["ac9023"] = <
+            id = <"ac9023">
+            members = <"at152", "at153", "at154", "at155", "at156">
+        >
+        ["ac9022"] = <
+            id = <"ac9022">
+            members = <"at146", "at147", "at148", "at149", "at150">
+        >
+        ["ac9021"] = <
+            id = <"ac9021">
+            members = <"at139", "at140", "at141", "at142", "at143">
+        >
+        ["ac9028"] = <
+            id = <"ac9028">
+            members = <"at183", "at184", "at185", "at186", "at187">
+        >
+        ["ac9027"] = <
+            id = <"ac9027">
+            members = <"at177", "at179", "at180", "at181", "at182">
+        >
+        ["ac9026"] = <
+            id = <"ac9026">
+            members = <"at170", "at171", "at172", "at173", "at174">
+        >
+        ["ac9025"] = <
+            id = <"ac9025">
+            members = <"at164", "at165", "at166", "at167", "at168">
+        >
+        ["ac9019"] = <
+            id = <"ac9019">
+            members = <"at127", "at128", "at129", "at130", "at131">
+        >
+        ["ac9018"] = <
+            id = <"ac9018">
+            members = <"at121", "at122", "at123", "at124", "at125">
+        >
+        ["ac9031"] = <
+            id = <"ac9031">
+            members = <"at201", "at202", "at203", "at204", "at205">
+        >
+        ["ac9030"] = <
+            id = <"ac9030">
+            members = <"at195", "at196", "at197", "at198", "at199">
+        >
+        ["ac9033"] = <
+            id = <"ac9033">
+            members = <"at214", "at215", "at216", "at217">
+        >
+        ["ac9032"] = <
+            id = <"ac9032">
+            members = <"at207", "at208", "at209", "at210", "at211", "at212">
+        >
+        ["ac9029"] = <
+            id = <"ac9029">
+            members = <"at189", "at190", "at191", "at192", "at193">
+        >
+        ["ac9002"] = <
+            id = <"ac9002">
+            members = <"at20", "at21", "at22", "at23", "at24">
+        >
+        ["ac9001"] = <
+            id = <"ac9001">
+            members = <"at15", "at16", "at17", "at18", "at19">
+        >
+        ["ac9000"] = <
+            id = <"ac9000">
+            members = <"at10", "at11", "at12", "at13", "at14">
+        >
+        ["ac9006"] = <
+            id = <"ac9006">
+            members = <"at45", "at46", "at47", "at48", "at49">
+        >
+        ["ac9005"] = <
+            id = <"ac9005">
+            members = <"at38", "at39", "at40", "at41", "at42">
+        >
+        ["ac9004"] = <
+            id = <"ac9004">
+            members = <"at32", "at33", "at34", "at35", "at36">
+        >
+        ["ac9003"] = <
+            id = <"ac9003">
+            members = <"at25", "at26", "at27", "at28", "at29">
+        >
+    >

@@ -1,0 +1,362 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=c3d239df-7c6f-4511-b997-df45aa00a63d; build_uid=10784c10-3c28-4839-b516-288d8151d227)
+    openEHR-EHR-OBSERVATION.kads.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["name"] = <"Candice de Lisser, Keisha Barwise">
+        ["organisation"] = <"Ministry of Health and Wellness, Jamaica">
+        ["email"] = <"kbarwise@gmail.com">
+        ["date"] = <"2020-09-17">
+    >
+    original_namespace = <"org.openehr">
+    original_publisher = <"openEHR Foundation">
+    other_contributors = <"Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)">
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"org.openehr">
+    custodian_organisation = <"openEHR Foundation">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+    references = <
+        ["1"] = <"Brooks, S. The Kutcher Adolescent Depression Scale (kADS). Child and Adolescent Psychopharmacology News. 2004; 9 (5):4-6. doi: 10.1521/capn.9.5.4.52044. ">
+        ["2"] = <"LeBlanc JC, Almudevar A, Brooks SJ, Kutcher S. Screening for adolescent depression: comparison of the Kutcher Adolescent Depression Scale with the Beck depression inventory. J Child Adolesc Psychopharmacol. 2002 Summer;12(2):113-26. doi: 10.1089/104454602760219153. PMID: 12188980.">
+    >
+    other_details = <
+        ["MD5-CAM-1.0.1"] = <"868629876FDC8BDD06ED173730AE683B">
+    >
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"To to record the results of the Kutcher Adolescent Depression questionnaire.">
+            keywords = <"screening, mood, assessment, depression, mental health, adolescent", ...>
+            use = <"Use to record the results of the Kutcher Adolescent Depression Questionnaire.
+    
+    The original version of the kADS had 16 component questions. The most broadly used versions have either 6 or 11 questions. This archetype currently contains only the questions for the 11-item questionnaire. The 6-item version is a subset of the 11-item questionnaire.">
+            misuse = <"">
+            copyright = <"© openEHR Foundation">
+        >
+    >
+
+definition
+    OBSERVATION[id1] matches {    -- Kutcher Adolescent Depression Scale (kADS)
+        data matches {
+            HISTORY[id2] matches {
+                events cardinality matches {0..*; unordered} matches {
+                    POINT_EVENT[id3] occurrences matches {0..1} matches {    -- Point in time
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[id5] occurrences matches {0..1} matches {    -- Low mood...
+                                        value matches {
+                                            DV_ORDINAL[id9002] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at6]}],
+                                                    [{1}, {[at7]}],
+                                                    [{2}, {[at8]}],
+                                                    [{3}, {[at9]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id10] occurrences matches {0..1} matches {    -- Irritable...
+                                        value matches {
+                                            DV_ORDINAL[id9003] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at6]}],
+                                                    [{1}, {[at7]}],
+                                                    [{2}, {[at8]}],
+                                                    [{3}, {[at9]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id11] occurrences matches {0..1} matches {    -- Trouble falling asleep...
+                                        value matches {
+                                            DV_ORDINAL[id9004] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at6]}],
+                                                    [{1}, {[at7]}],
+                                                    [{2}, {[at8]}],
+                                                    [{3}, {[at9]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id12] occurrences matches {0..1} matches {    -- Feeling decreased interest...
+                                        value matches {
+                                            DV_ORDINAL[id9005] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at6]}],
+                                                    [{1}, {[at7]}],
+                                                    [{2}, {[at8]}],
+                                                    [{3}, {[at9]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id13] occurrences matches {0..1} matches {    -- Feelings of worthlessness...
+                                        value matches {
+                                            DV_ORDINAL[id9006] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at6]}],
+                                                    [{1}, {[at7]}],
+                                                    [{2}, {[at8]}],
+                                                    [{3}, {[at9]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id14] occurrences matches {0..1} matches {    -- Feeling tired...
+                                        value matches {
+                                            DV_ORDINAL[id9007] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at6]}],
+                                                    [{1}, {[at7]}],
+                                                    [{2}, {[at8]}],
+                                                    [{3}, {[at9]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id15] occurrences matches {0..1} matches {    -- Trouble concentrating...
+                                        value matches {
+                                            DV_ORDINAL[id9008] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at6]}],
+                                                    [{1}, {[at7]}],
+                                                    [{2}, {[at8]}],
+                                                    [{3}, {[at9]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id16] occurrences matches {0..1} matches {    -- Life is not much fun...
+                                        value matches {
+                                            DV_ORDINAL[id9009] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at6]}],
+                                                    [{1}, {[at7]}],
+                                                    [{2}, {[at8]}],
+                                                    [{3}, {[at9]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id17] occurrences matches {0..1} matches {    -- Feeling worried...
+                                        value matches {
+                                            DV_ORDINAL[id9010] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at6]}],
+                                                    [{1}, {[at7]}],
+                                                    [{2}, {[at8]}],
+                                                    [{3}, {[at9]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id18] occurrences matches {0..1} matches {    -- Physical feelings of worry...
+                                        value matches {
+                                            DV_ORDINAL[id9011] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at6]}],
+                                                    [{1}, {[at7]}],
+                                                    [{2}, {[at8]}],
+                                                    [{3}, {[at9]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id19] occurrences matches {0..1} matches {    -- Thoughts, plans, or actions about suicide or self-harm
+                                        value matches {
+                                            DV_ORDINAL[id9012] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at24]}],
+                                                    [{1}, {[at25]}],
+                                                    [{2}, {[at26]}],
+                                                    [{3}, {[at27]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id20] occurrences matches {0..1} matches {    -- kADS-6 score
+                                        value matches {
+                                            DV_COUNT[id9013] matches {
+                                                magnitude matches {|0..18|}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id21] occurrences matches {0..1} matches {    -- kADS-11 score
+                                        value matches {
+                                            DV_COUNT[id9014] matches {
+                                                magnitude matches {|0..33|}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id22] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    allow_archetype CLUSTER[id23] matches {     -- Extension
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["ac9000"] = <
+                text = <"Low mood... (synthesised)">
+                description = <"\"Low mood, sadness, feeling blah or down, depressed, just can’t be bothered.\" (synthesised)">
+            >
+            ["ac9001"] = <
+                text = <"Thoughts, plans, or actions about suicide or self-harm (synthesised)">
+                description = <"\"Thoughts, plans, or actions about suicide or self-harm.\" (synthesised)">
+            >
+            ["at27"] = <
+                text = <"Plans and/or actions that have hurt">
+                description = <"">
+            >
+            ["at26"] = <
+                text = <"Frequent thoughts, no plans or actions">
+                description = <"">
+            >
+            ["at25"] = <
+                text = <"Occasional thoughts, no plans or actions">
+                description = <"">
+            >
+            ["at24"] = <
+                text = <"No thoughts or plans or actions">
+                description = <"">
+            >
+            ["id23"] = <
+                text = <"Extension">
+                description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
+                comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
+            >
+            ["id21"] = <
+                text = <"kADS-11 score">
+                description = <"The total sum of each component parameter for the 11-item kADS score.">
+            >
+            ["id20"] = <
+                text = <"kADS-6 score">
+                description = <"The total sum of each component parameter for the 6-item kADS score.">
+            >
+            ["id19"] = <
+                text = <"Thoughts, plans, or actions about suicide or self-harm">
+                description = <"\"Thoughts, plans, or actions about suicide or self-harm.\"">
+                kADS16 = <"Q13">
+                kADS6 = <"Q6">
+                kADS11 = <"Q11">
+            >
+            ["id18"] = <
+                text = <"Physical feelings of worry...">
+                description = <"\"Physical feelings of worry like: headaches, butterflies, nausea, tingling, restlessness, diarrhea, shakes or tremors.\"">
+                kADS16 = <"Q11">
+                kADS11 = <"Q10">
+            >
+            ["id17"] = <
+                text = <"Feeling worried...">
+                description = <"\"Feeling worried, nervous, panicky, tense, keyed up, anxious.\"">
+                kADS16 = <"Q10">
+                kADS6 = <"Q5">
+                kADS11 = <"Q9">
+            >
+            ["id16"] = <
+                text = <"Life is not much fun...">
+                description = <"\"Feeling that life is not very much fun, not feeling good when usually (before getting sick) would feel good, not getting as much pleasure from fun things as usual (before getting sick).\"">
+                kADS16 = <"Q9">
+                kADS6 = <"Q4">
+                kADS11 = <"Q8">
+            >
+            ["id15"] = <
+                text = <"Trouble concentrating...">
+                description = <"\"Trouble concentrating, can’t keep your mind on schoolwork or work, daydreaming when you should be working, hard to focus when reading, getting “bored” with work or school.\"">
+                kADS16 = <"Q7">
+                kADS11 = <"Q7">
+            >
+            ["id14"] = <
+                text = <"Feeling tired...">
+                description = <"\"Feeling tired, feeling fatigued, low in energy, hard to get motivated, have to push to get things done, want to rest or lie down a lot.\"">
+                kadssixteen = <"Q6">
+                kADS6 = <"Q3">
+                kADS11 = <"Q6">
+            >
+            ["id13"] = <
+                text = <"Feelings of worthlessness...">
+                description = <"\"Feelings of worthlessness, hopelessness, letting people down, not being a good person.\"">
+                kADS16 = <"Q5">
+                kADS6 = <"Q2">
+                kADS11 = <"Q5">
+            >
+            ["id12"] = <
+                text = <"Feeling decreased interest...">
+                description = <"\"Feeling decreased interest in hanging out with friends; being with your best friend; being with your  spouse/boyfriend/girlfriend; going out of the house; doing schoolwork or work; doing hobbies, sports, or recreation.\"">
+                kADS16 = <"Q4">
+                kADS11 = <"Q4">
+            >
+            ["id11"] = <
+                text = <"Trouble falling asleep...">
+                description = <"\"Trouble falling asleep, lying awake in bed.\"">
+                kADS16 = <"Q3a">
+                kADS11 = <"Q3">
+            >
+            ["id10"] = <
+                text = <"Irritable...">
+                description = <"\"Irritable, losing your temper easily, feeling pissed off, losing it.\"">
+                kADS16 = <"Q2">
+                kADS11 = <"Q2">
+            >
+            ["at9"] = <
+                text = <"All of the time">
+                description = <"">
+            >
+            ["at8"] = <
+                text = <"Most of the time">
+                description = <"">
+            >
+            ["at7"] = <
+                text = <"Much of the time">
+                description = <"">
+            >
+            ["at6"] = <
+                text = <"Hardly Ever">
+                description = <"">
+            >
+            ["id5"] = <
+                text = <"Low mood...">
+                description = <"\"Low mood, sadness, feeling blah or down, depressed, just can’t be bothered.\"">
+                kadssixteen = <"Q1">
+                kADS6 = <"Q1">
+                kADS11 = <"Q1">
+            >
+            ["id3"] = <
+                text = <"Point in time">
+                description = <"Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.">
+            >
+            ["id1"] = <
+                text = <"Kutcher Adolescent Depression Scale (kADS)">
+                description = <"Psychological self-rating scale to assess the level of depression in adolescents.">
+            >
+        >
+    >
+    value_sets = <
+        ["ac9001"] = <
+            id = <"ac9001">
+            members = <"at24", "at25", "at26", "at27">
+        >
+        ["ac9000"] = <
+            id = <"ac9000">
+            members = <"at6", "at7", "at8", "at9">
+        >
+    >

@@ -1,0 +1,711 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=fdc724a1-678c-489f-9f30-04ec38307b44; build_uid=428f51d4-0729-4d18-89c5-dd87a963b599)
+    openEHR-EHR-OBSERVATION.oxford_shoulder.v0.0.1-alpha
+
+language
+    original_language = <[ISO_639-1::en]>
+
+description
+    original_author = <
+        ["name"] = <"Alan Fish">
+        ["organisation"] = <"Apperta Foundation CIC">
+        ["email"] = <"alan.fish@apperta.org">
+        ["date"] = <"2019-07-03">
+    >
+    original_namespace = <"uk.org.clinicalmodels">
+    original_publisher = <"Apperta UK">
+    lifecycle_state = <"in_development">
+    custodian_namespace = <"uk.org.clinicalmodels">
+    custodian_organisation = <"Apperta UK">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+    references = <
+        ["1"] = <"https://innovation.ox.ac.uk/outcome-measures/oxford-shoulder-score-oss/">
+    >
+    other_details = <
+        ["current_contact"] = <"Alan Fish, Apperta Foundation .<alan.fish@apperta.org>">
+        ["MD5-CAM-1.0.1"] = <"FEE4163BA9CDA888DA8607D885CAE136">
+    >
+    details = <
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"Use to capture and report Oxford Shoulder Questionnaire (OSS) score details.">
+            use = <"Use to capture and report Oxford Shoulder Questionnaire score.
+    
+    While openEHR archetypes are all freely available under an open license, the specific content of this archetype may be copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners where a copyright exists. 
+    
+    ">
+            misuse = <"Not to be used unless the terms of copyright have been observed (if a copyright exists).">
+            copyright = <"© Clinical Models UK, Apperta Foundation">
+        >
+    >
+
+definition
+    OBSERVATION[id1] matches {    -- Oxford Shoulder Questionnaire Score (OSS)
+        data matches {
+            HISTORY[id2] matches {
+                events cardinality matches {1..*; unordered} matches {
+                    POINT_EVENT[id3] occurrences matches {0..1} matches {    -- Point in time
+                        data matches {
+                            ITEM_TREE[id4] matches {
+                                items cardinality matches {0..*; unordered} matches {
+                                    ELEMENT[id9] occurrences matches {0..1} matches {    -- 1 Worst pain in shoulder
+                                        value matches {
+                                            DV_ORDINAL[id9013] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at110]}],
+                                                    [{1}, {[at10]}],
+                                                    [{2}, {[at11]}],
+                                                    [{3}, {[at12]}],
+                                                    [{4}, {[at13]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id15] occurrences matches {0..1} matches {    -- 2 Trouble dressing
+                                        value matches {
+                                            DV_ORDINAL[id9014] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at20]}],
+                                                    [{1}, {[at16]}],
+                                                    [{2}, {[at19]}],
+                                                    [{3}, {[at18]}],
+                                                    [{4}, {[at17]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id21] occurrences matches {0..1} matches {    -- 3 Vehicle use
+                                        value matches {
+                                            DV_ORDINAL[id9015] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at22]}],
+                                                    [{1}, {[at23]}],
+                                                    [{2}, {[at24]}],
+                                                    [{3}, {[at25]}],
+                                                    [{4}, {[at26]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id27] occurrences matches {0..1} matches {    -- 4 Cutlery use
+                                        value matches {
+                                            DV_ORDINAL[id9016] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at28]}],
+                                                    [{1}, {[at29]}],
+                                                    [{2}, {[at30]}],
+                                                    [{3}, {[at31]}],
+                                                    [{4}, {[at32]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id33] occurrences matches {0..1} matches {    -- 5 Household shopping
+                                        value matches {
+                                            DV_ORDINAL[id9017] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at34]}],
+                                                    [{1}, {[at35]}],
+                                                    [{2}, {[at36]}],
+                                                    [{3}, {[at37]}],
+                                                    [{4}, {[at38]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id39] occurrences matches {0..1} matches {    -- 6 Carry a tray
+                                        value matches {
+                                            DV_ORDINAL[id9018] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at40]}],
+                                                    [{1}, {[at41]}],
+                                                    [{2}, {[at42]}],
+                                                    [{3}, {[at43]}],
+                                                    [{4}, {[at44]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id45] occurrences matches {0..1} matches {    -- 7 Brush hair
+                                        value matches {
+                                            DV_ORDINAL[id9019] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at111]}],
+                                                    [{1}, {[at112]}],
+                                                    [{2}, {[at113]}],
+                                                    [{3}, {[at114]}],
+                                                    [{4}, {[at115]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id51] occurrences matches {0..1} matches {    -- 8 Usual pain in shoulder
+                                        value matches {
+                                            DV_ORDINAL[id9020] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at52]}],
+                                                    [{1}, {[at53]}],
+                                                    [{2}, {[at54]}],
+                                                    [{3}, {[at55]}],
+                                                    [{4}, {[at56]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id57] occurrences matches {0..1} matches {    -- 9 Hanging clothes
+                                        value matches {
+                                            DV_ORDINAL[id9021] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at58]}],
+                                                    [{1}, {[at59]}],
+                                                    [{2}, {[at60]}],
+                                                    [{3}, {[at61]}],
+                                                    [{4}, {[at62]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id63] occurrences matches {0..1} matches {    -- 10 Drying
+                                        value matches {
+                                            DV_ORDINAL[id9022] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at64]}],
+                                                    [{1}, {[at65]}],
+                                                    [{2}, {[at66]}],
+                                                    [{3}, {[at67]}],
+                                                    [{4}, {[at68]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id69] occurrences matches {0..1} matches {    -- 11 Interfered with work
+                                        value matches {
+                                            DV_ORDINAL[id9023] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at70]}],
+                                                    [{1}, {[at71]}],
+                                                    [{2}, {[at72]}],
+                                                    [{3}, {[at73]}],
+                                                    [{4}, {[at74]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id75] occurrences matches {0..1} matches {    -- 12 Night pain
+                                        value matches {
+                                            DV_ORDINAL[id9024] matches {
+                                                [value, symbol] matches {
+                                                    [{0}, {[at76]}],
+                                                    [{1}, {[at77]}],
+                                                    [{2}, {[at78]}],
+                                                    [{3}, {[at79]}],
+                                                    [{4}, {[at80]}]
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id105] occurrences matches {0..1} matches {    -- Total score
+                                        value matches {
+                                            DV_COUNT[id9025] matches {
+                                                magnitude matches {|0..48|}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id106] occurrences matches {0..1} matches {    -- Average score
+                                        value matches {
+                                            DV_COUNT[id9026] matches {
+                                                magnitude matches {|0..100|}
+                                            }
+                                        }
+                                    }
+                                    ELEMENT[id116] occurrences matches {0..1} matches {    -- Grading
+                                        value matches {
+                                            DV_CODED_TEXT[id9027] matches {
+                                                defining_code matches {[ac9012]}    -- Grading (synthesised)
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id6] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    allow_archetype CLUSTER[id7] occurrences matches {0..1} matches {     -- Extension
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["en"] = <
+            ["ac9000"] = <
+                text = <"1 Worst pain in shoulder (synthesised)">
+                description = <"Patient-reported extent of worst pain in shoulder during past 4 weeks. (synthesised)">
+            >
+            ["ac9001"] = <
+                text = <"2 Trouble dressing (synthesised)">
+                description = <"Patient-reported trouble dressing because of pain shoulder. (synthesised)">
+            >
+            ["ac9002"] = <
+                text = <"3 Vehicle use (synthesised)">
+                description = <"Patient-reported extent to which they are able to access vehicles due to pain in their shoulder.  (synthesised)">
+            >
+            ["ac9003"] = <
+                text = <"4 Cutlery use (synthesised)">
+                description = <"Patient-reported extent to which they pain in shoulder during past 4 weeks when using a knife and fork. (synthesised)">
+            >
+            ["ac9004"] = <
+                text = <"5 Household shopping (synthesised)">
+                description = <"Patient-reported extent to which they complete household shopping because of pain in shoulder in past 4 weeks. (synthesised)">
+            >
+            ["ac9005"] = <
+                text = <"6 Carry a tray (synthesised)">
+                description = <"Patient-reported extent to which they were able to carry a tray because of pain in the shoulder in past 4 weeks. (synthesised)">
+            >
+            ["ac9006"] = <
+                text = <"7 Brush hair (synthesised)">
+                description = <"Patient-reported extent to which they could brush/comb their hair due to pain in shoulder during past 4 weeks. (synthesised)">
+            >
+            ["ac9007"] = <
+                text = <"8 Usual pain in shoulder (synthesised)">
+                description = <"Patient-reported extent to which they usually experience pain in shoulder during past 4 weeks. (synthesised)">
+            >
+            ["ac9008"] = <
+                text = <"9 Hanging clothes (synthesised)">
+                description = <"Patient-reported extent to which they could hang clothes in a wardrobe using the effected arm during past 4 weeks. (synthesised)">
+            >
+            ["ac9009"] = <
+                text = <"10 Drying (synthesised)">
+                description = <"Patient-reported extent to which they could dry under both arms during past 4 weeks. (synthesised)">
+            >
+            ["ac9010"] = <
+                text = <"11 Interfered with work (synthesised)">
+                description = <"Patient-reported extent to which pain in shoulder has interfered with work during past 4 weeks. (synthesised)">
+            >
+            ["ac9011"] = <
+                text = <"12 Night pain (synthesised)">
+                description = <"Patient-reported extent of pain in shoulder at night during past 4 weeks. (synthesised)">
+            >
+            ["ac9012"] = <
+                text = <"Grading (synthesised)">
+                description = <"Grading system for total score. (synthesised)">
+            >
+            ["at120"] = <
+                text = <"Satisfactory">
+                description = <"May indicate satisfactory joint function.">
+            >
+            ["at119"] = <
+                text = <"Mild to moderate">
+                description = <"May indicate mild to moderate shoulder arthritis.">
+            >
+            ["at118"] = <
+                text = <"Moderate to severe">
+                description = <"May indicate moderate to severe shoulder arthritis.">
+            >
+            ["at117"] = <
+                text = <"Severe">
+                description = <"May indicate severe shoulder arthritis.">
+            >
+            ["id116"] = <
+                text = <"Grading">
+                description = <"Grading system for total score.">
+            >
+            ["at115"] = <
+                text = <"Yes, easily">
+                description = <"The patient could brush/comb their hair easily, because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["at114"] = <
+                text = <"With little difficulty">
+                description = <"The patient could brush/comb their hair with little difficulty, because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["at113"] = <
+                text = <"With moderate difficulty">
+                description = <"The patient could brush/comb their hair with moderate difficulty, because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["at112"] = <
+                text = <"With extreme difficulty">
+                description = <"The patient could brush/comb their hair with extreme difficulty, because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["at111"] = <
+                text = <"No, impossible">
+                description = <"The patient found it impossible to complete carry a tray, because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["at110"] = <
+                text = <"Unbearable">
+                description = <"The patient has experienced unbearable pain in shoulder during past 4 weeks.">
+            >
+            ["id106"] = <
+                text = <"Average score">
+                description = <"Average score from Questions 1-12.">
+            >
+            ["id105"] = <
+                text = <"Total score">
+                description = <"Total score from Questions 1 to 12.">
+            >
+            ["at80"] = <
+                text = <"No nights">
+                description = <"The patient has experienced shoulder pain no nights in past 4 weeks.">
+            >
+            ["at79"] = <
+                text = <"Only 1 or 2 nights">
+                description = <"The patient has experienced shoulder pain only 1 or 2 nights in past 4 weeks.">
+            >
+            ["at78"] = <
+                text = <"Some nights">
+                description = <"The patient has experienced shoulder pain some nights in past 4 weeks.">
+            >
+            ["at77"] = <
+                text = <"Most nights">
+                description = <"The patient has experienced shoulder pain most nights in past 4 weeks.">
+            >
+            ["at76"] = <
+                text = <"Every night">
+                description = <"The patient has experienced shoulder pain every night in past 4 weeks.">
+            >
+            ["id75"] = <
+                text = <"12 Night pain">
+                description = <"Patient-reported extent of pain in shoulder at night during past 4 weeks.">
+                comment = <"Questionnaire wording:
+    Have you been troubled by pain from your shoulder in bed at night?">
+            >
+            ["at74"] = <
+                text = <"Not at all">
+                description = <"The patient reports that the pain in shoulder has not interfered with their work in last 4 weeks.">
+            >
+            ["at73"] = <
+                text = <"A little bit">
+                description = <"The patient reports that the pain in shoulder has interfered a little bit with their work in last 4 weeks.">
+            >
+            ["at72"] = <
+                text = <"Moderately">
+                description = <"The patient reports that the pain in shoulder has interfered moderately with their work in last 4 weeks.">
+            >
+            ["at71"] = <
+                text = <"Greatly">
+                description = <"The patient reports that the pain in shoulder has interfered greatly with their work in last 4 weeks.">
+            >
+            ["at70"] = <
+                text = <"Totally">
+                description = <"The patient reports that the pain in shoulder has interfered totally with their work in last 4 weeks.">
+            >
+            ["id69"] = <
+                text = <"11 Interfered with work">
+                description = <"Patient-reported extent to which pain in shoulder has interfered with work during past 4 weeks.">
+                comment = <"Questionnaire wording:
+    How much has pain from your shoulder interfered with your usual work (including housework)?">
+            >
+            ["at68"] = <
+                text = <"Yes, easily">
+                description = <"The patient found it easy to dry under both arms, because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["at67"] = <
+                text = <"With little difficulty">
+                description = <"The patient found it a little difficult to dry under both arms, because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["at66"] = <
+                text = <"With moderate difficulty">
+                description = <"The patient found it moderately difficult to dry under both arms, because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["at65"] = <
+                text = <"With extreme difficulty">
+                description = <"The patient found it extremely difficult to dry under both arms, because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["at64"] = <
+                text = <"No, impossible">
+                description = <"The patient found it impossible to dry under both arms, because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["id63"] = <
+                text = <"10 Drying">
+                description = <"Patient-reported extent to which they could dry under both arms during past 4 weeks.">
+                comment = <"Questionnaire wording:
+    Have you been able to wash and dry yourself under both arms?">
+            >
+            ["at62"] = <
+                text = <"Yes, easily">
+                description = <"The patient could hang clothes easily, because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["at61"] = <
+                text = <"With little difficulty">
+                description = <"The patient could hang clothes with little difficulty, because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["at60"] = <
+                text = <"With moderate difficulty">
+                description = <"The patient could hang clothes with moderate difficulty, because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["at59"] = <
+                text = <"With great difficulty">
+                description = <"The patient could hang clothes with great difficulty, because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["at58"] = <
+                text = <"No, impossible">
+                description = <"The patient found it impossible to hang clothes, because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["id57"] = <
+                text = <"9 Hanging clothes">
+                description = <"Patient-reported extent to which they could hang clothes in a wardrobe using the effected arm during past 4 weeks.">
+                comment = <"Questionnaire wording:
+    Could you hang your clothes up in a wardrobe, using the affected arm? (whichever you tend to use)">
+            >
+            ["at56"] = <
+                text = <"None">
+                description = <"The patient usually experienced no pain in their shoulder over the last 4 weeks.">
+            >
+            ["at55"] = <
+                text = <"Very Mild">
+                description = <"The patient usually experienced very mild pain in their shoulder over the last 4 weeks.">
+            >
+            ["at54"] = <
+                text = <"Mild">
+                description = <"The patient usually experienced mild pain in their shoulder over the last 4 weeks.">
+            >
+            ["at53"] = <
+                text = <"Moderate">
+                description = <"The patient usually experienced moderate pain in their shoulder over the last 4 weeks.">
+            >
+            ["at52"] = <
+                text = <"Severe">
+                description = <"The patient usually experienced severe pain in their shoulder over the last 4 weeks.">
+            >
+            ["id51"] = <
+                text = <"8 Usual pain in shoulder">
+                description = <"Patient-reported extent to which they usually experience pain in shoulder during past 4 weeks.">
+                comment = <"Questionnaire wording:
+    How would you describe the pain you usually had from your shoulder?">
+            >
+            ["id45"] = <
+                text = <"7 Brush hair">
+                description = <"Patient-reported extent to which they could brush/comb their hair due to pain in shoulder during past 4 weeks.">
+                comment = <"Questionnaire wording:
+    Could you brush/comb your hair with the affected arm?">
+            >
+            ["at44"] = <
+                text = <"Yes, easily">
+                description = <"The patient could carry a tray with easily, because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["at43"] = <
+                text = <"With little difficulty">
+                description = <"The patient could carry a tray with little difficulty, because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["at42"] = <
+                text = <"With moderate difficulty">
+                description = <"The patient could carry a tray with moderate difficulty, because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["at41"] = <
+                text = <"With extreme difficulty">
+                description = <"The patient could carry a tray with extreme difficulty, because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["at40"] = <
+                text = <"No, impossible">
+                description = <"The patient found it impossible to complete carry a tray, because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["id39"] = <
+                text = <"6 Carry a tray">
+                description = <"Patient-reported extent to which they were able to carry a tray because of pain in the shoulder in past 4 weeks.">
+                comment = <"Questionnaire wording:
+    Could you carry a tray containing a plate of food across a room?">
+            >
+            ["at38"] = <
+                text = <"Yes, easily">
+                description = <"The patient can complete household shopping easily because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["at37"] = <
+                text = <"With little difficulty">
+                description = <"The patient can complete household shopping with little difficulty because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["at36"] = <
+                text = <"With moderate difficulty">
+                description = <"The patient can complete household shopping with moderate difficulty because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["at35"] = <
+                text = <"With extreme difficulty">
+                description = <"The patient can complete household shopping with extreme difficulty because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["at34"] = <
+                text = <"No, impossible">
+                description = <"The patient found it impossible to complete household shopping because of shoulder pain all of the time during past 4 weeks.">
+            >
+            ["id33"] = <
+                text = <"5 Household shopping">
+                description = <"Patient-reported extent to which they complete household shopping because of pain in shoulder in past 4 weeks.">
+                comment = <"Questionnaire wording:
+    Could you do the household shopping on your own?">
+            >
+            ["at32"] = <
+                text = <"Yes, easily">
+                description = <"The patient found it easy to use a knife and fork during the past 4 weeks because of pain in the shoulder..">
+            >
+            ["at31"] = <
+                text = <"With little difficulty">
+                description = <"The patient has little difficulty using a knife and fork during the past 4 weeks because of pain in the shoulder.">
+            >
+            ["at30"] = <
+                text = <"With moderate difficulty">
+                description = <"The patient has moderate difficulty using a knife and fork during past 4 weeks because of pain in the shoulder.">
+            >
+            ["at29"] = <
+                text = <"With extreme difficulty">
+                description = <"The patient has extreme difficulty using a knife and fork during past 4 weeks because of pain in the shoulder.">
+            >
+            ["at28"] = <
+                text = <"No, impossible">
+                description = <"The patient found it impossible to use a knife and fork during past 4 weeks because of pain in the shoulder.">
+            >
+            ["id27"] = <
+                text = <"4 Cutlery use">
+                description = <"Patient-reported extent to which they pain in shoulder during past 4 weeks when using a knife and fork.">
+                comment = <"Questionnaire wording:
+    Have you been able to use a knife and fork at the same time?">
+            >
+            ["at26"] = <
+                text = <"No trouble at all">
+                description = <"The patient has no trouble at all getting into a vehicle during the past 4 weeks due to pain in shoulder.">
+            >
+            ["at25"] = <
+                text = <"Very little trouble">
+                description = <"The patient has very little trouble at all getting into a vehicle during the past 4 weeks due to pain in shoulder.">
+            >
+            ["at24"] = <
+                text = <"Moderate trouble">
+                description = <"The patient has moderate trouble at all getting into a vehicle during the past 4 weeks due to pain in shoulder.">
+            >
+            ["at23"] = <
+                text = <"Extreme difficulty">
+                description = <"The patient has extreme difficulty at all getting into a vehicle during the past 4 weeks due to pain in shoulder.">
+            >
+            ["at22"] = <
+                text = <"Impossible to do">
+                description = <"The patient found it impossible to get into a vehicle during the past 4 weeks due to pain in shoulder.">
+            >
+            ["id21"] = <
+                text = <"3 Vehicle use">
+                description = <"Patient-reported extent to which they are able to access vehicles due to pain in their shoulder. ">
+                comment = <"Questionnaire wording:
+    Have you had any trouble getting in and out of a car or using public transport because of your shoulder?">
+            >
+            ["at20"] = <
+                text = <"Extreme difficulty">
+                description = <"The patient has no extreme difficulty dressing in the last 4 weeks because of pain in the shoulder.">
+            >
+            ["at19"] = <
+                text = <"Moderate trouble">
+                description = <"The patient has no moderate trouble dressing in the last 4 weeks because of pain in the shoulder.">
+            >
+            ["at18"] = <
+                text = <"Little trouble">
+                description = <"The patient has no little trouble dressing in the last 4 weeks because of pain in the shoulder.">
+            >
+            ["at17"] = <
+                text = <"No trouble at all">
+                description = <"The patient has no trouble dressing in the last 4 weeks because of pain in the shoulder.">
+            >
+            ["at16"] = <
+                text = <"All of the time">
+                description = <"The patient has trouble dressing all of the time in the last 4 weeks because of pain in the shoulder.">
+            >
+            ["id15"] = <
+                text = <"2 Trouble dressing">
+                description = <"Patient-reported trouble dressing because of pain shoulder.">
+                comment = <"Questionnaire wording: 
+    
+    Have you had any trouble dressing yourself because of your shoulder?">
+            >
+            ["at13"] = <
+                text = <"None">
+                description = <"The patient has experienced no pain in shoulder during past 4 weeks.">
+            >
+            ["at12"] = <
+                text = <"Mild">
+                description = <"The patient has experienced mild pain in shoulder during past 4 weeks.">
+            >
+            ["at11"] = <
+                text = <"Moderate">
+                description = <"The patient has experienced moderate pain in shoulder during past 4 weeks.">
+            >
+            ["at10"] = <
+                text = <"Severe">
+                description = <"The patient has experienced severe pain in shoulder during past 4 weeks.">
+            >
+            ["id9"] = <
+                text = <"1 Worst pain in shoulder">
+                description = <"Patient-reported extent of worst pain in shoulder during past 4 weeks.">
+                comment = <"Questionnaire wording: 
+    
+    How would you describe the worst pain you had from your shoulder?">
+            >
+            ["id7"] = <
+                text = <"Extension">
+                description = <"Additional information required to capture local context or to align with other reference models/formalisms.">
+                comment = <"e.g. Local hospital departmental infomation or additional metadata to align with HL7 or CDISC equivalents.">
+            >
+            ["id3"] = <
+                text = <"Point in time">
+                description = <"A specific date and/or time which may be explicitly defined in a template or at run-time.">
+            >
+            ["id1"] = <
+                text = <"Oxford Shoulder Questionnaire Score (OSS)">
+                description = <"Oxford Shoulder Questionnaire Score.">
+            >
+        >
+    >
+    value_sets = <
+        ["ac9012"] = <
+            id = <"ac9012">
+            members = <"at117", "at118", "at119", "at120">
+        >
+        ["ac9011"] = <
+            id = <"ac9011">
+            members = <"at76", "at77", "at78", "at79", "at80">
+        >
+        ["ac9010"] = <
+            id = <"ac9010">
+            members = <"at70", "at71", "at72", "at73", "at74">
+        >
+        ["ac9009"] = <
+            id = <"ac9009">
+            members = <"at64", "at65", "at66", "at67", "at68">
+        >
+        ["ac9008"] = <
+            id = <"ac9008">
+            members = <"at58", "at59", "at60", "at61", "at62">
+        >
+        ["ac9007"] = <
+            id = <"ac9007">
+            members = <"at52", "at53", "at54", "at55", "at56">
+        >
+        ["ac9002"] = <
+            id = <"ac9002">
+            members = <"at22", "at23", "at24", "at25", "at26">
+        >
+        ["ac9001"] = <
+            id = <"ac9001">
+            members = <"at20", "at16", "at19", "at18", "at17">
+        >
+        ["ac9000"] = <
+            id = <"ac9000">
+            members = <"at110", "at10", "at11", "at12", "at13">
+        >
+        ["ac9006"] = <
+            id = <"ac9006">
+            members = <"at111", "at112", "at113", "at114", "at115">
+        >
+        ["ac9005"] = <
+            id = <"ac9005">
+            members = <"at40", "at41", "at42", "at43", "at44">
+        >
+        ["ac9004"] = <
+            id = <"ac9004">
+            members = <"at34", "at35", "at36", "at37", "at38">
+        >
+        ["ac9003"] = <
+            id = <"ac9003">
+            members = <"at28", "at29", "at30", "at31", "at32">
+        >
+    >

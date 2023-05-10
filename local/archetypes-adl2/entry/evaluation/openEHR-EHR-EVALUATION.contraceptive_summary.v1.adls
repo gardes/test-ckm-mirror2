@@ -1,0 +1,688 @@
+archetype (adl_version=2.0.6; rm_release=1.1.0; generated; uid=c00537a4-52ae-4ac0-b27e-81659a213233; build_uid=f4c30a3d-7cf7-44de-945d-feff45de7b0a)
+    openEHR-EHR-EVALUATION.contraceptive_summary.v1.0.0
+
+language
+    original_language = <[ISO_639-1::en]>
+    translations = <
+        ["nb"] = <
+            language = <[ISO_639-1::nb]>
+            author = <
+                ["name"] = <"Marit Alice Venheim, John Tore Valand">
+                ["organisation"] = <"Helse Vest IKT, Helse Bergen">
+                ["email"] = <"marit.alice.venheim@helse-vest-ikt.no, john.tore.valand@helse-bergen.no">
+            >
+        >
+    >
+
+description
+    original_author = <
+        ["name"] = <"Heather Leslie">
+        ["organisation"] = <"Atomica Informatics">
+        ["email"] = <"heather.leslie@atomicainformatics.com">
+        ["date"] = <"2009-06-21">
+    >
+    original_namespace = <"org.openehr">
+    original_publisher = <"openEHR Foundation">
+    other_contributors = <"Miguel Aguiar Netto, INLAGS, Brazil", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Terje Bektesevic Holmlund, UiT Norges arktiske universitet, Norway", "SB Bhattacharyya, Sudisa Consultancy Services, India", "Peter Fedorcsak, Oslo universitetssykehus, Norway", "Mikkel Gaup Grønmo, Helse-Nord, FSE, Norway (openEHR Editor)", "James Goddard, NHS Wales Informatics Service, United Kingdom", "Heather Grain, Llewelyn Grain Informatics, Australia", "Anne Grimstvedt Kvalvik, Haraldsplass Diakonale sykehus, Norway", "Mikkel Johan Gaup Grønmo, Forvaltningssenter EPJ, Helse-Nord, Norway (openEHR Editor)", "Anca Heyd, DIPS ASA, Norway", "Evelyn Hovenga, EJSH Consulting, Australia", "Nils Kolstrup, Skansen Legekontor og Nasjonalt Senter for samhandling og telemedisin, Norway", "Jörgen Kuylenstierna, eWeave AB, Sweden", "Liv Laugen, Oslo universitetssykehus, Norway (Nasjonal IKT redaktør)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom", "Johannes Michael Strehle, Helse-Nord, Norway", "Svenne Naumann, Finnmarkssykehuset, Norway", "Bjørn Næss, DIPS ASA, Norway", "sam philip, NHS Grampian, United Kingdom", "Jussara Rotzsch, Hospital Alemão Oswaldo Cruz, Brazil", "Danielle Santos Alves, Federal University of Pernambuco, Brazil", "Line Silsand, Universitetssykehuset i Nord-Norge, Norway", "Norwegian Review Summary, Nasjonal IKT HF, Norway", "Nyree Taylor, Ocean Informatics, Australia", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)">
+    lifecycle_state = <"published">
+    custodian_namespace = <"org.openehr">
+    custodian_organisation = <"openEHR Foundation">
+    licence = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+    other_details = <
+        ["current_contact"] = <"Heather Leslie, Atomica Informatics<heather.leslie@atomicainformatics.com>">
+        ["MD5-CAM-1.0.1"] = <"0ED359CA677901E7435742AC45DAF7CF">
+    >
+    details = <
+        ["nb"] = <
+            language = <[ISO_639-1::nb]>
+            purpose = <"For å registrere gjeldende status og detaljer om episoder hvor individet har brukt antikonsepsjon, og hvilke typer.">
+            keywords = <"prevensjonsmiddel, hormon, prevensjon, fødsel, kontroll, svangerskapsprevensjon, familieplanlegging, prevensjonstiltak, kontrasepsjon, spiral, p-pille, hormonspiral, kondom", ...>
+            use = <"Brukes for å registrere gjeldende status og detaljer om episoder hvor individet har brukt antikonsepsjon, og hvilke typer.
+    
+    Denne arketypen skal brukes til å registrere informasjon om både nåværende og tidligere bruk av antikonsepsjon.
+    
+    Arketypen fokuserer spesifikt på dokumentasjon om bruken av alle typer antikonsepsjon, inkludert episoder der mer enn en type antikonsepsjon kan ha blitt brukt samtidig.
+    
+    Clusteret 'Per type' gjør det mulig å registrere spesifikke detaljer og episoder om hver type antikonsepsjon som brukes, og kan bare gjentas en gang per type.
+    
+    I mange situasjoner vil den enkelte bare bruke én type antikonsepsjon om gangen. Imidlertid, hvis andre typer antikonsepsjon brukes samtidig, registreres detaljene i en annen forekomst av clusteret 'Per type'.
+    
+    For hver type antikonsepsjon kan brukshistorikken over tid registreres ved hjelp av det repeterbare clusteret \"Per episode\". Dette clusteret gjør det mulig å registrere et veldig detaljert bruksmønster for antikonsepsjon, om nødvendig.
+    
+    Dataelementet \"Overordnet beskrivelse\" kan brukes til å overføre fritekstbeskrivelser fra eksisterende eller tidligere kliniske systemer til arketypeformat.">
+            misuse = <"Brukes ikke til å registrere detaljert informasjon om reseptbelagte medisiner. Lenker fra denne arketypen til den aktuelle \"Legemiddelordinering\" (INSTRUCTION.medication_order) eller \"Legemiddelhåndtering\" (ACTION.medication) bør brukes til å registrere detaljene.
+    
+    Brukes ikke til å registrere detaljert informasjon om prosedyrene som er utført. Lenker fra denne arketypen til den aktuelle \"Prosedyre\" (ACTION.procedure) skal brukes til å registrere detaljene.">
+        >
+        ["en"] = <
+            language = <[ISO_639-1::en]>
+            purpose = <"To record the current status and episodic details about specific types of contraception used by an individual.">
+            keywords = <"contraceptive", "hormone", "contraception", "control", "family planning", "birth control measures">
+            use = <"Use to record the current status and episodic details about specific types of contraception used by an individual.
+    
+    This archetype is to be used to record information about both current and previous use of contraception.
+    
+    The specific scope of this archetype is on overall documentation about the use of all types of contraception, including episodes where more than one type of contraception may have been used simultaneously.
+    
+    The 'Per type' cluster of data elements allows for recording of specific details and episodes about each type of contraception used and can be repeated only once per type. 
+    
+    In many situations the individual will use only one type of contraception at a time. However, if other types of contraception are used at the same time, the details will be recorded in another instance of the 'Per type' cluster.
+    
+    For each type of contraception the history of use over time can be captured using the repeatable 'Per episode' cluster. This cluster of data elements allows for a very detailed pattern of contraception use to be recorded, if necessary.
+    
+    Use to incorporate the narrative descriptions of contraceptive history within existing or legacy clinical systems into an archetyped format, using the 'Overall description' data element.">
+            misuse = <"Not to be used to record detailed information about the medication prescription. Links from this archetype to the relevant INSTRUCTION.medication_order or ACTION.medication should be used to record the detail.
+    
+    Not to be used to record detailed information about the procedures performed, such as an IUD insertion or a vasectomy. Links from this archetype to the relevant ACTION.procedure should be used to record the detail.">
+            copyright = <"© openEHR Foundation">
+        >
+    >
+
+definition
+    EVALUATION[id1] matches {    -- Contraceptive use summary
+        data matches {
+            ITEM_TREE[id2] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    ELEMENT[id90] occurrences matches {0..1} matches {    -- Overall status
+                        value matches {
+                            DV_CODED_TEXT[id9003] matches {
+                                defining_code matches {[ac9000]}    -- Overall status (synthesised)
+                            }
+                        }
+                    }
+                    ELEMENT[id44] occurrences matches {0..1} matches {    -- Overall description
+                        value matches {
+                            DV_TEXT[id9004] 
+                        }
+                    }
+                    CLUSTER[id30] matches {    -- Per type
+                        items cardinality matches {1..*; unordered} matches {
+                            ELEMENT[id152] occurrences matches {0..1} matches {    -- Type
+                                value matches {
+                                    DV_TEXT[id9032] 
+                                    DV_CODED_TEXT[id9033] matches {
+                                        defining_code matches {[ac9032]}    -- Type (synthesised)
+                                    }
+                                }
+                            }
+                            ELEMENT[id145] occurrences matches {0..1} matches {    -- Status
+                                value matches {
+                                    DV_CODED_TEXT[id9034] matches {
+                                        defining_code matches {[ac9031]}    -- Status (synthesised)
+                                    }
+                                }
+                            }
+                            ELEMENT[id54] occurrences matches {0..1} matches {    -- Description
+                                value matches {
+                                    DV_TEXT[id9008] 
+                                }
+                            }
+                            ELEMENT[id149] occurrences matches {0..1} matches {    -- Start date
+                                value matches {
+                                    DV_DATE_TIME[id9035] 
+                                }
+                            }
+                            CLUSTER[id65] matches {    -- Per episode
+                                items cardinality matches {1..*; unordered} matches {
+                                    ELEMENT[id82] occurrences matches {0..1} matches {    -- Episode label
+                                        value matches {
+                                            DV_COUNT[id9010] matches {
+                                                magnitude matches {|>=1|}
+                                            }
+                                            DV_TEXT[id9011] 
+                                        }
+                                    }
+                                    ELEMENT[id24] occurrences matches {0..1} matches {    -- Specific name
+                                        value matches {
+                                            DV_TEXT[id9012] 
+                                        }
+                                    }
+                                    ELEMENT[id31] occurrences matches {0..1} matches {    -- Description
+                                        value matches {
+                                            DV_TEXT[id9013] 
+                                        }
+                                    }
+                                    ELEMENT[id169] occurrences matches {0..1} matches {    -- Clinical indication
+                                        value matches {
+                                            DV_TEXT[id9036] 
+                                        }
+                                    }
+                                    ELEMENT[id26] occurrences matches {0..1} matches {    -- Goal
+                                        value matches {
+                                            DV_TEXT[id9015] 
+                                        }
+                                    }
+                                    ELEMENT[id14] occurrences matches {0..1} matches {    -- Episode start date
+                                        value matches {
+                                            DV_DATE[id9016] 
+                                        }
+                                    }
+                                    ELEMENT[id83] occurrences matches {0..1} matches {    -- Episode end date
+                                        value matches {
+                                            DV_DATE[id9017] 
+                                        }
+                                    }
+                                    ELEMENT[id75] occurrences matches {0..1} matches {    -- Reason for cessation
+                                        value matches {
+                                            DV_TEXT[id9018] 
+                                        }
+                                    }
+                                    allow_archetype CLUSTER[id27] matches {     -- Episode details
+                                        include
+                                            archetype_id/value matches {/.*/}
+                                    }
+                                    ELEMENT[id88] occurrences matches {0..1} matches {    -- Episode comment
+                                        value matches {
+                                            DV_TEXT[id9019] 
+                                        }
+                                    }
+                                }
+                            }
+                            ELEMENT[id150] occurrences matches {0..1} matches {    -- End date
+                                value matches {
+                                    DV_DATE_TIME[id9037] 
+                                }
+                            }
+                            allow_archetype CLUSTER[id78] matches {     -- Type details
+                                include
+                                    archetype_id/value matches {/.*/}
+                            }
+                            ELEMENT[id70] occurrences matches {0..1} matches {    -- Comment
+                                value matches {
+                                    DV_TEXT[id9021] 
+                                }
+                            }
+                        }
+                    }
+                    allow_archetype CLUSTER[id151] matches {     -- Overall details
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                    ELEMENT[id20] occurrences matches {0..1} matches {    -- Overall comment
+                        value matches {
+                            DV_TEXT[id9023] 
+                        }
+                    }
+                }
+            }
+        }
+        protocol matches {
+            ITEM_TREE[id22] matches {
+                items cardinality matches {0..*; unordered} matches {
+                    allow_archetype CLUSTER[id74] matches {     -- Extension
+                        include
+                            archetype_id/value matches {/.*/}
+                    }
+                    ELEMENT[id23] occurrences matches {0..1} matches {    -- Last updated
+                        value matches {
+                            DV_DATE_TIME[id9027] 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+terminology
+    term_definitions = <
+        ["nb"] = <
+            ["ac9000"] = <
+                text = <"Overordnet status (synthesised)">
+                description = <"Utsagn om regelmessig bruk av alle typer antikonsepsjon. (synthesised)">
+            >
+            ["ac9032"] = <
+                text = <"Type (synthesised)">
+                description = <"Typen antikonsepsjon individet bruker eller brukte. (synthesised)">
+            >
+            ["ac9031"] = <
+                text = <"Status (synthesised)">
+                description = <"Utsagn om nåværende bruk for den spesifiserte antikonsepsjonen. (synthesised)">
+            >
+            ["at170"] = <
+                text = <"Intrauterin antikonsepsjon med hormon">
+                description = <"Spiral satt inn i livmoren for å forhindre implantasjon.">
+            >
+            ["id169"] = <
+                text = <"Klinisk indikasjon">
+                description = <"Den kliniske årsaken for å bruke spesifisert antikonsepsjon i denne episoden.">
+                comment = <"For eksempel: dysmenoré; eller uregelmessige menstruasjoner. Koding med ekstern terminologi er å foretrekke der det er mulig.">
+            >
+            ["at168"] = <
+                text = <"Vaginal skylling">
+                description = <"Intravaginal skylling med en flytende oppløsning.">
+            >
+            ["at167"] = <
+                text = <"Avhold">
+                description = <"Unngåelse av vaginalt samleie eller intime aktiviteter som kan føre til graviditet.">
+            >
+            ["at166"] = <
+                text = <"Fertilitetsbevissthet">
+                description = <"Periodisk bruk av avholdenhet eller barrieremetoder i sannsynlig fruktbare perioder.">
+            >
+            ["at165"] = <
+                text = <"Avbrutt samleie">
+                description = <"Å trekke penis fra skjeden og bort fra kvinnens ytre kjønnsorganer før utløsning.">
+            >
+            ["at164"] = <
+                text = <"Intrauterin antikonsepsjon uten hormon">
+                description = <"Spiral satt inn i livmoren for å forhindre implantasjon.">
+            >
+            ["at163"] = <
+                text = <"Mannlig sterilisering">
+                description = <"Fremgangsmåte ment for å permanent forhindre graviditet, vanligvis ved å kutte sædlederne.">
+            >
+            ["at162"] = <
+                text = <"Kvinnelig sterilisering">
+                description = <"Fremgangsmåte ment for å permanent forhindre graviditet, vanligvis ved å blokkere egglederne.">
+            >
+            ["at161"] = <
+                text = <"Vaginal ring">
+                description = <"Hormonimpregnert ring satt inn i skjeden.">
+            >
+            ["at160"] = <
+                text = <"Hormonimplantat">
+                description = <"Hormonell antikonsepsjon implantert under huden.">
+            >
+            ["at159"] = <
+                text = <"P-sprøyte">
+                description = <"Progestagen som injiserbar hormonell antikonsepsjon.">
+            >
+            ["at158"] = <
+                text = <"Progestagen pille">
+                description = <"Progestagen som oral hormonell antikonsepsjon.">
+            >
+            ["at157"] = <
+                text = <"Kombinasjonsplaster">
+                description = <"Et p-plaster som inneholder både østrogen og progestin.">
+            >
+            ["at156"] = <
+                text = <"Kombinasjonspille">
+                description = <"En kombinasjons p-pille som inneholder både østrogen og gestagen.">
+            >
+            ["at155"] = <
+                text = <"Pessar">
+                description = <"En grunn, kuppelformet barriere plassert i skjeden for å dekke livmorhalsen.">
+            >
+            ["at154"] = <
+                text = <"Femidom">
+                description = <"En barriere som plasseres inne i vagina for fysisk å blokkere ejakulert sæd fra å komme inn i livmorhalsen.">
+            >
+            ["at153"] = <
+                text = <"Kondom">
+                description = <"En barriere som dekker penis for fysisk å blokkere ejakulert sæd fra å komme inn i skjeden.">
+            >
+            ["id152"] = <
+                text = <"Type">
+                description = <"Typen antikonsepsjon individet bruker eller brukte.">
+                comment = <"Koding med ekstern terminologi er å foretrekke, der det er mulig.">
+            >
+            ["id151"] = <
+                text = <"Samlede detaljer">
+                description = <"Ytterligere strukturerte detaljer om den overordnede bruken av prevensjon.">
+            >
+            ["id150"] = <
+                text = <"Sluttdato">
+                description = <"Dato da individet sist brukte den angitte typen antikonsepsjon.">
+                comment = <"Kan være en deldato, for eksempel årstall.">
+            >
+            ["id149"] = <
+                text = <"Startdato">
+                description = <"Datoen når individet første gang brukte den spesifiserte antikonsepsjonen.">
+                comment = <"Kan være en deldato, for eksempel årstall.">
+            >
+            ["at148"] = <
+                text = <"Aldri brukt antikonsepsjonstypen">
+                description = <"Individet har aldri brukt den angitte typen antikonsepsjon.">
+            >
+            ["at147"] = <
+                text = <"Har brukt antikonsepsjonstypen">
+                description = <"Individet har tidligere brukt den angitte typen antikonsepsjon, men bruker det ikke nå.">
+            >
+            ["at146"] = <
+                text = <"Bruker antikonsepsjonstypen">
+                description = <"Individet bruker den angitte typen antikonsepsjon.">
+            >
+            ["id145"] = <
+                text = <"Status">
+                description = <"Utsagn om nåværende bruk for den spesifiserte antikonsepsjonen.">
+            >
+            ["id90"] = <
+                text = <"Overordnet status">
+                description = <"Utsagn om regelmessig bruk av alle typer antikonsepsjon.">
+            >
+            ["id88"] = <
+                text = <"Kommentar til episoden">
+                description = <"Ytterligere fritekst om bruken av antikonsepsjon innenfor den spesifiserte episoden som ikke er omfattet av andre felt.">
+            >
+            ["id83"] = <
+                text = <"Episodens sluttdato">
+                description = <"Datoen episoden opphørte.">
+                comment = <"Kan være en deldato, for eksempel kun årstall. Dette datafeltet vil være tomt når gjeldene episode pågår.">
+            >
+            ["id82"] = <
+                text = <"Episodens navn">
+                description = <"Identifisering av en episode med bruk av antikonsepsjon - enten som et nummer i en sekvens og / eller en navngitt hendelse.">
+                comment = <"For eksempel: \"2\" som den andre episoden i en sekvens av episoder eller \"Amming\".">
+            >
+            ["id78"] = <
+                text = <"Detaljer om antikonsepsjonstypen">
+                description = <"Ytterligere strukturerte detaljer om den spesifiserte typen antikonsepsjon.">
+            >
+            ["id75"] = <
+                text = <"Årsak til opphør">
+                description = <"Fritekstbeskrivelse av årsaken til at en sluttet å bruke den spesifiserte antikonsepsjonstypen i denne episoden.">
+                comment = <"For eksempel: Alvorlige bivirkninger eller ønsker å bli gravid. Koding med ekstern terminologi er å foretrekke der det er mulig.">
+            >
+            ["id74"] = <
+                text = <"Tilleggsinformasjon">
+                description = <"Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.">
+                comment = <"For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR.">
+            >
+            ["id70"] = <
+                text = <"Kommentar">
+                description = <"Ytterligere fritekst om den spesifiserte antikonsepsjonstypen som ikke er omfattet av andre felt.">
+            >
+            ["id65"] = <
+                text = <"Per episode">
+                description = <"Detaljer om bruk av antikonsepsjon i løpet av en identifisert tidsperiode.">
+            >
+            ["id54"] = <
+                text = <"Beskrivelse">
+                description = <"Fritekstsammendrag om bruken av den spesifiserte antikonsepsjonen.">
+            >
+            ["id44"] = <
+                text = <"Overordnet beskrivelse">
+                description = <"Fritekstsammendrag om individets overordnede bruk av antikonsepsjon.">
+                comment = <"Bruk dette dataelementet for å registrere en fritekstbeskrivelse om individets bruk av antikonsepsjon dersom man ikke kan eller trenger de strukturerte elementene. Kan også brukes for å overføre ustrukturert informasjon fra eksisterende eller gamle systemer til arketypeformat.">
+            >
+            ["id31"] = <
+                text = <"Beskrivelse">
+                description = <"Fritekstbeskrivelse om den samlede bruken av antikonsepsjon i løpet av denne episoden.">
+                comment = <"Dette dataelementet kan brukes til å beskrive bruksmønsteret, inkludert regulariteten. For eksempel \"p-pillen ble ofte glemt\" eller \"kondomer brukt noen ganger, eller for å beskrive mindre bivirkninger.">
+            >
+            ["id30"] = <
+                text = <"Per type">
+                description = <"Detaljer om bruken for en spesifikk type antikonsepsjon.">
+            >
+            ["id27"] = <
+                text = <"Episodedetaljer">
+                description = <"Ytterligere strukturerte detaljer om den spesifiserte episoden med antikonsepsjonsbruk.">
+            >
+            ["id26"] = <
+                text = <"Hensikt">
+                description = <"Forventet utfall som et resultat av bruk av den spesifiserte antikonsepsjonen.">
+                comment = <"For eksempel: Regelmessig syklus, lindring av smerter eller forhindre graviditet. Koding med ekstern terminologi er å foretrekke, der det er mulig.">
+            >
+            ["id24"] = <
+                text = <"Spesifikt navn">
+                description = <"Identifisering av den spesifikke antikonsepsjonen som brukes i denne episoden, med navn.">
+                comment = <"For eksempel: Merkenavnet på den p-pillen som brukes. Dette dataelementet er sannsynligvis overflødig for noen antikonsepsjonsmidler der spesifikasjon av merke eller type vanligvis ikke er relevant, som kondom.">
+            >
+            ["id23"] = <
+                text = <"Sist oppdatert">
+                description = <"Datoen da dette antikonsepsjonssammendraget sist ble oppdatert.">
+            >
+            ["id20"] = <
+                text = <"Samlet kommentar">
+                description = <"Ytterligere fritekst om antikonsepsjonsbruken som ikke er omfattet av andre felt.">
+            >
+            ["id14"] = <
+                text = <"Episodens startdato">
+                description = <"Dato da episoden startet.">
+                comment = <"Kan være en deldato, for eksempel kun årstall.">
+            >
+            ["at7"] = <
+                text = <"Har aldri brukt antikonsepsjon">
+                description = <"Individet har aldri brukt noen form for antikonsepsjon.">
+            >
+            ["at6"] = <
+                text = <"Har brukt antikonsepsjon">
+                description = <"Individet har tidligere brukt antikonsepsjon, men bruker det for tiden ikke.">
+            >
+            ["at4"] = <
+                text = <"Bruker antikonsepsjon">
+                description = <"Individet bruker antikonsepsjon.">
+            >
+            ["id1"] = <
+                text = <"Antikonsepsjonssammendrag">
+                description = <"Sammendrag og varig (persistent) informasjon om bruk av metoder for å forhindre graviditet.">
+            >
+        >
+        ["en"] = <
+            ["ac9000"] = <
+                text = <"Overall status (synthesised)">
+                description = <"Statement about regular use of any type of contraception. (synthesised)">
+            >
+            ["ac9032"] = <
+                text = <"Type (synthesised)">
+                description = <"The type of contraception used by the individual. (synthesised)">
+            >
+            ["ac9031"] = <
+                text = <"Status (synthesised)">
+                description = <"Statement about current use of the specified type of contraception. (synthesised)">
+            >
+            ["at170"] = <
+                text = <"IUD with hormone">
+                description = <"Device inserted into the uterus to prevent implantation.">
+            >
+            ["id169"] = <
+                text = <"Clinical indication">
+                description = <"Clinical reason for using the specified type of contraception during this episode.">
+                comment = <"For example: dysmenorrhoea; or irregular menses. Coding with an external terminology is preferred, where possible.">
+            >
+            ["at168"] = <
+                text = <"Vaginal douching">
+                description = <"Intravaginal cleansing with a liquid solution.">
+            >
+            ["at167"] = <
+                text = <"Abstinence">
+                description = <"Avoidance of vaginal intercourse or intimate activities which may result in pregnancy.">
+            >
+            ["at166"] = <
+                text = <"Fertility awareness method">
+                description = <"Cyclical use of abstinence or barrier methods during likely fertile periods.">
+            >
+            ["at165"] = <
+                text = <"Withdrawal">
+                description = <"Withdrawing the penis from the vagina and away from a woman's external genitals before ejaculation.">
+            >
+            ["at164"] = <
+                text = <"IUD without hormone">
+                description = <"Device inserted into the uterus to prevent implantation.">
+            >
+            ["at163"] = <
+                text = <"Male sterilisation">
+                description = <"Procedure intended to permanently prevent pregnancy, usually by vasectomy.">
+            >
+            ["at162"] = <
+                text = <"Female sterilisation">
+                description = <"Procedure intended to permanently prevent pregnancy, usually by tubal ligitation.">
+            >
+            ["at161"] = <
+                text = <"Vaginal ring">
+                description = <"Hormone impregnated ring inserted into the vagina.">
+            >
+            ["at160"] = <
+                text = <"Hormone implant">
+                description = <"Hormonal contraception inserted under the skin.">
+            >
+            ["at159"] = <
+                text = <"Depot progestogen injection">
+                description = <"Progestogen-only injectable of hormonal contraception.">
+            >
+            ["at158"] = <
+                text = <"Progestogen-only pill">
+                description = <"Progestogen-only form of oral hormonal contraception.">
+            >
+            ["at157"] = <
+                text = <"Combination skin patch">
+                description = <"A combination skin patch containing both an oestrogen and progestin.">
+            >
+            ["at156"] = <
+                text = <"Combination pill">
+                description = <"A combination oral contraceptive pill containing both an oestrogen and progestin.">
+            >
+            ["at155"] = <
+                text = <"Diaphragm">
+                description = <"A shallow, dome shaped barrier placed in the vagina to cover the cervix.">
+            >
+            ["at154"] = <
+                text = <"Female condom">
+                description = <"A barrier worn inside the vagina to physically block ejaculated sperm from entering the cervix.">
+            >
+            ["at153"] = <
+                text = <"Male condom">
+                description = <"A barrier covering the penis to physically block ejaculated sperm from entering the vagina.">
+            >
+            ["id152"] = <
+                text = <"Type">
+                description = <"The type of contraception used by the individual.">
+                comment = <"Coding the contraceptive type with a terminology is recommended, where possible.">
+            >
+            ["id151"] = <
+                text = <"Overall details">
+                description = <"Additional structured details about the overall use of contraception.">
+            >
+            ["id150"] = <
+                text = <"End date">
+                description = <"Date when the individual last used the specified type of contraception.">
+                comment = <"Comment: Can be a partial date, for example, only a year.">
+            >
+            ["id149"] = <
+                text = <"Start date">
+                description = <"Date when the individual first used the specified type of contraception.">
+                comment = <"Comment: Can be a partial date, for example, only a year.">
+            >
+            ["at148"] = <
+                text = <"Never used">
+                description = <"Individual has never used the specified type of contraception.">
+            >
+            ["at147"] = <
+                text = <"Not current user">
+                description = <"Individual has previously used the specified type of contraception but is not a current user.">
+            >
+            ["at146"] = <
+                text = <"Current user">
+                description = <"Individual is a current user of the specified type of contraception.">
+            >
+            ["id145"] = <
+                text = <"Status">
+                description = <"Statement about current use of the specified type of contraception.">
+            >
+            ["id90"] = <
+                text = <"Overall status">
+                description = <"Statement about regular use of any type of contraception.">
+            >
+            ["id88"] = <
+                text = <"Episode comment">
+                description = <"Additional narrative about the use of the specified contraception during the specified episode, not captured in other fields.">
+            >
+            ["id83"] = <
+                text = <"Episode end date">
+                description = <"Date when this episode ceased.">
+                comment = <"Can be a partial date, for example, only a year. This data field will be empty if the episode is current and ongoing.">
+            >
+            ["id82"] = <
+                text = <"Episode label">
+                description = <"Identification of an episode of contraception use - either as a number in a sequence and/or a named event.">
+                comment = <"For example: '2' as the second episode within a sequence of episodes; or 'Breastfeeding'.">
+            >
+            ["id78"] = <
+                text = <"Type details">
+                description = <"Additional structured details about the specified type of contraception used.">
+            >
+            ["id75"] = <
+                text = <"Reason for cessation">
+                description = <"Narrative description for the reason for stopping use of the specified type of contraception during this episode.">
+                comment = <"For example: Major side effects or the wish to become pregnant. Coding with a terminology is recommended, where possible.">
+            >
+            ["id74"] = <
+                text = <"Extension">
+                description = <"Additional information required to capture local content or to align with other reference models/formalisms.">
+                comment = <"For example: local information requirements or additional metadata to align with FHIR.">
+            >
+            ["id70"] = <
+                text = <"Comment">
+                description = <"Additional narrative about use of the specified type of contraception, not captured in other fields.">
+            >
+            ["id65"] = <
+                text = <"Per episode">
+                description = <"Details about contraceptive use during an identified period of time.">
+            >
+            ["id54"] = <
+                text = <"Description">
+                description = <"Narrative summary about the use of the specified type of contraception.">
+            >
+            ["id44"] = <
+                text = <"Overall description">
+                description = <"Narrative summary about the individual's overall use of contraception.">
+                comment = <"Use this data element to record a narrative description where the structured data does not adequately reflect the use of contraception for this individual or to incorporate unstructured information from existing or legacy clinical systems into an archetyped format.">
+            >
+            ["id31"] = <
+                text = <"Description">
+                description = <"Narrative description about the overall use of contraception during this episode.">
+                comment = <"This data element may be used to describe the pattern of use, including regularity of use. For example, the oral contraceptive pill was missed frequently, condoms used occasionally or to describe minor side effects.">
+            >
+            ["id30"] = <
+                text = <"Per type">
+                description = <"Details about use of a specified type of contraception.">
+            >
+            ["id27"] = <
+                text = <"Episode details">
+                description = <"Additional structured details about the specified episode of contraception use.">
+            >
+            ["id26"] = <
+                text = <"Goal">
+                description = <"Intended outcome as a result of use of the specified contraception.">
+                comment = <"For example: pregnancy prevention, regular cycle or relief of pain. Coding with a terminology is recommended, where possible.">
+            >
+            ["id24"] = <
+                text = <"Specific name">
+                description = <"Identification of the specific contraception used in this episode, by name.">
+                comment = <"For example: the brand name of the oral contraceptive pill. This data element is most likely redundant in the context of use of some contraceptives such as condoms where specification of the brand or type is usually not relevant.">
+            >
+            ["id23"] = <
+                text = <"Last updated">
+                description = <"The date this contraceptive use summary was last updated.">
+            >
+            ["id20"] = <
+                text = <"Overall comment">
+                description = <"Additional narrative about the use of contraception that has not been captured in other fields.">
+            >
+            ["id14"] = <
+                text = <"Episode start date">
+                description = <"Date when this episode commenced.">
+                comment = <"Can be a partial date, for example, only a year.">
+            >
+            ["at7"] = <
+                text = <"Never used">
+                description = <"Individual has never used any type of contraception.">
+            >
+            ["at6"] = <
+                text = <"Not current user">
+                description = <"Individual has previously used contraception but is not a current user.">
+            >
+            ["at4"] = <
+                text = <"Current user">
+                description = <"Individual currently uses contraception.">
+            >
+            ["id1"] = <
+                text = <"Contraceptive use summary">
+                description = <"Summary and persistent information about the use of methods to prevent pregnancy.">
+            >
+        >
+    >
+    value_sets = <
+        ["ac9031"] = <
+            id = <"ac9031">
+            members = <"at146", "at147", "at148">
+        >
+        ["ac9000"] = <
+            id = <"ac9000">
+            members = <"at4", "at6", "at7">
+        >
+        ["ac9032"] = <
+            id = <"ac9032">
+            members = <"at156", "at158", "at157", "at159", "at160", "at161", "at170", "at164", "at162", "at163", "at155", "at168", "at154", "at153", "at165", "at166", "at167">
+        >
+    >
