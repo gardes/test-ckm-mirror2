@@ -14,6 +14,14 @@ language
 				["email"] = <"john.tore.valand@helse-bergen.no">
 			>
 		>
+		["sq"] = <
+			language = <[ISO_639-1::sq]>
+			author = <
+				["name"] = <"Mr Ocean">
+				["organisation"] = <"Ocean Informatics">
+				["email"] = <"sebastian.garde@oceaninformatics.com">
+			>
+		>
 	>
 description
 	original_author = <
@@ -48,6 +56,15 @@ such as technical difficulties or patient instability, use a null flavour for 'N
 			misuse = <"">
 			copyright = <"© Nasjonal IKT HF, openEHR Foundation, openEHR Foundation">
 		>
+		["sq"] = <
+			language = <[ISO_639-1::sq]>
+			purpose = <"*To record the quality of bowel cleanliness during colonoscopy.(en)">
+			use = <"*Use to record the quality of bowel cleanliness during colonoscopy.
+
+If a segment of the colon is surgically absent or not seen for reasons unrelated to bowel preparation,
+such as technical difficulties or patient instability, use a null flavour for 'Not applicable' for each relevant data element.(en)">
+			misuse = <"">
+		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <"Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "SB Bhattacharyya, Sudisa Consultancy Services, India", "Kåre Flø, DIPS ASA, Norway", "Mikkel Johan Gaup Grønmo, Forvaltningssenter EPJ, Helse-Nord, Norway (openEHR Editor)", "Geir Hoff, Sykehuset Telemark HF, Norway", "Evelyn Hovenga, EJSH Consulting, Australia", "Morten Hørthe <mho@dips.no>", "Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia", "Bjørn Næss, DIPS ASA, Norway", "Frode Stenvik, Helse Sør-Øst, Norway", "Norwegian Review Summary, Nasjonal IKT HF, Norway", "Pencho Tonchev, Medical University- Pleven, Bulgaria", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)">
@@ -66,8 +83,8 @@ An instructional video demonstrating how to use the BBPS is available online at 
 		["original_namespace"] = <"org.openehrTEST">
 		["original_publisher"] = <"openEHR">
 		["custodian_namespace"] = <"org.openehrTEST">
-		["MD5-CAM-1.0.1"] = <"E529549F2D8D5208E321EFB0B2C771FC">
-		["build_uid"] = <"da9acbb9-3ea7-4c07-a0b5-d9b5ddcfd030">
+		["MD5-CAM-1.0.1"] = <"8E839DB8FDDDCCE5C044AB5A8C2DF289">
+		["build_uid"] = <"87a62425-8df2-4fc2-95c3-9007ef3e80f2">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -189,6 +206,46 @@ ontology
 				["at0018"] = <
 					text = <"Left colon">
 					description = <"Including the descending colon, sigmoid colon and rectum.">
+				>
+			>
+		>
+		["sq"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Boston Bowel Preparation Scale sg(en)">
+					description = <"*An assessment score used to record the quality of bowel cleanliness during colonoscopy.(en)">
+				>
+				["at0001"] = <
+					text = <"*Right colon(en)">
+					description = <"*Including the cecum and ascending colon.(en)">
+				>
+				["at0002"] = <
+					text = <"*Unprepared colon segment with mucosa not seen.(en)">
+					description = <"*Because of solid stool that cannot be cleared.(en)">
+				>
+				["at0003"] = <
+					text = <"*Portion of mucosa of the colon segment seen.(en)">
+					description = <"*Other areas of the colon segment are not well seen because of staining, residual stool, and/or opaque liquid.(en)">
+				>
+				["at0004"] = <
+					text = <"*Mucosa of colon segment seen well.(en)">
+					description = <"*Minor amount of residual staining, small fragments of stool and/or opaque liquid.(en)">
+				>
+				["at0005"] = <
+					text = <"*Entire mucosa of colon segment seen well.(en)">
+					description = <"ds">
+				>
+				["at0012"] = <
+					text = <"*Total score(en)">
+					description = <"*The total sum of each component parameter for the Boston bowel preparation scale.(en)">
+				>
+				["at0013"] = <
+					text = <"*Transverse(en)">
+					description = <"*Including the hepatic and splenic flexures.(en)">
+				>
+				["at0018"] = <
+					text = <"*Left colon(en)">
+					description = <"*Including the descending colon, sigmoid colon and rectum.(en)">
 				>
 			>
 		>
