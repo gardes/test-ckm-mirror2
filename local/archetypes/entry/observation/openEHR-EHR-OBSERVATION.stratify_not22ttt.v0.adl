@@ -21,7 +21,9 @@ language
 				["organisation"] = <"Ocean Informatics">
 				["email"] = <"sebastian.garde@oceaninformatics.com">
 			>
-			other_contributors = <"test1, tst", ...>
+			other_details = <
+				["other_contributors"] = <"test1, tst">
+			>
 		>
 	>
 description

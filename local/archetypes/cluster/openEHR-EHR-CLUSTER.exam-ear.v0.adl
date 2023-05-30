@@ -22,8 +22,10 @@ language
 				["organisation"] = <"Ocean Informatics">
 				["email"] = <"sebastian.garde@oceaninformatics.com">
 			>
-			version_last_translated = <"1.0.1">
-			other_contributors = <"Sebastian Garde, Ocean, Germany", ...>
+			other_details = <
+				["other_contributors"] = <"Sebastian Garde, Ocean, Germany">
+				["version_last_translated"] = <"1.0.1">
+			>
 		>
 	>
 description
