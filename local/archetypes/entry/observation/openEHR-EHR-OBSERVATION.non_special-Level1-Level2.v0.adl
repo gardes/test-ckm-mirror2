@@ -1,0 +1,93 @@
+﻿archetype (adl_version=1.4; uid=0191df3f-a9ef-473b-8bc5-e2137a8cc28b)
+	openEHR-EHR-OBSERVATION.non_special-Level1-Level2.v0
+specialise
+	openEHR-EHR-OBSERVATION.non_special-Level1.v0
+
+concept
+	[at0000.1.1]	-- Non special!!
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["name"] = <"">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"Non Specialised Archetype 1.">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"CC646F624E30FF3139FD30FC2142B176">
+		["build_uid"] = <"1deaeb3b-a7ed-4b27-83b2-26a59de48701">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	OBSERVATION[at0000.1.1] matches {	-- Non special!!
+		data matches {
+			HISTORY[at0001] matches {	-- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..1} matches {	-- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {	-- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {	-- New element
+										value matches {
+											DV_TEXT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Non special">
+					description = <"unknown">
+				>
+				["at0000.1"] = <
+					text = <"Non special!">
+					description = <"unknown!">
+				>
+				["at0000.1.1"] = <
+					text = <"Non special!!">
+					description = <"unknown!!">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"New element">
+					description = <"*">
+				>
+			>
+		>
+	>
