@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=0a67fcae-271f-4c24-9fdd-45b5718bb5b3)
-	openEHR-EHR-OBSERVATION.das28.v0
+﻿archetype (adl_version=1.4; uid=62d201bf-3672-4469-bcc3-7dac475ce820)
+	openEHR-EHR-OBSERVATION.das28.v1
 
 concept
 	[at0000]	-- Disease Activity Score-28 (DAS28)
@@ -22,7 +22,7 @@ description
 			copyright = <"© Clinical Models UK">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Mark Greenhalgh, Operon Limited, UK", "Ian McNicoll, freshEHR Clinical Informatics, UK", "Nadim Anani, Sweden">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -33,8 +33,8 @@ description
 		["original_publisher"] = <"UK Clinical Models">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"DD360EBB11A1B0BB97AA5809A2EDE8EC">
-		["build_uid"] = <"22482048-0a0c-4009-98f2-35b786cc31e6">
-		["revision"] = <"0.0.1-alpha">
+		["build_uid"] = <"a23ca6d4-3b5e-448b-a54f-277dc9ae512a">
+		["revision"] = <"1.0.0">
 	>
 
 definition
