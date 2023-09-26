@@ -68,8 +68,8 @@ Terms and conditions for use: https://www.healthmeasures.net/images/PROMIS/Terms
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"22795D18D61B3866E4523068A269016F">
-		["build_uid"] = <"ee6e86ff-c261-42c5-a01a-766c99a26776">
-		["revision"] = <"1.0.0">
+		["build_uid"] = <"38e867e1-e106-4e3f-ac57-525ceda96081">
+		["revision"] = <"1.0.1">
 	>
 
 definition
