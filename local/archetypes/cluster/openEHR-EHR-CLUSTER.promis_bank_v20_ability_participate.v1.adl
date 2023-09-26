@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=5372489c-4bf5-453e-86bf-e46330883923)
-	openEHR-EHR-CLUSTER.promis_bank_v20_ability_participate.v0
+﻿archetype (adl_version=1.4; uid=7b86d6ef-eafb-4cf6-ba89-2e587a0dc18d)
+	openEHR-EHR-CLUSTER.promis_bank_v20_ability_participate.v1
 
 concept
 	[at0000]	-- PROMIS Item Bank v2.0 - Ability to Participate in Social Roles and Activities
@@ -58,7 +58,7 @@ Terms and conditions for use: https://www.healthmeasures.net/images/PROMIS/Terms
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -67,9 +67,9 @@ Terms and conditions for use: https://www.healthmeasures.net/images/PROMIS/Terms
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"14049DEE9779208E9C190F727435650E">
-		["build_uid"] = <"d56f14e6-5ca1-4867-9b21-a379c6292f32">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"22795D18D61B3866E4523068A269016F">
+		["build_uid"] = <"ee6e86ff-c261-42c5-a01a-766c99a26776">
+		["revision"] = <"1.0.0">
 	>
 
 definition
