@@ -9,9 +9,12 @@ language
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			author = <
-				["name"] = <"Caroline Bönisch">
-				["organisation"] = <"UMG">
-				["email"] = <"Caroline.Thoms@med.uni-goettingen.de">
+				["name"] = <"Caroline Bönisch, Mr Ocean">
+				["organisation"] = <"UMG, Ocean Informatics">
+				["email"] = <"Caroline.Thoms@med.uni-goettingen.de, sebastian.garde@oceaninformatics.com">
+			>
+			other_details = <
+				["other_contributors"] = <"some others">
 			>
 		>
 		["sv"] = <
@@ -233,9 +236,9 @@ Niet te gebruiken voor het vastleggen van toediening van alcohol op andere wijze
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"66A9F5CA4FEAA6FEBD2C4D93E4492A28">
-		["build_uid"] = <"44f5ecc1-352e-4b09-8f93-aeb03f16c8a9">
-		["revision"] = <"1.0.5">
+		["MD5-CAM-1.0.1"] = <"907F99E9CDF3C3F356662203FD5A6FC0">
+		["build_uid"] = <"eb55fd1d-3cf3-4d38-beaa-f8f9df27062d">
+		["revision"] = <"1.0.6">
 	>
 
 definition
