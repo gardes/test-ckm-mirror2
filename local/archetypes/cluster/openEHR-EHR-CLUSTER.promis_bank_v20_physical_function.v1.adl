@@ -57,7 +57,7 @@ Terms and conditions for use: https://www.healthmeasures.net/images/PROMIS/Terms
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -67,8 +67,8 @@ Terms and conditions for use: https://www.healthmeasures.net/images/PROMIS/Terms
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"10D3663DCA94DAB2E9CB9F2A0590FF45">
-		["build_uid"] = <"62a301af-153f-498d-a12c-7296c47117f3">
-		["revision"] = <"1.0.1-alpha">
+		["build_uid"] = <"7e6479a7-83fd-48af-89ca-41232b8f9e1a">
+		["revision"] = <"1.0.1">
 	>
 
 definition
