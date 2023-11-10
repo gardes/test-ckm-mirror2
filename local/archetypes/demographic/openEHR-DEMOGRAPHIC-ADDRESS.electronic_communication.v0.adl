@@ -6,6 +6,22 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
+		["aa"] = <
+			language = <[ISO_639-1::aa]>
+			author = <
+				["name"] = <"Mr Ocean">
+				["organisation"] = <"Ocean">
+				["email"] = <"sebastian.garde@oceaninformatics.com">
+			>
+		>
+		["fi"] = <
+			language = <[ISO_639-1::fi]>
+			author = <
+				["name"] = <"Mr Ocean">
+				["organisation"] = <"Ocean">
+				["email"] = <"sebastian.garde@oceaninformatics.com">
+			>
+		>
 		["ko"] = <
 			language = <[ISO_639-1::ko]>
 			author = <
@@ -21,6 +37,14 @@ language
 				["name"] = <"Sergio Miranda Freire">
 				["organisation"] = <"Universidade do Estado do Rio de Janeiro - UERJ">
 				["email"] = <"sergio@lampada.uerj.br">
+			>
+		>
+		["ar-bh"] = <
+			language = <[ISO_639-1::ar-bh]>
+			author = <
+				["name"] = <"Mr Ocean">
+				["organisation"] = <"Ocean">
+				["email"] = <"sebastian.garde@oceaninformatics.com">
 			>
 		>
 		["es-py"] = <
@@ -39,6 +63,18 @@ description
 		["date"] = <"2009-05-20">
 	>
 	details = <
+		["aa"] = <
+			language = <[ISO_639-1::aa]>
+			purpose = <"*For capture and storage of the electronic communication contact details of people or organisations.(en)">
+			use = <"*Used in demographic services to collect data about electronic communications.(en)">
+			misuse = <"">
+		>
+		["fi"] = <
+			language = <[ISO_639-1::fi]>
+			purpose = <"*For capture and storage of the electronic communication contact details of people or organisations.(en)">
+			use = <"*Used in demographic services to collect data about electronic communications.(en)">
+			misuse = <"">
+		>
 		["ko"] = <
 			language = <[ISO_639-1::ko]>
 			purpose = <"사람 또는 기관의 전자통신 연락처 상세내용을 획득하고 저장하기 위함.">
@@ -63,6 +99,12 @@ description
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
+		["ar-bh"] = <
+			language = <[ISO_639-1::ar-bh]>
+			purpose = <"*For capture and storage of the electronic communication contact details of people or organisations.(en)">
+			use = <"*Used in demographic services to collect data about electronic communications.(en)">
+			misuse = <"">
+		>
 		["es-py"] = <
 			language = <[ISO_639-1::es-py]>
 			purpose = <"Capturar y registrar detalles de contactos de personas u organizaciones por medio de comunicación electrónica">
@@ -81,8 +123,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"6CD87123522AB433B8C6D569B260A669">
-		["build_uid"] = <"c63d793b-cc43-4468-92c0-080e52897ad2">
+		["MD5-CAM-1.0.1"] = <"19276DC0C55ADBD652A8EAA498788D90">
+		["build_uid"] = <"63acb8dd-e790-486e-a891-52ccdad82700">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -517,6 +559,282 @@ ontology
 				["at0044"] = <
 					text = <"Durante la noche.">
 					description = <"Indica que este medio de comunicación debe ser utilizado durante la noche.">
+				>
+			>
+		>
+		["fi"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Electronic address(en)">
+					description = <"*The address of an electronic communication medium.(en)">
+				>
+				["at0001"] = <
+					text = <"*Components(en)">
+					description = <"*Electronic communication medium components.(en)">
+				>
+				["at0003"] = <
+					text = <"*Usage(en)">
+					description = <"*A code representing the manner of use that a person/organization applies to an electronic medium.(en)">
+				>
+				["at0004"] = <
+					text = <"*Time preferences(en)">
+					description = <"*An indication of the time of day preference for use of this electronic contact address.(en)">
+				>
+				["at0007"] = <
+					text = <"*Details(en)">
+					description = <"*A unique combination of characters used as input to electronic telecommunication equipment for the purpose of establishing contact.(en)">
+				>
+				["at0009"] = <
+					text = <"*Internet address(en)">
+					description = <"*Internet address.(en)">
+				>
+				["at0012"] = <
+					text = <"*Identification of the electronic communication medium(en)">
+					description = <"*Identification of telephone, fax, pager, e-mail, etc.(en)">
+				>
+				["at0020"] = <
+					text = <"*Telephone(en)">
+					description = <"*The medium is a telephone (not a mobile phone).(en)">
+				>
+				["at0021"] = <
+					text = <"*Fax(en)">
+					description = <"*The medium is a faxsimile machine.(en)">
+				>
+				["at0022"] = <
+					text = <"*Mobile(en)">
+					description = <"*The medium is a mobile phone (not a landline).(en)">
+				>
+				["at0023"] = <
+					text = <"*Pager(en)">
+					description = <"*The medium is a pager.(en)">
+				>
+				["at0024"] = <
+					text = <"*E-mail(en)">
+					description = <"*The medium is e-mail.(en)">
+				>
+				["at0025"] = <
+					text = <"*URL(en)">
+					description = <"*The medium is an internet address.(en)">
+				>
+				["at0030"] = <
+					text = <"*Personal(en)">
+					description = <"*The medium is for personal use.(en)">
+				>
+				["at0031"] = <
+					text = <"*Business(en)">
+					description = <"sdf">
+				>
+				["at0032"] = <
+					text = <"*Personal/Business(en)">
+					description = <"*The medium is for both business and personal use.(en)">
+				>
+				["at0033"] = <
+					text = <"*Other use(en)">
+					description = <"*The medium is for another use, e.g., a telephone for contact, a relative's phone.(en)">
+				>
+				["at0040"] = <
+					text = <"*Use during business hours(en)">
+					description = <"*The medium is accessible during the business hours.(en)">
+				>
+				["at0041"] = <
+					text = <"*Use during day time(en)">
+					description = <"*The medium should be used during day time hours.(en)">
+				>
+				["at0042"] = <
+					text = <"*Use at weekend(en)">
+					description = <"*The medium should be used at the weekend.(en)">
+				>
+				["at0043"] = <
+					text = <"*Use at any time(en)">
+					description = <"*The medium can be used at all times.(en)">
+				>
+				["at0044"] = <
+					text = <"*Use during evening/night.(en)">
+					description = <"*The medium should be used during the evening or at night.(en)">
+				>
+			>
+		>
+		["aa"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Electronic address(en)">
+					description = <"*The address of an electronic communication medium.(en)">
+				>
+				["at0001"] = <
+					text = <"*Components(en)">
+					description = <"*Electronic communication medium components.(en)">
+				>
+				["at0003"] = <
+					text = <"*Usage(en)">
+					description = <"*A code representing the manner of use that a person/organization applies to an electronic medium.(en)">
+				>
+				["at0004"] = <
+					text = <"*Time preferences(en)">
+					description = <"*An indication of the time of day preference for use of this electronic contact address.(en)">
+				>
+				["at0007"] = <
+					text = <"*Details(en)">
+					description = <"*A unique combination of characters used as input to electronic telecommunication equipment for the purpose of establishing contact.(en)">
+				>
+				["at0009"] = <
+					text = <"*Internet address(en)">
+					description = <"*Internet address.(en)">
+				>
+				["at0012"] = <
+					text = <"*Identification of the electronic communication medium(en)">
+					description = <"*Identification of telephone, fax, pager, e-mail, etc.(en)">
+				>
+				["at0020"] = <
+					text = <"*Telephone(en)">
+					description = <"*The medium is a telephone (not a mobile phone).(en)">
+				>
+				["at0021"] = <
+					text = <"*Fax(en)">
+					description = <"*The medium is a faxsimile machine.(en)">
+				>
+				["at0022"] = <
+					text = <"*Mobile(en)">
+					description = <"*The medium is a mobile phone (not a landline).(en)">
+				>
+				["at0023"] = <
+					text = <"*Pager(en)">
+					description = <"*The medium is a pager.(en)">
+				>
+				["at0024"] = <
+					text = <"*E-mail(en)">
+					description = <"*The medium is e-mail.(en)">
+				>
+				["at0025"] = <
+					text = <"*URL(en)">
+					description = <"*The medium is an internet address.(en)">
+				>
+				["at0030"] = <
+					text = <"*Personal(en)">
+					description = <"*The medium is for personal use.(en)">
+				>
+				["at0031"] = <
+					text = <"*Business(en)">
+					description = <"*The medium is for business use.(en)">
+				>
+				["at0032"] = <
+					text = <"*Personal/Business(en)">
+					description = <"*The medium is for both business and personal use.(en)">
+				>
+				["at0033"] = <
+					text = <"*Other use(en)">
+					description = <"*The medium is for another use, e.g., a telephone for contact, a relative's phone.(en)">
+				>
+				["at0040"] = <
+					text = <"*Use during business hours(en)">
+					description = <"*The medium is accessible during the business hours.(en)">
+				>
+				["at0041"] = <
+					text = <"*Use during day time(en)">
+					description = <"*The medium should be used during day time hours.(en)">
+				>
+				["at0042"] = <
+					text = <"*Use at weekend(en)">
+					description = <"*The medium should be used at the weekend.(en)">
+				>
+				["at0043"] = <
+					text = <"*Use at any time(en)">
+					description = <"*The medium can be used at all times.(en)">
+				>
+				["at0044"] = <
+					text = <"*Use during evening/night.(en)">
+					description = <"*The medium should be used during the evening or at night.(en)">
+				>
+			>
+		>
+		["ar-bh"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Electronic address(en)">
+					description = <"*The address of an electronic communication medium.(en)">
+				>
+				["at0001"] = <
+					text = <"*Components(en)">
+					description = <"*Electronic communication medium components.(en)">
+				>
+				["at0003"] = <
+					text = <"*Usage(en)">
+					description = <"*A code representing the manner of use that a person/organization applies to an electronic medium.(en)">
+				>
+				["at0004"] = <
+					text = <"*Time preferences(en)">
+					description = <"*An indication of the time of day preference for use of this electronic contact address.(en)">
+				>
+				["at0007"] = <
+					text = <"*Details(en)">
+					description = <"*A unique combination of characters used as input to electronic telecommunication equipment for the purpose of establishing contact.(en)">
+				>
+				["at0009"] = <
+					text = <"*Internet address(en)">
+					description = <"*Internet address.(en)">
+				>
+				["at0012"] = <
+					text = <"*Identification of the electronic communication medium(en)">
+					description = <"*Identification of telephone, fax, pager, e-mail, etc.(en)">
+				>
+				["at0020"] = <
+					text = <"*Telephone(en)">
+					description = <"*The medium is a telephone (not a mobile phone).(en)">
+				>
+				["at0021"] = <
+					text = <"*Fax(en)">
+					description = <"*The medium is a faxsimile machine.(en)">
+				>
+				["at0022"] = <
+					text = <"*Mobile(en)">
+					description = <"*The medium is a mobile phone (not a landline).(en)">
+				>
+				["at0023"] = <
+					text = <"*Pager(en)">
+					description = <"*The medium is a pager.(en)">
+				>
+				["at0024"] = <
+					text = <"*E-mail(en)">
+					description = <"*The medium is e-mail.(en)">
+				>
+				["at0025"] = <
+					text = <"*URL(en)">
+					description = <"*The medium is an internet address.(en)">
+				>
+				["at0030"] = <
+					text = <"*Personal(en)">
+					description = <"*The medium is for personal use.(en)">
+				>
+				["at0031"] = <
+					text = <"*Business(en)">
+					description = <"*The medium is for business use.(en)">
+				>
+				["at0032"] = <
+					text = <"*Personal/Business(en)">
+					description = <"*The medium is for both business and personal use.(en)">
+				>
+				["at0033"] = <
+					text = <"*Other use(en)">
+					description = <"*The medium is for another use, e.g., a telephone for contact, a relative's phone.(en)">
+				>
+				["at0040"] = <
+					text = <"*Use during business hours(en)">
+					description = <"*The medium is accessible during the business hours.(en)">
+				>
+				["at0041"] = <
+					text = <"*Use during day time(en)">
+					description = <"*The medium should be used during day time hours.(en)">
+				>
+				["at0042"] = <
+					text = <"*Use at weekend(en)">
+					description = <"*The medium should be used at the weekend.(en)">
+				>
+				["at0043"] = <
+					text = <"*Use at any time(en)">
+					description = <"*The medium can be used at all times.(en)">
+				>
+				["at0044"] = <
+					text = <"*Use during evening/night.(en)">
+					description = <"*The medium should be used during the evening or at night.(en)">
 				>
 			>
 		>
