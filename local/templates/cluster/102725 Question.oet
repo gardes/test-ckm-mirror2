@@ -96,7 +96,7 @@
 			</item>
 		</items>
 	</annotations>
-	<definition xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.freetextorderquestion.v0" concept_name="Freetextorderquestion" max="1" name="tttt"/>
+	<definition xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.freetextorderquestion.v0" concept_name="Freetextorderquestion" max="1" name="."/>
 	<integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.freetextorderquestion.v0">
 		<digest id="MD5-CAM-1.0.1">C97290239F3433C061235C494DB66DC1</digest>
 	</integrity_checks>
