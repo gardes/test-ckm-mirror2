@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=08bc7c02-1b56-4cf9-88b7-44e4310a7ab8)
-	openEHR-EHR-COMPOSITION.health_certificate.v0
+﻿archetype (adl_version=1.4; uid=b513104a-a7bf-4c6c-ad34-0a342498e7de)
+	openEHR-EHR-COMPOSITION.health_certificate.v1
 
 concept
 	[at0000]	-- Health certificate
@@ -111,7 +111,7 @@ Use cases asserted by a healthcare professional include, but are not limited to:
 			misuse = <"">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <"Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (Nasjonal IKT redaktør)", "Malin Berg, DIPS ASA, Norway", "SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India", "Gunn Elin Blakkisrud, DIPS ASA, Norway", "Marte Rime Bø, Direktoratet for e-helse, Norway", "Richard Conings, Open Line, Netherlands", "Kåre Flø, DIPS ASA, Norway", "Rosane Gotardo, Systema Ltda., Brazil", "Heather Grain, Llewelyn Grain Informatics, Australia", "Mikkel Johan Gaup Grønmo, Helse Nord IKT, Norway (Nasjonal IKT redaktør)", "Evelyn Hovenga, EJSH Consulting, Australia", "Kanika Kuwelker, Helse Vest IKT, Norway (openEHR Editor)", "Jörgen Kuylenstierna, eWeave AB, Sweden", "Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Hanne Marte Bårholm, Helse Vest IKT, Norway (openEHR Editor)", "Paul Miller, NES Digital Service, NHS Scotland, United Kingdom", "Arunakiry Natarajan, medondo, Germany", "Mikael Nyström, Cambio Healthcare Systems AB, Sweden", "Norwegian Review Summary, Norwegian Public Hospitals, Norway", "Terje Sagmyr, Helse Vest IKT, Norway", "Natalia Strauch, Medizinische Hochschule Hannover, Germany", "Anders Thurin, VGR, Sweden", "John Tore Valand, Helse Vest IKT, Norway", "Ina Wille, Helse-Vest RHF, Norway">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -120,9 +120,9 @@ Use cases asserted by a healthcare professional include, but are not limited to:
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3F0BE8AD681941AB352EA998C4979D95">
-		["build_uid"] = <"204a5227-070c-44c2-aa7a-65f08e13b510">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"4EDA6ACC9C96DA3DF8FA313B5BBF24F0">
+		["build_uid"] = <"94ffd60b-d3e7-4cc3-b60c-e238519eda8a">
+		["revision"] = <"1.0.0">
 	>
 
 definition
