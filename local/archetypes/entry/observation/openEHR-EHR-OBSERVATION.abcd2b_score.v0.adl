@@ -25,7 +25,7 @@ description
 		["sv"] = <
 			language = <[ISO_639-1::sv]>
 			purpose = <"Att utgöra stöd till klinisk bedömning av strokerisk i samband med transitorisk ischemisk attack (TIA). ">
-			use = <"Använd som stöd till klinisk bedömning av strokerisk i samband med transitorisk ischemisk attack (TIA). Instrumentet baseras på fem parametrar som vardera bidrar till totala summan enligt:
+			use = <"Använd som stöd TEST till klinisk bedömning av strokerisk i samband med transitorisk ischemisk attack (TIA). Instrumentet baseras på fem parametrar som vardera bidrar till totala summan enligt:
 
 - Ålder: 1p för ≥60 år
 - Blodtryck: 1p för systoliskt BT ≥140 och/eller diastoliskt BT ≥90
@@ -65,8 +65,8 @@ Rothwell PM, Giles MF, Flossmann E, Lovelock CE, Redgrave JN, Warlow CP, Mehta Z
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"B06A1A0AEB1325DC72083285FBC47C63">
-		["build_uid"] = <"df7f1b1d-31cc-4d2c-bac7-91fd93516f42">
+		["MD5-CAM-1.0.1"] = <"3D2D43A0A61F3AA78659DD8D9BDF3807">
+		["build_uid"] = <"def07b64-8600-4adb-a704-f4444bdc7b11">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -241,7 +241,7 @@ ontology
 		["sv"] = <
 			items = <
 				["at0000"] = <
-					text = <"*ABCD2 score(en)">
+					text = <"*ABCD2b score(en)">
 					description = <"*Tool to assess the risk of subsequent stroke in an individual presenting with a transient ischaemic attack (TIA).(en)">
 				>
 				["at0001"] = <
