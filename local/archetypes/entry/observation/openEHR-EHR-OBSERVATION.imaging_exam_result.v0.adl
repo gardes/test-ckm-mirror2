@@ -21,10 +21,13 @@ language
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			author = <
+				["name"] = <"Mr Ocean">
+				["organisation"] = <"Ocean">
+				["email"] = <"sebastian.garde@oceaninformatics.com">
 				["application"] = <"Adl Designer">
 			>
 			other_details = <
-				["notes"] = <"Generated automatically by Adl Designer">
+				["notes"] = <"Generated automatically by Adl Designere">
 			>
 		>
 	>
@@ -108,8 +111,8 @@ Imaging examination result, draft archetype, NEHTA Clinical Knowledge Manager [I
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"636D8356D589C61CAD7589B340C685AD">
-		["build_uid"] = <"6c348d26-896c-47ac-a556-7b57ddfd1d4e">
+		["MD5-CAM-1.0.1"] = <"505EFBD415FC6DE3A73A1193FD582D09">
+		["build_uid"] = <"65f9b5fe-ec9a-47a2-99fe-f98271b6c47c">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -579,19 +582,19 @@ ontology
 					description = <"@ internal @">
 				>
 				["at0004"] = <
-					text = <"*Test name (en)">
-					description = <"*The name of the imaging examination or procedure performed. (en)">
-					comment = <"*Coding with a terminology, potentially a pre-coordinated term specifying both modality and anatomical location, is desirable where possible. Possible candidate terminologies: LOINC, SNOMED CT or RadLex. (en)">
+					text = <"*Test name(en)">
+					description = <"*The name of the imaging examination or procedure performed.(en)">
+					comment = <"*Coding with a terminology, potentially a pre-coordinated term specifying both modality and anatomical location, is desirable where possible. Possible candidate terminologies: LOINC, SNOMED CT or RadLex.(en)">
 				>
 				["at0005"] = <
 					text = <"Metode">
-					description = <"*Type of equipment that originally acquired the image or series of images. (en)">
-					comment = <"*Also known as 'Examination type'. For example: Ultrasound; Computed tomography; or X-ray. Coding with a terminology is desirable, where possible. If the modality is specified by a code in the Examination result name, then this field may be redundant. (en)">
+					description = <"*Type of equipment that originally acquired the image or series of images.(en)">
+					comment = <"*Also known as 'Examination type'. For example: Ultrasound; Computed tomography; or X-ray. Coding with a terminology is desirable, where possible. If the modality is specified by a code in the Examination result name, then this field may be redundant.(en)">
 				>
 				["at0006"] = <
-					text = <"*Structured anatomical site (en)">
+					text = <"*Structured anatomical site(en)">
 					description = <"Detaljer om det anatomiske området som undersøkes bildediagnostisk, inkludert lateralitet, hvis alle individuelle funn og resultater er knyttet til den samme anatomiske plassering. Hvis det anatomiske området er tilstrekkelig spesifisert med en kode i undersøkelsesnavnet, så er dette felt ikke nødvendig. Bilder med høy oppløsning (fin-kornet) fra multiple anatomiske områder kan presenteres gruppevis som 'Resultatgruppe'.">
-					comment = <"*Identification of the anatomical site related to a specific finding will be recorded within each instance of CLUSTER.imaging_finding. (en)">
+					comment = <"*Identification of the anatomical site related to a specific finding will be recorded within each instance of CLUSTER.imaging_finding.(en)">
 				>
 				["at0007"] = <
 					text = <"Samlet resultatstatus">
@@ -599,7 +602,7 @@ ontology
 				>
 				["at0008"] = <
 					text = <"Funn">
-					description = <"*Narrative description of the clinical findings. (en)">
+					description = <"*Narrative description of the clinical findings.(en)">
 				>
 				["at0009"] = <
 					text = <"Registrert">
@@ -623,23 +626,23 @@ ontology
 				>
 				["at0014"] = <
 					text = <"Medfølgende klinisk informasjon">
-					description = <"*Description of clinical information available at the time of interpretation of results. (en)">
-					comment = <"*This may include a link to the clinical information provided in the original examination request. If other sources of clinical information have been used, this should be clearly stated using this data element. (en)">
+					description = <"*Description of clinical information available at the time of interpretation of results.(en)">
+					comment = <"*This may include a link to the clinical information provided in the original examination request. If other sources of clinical information have been used, this should be clearly stated using this data element.(en)">
 				>
 				["at0020"] = <
 					text = <"Bildediagnostisk diagnose">
-					description = <"*Single word, phrase or brief description representing the likely condition or diagnosis. (en)">
-					comment = <"*This data element has multiple occurrences to allow for more than one diagnoses. Coding with a terminology is preferred, where possible. This data element should be regarded as mutually exclusive to 'Differential diagnoses' - only one of 'Differential diagnoses' OR 'Imaging diagnosis' should be present in the each Imaging examination result. (en)">
+					description = <"*Single word, phrase or brief description representing the likely condition or diagnosis.(en)">
+					comment = <"*This data element has multiple occurrences to allow for more than one diagnoses. Coding with a terminology is preferred, where possible. This data element should be regarded as mutually exclusive to 'Differential diagnoses' - only one of 'Differential diagnoses' OR 'Imaging diagnosis' should be present in the each Imaging examination result.(en)">
 				>
 				["at0021"] = <
-					text = <"*Conclusion (en)">
-					description = <"*Narrative concise, clinically relevant interpretation of all imaging findings, and include a comparison with previous studies where appropriate. (en)">
-					comment = <"*Also referred to as 'Opinion' or 'Impression'. (en)">
+					text = <"*Conclusion(en)">
+					description = <"*Narrative concise, clinically relevant interpretation of all imaging findings, and include a comparison with previous studies where appropriate.(en)">
+					comment = <"*Also referred to as 'Opinion' or 'Impression'.(en)">
 				>
 				["at0023"] = <
 					text = <"Kommentar">
 					description = <"Ytterligere kommentarer om undersøkelsen som ikke passer i andre felter.">
-					comment = <"*For example: a note that the film was given to the patient. (en)">
+					comment = <"*For example: a note that the film was given to the patient.(en)">
 				>
 				["at0024"] = <
 					text = <"Dato og tidspunkt for ferdigstilt resultat">
@@ -710,21 +713,21 @@ ontology
 					description = <"Vedlagt eller referert bilde av en aktuelt visning.">
 				>
 				["at0041"] = <
-					text = <"*Structured technique (en)">
-					description = <"*Additional structured details of technical details and procedure. (en)">
+					text = <"*Structured technique(en)">
+					description = <"*Additional structured details of technical details and procedure.(en)">
 				>
 				["at0044"] = <
-					text = <"*Imaging findings (en)">
+					text = <"*Imaging findings(en)">
 					description = <"SLOT for detaljerte strukturerte beskrivelser av det bildediagnostiske svaret.">
 				>
 				["at0045"] = <
-					text = <"*Image representation (en)">
+					text = <"*Image representation(en)">
 					description = <"Digitalt bilde, video eller diagram som representerer undersøkelsesresultatet.">
 				>
 				["at0046"] = <
 					text = <"Tilleggsinformasjon">
-					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)">
-					comment = <"*For example: local information requirements; or additional metadata to align with FHIR. (en)">
+					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms.(en)">
+					comment = <"*For example: local information requirements; or additional metadata to align with FHIR.(en)">
 				>
 				["at0047"] = <
 					text = <"*Tree(en)">
@@ -732,45 +735,46 @@ ontology
 				>
 				["at0048"] = <
 					text = <"*Confounding factors(en)">
-					description = <"*Narrative description of factors, not recorded elsewhere, that may influence the test result.(en)">
+					description = <"*Narrative description of factors, not recorded elsewhere, that may influence the examination findings and/or result.(en)">
 				>
 				["at0049"] = <
-					text = <"*Technique (en)">
-					description = <"*Narrative description about the technical details and procedure. (en)">
-					comment = <"*For example: outline of technique; non-routine alternative or additional imaging; nature and route of administration of contrast agent, radiopharmaceuticals and/or treatments administered; adverse reactions to contrast media. (en)">
+					text = <"*Technique(en)">
+					description = <"*Narrative description about the technical details and procedure.(en)">
+					comment = <"*For example: outline of technique; non-routine alternative or additional imaging; nature and route of administration of contrast agent, radiopharmaceuticals and/or treatments administered; adverse reactions to contrast media.(en)">
 				>
 				["at0053"] = <
-					text = <"*Reported image (en)">
-					description = <"*Details about the image being reported. (en)">
+					text = <"*Reported image(en)">
+					description = <"*Details about the image being reported.(en)">
 				>
 				["at0054"] = <
-					text = <"*Comparison image (en)">
-					description = <"*Details about an image being compared to the image being reported. (en)">
+					text = <"*Comparison image(en)">
+					description = <"*Details about an image being compared to the image being reported.(en)">
+					comment = <"*For example: narrative description about progression/worsening of a condition. Structured comparison details will require representation in a separate CLUSTER archetype.(en)">
 				>
 				["at0055"] = <
-					text = <"*Anatomical site (en)">
+					text = <"*Anatomical site(en)">
 					description = <"*">
-					comment = <"*This data element is redundant if the anatomical site is identified in the 'Test name'. (en)">
+					comment = <"*This data element is redundant if the anatomical site is identified in the 'Test name'.(en)">
 				>
 				["at0056"] = <
-					text = <"*Comparison with previous (en)">
-					description = <"*Narrative descripition about the comparison of this image, or series of images, with previous similar examinations. (en)">
-					comment = <"*If there is no availability of previous imaging and/or reports this should also be stated using this data element. (en)">
+					text = <"*Comparison with previous(en)">
+					description = <"*Narrative descripition about the comparison of this image, or series of images, with previous similar examinations.(en)">
+					comment = <"*If there is no availability of previous imaging and/or reports this should also be stated using this data element.(en)">
 				>
 				["at0057"] = <
-					text = <"*Imaging quality (en)">
-					description = <"*Narrative description about the quality of the examination. (en)">
-					comment = <"*For example: the nature of any limitations and their impact on interpretation. (en)">
+					text = <"*Imaging quality(en)">
+					description = <"*Narrative description about the quality of the examination.(en)">
+					comment = <"*For example: the nature of any limitations and their impact on interpretation.(en)">
 				>
 				["at0058"] = <
-					text = <"*Imaging differential diagnosis (en)">
-					description = <"*Single word, phrase or brief description representing a possible condition or diagnosis. (en)">
-					comment = <"*This data element has multiple occurrences to allow for more than one differential diagnoses. Coding with a terminology is preferred, where possible. This data element should be regarded as mutually exclusive to 'Imaging diagnosis' - only one of 'Differential diagnoses' OR 'Imaging diagnosis' should be present in each Imaging examination result. (en)">
+					text = <"*Imaging differential diagnosis(en)">
+					description = <"*Single word, phrase or brief description representing a possible condition or diagnosis.(en)">
+					comment = <"*This data element has multiple occurrences to allow for more than one differential diagnoses. Coding with a terminology is preferred, where possible. This data element should be regarded as mutually exclusive to 'Imaging diagnosis' - only one of 'Differential diagnoses' OR 'Imaging diagnosis' should be present in each Imaging examination result.(en)">
 				>
 				["at0059"] = <
-					text = <"*Recommendation (en)">
-					description = <"*Suggestion for further imaging, investigations and/or referral, and associated rationale. (en)">
-					comment = <"*This data element has 0..* occurrences to allow for more than one recommendation and associated rationale. Formal orders for additional imaging examination, investigation should be recorded using an INSTRUCTION archetype, such as INSTRUCTION.service_request. (en)">
+					text = <"*Recommendation(en)">
+					description = <"*Suggestion for further imaging, investigations and/or referral, and associated rationale.(en)">
+					comment = <"*This data element has 0..* occurrences to allow for more than one recommendation and associated rationale. Formal orders for additional imaging examination, investigation should be recorded using an INSTRUCTION archetype, such as INSTRUCTION.service_request.(en)">
 				>
 			>
 		>
