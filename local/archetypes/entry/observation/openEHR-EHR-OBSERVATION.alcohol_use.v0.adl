@@ -68,8 +68,8 @@ Not to be used to record information about consumption of other substances other
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5AF23CB138F1FC52812727FB4FF2EE61">
-		["build_uid"] = <"2f9abbf9-29af-4eb0-9646-15ff595345b1">
+		["MD5-CAM-1.0.1"] = <"878F5B9F427D0F709A2E656890ABD0C7">
+		["build_uid"] = <"40036227-e5a5-4186-97a4-d640092eff00">
 		["revision"] = <"0.0.1-alpha">
 	>
 
