@@ -5,6 +5,15 @@ concept
 	[at0000]	-- Progress Note
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			author = <
+				["name"] = <"Kim Sommer">
+				["organisation"] = <"MHH">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"Heather Leslie">
@@ -13,6 +22,15 @@ description
 		["date"] = <"2013-04-11">
 	>
 	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Zur Repräsentation von gesundheitsbezogenen Ereignissen, die im Rahmen der Pflege des Patienten eingetreten sind, und/oder zum Gesundheitszustand des Patienten, zu Ergebnissen, Meinungen und Plänen, die zum Zeitpunkt der Aufzeichnung aktuell sind.">
+			use = <"Zur Repräsentation von gesundheitsbezogenen Ereignissen, die im Rahmen der Pflege des Patienten aufgetreten sind, und/oder zum Gesundheitszustand des Patienten, zu Ergebnissen, Meinungen und Plänen, die zum Zeitpunkt der Aufzeichnung aktuell sind. Fortschrittsberichte werden typischerweise verwendet, um laufende Pflegehinweise von verschiedenen Anbietern, die an Aspekten der Pflege während einer Art von Gesundheitsepisode teilnehmen, aufzuzeichnen, im Gegensatz zu einem einmaligen persönlichen Treffen in einer Klinik, das normalerweise als COMPOSITION.encounter aufgezeichnet wird. Ein Fortschrittsbericht darf kein persönliches Gespräch zwischen einem Arzt und dem Patienten beinhalten, kann aber verwendet werden, um Gesundheitsinformationen aus der Ferne vom Patienten aufzuzeichnen oder über ein anschließendes Telefongespräch oder eine Verbindung zwischen Gesundheitsversorgern ohne Anwesenheit des Patienten zu berichten.
+
+Eine typische Pflegefortschrittsmeldung während einer Krankenhausepisode kann EVALUATION.reason_for_encounter, EVALUATION.progress_note zur Aufzeichnung der Zusammenfassung der Pflegeschicht, eine Kombination von OBSERVATIONS zur Aufzeichnung von Vitalparameter-Messungen und/oder ACTIONS zur Aufzeichnung der ausgeführten Aufgaben oder Maßnahmen beinhalten.">
+			keywords = <"Fortschrittsbericht", ...>
+			misuse = <"">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record details of health-related events that have occurred as part of the subject's care, and/or the subject's health status, findings, opinions and plans that are current at the time of recording.">
@@ -33,8 +51,8 @@ A typical nursing progress note during a hospital episode might include EVALUATI
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"39E8BC92B5A362F1CB48E5CD0CB75774">
-		["build_uid"] = <"dc2721f6-3b42-4994-b7af-252d6e5ad24d">
+		["MD5-CAM-1.0.1"] = <"F579B01D84809755F834D896C82934C1">
+		["build_uid"] = <"8da16efc-2907-4212-9e81-0def5b638ba0">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -47,7 +65,6 @@ definition
 		}
 	}
 
-
 ontology
 	term_definitions = <
 		["en"] = <
@@ -55,6 +72,14 @@ ontology
 				["at0000"] = <
 					text = <"Progress Note">
 					description = <"Document used to record details of health-related events that have occurred as part of the subject's care, and/or the subject's health status, findings, opinions and plans that are current at the time of recording.">
+				>
+			>
+		>
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Fortschrittsbericht">
+					description = <"Ein Dokument, das zur Repräsentation gesundheitsbezogener Ereignisse dient, die im Rahmen der Pflege des Patienten aufgetreten sind, und/oder zum Gesundheitszustand des Patienten, zu Ergebnissen, Meinungen und Plänen, die zum Zeitpunkt der Aufzeichnung aktuell sind.">
 				>
 			>
 		>
