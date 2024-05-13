@@ -63,7 +63,7 @@
   <definition xsi:type="COMPOSITION" archetype_id="openEHR-EHR-COMPOSITION.progress_note.v0" concept_name="Fortschrittsbericht">
     <Content xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.follow_up.v0" concept_name="Follow-Up" path="/content">
       <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0046]" clone="true" name="Follow-Up Ergebnis #1" />
-      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.hospitalization.v0" concept_name="Krankenhausaufenthalt" path="/data[at0001]/events[at0002]/data[at0003]/items[at0046 and name/value='Follow-Up Ergebnis']/items[at0049]" />
+      <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.hospitalization.v0" concept_name="Krankenhausaufenthalt" path="/data[at0001]/events[at0002]/data[at0003]/items[at0046 and name/value='Follow-Up Result']/items[at0049]" />
       <Items xsi:type="CLUSTER" archetype_id="openEHR-EHR-CLUSTER.hospitalization.v0" concept_name="Krankenhausaufenthalt" path="/data[at0001]/events[at0002]/data[at0003]/items[at0046 and name/value='Follow-Up Ergebnis #1']/items[at0049]" />
     </Content>
     <Context />
