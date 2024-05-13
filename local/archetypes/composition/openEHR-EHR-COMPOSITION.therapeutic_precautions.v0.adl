@@ -2,7 +2,7 @@
 	openEHR-EHR-COMPOSITION.therapeutic_precautions.v0
 
 concept
-	[at0000]	-- Therapeutic precautions
+	[at0000]	-- Therapeutic precautionsNEWNAME
 language
 	original_language = <[ISO_639-1::en]>
 description
@@ -32,8 +32,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"BB749FF36B7F0B2E03E05195C1EEB2B6">
-		["build_uid"] = <"11259227-8aa5-4088-9008-d4eb15435f99">
+		["MD5-CAM-1.0.1"] = <"261CCEC4BEFA7FBCDFA340E6E349C3E0">
+		["build_uid"] = <"2d6898d4-e2b0-41de-a90c-0b5a9bd2c47e">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -52,7 +52,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Therapeutic precautions">
+					text = <"Therapeutic precautionsNEWNAME">
 					description = <"Persistent data relating to issues that may influence or preclude the administration of one or more therapies or interventions.">
 				>
 			>
