@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <template xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="openEHR/v1/Template">
   <id>2247b172-b90b-4ece-895d-29a4510365cb</id>
-  <name>New Template with ckms-169 problem </name>
+  <name>New Template with ckms-169 problem NEW NAME</name>
   <description>
     <lifecycle_state>Initial</lifecycle_state>
     <details>
