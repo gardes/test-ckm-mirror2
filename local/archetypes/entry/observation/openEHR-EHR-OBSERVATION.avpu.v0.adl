@@ -14,7 +14,8 @@ language
 				["email"] = <"sebastian.garde@oceaninformatics.comnn">
 			>
 			other_details = <
-				["other_contributors"] = <"test">
+				["other_contributors"] = <"test
+me">
 			>
 		>
 		["pt-br"] = <
@@ -70,8 +71,8 @@ Kelly, CA; Upex A; Bateman DN. (February 2005). \"Comparison of consciousness le
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"F0D2FE46E4BB71E5717A52B45DB153A4">
-		["build_uid"] = <"896a5bf7-6872-4421-b7e0-554e36aa4168">
+		["MD5-CAM-1.0.1"] = <"DD43EAEFDA9507ECDF9E7EF75CFB719C">
+		["build_uid"] = <"3f33d117-5928-460e-b268-35ad372cf806">
 		["revision"] = <"0.0.1-alpha">
 	>
 
