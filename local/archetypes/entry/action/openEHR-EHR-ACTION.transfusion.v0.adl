@@ -2,7 +2,7 @@
 	openEHR-EHR-ACTION.transfusion.v0
 
 concept
-	[at0000]	-- Transfusion
+	[at0000]	-- Transfusionss
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -63,8 +63,8 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"020B810D16EC0D21377941C939EF95AB">
-		["build_uid"] = <"d0c5f3de-98a5-440e-9469-3d1adfe26cac">
+		["MD5-CAM-1.0.1"] = <"4B471B99F94E815410321C329816E711">
+		["build_uid"] = <"a015f256-8657-425d-89c7-37d6951acfb2">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -371,8 +371,8 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"Transfusion">
-					description = <"Recording the actions taken during transfusion.">
+					text = <"Transfusionss">
+					description = <"Recording the actions taken during transfusion.s">
 				>
 				["at0001"] = <
 					text = <"Tree">
