@@ -2,7 +2,7 @@
 	openEHR-EHR-OBSERVATION.four_at.v0
 
 concept
-	[at0000]	-- 4 ‘A’s Test (4AT)
+	[at0000]	-- 4 ‘A’s Test (4AT-sg)
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -50,8 +50,8 @@ Bellelli G, Morandi A, Davis DH, Mazzola P, Turco R, Gentile S, Ryan T, Cash H, 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"3B061B4C2D55F1C035682CA5EB9EAF58">
-		["build_uid"] = <"40e84ca2-cc0f-441d-bb59-1b54e32d0c7c">
+		["MD5-CAM-1.0.1"] = <"8AB06E06FC939831C946BA4AB4441C26">
+		["build_uid"] = <"e2e1bccf-dac4-49aa-ad43-c6912063793f">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -124,7 +124,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"4 ‘A’s Test (4AT)">
+					text = <"4 ‘A’s Test (4AT-sg)">
 					description = <"A screening tool used for rapid initial assessment of delirium and cognitive impairment.">
 				>
 				["at0001"] = <
@@ -146,6 +146,10 @@ ontology
 				["at0005"] = <
 					text = <"Normal">
 					description = <"Fully alert, but not agitated, throughout assessment.">
+				>
+				["at0006"] = <
+					text = <"Mild sleepiness for <10 seconds after waking, then normal">
+					description = <"">
 				>
 				["at0007"] = <
 					text = <"Clearly abnormal">
@@ -198,6 +202,10 @@ ontology
 					text = <"Yes">
 					description = <"">
 				>
+				["at0019"] = <
+					text = <"Total score">
+					description = <"The total sum of each component parameter for the 4AT.">
+				>
 				["at0020"] = <
 					text = <"ItemTree">
 					description = <"@ internal @">
@@ -206,14 +214,6 @@ ontology
 					text = <"Extension">
 					description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
 					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
-				>
-				["at0019"] = <
-					text = <"Total score">
-					description = <"The total sum of each component parameter for the 4AT.">
-				>
-				["at0006"] = <
-					text = <"Mild sleepiness for <10 seconds after waking, then normal">
-					description = <"">
 				>
 				["at0022"] = <
 					text = <"Untestable">
