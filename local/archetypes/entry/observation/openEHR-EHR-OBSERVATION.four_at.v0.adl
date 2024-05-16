@@ -2,7 +2,7 @@
 	openEHR-EHR-OBSERVATION.four_at.v0
 
 concept
-	[at0000]	-- 4 ‘A’s Test (4AT-sg)
+	[at0000]	-- 4 ‘A’s Test (4AT-sg2)
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
@@ -50,8 +50,8 @@ Bellelli G, Morandi A, Davis DH, Mazzola P, Turco R, Gentile S, Ryan T, Cash H, 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"8AB06E06FC939831C946BA4AB4441C26">
-		["build_uid"] = <"e2e1bccf-dac4-49aa-ad43-c6912063793f">
+		["MD5-CAM-1.0.1"] = <"77D0957E5F832F29657C64789561F028">
+		["build_uid"] = <"d047fc8e-d590-443a-a9ba-e0e44ec6be20">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -124,7 +124,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"4 ‘A’s Test (4AT-sg)">
+					text = <"4 ‘A’s Test (4AT-sg2)">
 					description = <"A screening tool used for rapid initial assessment of delirium and cognitive impairment.">
 				>
 				["at0001"] = <
