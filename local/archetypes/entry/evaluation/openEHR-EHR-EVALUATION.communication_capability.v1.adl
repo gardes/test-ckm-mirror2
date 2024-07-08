@@ -61,9 +61,9 @@ Not to be used to record details about an interpretation that was performed - us
 		["original_namespace"] = <"no.nasjonalikt">
 		["original_publisher"] = <"Nasjonal IKT">
 		["custodian_namespace"] = <"no.nasjonalikt">
-		["MD5-CAM-1.0.1"] = <"EC507FEB6429C45753F569D2269FA4C0">
-		["build_uid"] = <"ed2bc015-0aae-4ec0-95ab-a0ed7404a697">
-		["revision"] = <"1.0.0">
+		["MD5-CAM-1.0.1"] = <"2B214343BA4DA5B93579044D5686695C">
+		["build_uid"] = <"1427aab4-b66d-4b47-9fcb-40c17a877059">
+		["revision"] = <"1.0.1">
 	>
 
 definition
