@@ -141,7 +141,7 @@ Not to be used to record information about individualised protocols, care plans 
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"601608EA66FA4FD56D573EF084D5B2C0">
-		["build_uid"] = <"560b3e0d-7189-454f-8aaa-83fc3bb13b6d">
+		["build_uid"] = <"64e366d6-10d7-4c1a-a66e-fa0ab15cbc06">
 		["revision"] = <"0.0.1-alpha">
 	>
 
