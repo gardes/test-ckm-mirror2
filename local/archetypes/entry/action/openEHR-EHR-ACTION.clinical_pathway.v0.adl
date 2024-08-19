@@ -14,6 +14,14 @@ language
 				["email"] = <"bna@dips.no, silje.ljosland.bakke@helse-vest-ikt.no">
 			>
 		>
+		["ar-bh"] = <
+			language = <[ISO_639-1::ar-bh]>
+			author = <
+				["name"] = <"Mr Ocean">
+				["organisation"] = <"Ocean Informatics">
+				["email"] = <"sebastian.garde@oceaninformatics.com">
+			>
+		>
 		["gd"] = <
 			language = <[ISO_639-1::gd]>
 			author = <
@@ -67,6 +75,18 @@ This archetype has been designed to support recording the carrying out of high l
 Not to be used to record information about individualised protocols, care plans or guidelines. Use other appropriate archetypes for this purpose.">
 			copyright = <"© Nasjonal IKT HF, openEHR Foundation">
 		>
+		["ar-bh"] = <
+			language = <[ISO_639-1::ar-bh]>
+			purpose = <"*To record information about a high level, standardised clinical pathway carried out to organise the delivery of healthcare, and its constituent high level activities.(en)">
+			use = <"*Use to record information about a high level, standardised clinical pathway carried out to organise the delivery of healthcare, and its constituent high level activities.
+
+This archetype has been designed to support recording the carrying out of high level, standardised clinical pathways. Examples include, but are not limited to:
+- Cancer care pathways outlining the major events of a course of cancer treatment, including the start and end of investigation, particularly significant multidisciplinary team (MDT) meetings, or the start of medical, radiation or surgical treatment.
+- Standardised high level pathways for any type of medical or surgical treatment, such as allergen immunotherapy (AIT) or elective hyperbaric oxygen therapy (HBOT).(en)">
+			misuse = <"*Not to be used to record the order for a clinical pathway. Use the INSTRUCTION.clinical_pathway_order archetype for this purpose.
+
+Not to be used to record information about individualised protocols, care plans or guidelines. Use other appropriate archetypes for this purpose.(en)">
+		>
 		["gd"] = <
 			language = <[ISO_639-1::gd]>
 			purpose = <"*To record information about a high level, standardised clinical pathway carried out to organise the delivery of healthcare, and its constituent high level activities.(en)">
@@ -100,8 +120,8 @@ Not to be used to record information about individualised protocols, care plans 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"2028B869294EB23E81ABD5135719855B">
-		["build_uid"] = <"00ccb103-befa-40d1-b134-61a17b06f85b">
+		["MD5-CAM-1.0.1"] = <"55A045AFEE50B5894AFCC157607B123C">
+		["build_uid"] = <"9281d30b-bf0e-4a2c-b713-a0a6c704db61">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -495,7 +515,7 @@ ontology
 					description = <"*The pathway has been aborted.(en)">
 				>
 				["at0006"] = <
-					text = <"*Pathway cancelled(en)">
+					text = <"dswdeww">
 					description = <"*The pathway has been cancelled.(en)">
 				>
 				["at0007"] = <
@@ -618,6 +638,90 @@ ontology
 				["at0017"] = <
 					text = <"*Pathway postponed(en)">
 					description = <"*The pathway has been postponed.(en)">
+				>
+				["at0018"] = <
+					text = <"*Additional details(en)">
+					description = <"*Additional structured details about the care pathway or activity.(en)">
+				>
+				["at0019"] = <
+					text = <"*Pathway name(en)">
+					description = <"*The name of the clinical pathway.(en)">
+				>
+				["at0020"] = <
+					text = <"*Reason(en)">
+					description = <"*Reason that the care flow step for the clinical pathway was carried out.(en)">
+				>
+				["at0021"] = <
+					text = <"*Comment(en)">
+					description = <"*Additional narrative about the pathway not captured in other fields.(en)">
+				>
+				["at0022"] = <
+					text = <"*Extension(en)">
+					description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
+				>
+			>
+		>
+		["ar-bh"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Clinical pathway(en)">
+					description = <"*A high level, standardised clinical pathway carried out to organise the delivery of healthcare.(en)">
+				>
+				["at0001"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Activity(en)">
+					description = <"*The name of the activity which was scheduled or performed.(en)">
+				>
+				["at0003"] = <
+					text = <"*Activity performed(en)">
+					description = <"*The activity has been performed.(en)">
+				>
+				["at0005"] = <
+					text = <"*Pathway aborted(en)">
+					description = <"*The pathway has been aborted.(en)">
+				>
+				["at0006"] = <
+					text = <"*Pathway cancelled(en)">
+					description = <"*The pathway has been cancelled.(en)">
+				>
+				["at0007"] = <
+					text = <"*Pathway completed(en)">
+					description = <"*The pathway has been completed.(en)">
+				>
+				["at0008"] = <
+					text = <"*Activity scheduled(en)">
+					description = <"*The activity has been scheduled.(en)">
+				>
+				["at0009"] = <
+					text = <"*Pathway planned(en)">
+					description = <"*The pathway has been planned.(en)">
+				>
+				["at0010"] = <
+					text = <"*Description(en)">
+					description = <"*Narrative description about the pathway or activity.(en)">
+				>
+				["at0011"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0013"] = <
+					text = <"*Healthcare provider details(en)">
+					description = <"*Details about the healthcare provider or organisation responsible for the recorded care flow step.(en)">
+				>
+				["at0014"] = <
+					text = <"*External activity(en)">
+					description = <"*Was the activity performed outside of the healthcare provider responsible for the current health record?(en)">
+				>
+				["at0016"] = <
+					text = <"*Pathway suspended(en)">
+					description = <"*The pathway has been suspended.(en)">
+				>
+				["at0017"] = <
+					text = <"ed">
+					description = <"dws">
 				>
 				["at0018"] = <
 					text = <"*Additional details(en)">
