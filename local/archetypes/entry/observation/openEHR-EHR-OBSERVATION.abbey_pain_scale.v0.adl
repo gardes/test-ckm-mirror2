@@ -41,7 +41,7 @@ description
 		>
 	>
 	lifecycle_state = <"in_development">
-	other_contributors = <"Sebastian Garde, Ocean Health Systems, Germany (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia", "Heather L, Atomica Informatics, Australia (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)">
+	other_contributors = <"Heather Leslie, Atomica Informatics, Australia", ...>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -52,8 +52,8 @@ Liu JY, Briggs M, Closs SJ. The psychometric qualities of four observational pai
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"39B4257D19A91531023BACAA7955C10F">
-		["build_uid"] = <"5a952b19-017d-439b-9617-cb20664e3473">
+		["MD5-CAM-1.0.1"] = <"B1E09466131ED871F3E2EA0C9C0EFF82">
+		["build_uid"] = <"4b83c511-3165-401b-8ee1-fea5469dc06d">
 		["revision"] = <"0.0.1-alpha">
 	>
 

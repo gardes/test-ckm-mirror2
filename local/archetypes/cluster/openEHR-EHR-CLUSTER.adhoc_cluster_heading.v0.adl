@@ -14,14 +14,6 @@ language
 				["email"] = <"wellmann.ramona@mh-hannover.de, Strauch.Natalia@mh-hannover.de">
 			>
 		>
-		["af"] = <
-			language = <[ISO_639-1::af]>
-			author = <
-				["name"] = <"Mr Ocean">
-				["organisation"] = <"Ocean Informatics">
-				["email"] = <"sebastian.garde@oceaninformatics.com">
-			>
-		>
 	>
 description
 	original_author = <
@@ -36,12 +28,6 @@ description
 			purpose = <"Eine generische Clusterüberschrift, welche üblicherweise im Rahmen der Template Modellierung umbenannt wird.">
 			use = <"Für den Aufbau und die Benennung eines Clusters innerhalb eines definierten Templates.">
 			keywords = <"Überschrift", "Cluster", "Ad hoc", "Clusterüberschrift">
-			misuse = <"">
-		>
-		["af"] = <
-			language = <[ISO_639-1::af]>
-			purpose = <"test purpose translated">
-			use = <"Test use translated">
 			misuse = <"">
 		>
 		["en"] = <
@@ -63,8 +49,8 @@ http://dcm.nehta.org.au/ckm#showArchetype_1013.1.1288_1 (discontinued).">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"E68BCBA3D9B91049C9F3D4A9E779ED54">
-		["build_uid"] = <"fad788cc-88ce-4c17-b803-0e6e9ada9e65">
+		["MD5-CAM-1.0.1"] = <"528770673B6F27BE273FC9F786744619">
+		["build_uid"] = <"45fe8c2c-067f-471b-87e5-84fc1bc771c4">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -102,18 +88,6 @@ ontology
 				["at0002"] = <
 					text = <"Inhalt">
 					description = <"SLOT für detaillierte Inhalte.">
-				>
-			>
-		>
-		["af"] = <
-			items = <
-				["at0000"] = <
-					text = <"Adhoc cluster heading Translated">
-					description = <"">
-				>
-				["at0002"] = <
-					text = <"Content translated">
-					description = <"SLOT for Detailed Content translated">
 				>
 			>
 		>

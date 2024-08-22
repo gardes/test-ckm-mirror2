@@ -70,8 +70,8 @@ Not to be used to record the exclusion or absence of adverse reactions, family h
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"2DCECCDEA74C4AD5B9B0F6087F57BE61">
-		["build_uid"] = <"56833869-1d7c-4920-83ef-785f6c93b02e">
-		["revision"] = <"1.2.0">
+		["build_uid"] = <"9ebf8286-e78c-40e5-bb9f-01b54114b662">
+		["revision"] = <"1.1.1">
 	>
 
 definition

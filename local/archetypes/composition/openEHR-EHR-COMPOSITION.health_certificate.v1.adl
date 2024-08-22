@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=b513104a-a7bf-4c6c-ad34-0a342498e7de)
+﻿archetype (adl_version=1.4; uid=eb0afe76-1cc2-451b-adf1-fa5dfd2885b4)
 	openEHR-EHR-COMPOSITION.health_certificate.v1
 
 concept
@@ -22,14 +22,6 @@ language
 				["email"] = <"mikkel.johan.gaup.gronmo@hnikt.no">
 			>
 			accreditation = <"Nasjonal IKT">
-		>
-		["ca"] = <
-			language = <[ISO_639-1::ca]>
-			author = <
-				["name"] = <"Mr Ocean">
-				["organisation"] = <"Ocean">
-				["email"] = <"sebastian.garde@oceaninformatics.com">
-			>
 		>
 	>
 description
@@ -56,7 +48,6 @@ Verwendungsbeispiele, die von einem Administrator angegeben werden, umfassen, si
 - Anwesenheit in einer Gesundheitseinrichtung.">
 			keywords = <"Zertifikat, Bescheinigung, Aussage, Erklärung, Tod, Krankenurlaub, Fitness, Impfung, Übung, Beschäftigung, Fliegen, Fahren, Tauchen", ...>
 			misuse = <"">
-			copyright = <"© openEHR Foundation">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
@@ -94,34 +85,17 @@ Use cases asserted by a healthcare professional include, but are not limited to:
 			misuse = <"">
 			copyright = <"© openEHR Foundation">
 		>
-		["ca"] = <
-			language = <[ISO_639-1::ca]>
-			purpose = <"eeee">
-			use = <"*Use to record a formal assessment regarding the health status of an individual, usually asserted by the treating clinician and intended for sharing with third parties.
-
-Use cases asserted by a healthcare professional include, but are not limited to:
-- reduced capacity for work duties or hours;
-- death certificate - using the content of the EVALUATION.cause_of_death archetype to carry the specific death-related information within a Death Certificate template;
-- functional capacity;
-- fitness for specific activities, including driving, flying or diving; or
-- certificate of vaccination status.
- 
- Use cases asserted by an administrator include, but are not limited to:
-- attendance at a health facility.(en)">
-			misuse = <"">
-		>
 	>
 	lifecycle_state = <"published">
 	other_contributors = <"Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (Nasjonal IKT redaktør)", "Malin Berg, DIPS ASA, Norway", "SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India", "Gunn Elin Blakkisrud, DIPS ASA, Norway", "Marte Rime Bø, Direktoratet for e-helse, Norway", "Richard Conings, Open Line, Netherlands", "Kåre Flø, DIPS ASA, Norway", "Rosane Gotardo, Systema Ltda., Brazil", "Heather Grain, Llewelyn Grain Informatics, Australia", "Mikkel Johan Gaup Grønmo, Helse Nord IKT, Norway (Nasjonal IKT redaktør)", "Evelyn Hovenga, EJSH Consulting, Australia", "Kanika Kuwelker, Helse Vest IKT, Norway (openEHR Editor)", "Jörgen Kuylenstierna, eWeave AB, Sweden", "Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Hanne Marte Bårholm, Helse Vest IKT, Norway (openEHR Editor)", "Paul Miller, NES Digital Service, NHS Scotland, United Kingdom", "Arunakiry Natarajan, medondo, Germany", "Mikael Nyström, Cambio Healthcare Systems AB, Sweden", "Norwegian Review Summary, Norwegian Public Hospitals, Norway", "Terje Sagmyr, Helse Vest IKT, Norway", "Natalia Strauch, Medizinische Hochschule Hannover, Germany", "Anders Thurin, VGR, Sweden", "John Tore Valand, Helse Vest IKT, Norway", "Ina Wille, Helse-Vest RHF, Norway">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
-		["custodian_organisation"] = <"openEHR">
-		["references"] = <"Health certificate, Published archetype [Internet]. openEHR Foundation, Norwegian Clinical Knowledge Manager [cited: 2024-01-10]. Available from: https://arketyper.no/ckm/archetypes/1078.36.2365">
+		["custodian_organisation"] = <"openEHR Foundation">
 		["original_namespace"] = <"org.openehr">
-		["original_publisher"] = <"openEHR">
+		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"4EDA6ACC9C96DA3DF8FA313B5BBF24F0">
-		["build_uid"] = <"94ffd60b-d3e7-4cc3-b60c-e238519eda8a">
+		["MD5-CAM-1.0.1"] = <"2B3CB0C5E69EAAB446A04927F70E6002">
+		["build_uid"] = <"553c3f10-2917-4487-a7dd-c7417983ed96">
 		["revision"] = <"1.0.0">
 	>
 
@@ -164,6 +138,9 @@ definition
 			}
 		}
 	}
+
+
+
 
 ontology
 	term_definitions = <
@@ -281,42 +258,6 @@ ontology
 					text = <"Zertifikatstyp">
 					description = <"Art des Zertifikats.">
 					comment = <"Beispiel: Impfstatus, Flugtauglichkeit, Medizinisches Attest.">
-				>
-			>
-		>
-		["ca"] = <
-			items = <
-				["at0000"] = <
-					text = <"*Health certificate(en)">
-					description = <"*A formal statement about the health status or situation related to an individual.(en)">
-				>
-				["at0001"] = <
-					text = <"*Coded text(en)">
-					description = <"">
-				>
-				["at0002"] = <
-					text = <"*Event Context(en)">
-					description = <"">
-				>
-				["at0003"] = <
-					text = <"Item tree">
-					description = <"@ internal @">
-				>
-				["at0004"] = <
-					text = <"*Individual(en)">
-					description = <"*Identification of the subject of the certificate.(en)">
-				>
-				["at0006"] = <
-					text = <"*Certificate ID(en)">
-					description = <"*Identification information about the certificate.(en)">
-				>
-				["at0009"] = <
-					text = <"*Extension(en)">
-					description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
-				>
-				["at0010"] = <
-					text = <"*Certificate type(en)">
-					description = <"*Type of certificate.(en)">
 				>
 			>
 		>

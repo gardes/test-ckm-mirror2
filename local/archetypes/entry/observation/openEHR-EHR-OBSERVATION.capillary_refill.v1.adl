@@ -68,9 +68,9 @@ Kawaguchi R, Nakada TA, Oshima T, Shinozaki M, Nakaguchi T, Haneishi H, Oda S. O
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"94C2D8614A1CD79692B81F6BE3A40419">
-		["build_uid"] = <"f0170df1-c5e6-46df-9420-2ff87f84483f">
+		["build_uid"] = <"e00d1d6c-e3ef-400d-baf0-1fbc15c378b3">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
-		["revision"] = <"1.0.2">
+		["revision"] = <"1.0.0">
 	>
 
 definition

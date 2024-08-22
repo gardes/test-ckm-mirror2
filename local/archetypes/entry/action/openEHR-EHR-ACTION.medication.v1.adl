@@ -9,9 +9,9 @@ language
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			author = <
-				["name"] = <"Ramona Wellmann, Natalia Strauch, Mr Ocean">
-				["organisation"] = <"Medizinische Hochschule Hannover, Ocean Informatics">
-				["email"] = <"strauch.natalia@mh-hannover.de, Strauch.Natalia@mh-hannover.de, sebastian.garde@oceaninformatics.com">
+				["name"] = <"Ramona Wellmann, Natalia Strauch">
+				["organisation"] = <"Medizinische Hochschule Hannover">
+				["email"] = <"strauch.natalia@mh-hannover.de, Strauch.Natalia@mh-hannover.de">
 			>
 		>
 		["ru"] = <
@@ -25,11 +25,10 @@ language
 		["sv"] = <
 			language = <[ISO_639-1::sv]>
 			author = <
-				["name"] = <"Elham Gholami">
-				["organisation"] = <"SLL">
-				["email"] = <"elham.gholami@sll.se">
+				["name"] = <"Emma Malm">
+				["organisation"] = <"Karolinska Universitetssjukhuset">
+				["email"] = <"emma.malm@cambio.se">
 			>
-			accreditation = <"Ackreditering">
 		>
 		["es-ar"] = <
 			language = <[ISO_639-1::es-ar]>
@@ -40,8 +39,9 @@ language
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			author = <
-				["name"] = <"Vebjørn Arntzen, Silje L. Bakke">
-				["organisation"] = <"Oslo universitetssykehus HF, Nasjonal IKT HF, Norway">
+				["name"] = <"Vebjørn Arntzen, Silje L. Bakke, John Tore Valand">
+				["organisation"] = <"Oslo universitetssykehus HF, Nasjonal IKT HF, Norway, Helse Bergen, Helse Vest IKT">
+				["email"] = <"john.tore.valand@helse-bergen.no, john.tore.valand@helse-vest-ikt.no">
 			>
 		>
 		["pt-br"] = <
@@ -75,6 +75,22 @@ language
 				["email"] = <"linforest@163.com">
 			>
 			accreditation = <"?">
+		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			author = <
+				["name"] = <"Jaqueline Peredo, Julio de Sosa">
+				["organisation"] = <"Servei Català de la Salut">
+				["email"] = <"jperedo2003@gmail.com, juliodesosa@catsalut.cat">
+			>
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			author = <
+				["name"] = <"Julio de Sosa">
+				["organisation"] = <"Servei Català de la Salut">
+				["email"] = <"juliodesosa@catsalut.cat">
+			>
 		>
 	>
 description
@@ -123,48 +139,6 @@ Nicht für den Medikamentenabgleich verwenden. Für diesen Zweck muss der passen
 Nicht für eine formelle Überprüfung einer ganzen Medikamentenliste, z.B. durch einen Apotheker, verwenden. Für diesen Zweck müssen andere geeignete Archetypen verwendet werden.
 ">
 		>
-		["sv"] = <
-			language = <[ISO_639-1::sv]>
-			purpose = <"För registrering av detaljer om aktiviteter som är relaterade till planering, schemaläggning, recepthantering, utdelning, administrering, upphörande och annan användning av läkemedel, vaccin, näringsprodukt eller annan behandlings produkt.">
-			use = <"Används för att registrera information om de aktiviteter som krävs för att stödja alla aspekter av läkemedelshantering inklusive planering, schemaläggning, avbrott, avbokning, slutförande av läkemedelsbeställningar och den faktiska administreringen av läkemedelsföremål. Detta görs genom att registrera data för specifika aktiviteter, som definieras av \"Pathway\" -flödesstegen i denna arketyp.
-
-Arketypen är avsedd för att användas för alla typer av medicineringar och relaterade beställningar, oavsett om det ordinerats av en vårdpersonal eller är receptfri. I skopet inkluderar också beställningar på vaccinationer, parenterala vätskor eller andra behandlings produkter, såsom bandage, näringsprodukter eller andra föremål som appliceras eller administreras för att ha en behandlingseffekts. Något gemensamt mellan de är att alla har samma dataregistrerings pattern/mönster. Denna arketyp kommer att användas för bara registrering av medicinering eller vaccination som har ordinerats eller administrerats i en läkemedels- eller vaccinationslista.
-
-Ytterligare strukturerad och detaljerad information om aktiviteten kan fångas med hjälp av målbaserade och specifika arketyper infogade i '' Preparations details '', '' Amount'', 'Structured body site', 'Administration device' eller 'Additional details' SLOTs.
-
-Tider relaterade till läkemedelshantering kan hanteras på ett av två sätten:
-- Använda Referensmodellen -för att registrera tiden för att utföra alla steg, använd attributet ACTION time 
-- Archetyped data element - dataelementet \"Original schemalagt datum / tid\" är avsett att registrera den tid då läkemedelsartikeln var avsedd att administreras. Notera! Motsvarande ACTION-tidsattribut för den schemalagda steget registrerar den tid då den kliniska aktiviteten planerades i ett system, det beskriver inte det bestämda datumet / tiden när aktiviteten är avsedd att utföras.
-
-I praktiken kommer vissa läkemedel (till exempel vid återupplivning på akutmottagningen) att administreras baserad på protokoll eller en muntlig ordination. Det kommer inte att beställas i förväg. Läkemedlets detaljer kommer att läggas till i steget: \"Dos administrerad\". För en pågående medicinering kommer data om läkemedelsartikeln att registreras i steget \"Dos administrerad\", man behöver lämna instruktionen i aktivt tillstånd tills medicineringen är klar. När den sista händelsen registreras och information om sista steget \"Läkemedelsprocess slutförd\" är klarregistrerad då visas \"status klar\" för ordinationen.
-
-I andra situationer, till exempel sekundärvård, kan det finnas en formell beställning av ett läkemedels artikel med en motsvarande INSTRUKTION.medicin_order-arketyp. Denna ACTION-arketyp kan sedan användas för att registrera arbetsflödet för tid, datum och hur ordinationen har genomförts. 
-
-Det kan vara så att leverantören har inte hunnit med leverans av läkemedlet i tid eller annan aktivitet orsakat så att förberedelse av läkemedels artikel har avbrutits. Om det finns en formell beställning för läkemedelsartikeln, administreras detta i själva processen för förberedelse av medicinska artikel, 
-Om det finns en formell beställning för en läkemedelsartikel kommer statusbeskrivning av denna artikel presenteras i steget där data är registrerad. 
-
-Exempelvis, Med hjälp av denna arketyp kan det fortskridande tillståndet för en Paracetamol beställning registreras. detta görs genom att det separata poster i EHR-framstegsnoterna vid varje \"Pathway\" -steg. När man dokumenterar anledningen till varför en aktivitet utfördes eller ett vägsteg valdes.
-Elementet \"orsak\" används för att registrera anledningen till varför en aktivitet upphördes eller ett vägsteg valdes, till exempel varför en dos utelämnades eller en nedicineringen upphörde.
-
-Användning av ACTION-arketyp samt INSTRUCTION.medication_order-arketyp gör så att oförändrade information från ordningen till hanteringsaktiviteten i ACTION inte upprepas. Det anses vara bra praxis, men inte obligatoriskt, att registrera läkemedelsartikeln i HANDLINGEN.
-
-Vägstegen skapar skillnader mellan de som direkt relatera sig till uppfyllandet av beställningen, såsom auktorisering, beredning och dosadministration, och de som avser hantering av receptet såsom utfärdande, om identifiering och utdelning. I vissa jurisdiktioner betraktas dessa som en enda väg, i andra kan det vara till hjälp att hantera beställning och recept i separata mallar.
-
-Namnen på de flesta vägstegen i den här arketypen börjar med antingen \"Medicinering\" eller \"Recept\". Detta för att göra det lättare att skilja mellan de vägsteg som är relaterade till recepthantering och de som är associerade med hanteringen av själva läkemedelsbeställningen.
-
-I vissa jurisdiktioner kan ett recept godkännas på nytt, detta för att kunna fortsätta med en pågående läkemedelsbeställning, medan i andra måste ett helt nytt recept utfärdas under dessa omständigheter. I det sistnämnda gäller inte vägsteget \"Receptbeläggning på nytt\".
-">
-			keywords = <"medicinering", "förskrivning", "fördela", "administrering", "upphörande", "bra behandling", "tillförsel", "medicin", "läkemedel", "förberedelse", "medicinsk", "recept", "vaccin", "vaccination", "dosering", "form", "rutt", "uppföljning">
-			misuse = <"Får inte användas för att registrera en läkemedelsordination eller instruktion. Använd arketypen INSTRUCTION.medication_order för detta ändamål.
-
-Används inte arketypen för att registrera administrering eller dosering av blodprodukter, vilket innebär en helt annan klinisk process och sannolikt kommer att kräva annan stödjande information. Använd en annan lämplig ACTION-arketyp för detta ändamål.
-
-Får inte användas för registrering av detaljer om efterlevnadsbehandling, sekundära effekter eller toxicitet. Använd andra arketyper för dessa ändamål.
-
-Får inte användas för avstämning av läkemedel. Använd andra lämpliga arketyper för detta ändamål.
-
-Får inte användas för en formell granskning av en hel läkemedelslista, till exempel av en apotekare. Använd andra lämpliga arketyper för detta ändamål.">
-		>
 		["ru"] = <
 			language = <[ISO_639-1::ru]>
 			purpose = <"этот архетип класса ДЕЙСТВИЕ позволяет записывать активность, связанную с введением лекарств или применением лечения. Обычно такая активность возникает в ответ на назначение лекарства врачом, но также может быть при самолечении или лечении по совету аптекаря. Информация о времени приема отсутствует, так как использование данного архетипа предполагает, что действие произведено в настоящий момент времени.">
@@ -177,17 +151,42 @@ There is a date and time at which this ACTION took place (as there is for all AC
 			misuse = <"*Do not use when recording an instruction or order (use INSTRUCTION.medication).(en)">
 			copyright = <"© openEHR Foundation">
 		>
-		["es-ar"] = <
-			language = <[ISO_639-1::es-ar]>
-			purpose = <"Este ACTION permite la grabación de las ordenes de prescripciones. Esto será normalmente en respuesta a una orden de medicación o prescripción, pero puede ser autoadministrado o suministrada por una farmacia. No existe informacion sobre si el uso de este arquetipo implica que alguna accion haya efectivamente sido ejecutada">
-			use = <"*For recording the planning, issuing of a prescription, dispensing, administration, cessation, suspension, completion of a medicine, vaccine or other therapeutic good . This will usually be in response to a medication order but may be administered immediately without an order at times, thus requiring recording of the administration alone (e.g. in an emergency situation). 
+		["sv"] = <
+			language = <[ISO_639-1::sv]>
+			purpose = <"Att registrera information om aktiviteter relaterade till planering, schemaläggning, recepthantering, dosering, administrering, avbrott från eller användning av läkemedel, vaccinering, näringspreparat eller annan terapeutisk produkt.">
+			use = <"Används för att registrera information om de aktiviteter som krävs för att stödja alla aspekter av läkemedelshantering inklusive planering, schemaläggning, avbrott, avbokning och slutförande av läkemedelsbeställningar, liksom den faktiska administreringen av läkemedelsartiklar. Detta görs genom registrering av data mot de specifika aktiviteterna, definierat som ”Pathway”-stegen.
 
-Such a record may be made to indicate the administration of a dose, dispensing of a certain quantity or as a record of ceasing a medication. The state of the medication instruction is altered by the action taken as indicated in the Pathway definition.
+Den här arketypen är avsedd att användas för alla typer av läkemedel och relaterade ordrar, oavsett om de ordinerats av vårdpersonal eller är tillgängligt för köp \"över disk\". Omfattningen av denna arketyp inkluderar även beställning av vaccin, parenterala vätskor och andra terapeutiska varor, såsom bandage, näringspreparat eller andra föremål som appliceras eller administreras för att uppnå en terapeutisk effekt. För läkemedels- eller vaccinationslistor kommer denna arketyp att bara användas för att registrera vilken medicinering eller vaccination som har ordinerats eller administrerats.
 
-There is a date and time at which this ACTION took place (as there is for all ACTIONs)  and use of this archetype indicates that some action has actually occurred.(en)">
-			keywords = <"*medication(en)", "*prescibe(en)", "*dispense(en)", "*administration(en)", "*cessation(en)", "*therapeutic good(en)", "*supply(en)", "*medicine(en)", "*drug(en)">
-			misuse = <"*Do not use when recording an instruction or order (use INSTRUCTION.medication).(en)">
-			copyright = <"© openEHR Foundation">
+Ytterligare information om aktiviteterna kan fångas upp med hjälp av specifika arketyper. Dessa kan bifogas under följande SLOTs: ”Förberedelse av läkemedel”, ” Kvantitet”, ”Exakt anatomisk lokalisering”, \"Utrustning för administrering\" eller ”Övrig information”.
+
+Tidsenheter relaterat till läkemedelshantering kan hanteras på ett av följande sätt:
+- Med hjälp av referensmodellen. Använd tidsattributet ACTION vid utförandet av varje steg. 
+- Med arketypiskt dataelement. Dataelementet ”Ursprungligt datum/tid” registrerar den tid då läkemedelsartikeln var avsedd att administreras. Obs! Motsvarande ACTION-attribut registrerar den tid då den kliniska aktiviteten inplanerades i ett system, och inte det datum/tid då aktiviteten var avsedd att faktiskt genomföras.
+
+I praktiken kommer vissa medicineringar (exempelvis de relaterade till återupplivningsförsök på akutmottagningen) att administreras baserat på ett protokoll eller en muntlig order, och därför inte beställas i förväg. Information om detta läkemedel läggs till under ”Administrerad dos”. För en pågående medicinering kommer data om läkemedelsartikeln att registreras under ”Administrerad dos” vid varje administrering, för att på så sätt hålla instruktionen aktiv. När den sista administreringen har registrerats och ordern är fullbordad, noteras detta i ”Fullföljd läkemedelsbehandling”. 
+
+I andra situationer, till exempel vid sekundärvård, kan det finnas en formell beställning för en läkemedelsartikel med motsvarande INSTRUCTION.medication_order. Denna ACTION-arketyp kan sedan användas för att registrera arbetsflödet för när och hur ordern har genomförts.
+
+Registrering av information med denna ACTION-arketyp är en indikation på att någon form av aktivitet har inträffat. Detta utgörs ofta av administrering av själva läkemedelsartikeln, men kan även innebära försenad leverans eller avbrott i en läkemedelsbehandling. Om det finns en formell beställning av läkemedelsartikeln, representeras dess orderstatus av det ”Pathway”-steg mot vilken data registreras. Exempelvis kan ett fortskridande förlopp för en beställning av Paracetamol registreras genom separata noteringar i EHR vid varje ”Pathway”-steg. Vid dokumentation av orsak till utförd aktivitet eller vårdsteg, exempelvis varför en dos utelämnades eller att en medicinering upphörde, kan dataelemntet ”Orsak” användas. 
+
+När denna ACTION-arketyp används med motsvarande INSTRUCTION.medication_order-arketyp, ska inte information som är oförändrad mellan order och tillhörande hanteringsaktivitet upprepas. God praxis avser dock registrering av läkemedelsartikeln i ACTION-arketypen, men detta är inte obligatoriskt. 
+
+De olika vårdstegen utgör en åtskillnad mellan de som direkt hänför sig till uppfyllandet av ordern, såsom auktorisering, beredning och administrering av dos, samt de som avser hantering av receptet, såsom utfärdande, återauktorisering och dispensering. I vissa jurisdiktioner betraktas dessa som ett enda vårdsteg, medan det i andra fall är underlättande att behandla orderhantering och recept i separata mallar.
+
+Namn på de möjliga vårdstegen i denna arketyp börjar med antingen \"Läkemedel\" eller \"Ordination\" för att underlätta urskiljning mellan de vägval som är förknippade med recepthantering och de som är associerade med att hantera själva läkemedelsordern.
+
+I vissa jurisdiktioner kan en ordination godkännas på nytt för att få fortsätta en pågående läkemedelsorder, medan det i andra fall måste utfärdas en ny ordination. För det sistnämnda gäller inte vårdsteget \"Förnyelse av receptbeläggning\".">
+			keywords = <"medicinering", "ordinera", "dispensera", "administrering", "terapeutiska vara", "leverera", "medicin", "läkemedel", "preparat", "läkande", "ordination", "recept", "vaccin", "vaccination", "dosering", "administreringsväg", "uppföljning">
+			misuse = <"Ska inte användas för att registrera en läkemedelsorder eller föreskrift. Använd i stället arketypen INSTRUCTION.medication_order. 
+
+Ska inte användas för att registrera administrering eller dispensering av blodprodukter, då denna aktivitet kräver annan klinisk process. Använd i stället annan lämplig ACTION-arketyp för detta ändamål.
+
+Ska inte användas för att registrera information om terapeutisk följsamhet, sekundära effekter eller toxicitet. Använd i stället andra lämpliga arketyper för dessa ändamål.
+
+Ska inte användas för förlikning av läkemedel. Använd i stället andra lämpliga arketyper för detta ändamål.
+
+Ska inte användas för formell granskning av en läkemedelslista. Använd i stället andra lämpliga arketyper för detta ändamål.">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
@@ -202,11 +201,11 @@ Timing i forbindelse med legemiddelhåndtering kan gjøres på to forskjellige m
 - Ved å bruke referansemodellen: Tidspunktet for utførelsen av en aktivitet bruker \"ACTION time\"-attributten for hvert prosesstrinn, for eksempel når en dose ble administrert eller når legemiddelet ble seponert.
 - Ved hjelp av informasjonselementer i arketyper: Elementet \"Opprinnelig planlagt tid\" er ment for å registrere tidspunktet da legemiddelet ifølge ordineringen skulle vært administrert. Merk: Den korresponderende \"ACTION time\"-attributten for prosesstrinn av typen \"scheduled\" vil registrere tidspunktet da planleggings-steget ble lagt inn i systemet, ikke tidspunktet når aktiviteten er planlagt å bli utført.
 
-I praksis vil noen legemidler, for eksempel under gjenoppliving, administreres på bakgrunn av en prosedyre eller verbal ordinering, og ikke bli registrert på forhånd. Detaljer om legemiddelet vil i disse tilfellene bli registrert i sammenheng med prosesstrinnet \"Legemiddel administrert\". Når det skal gjøres flere administreringer, blir informasjon om legemiddelet bli registrert i sammenheng med prosesstrinnet \"Legemiddel administrert\" for hver administrering, og instruksjonen beholder statusen \"active\". Når siste administrering er utført, settes prosesstrinnet \"Medisinering fullført\".
+I praksis vil noen legemidler, for eksempel under gjenoppliving, administreres på bakgrunn av en prosedyre eller verbal ordinering, og ikke bli registrert på forhånd. Detaljer om legemiddelet vil i disse tilfellene bli registrert i sammenheng med prosesstrinnet \"Legemiddel administrert\". Når det skal gjøres flere administreringer, blir informasjon om legemiddelet registrert i sammenheng med prosesstrinnet \"Legemiddel administrert\" for hver administrering, og instruksjonen beholder statusen \"active\". Når siste administrering er utført, settes prosesstrinnet \"Medisinering fullført\".
 
 I andre situasjoner, som for eksempel vanlig ordinering i sykehus, kan det eksistere en formell ordinering for hvert legemiddel i form av en \"INSTRUCTION.medication_order\"-arketype. Denne ACTION-arketypen kan da brukes for å registrere arbeidsflyten for når og hvordan ordineringen ble utført.
 
-Å registrere informasjon ved hjelp av denne ACTION-arketypen indikerer at en aktivitet faktisk har blitt utført. Dette vil vanligvis være administrering av legemiddelet, me kan også være forsinket levering fra apotek eller andre aktiviteter som å nulle ut legemiddelet i forkant av en operasjon. Dersom det finnes en formell ordinering av legemiddelet, representeres status for ordineringen ved prosesstrinnet informasjonen er registrert i sammenheng med. For eksempel kan arketypen brukes for å registrere den pågående statusen for en paracetamol-ordinering gjennom en serie registreringer i journalen som hver har sitt prosesstrinn. Man kan bruke elementet \"Årsak\" dersom man trenger å registrere begrunnelsen for at en aktivitet ble utført eller et prosesstrinn ble valgt, for eksempel hvorfor en enkeltdose ble nullet eller legemiddelet ble seponert.
+Å registrere informasjon ved hjelp av denne ACTION-arketypen indikerer at en aktivitet faktisk har blitt utført. Dette vil vanligvis være administrering av legemiddelet, men kan også være forsinket levering fra apotek eller andre aktiviteter som å nulle ut legemiddelet i forkant av en operasjon. Dersom det finnes en formell ordinering av legemiddelet, representeres status for ordineringen ved prosesstrinnet informasjonen er registrert i sammenheng med. For eksempel kan arketypen brukes for å registrere den pågående statusen for en paracetamol-ordinering gjennom en serie registreringer i journalen som hver har sitt prosesstrinn. Man kan bruke elementet \"Årsak\" dersom man trenger å registrere begrunnelsen for at en aktivitet ble utført eller et prosesstrinn ble valgt, for eksempel hvorfor en enkeltdose ble nullet eller legemiddelet ble seponert.
 
 Når denne ACTION-arketypen brukes sammen med den korresponderende INSTRUCTION.medication_order-arketypen, vil man generelt ikke gjenta informasjon som ikke er endret fra ordineringen. Det regnes som god praksis, men ikke obligatorisk, å registrere legemiddelnavnet også i ACTION-arketypen.
 
@@ -223,6 +222,18 @@ Skal ikke brukes for å registrere detaljer om adheranse, sekundæreffekter elle
 Skal ikke brukes for legemiddelsamstemming. Bruk andre arketyper for dette formålet.
 
 Skal ikke brukes for en formell gjennomgang av en hel legemiddelliste, for eksempel av farmasøyt. Bruk andre arketyper for dette formålet.">
+			copyright = <"© openEHR Foundation">
+		>
+		["es-ar"] = <
+			language = <[ISO_639-1::es-ar]>
+			purpose = <"Este ACTION permite la grabación de las ordenes de prescripciones. Esto será normalmente en respuesta a una orden de medicación o prescripción, pero puede ser autoadministrado o suministrada por una farmacia. No existe informacion sobre si el uso de este arquetipo implica que alguna accion haya efectivamente sido ejecutada">
+			use = <"*For recording the planning, issuing of a prescription, dispensing, administration, cessation, suspension, completion of a medicine, vaccine or other therapeutic good . This will usually be in response to a medication order but may be administered immediately without an order at times, thus requiring recording of the administration alone (e.g. in an emergency situation). 
+
+Such a record may be made to indicate the administration of a dose, dispensing of a certain quantity or as a record of ceasing a medication. The state of the medication instruction is altered by the action taken as indicated in the Pathway definition.
+
+There is a date and time at which this ACTION took place (as there is for all ACTIONs)  and use of this archetype indicates that some action has actually occurred.(en)">
+			keywords = <"*medication(en)", "*prescibe(en)", "*dispense(en)", "*administration(en)", "*cessation(en)", "*therapeutic good(en)", "*supply(en)", "*medicine(en)", "*drug(en)">
+			misuse = <"*Do not use when recording an instruction or order (use INSTRUCTION.medication).(en)">
 			copyright = <"© openEHR Foundation">
 		>
 		["pt-br"] = <
@@ -264,30 +275,6 @@ Não deve ser usado para uma revisão formal de uma lista inteira de medicameç�
 ">
 			copyright = <"© openEHR Foundation">
 		>
-		["ar-sy"] = <
-			language = <[ISO_639-1::ar-sy]>
-			purpose = <"يُمَكِّن هذا الفعل من تسجيل الأفعال التي يتم تنفيذها فيما يتعلق بالأدوية. و عادة ما يكون ذلك استجابة لأمر دوائي أو وصفة دوائية, و لكنه قد يكون إما قام المريض بتناوله بنفسه أو عن طريق الصيدلية. لا يوجد في هذا النموذج تفاصيل حول الوقت حيث إنه يشير إلى فعل تم في الواقع.">
-			use = <"*For recording the planning, issuing of a prescription, dispensing, administration, cessation, suspension, completion of a medicine, vaccine or other therapeutic good . This will usually be in response to a medication order but may be administered immediately without an order at times, thus requiring recording of the administration alone (e.g. in an emergency situation). 
-
-Such a record may be made to indicate the administration of a dose, dispensing of a certain quantity or as a record of ceasing a medication. The state of the medication instruction is altered by the action taken as indicated in the Pathway definition.
-
-There is a date and time at which this ACTION took place (as there is for all ACTIONs)  and use of this archetype indicates that some action has actually occurred.(en)">
-			keywords = <"*medication(en)", "*prescibe(en)", "*dispense(en)", "*administration(en)", "*cessation(en)", "*therapeutic good(en)", "*supply(en)", "*medicine(en)", "*drug(en)">
-			misuse = <"*Do not use when recording an instruction or order (use INSTRUCTION.medication).(en)">
-			copyright = <"© openEHR Foundation">
-		>
-		["sl"] = <
-			language = <[ISO_639-1::sl]>
-			purpose = <"*The recording of activities undertaken with regard to a medicine, vaccine or other therapeutic good and linking to the instruction if appropriate.">
-			use = <"*For recording the planning, issuing of a prescription, dispensing, administration, cessation, suspension, completion of a medicine, vaccine or other therapeutic good . This will usually be in response to a medication order but may be administered immediately without an order at times, thus requiring recording of the administration alone (e.g. in an emergency situation). 
-
-Such a record may be made to indicate the administration of a dose, dispensing of a certain quantity or as a record of ceasing a medication. The state of the medication instruction is altered by the action taken as indicated in the Pathway definition.
-
-There is a date and time at which this ACTION took place (as there is for all ACTIONs)  and use of this archetype indicates that some action has actually occurred.">
-			keywords = <"*medication", "*prescibe", "*dispense", "*administration", "*cessation", "*therapeutic good", "*supply", "*medicine", "*drug">
-			misuse = <"*Do not use when recording an instruction or order (use INSTRUCTION.medication).">
-			copyright = <"© openEHR Foundation">
-		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"For recording details about any activity related to the planning, scheduling, prescription management, dispensing, administration, cessation and other use of a medication, vaccine, nutritional product or other therapeutic item.">
@@ -324,6 +311,30 @@ Not to be used for recording details about therapeutic adherence, secondary effe
 Not to be used for medication reconcilliation. Use other appropriate archetypes for this purpose.
 
 Not to be used for a formal review of an entire medication list, for example by a pharmacist. Use other appropriate archetypes for this purpose.">
+			copyright = <"© openEHR Foundation">
+		>
+		["sl"] = <
+			language = <[ISO_639-1::sl]>
+			purpose = <"*The recording of activities undertaken with regard to a medicine, vaccine or other therapeutic good and linking to the instruction if appropriate.">
+			use = <"*For recording the planning, issuing of a prescription, dispensing, administration, cessation, suspension, completion of a medicine, vaccine or other therapeutic good . This will usually be in response to a medication order but may be administered immediately without an order at times, thus requiring recording of the administration alone (e.g. in an emergency situation). 
+
+Such a record may be made to indicate the administration of a dose, dispensing of a certain quantity or as a record of ceasing a medication. The state of the medication instruction is altered by the action taken as indicated in the Pathway definition.
+
+There is a date and time at which this ACTION took place (as there is for all ACTIONs)  and use of this archetype indicates that some action has actually occurred.">
+			keywords = <"*medication", "*prescibe", "*dispense", "*administration", "*cessation", "*therapeutic good", "*supply", "*medicine", "*drug">
+			misuse = <"*Do not use when recording an instruction or order (use INSTRUCTION.medication).">
+			copyright = <"© openEHR Foundation">
+		>
+		["ar-sy"] = <
+			language = <[ISO_639-1::ar-sy]>
+			purpose = <"يُمَكِّن هذا الفعل من تسجيل الأفعال التي يتم تنفيذها فيما يتعلق بالأدوية. و عادة ما يكون ذلك استجابة لأمر دوائي أو وصفة دوائية, و لكنه قد يكون إما قام المريض بتناوله بنفسه أو عن طريق الصيدلية. لا يوجد في هذا النموذج تفاصيل حول الوقت حيث إنه يشير إلى فعل تم في الواقع.">
+			use = <"*For recording the planning, issuing of a prescription, dispensing, administration, cessation, suspension, completion of a medicine, vaccine or other therapeutic good . This will usually be in response to a medication order but may be administered immediately without an order at times, thus requiring recording of the administration alone (e.g. in an emergency situation). 
+
+Such a record may be made to indicate the administration of a dose, dispensing of a certain quantity or as a record of ceasing a medication. The state of the medication instruction is altered by the action taken as indicated in the Pathway definition.
+
+There is a date and time at which this ACTION took place (as there is for all ACTIONs)  and use of this archetype indicates that some action has actually occurred.(en)">
+			keywords = <"*medication(en)", "*prescibe(en)", "*dispense(en)", "*administration(en)", "*cessation(en)", "*therapeutic good(en)", "*supply(en)", "*medicine(en)", "*drug(en)">
+			misuse = <"*Do not use when recording an instruction or order (use INSTRUCTION.medication).(en)">
 			copyright = <"© openEHR Foundation">
 		>
 		["zh-cn"] = <
@@ -364,9 +375,87 @@ Not to be used for a formal review of an entire medication list, for example by 
 
 不得将其用于药师等对整个药物清单的正式审核。对于此类的用途，应当采用其他合适的原始型。">
 		>
+		["ca"] = <
+			language = <[ISO_639-1::ca]>
+			purpose = <"Per a registrar detalls sobre qualsevol activitat relacionada amb la planificació, programació, gestió de prescripció, dispensació, administració, cessament i altre ús d'una medicació, vacuna, producte nutricional o altre article terapèutic.">
+			use = <"Utilitzar per registrar informació sobre les activitats necessàries per donar suport a tots els aspectes de la gestió de medicació, incloent-hi la planificació, programació, suspensió, cancel·lació i finalització de les ordres de medicació, així com l'administració actual dels articles de medicació. Això es fa mitjançant l'enregistrament de dades contra activitats específiques, tal com es defineix en els passos de flux assistencial \"Pathway\" en aquest arquetip. 
+
+Aquest arquetip està destinat a ser utilitzat per a qualsevol tipus de medicació i ordre relacionada, ja sigui prescrit per un professional de la salut o disponible per a la compra “sense recepta”. L'àmbit d'aplicació d'aquest arquetip de medicació també inclou ordres de vacunació, fluids parentals o altres productes terapèutics, com ara benes, productes nutricionals o altres articles que s'apliquen o administren per tenir un efecte terapèutic i que tenen un patró comú per al registre de dades. En el context d'una Llista de Medicació o Vacunació, aquest arquetip només s'utilitzarà per registrar la medicació o vacunació que s'ha prescrit o administrat. 
+
+Es pot capturar informació addicional estructurada i detallada sobre l'activitat utilitzant arquetips específics de propòsit inserits en els SLOTs “Detalls de les preparacions”, “Quantitat”, “Localització del cos estructurat”, “Dispositiu d'administració” o “Detalls addicionals”, quan sigui necessari. 
+
+El cronometratge relacionat amb la gestió de la medicació es pot gestionar de dues maneres: 
+
+- Utilitzant el model de referència - el temps per a la realització de qualsevol pas utilitzarà l'ACCIÓ d'atribut de temps per a cada pas. 
+
+- Elements de dades arquetipats - l'element de dades \"Data/hora programada original\" està destinat a registrar l'hora en què es pretenia administrar l'element de medicació. Nota: l'ACCIÓ d’atribut de temps corresponent, per al pas programat, registrarà l’hora en què l'activitat clínica estava programada en un sistema, no la data/hora desitjada en què l'activitat es pretén dur a terme. 
+
+A la pràctica, alguns medicaments (per exemple, durant la reanimació al departament d'emergència) s'administraran sobre la base d'un protocol o ordre verbal i no s'ordenaran amb antelació. Els detalls sobre la medicació s'afegiran contra el pas \"Dosi administrada\". Per a un curs de medicació en curs, les dades sobre l'element de medicació es registraran contra el pas \"Dosi administrada\" en cada administració, deixant la instrucció en estat actiu. Quan es registra l'última ocurrència, es registra el pas “Curs de medicació completat”, demostrant que aquesta ordre es troba ara en estat completat. 
+
+En altres situacions, com l'atenció secundària, pot haver-hi una ordre formal per a un element de medicació utilitzant un arquetip INSTRUCCIÓ.ordre_medicació corresponent. Aquest arquetip d'ACCIÓ es pot utilitzar per registrar el flux de treball de quan i com s'ha realitzat la ordre. 
+
+L'enregistrament d'informació utilitzant aquest arquetip d'ACCIÓ indica que algun tipus d'activitat ha succeït realment; això serà més comunament l'administració de l'element de medicació en si, però pot ser un intent de subministrament retardat o una altra activitat com ara suspendre l'element de medicació en preparació per a un procediment. Si hi ha una ordre formal per a l'element de medicació, l'estat d'aquesta ordre és representada pel pas contra el qual es registren les dades. Per exemple, utilitzant aquest arquetip l'estat progressiu d'un ordre de Paracetamol pot ser enregistrat a través d'entrades separades en les notes de progrés d’EHR a cada pas de \"Pathway\". Quan es documenta la raó per la qual es va realitzar una activitat o es va escollir un pas, per exemple per què es va ometre una dosi o es va cessar la medicació, es pot utilitzar l'element \"Raó\". 
+
+Quan aquest arquetip d'ACCIÓ s'utilitza amb l'arquetip corresponent INSTRUCCIÓ.ordre_medicació, la informació que no ha canviat de la ordre a la gestió de l'activitat no es repeteix generalment en l'acció. Es considera una bona pràctica, encara que no obligatòria, registrar l'element de medicació en l'ACCIÓ. 
+
+Els passos fan una distinció entre aquells que es refereixen directament al compliment de la ordre, com l'autorització, preparació i administració de la dosi, i aquells que es refereixen al maneig de la prescripció com l'emissió, reautorització i dispensació. En algunes jurisdiccions aquestes es consideren un únic camí, en altres pot ser útil manejar el compliment de la ordre i la prescripció en templates separats. 
+
+Els noms de la majoria dels passos en aquest arquetip comencen amb \"Medicació\" o \"Prescripció\" per fer més fàcil diferenciar entre els passos que estan associats amb el maneig de la prescripció i aquells que estan associats amb el maneig de la ordre de medicació en si mateixa. 
+
+En algunes jurisdiccions, una prescripció pot estar reautoritzada amb el propòsit de continuar una ordre de medicació en curs, mentre que en altres s'ha d'emetre una prescripció totalment nova en aquestes circumstàncies. En aquest últim, no s'aplica el pas \"Prescripció reautoritzada\".">
+			keywords = <"medicació", "prescriure", "dispensar", "administració", "cessació", "element terapèutic", "subministrament", "medicina", "fàrmac", "preparació", "medicinal", "prescripció", "vacuna", "vacunació", "dosificació", "formulari", "ruta", "seguiment">
+			misuse = <"No s'ha d'utilitzar per a registrar una ordre de medicació o instrucció. Utilitzeu l'arquetip INSTRUCCIÓ.ordre_medicació per a aquest propòsit. 
+
+No s'ha d’utilitzar per a registrar l'administració o dispensació de productes sanguinis, que implica un procés clínic fonamentalment diferent i que probablement requereix informació de suport diferent. Utilitzeu un altre arquetip apropiat d'ACCIÓ diferent per a aquest propòsit. 
+
+No s'ha d'utilitzar per a registrar detalls sobre adhesió terapèutica, efectes secundaris o toxicitat. Utilitzeu altres arquetips per a aquests propòsits. 
+
+No s'ha d'utilitzar per a la conciliació de la medicació. Utilitzeu altres arquetips adequats per a aquest propòsit. 
+
+No s'ha d'utilitzar per a una revisió formal de tota una llista de medicació, per un farmacèutic per exemple. Utilitzeu altres arquetips adequats per a aquest propòsit.">
+		>
+		["es"] = <
+			language = <[ISO_639-1::es]>
+			purpose = <"Registrar detalles sobre cualquier actividad relacionada con la planificación, programación, gestión de la prescripción, dispensación, administración, cese y otros usos de un medicamento, vacuna, producto nutricional u otro artículo terapéutico.">
+			use = <"Se utiliza para registrar información sobre las actividades necesarias para apoyar todos los aspectos de la gestión de la medicación, incluida la planificación, programación, suspensión, cancelación y finalización de las órdenes de medicación, así como la administración real de los elementos de medicación. Esto se realiza mediante el registro de datos de actividades específicas, tal y como se definen en las distintas etapas del proceso de este arquetipo.
+
+Este arquetipo debe utilizarse para cualquier tipo de medicamento y pedido relacionado, ya sea prescrito por un profesional sanitario o disponible para su compra \"sin receta\". El ámbito de aplicación de este arquetipo de medicación incluye también los pedidos de vacunas, fluidos parenterales u otros productos terapéuticos, como vendas, productos nutricionales u otros artículos que se aplican o administran para tener un efecto terapéutico y que tienen un patrón común para el registro de datos. En el contexto de una lista de medicación o vacunación, este arquetipo se utilizará para registrar únicamente qué medicación o vacunación se ha prescrito o administrado.
+
+Se puede capturar información adicional estructurada y detallada sobre la actividad utilizando arquetipos específicos de propósito insertados en los SLOTs “Detalle de las preparaciones”, “Cantidad”, “Localización del cuerpo estructurado”, “Dispositivo de administración” o “Detalle adicional” , cuando sea necesario.
+
+El cronometraje relacionado con la gestión de la medicación se puede gestionar de dos formas:
+
+- Utilizando el modelo de referencia – el tiempo para la realización de cualquier paso utilizará la ACTION de atributo de tiempo para cada paso.
+
+- Elementos de datos arquetipados - el elemento de datos \"Fecha/hora programada original\" está destinado a registrar la hora en la que se pretendía administrar el elemento de medicación. Nota: la ACTION de atributo de tiempo correspondiente, para el paso programado, registrará la hora en la que la actividad clínica estaba programada en un sistema, no la fecha/hora deseada en la que la actividad se pretende llevar a cabo.
+
+En la práctica, algunos medicamentos (por ejemplo, durante la reanimación en el departamento de emergencia) se administrarán sobre la base de un protocolo u orden verbal y no se ordenarán con antelación. Los detalles sobre la medicación se añadirán contra el paso \"Dosis administrada\". Para un curso de medicación en curso, los datos sobre el elemento de medicación se registrarán contra el paso \"Dosis administrada\" en cada administración, dejando la instrucción en estado activo. Cuando se registra la última ocurrencia, se registra el paso “Curso de medicación completado”, demostrando que esta orden se encuentra ahora en estado completado.
+
+En otras situaciones, como la atención secundaria, puede haber una orden formal para un elemento de medicación utilizando un arquetipo INSTRUCTIONN.medication_order correspondiente. Este arquetipo de ACTION se puede utilizar para registrar el flujo de trabajo de cuándo y cómo se ha realizado la orden.
+
+La grabación de información utilizando este arquetipo de ACTION indica que algún tipo de actividad ha sucedido realmente; esto será más comúnmente la administración del elemento de medicación en sí, pero puede ser un intento de suministro retrasado u otra actividad tales como suspender el elemento de medicación en preparación para un procedimiento. Si existe una orden formal para el elemento de medicación, el estado de esta orden está representada por el paso contra el que se registran los datos. Por ejemplo, utilizando este arquetipo el estado progresivo de un orden de Paracetamol puede ser grabado a través de entradas separadas en las notas de progreso de EHR a cada paso de \"Pathway\". Cuando se documenta la razón por la que se realizó una actividad o se escogió un paso, por ejemplo por qué se omitió una dosis o se cesó la medicación, se puede utilizar el elemento \"Razón\".
+
+Cuando este arquetipo de ACTION se utiliza con el arquetipo correspondiente INSTRUCTION.medication_order, la información que no ha cambiado del orden a la gestión de la actividad no se repite generalmente en la acción. Se considera una buena práctica, aunque no obligatoria, registrar el elemento de medicación en la ACTION.
+
+Los pasos hacen una distinción entre aquéllos que se refieren directamente al cumplimiento de la orden, como la autorización, preparación y administración de la dosis, y aquellos que se refieren al manejo de la prescripción como la emisión, reautorización y dispensación. En algunas jurisdicciones éstas se consideran un único camino, en otras puede ser útil manejar el cumplimiento de la orden y la prescripción en templates separados.
+
+Los nombres de la mayoría de los pasos en este arquetipo comienzan con \"Medicación\" o \"Prescripción\" para hacer más fácil diferenciar entre los pasos que están asociados con el manejo de la prescripción y aquellos que están asociados con el manejo de la orden de medicación en sí misma.
+
+En algunas jurisdicciones, una prescripción puede estar reautorizada con el propósito de continuar una orden de medicación en curso, mientras que en otras debe emitirse una prescripción totalmente nueva en estas circunstancias. En este último, no se aplica el paso \"Prescripción reautorizada\".">
+			keywords = <"medicación", "prescribir", "dispensar", "administración", "cesación", "elemento terapéutico", "suministro", "medicina", "fármaco", "preparación", "medicinal", "prescripción", "vacuna", "vacunación", "dosificación", "formulario", "ruta", "seguimiento">
+			misuse = <"No debe utilizarse para registrar una orden de medicación o instrucción. Utilice el arquetipo INSTRUCTION.medication_order para este propósito.
+
+No debe utilizarse para registrar la administración o dispensación de productos sanguíneos, que implica un proceso clínico fundamentalmente diferente y que probablemente requiere información de soporte diferente. Utilice otro arquetipo apropiado de ACTION diferente para este propósito.
+
+No debe utilizarse para registrar detalles sobre adhesión terapéutica, efectos secundarios o toxicidad. Utilice otros arquetipos para estos propósitos.
+
+No debe utilizarse para la conciliación de la medicación. Utilice otros arquetipos adecuados para este propósito.
+
+No debe utilizarse para una revisión formal de toda una lista de medicación, por un farmacéutico por ejemplo. Utilice otros arquetipos adecuados para este propósito.">
+		>
 	>
-	lifecycle_state = <"in_development">
-	other_contributors = <"Morten Aas, Oslo Universitetssykehus, Norway", "Ole Andreas Bjordal, Webmed, Norway", "Erling Are Hole, Helse Bergen, Norway", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "SB Bhattacharyya, Sudisa Consultancy Services, India", "Dionizio Brentano, UFRGS - Universidade Federal do Rio Grande do Sul, Brazil", "Laila Bruun, Oslo universitetssykehus HF, Norway", "Ady Angelica Castro Acosta, CIBERES-Hospital 12 de Octubre, Spain", "Ruth Caudwell, retired, United Kingdom", "Bjørn Christensen, Helse Bergen HF, Norway", "Stephen Chu, NEHTA, Australia (Editor)", "Lisbeth Dahlhaug, Helse Midt - Norge IT, Norway", "Inderjit Daphu, Helse Bergen, Norway", "Samo Drnovšek, Marand, Slovenia (Editor)", "Robert Eager, Healthways, Australia", "Tone Engen, Norway", "Peter Fedorcsak, Oslo universitetssykehus, Norway", "Samuel Frade, Marand, Portugal", "Hildegard Franke, freshEHR Clinical Informatics Ltd., United Kingdom", "Jacquie Garton-Smith, Royal Perth Hospital and DoHWA, Australia", "Mikkel Gaup Grønmo, FSE, Helse Nord, Norway", "Heather Grain, Llewelyn Grain Informatics, Australia", "Sam Heard, Ocean Health Systems, Australia", "Geir Hoff, Sykehuset Telemark HF, Norway", "Annette Hole Sjøborg, DIPS ASA, Norway", "Hilde Hollås, DIPS AS, Norway", "Roar Holm, Helse Vest IKT A/S, Norway", "Alfred Honore, Haukeland, Norway", "Evelyn Hovenga, EJSH Consulting, Australia", "Lars Ivar Mehlum, Helse Bergen HF, Norway", "Tom Jarl Jakobsen, Helse Bergen, Norway", "Gunnar Jårvik, Nasjonal IKT HF, Norway", "Hilde Karen Ofte, Nordlandssykehuset HF, Norway", "Nils Kolstrup, Skansen Legekontor og Nasjonalt Senter for samhandling og telemedisin, Norway", "Harmony Kosola, Alberta Health Services, Canada", "Anne Kristin Strand, Sykehuspartner HF, Norway", "Robert L'egan, NEHTA, Australia", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Marit Ludvigsen, St Olavs Hospital, Norway", "Colin Macfarlane, Elsevier, United Kingdom", "Siv Marie Lien, DIPS ASA, Norway", "James McClay, University of Nebraska Medical Center, United States", "Hildegard McNicoll, freshEHR Clinical Informatics Ltd., United Kingdom", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Jude Michel, Queensland Health, Australia", "Chris Mitchell, RACGP, Australia", "Lars Morgan Karlsen, DIPS ASA, Norway", "Andrej Orel, Marand d.o.o., Slovenia", "Doug Pankoski, Alberta Health Services, Canada", "Vladimir Pizzo, Hospital Sírio Libanês, Brazil", "Jodie Pycroft, Adelaide Northern Division of General Practice Ltd, Australia", "Jussara Rotzsch, Hospital Alemão Oswaldo Cruz, Brazil", "Danielle Santos Alves, Federal University of Pernambuco, Brazil", "Anoop Shah, University College London, United Kingdom", "Line Silsand, Universitetssykehuset i Nord-Norge, Norway", "Sam Stokes, Citizen Scientist, United States", "Iztok Stotl, UKCLJ, Slovenia", "Norwegian Review Summary, Nasjonal IKT HF, Norway", "Nyree Taylor, Ocean Informatics, Australia", "Tesfay Teame, Folkehelseinstituttet, Norway", "Rowan Thomas, St. Vincent's Hospital Melbourne, Australia", "Anders Thurin, VGR, Sweden", "Gordon Tomes, Australian Institute of Health and Welfare, Australia", "Stian Torleif Varpe, Helse Bergen, Norway", "Richard Townley-O'Neill, NEHTA, Australia (Editor)", "Karl Trygve Kalleberg, Oslo Universitetssykehus, Norway", "Gro-Hilde Ulriksen, Norwegian center for ehealthresearch, Norway", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Ines Vaz, UFN, Portugal", "Kylie Young, The Royal Australian College of General Practitioners, Australia">
+	lifecycle_state = <"published">
+	other_contributors = <"Morten Aas, Oslo Universitetssykehus, Norway", "Ole Andreas Bjordal, Webmed, Norway", "Erling Are Hole, Helse Bergen, Norway", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "SB Bhattacharyya, Bhattacharyyas Clinical Records Research & Informatics LLP, India", "Dionizio Brentano, UFRGS - Universidade Federal do Rio Grande do Sul, Brazil", "Laila Bruun, Oslo universitetssykehus HF, Norway", "Ady Angelica Castro Acosta, CIBERES-Hospital 12 de Octubre, Spain", "Ruth Caudwell, retired, United Kingdom", "Bjørn Christensen, Helse Bergen HF, Norway", "Stephen Chu, NEHTA, Australia (Editor)", "Lisbeth Dahlhaug, Helse Midt - Norge IT, Norway", "Inderjit Daphu, Helse Bergen, Norway", "Samo Drnovšek, Marand, Slovenia (Editor)", "Robert Eager, Healthways, Australia", "Tone Engen, Norway", "Peter Fedorcsak, Oslo universitetssykehus, Norway", "Samuel Frade, Marand, Portugal", "Hildegard Franke, freshEHR Clinical Informatics Ltd., United Kingdom", "Jacquie Garton-Smith, Royal Perth Hospital and DoHWA, Australia", "Mikkel Gaup Grønmo, FSE, Helse Nord, Norway", "Heather Grain, Llewelyn Grain Informatics, Australia", "Sam Heard, Ocean Health Systems, Australia", "Geir Hoff, Sykehuset Telemark HF, Norway", "Annette Hole Sjøborg, DIPS ASA, Norway", "Hilde Hollås, DIPS AS, Norway", "Roar Holm, Helse Vest IKT A/S, Norway", "Alfred Honore, Haukeland, Norway", "Evelyn Hovenga, EJSH Consulting, Australia", "Lars Ivar Mehlum, Helse Bergen HF, Norway", "Tom Jarl Jakobsen, Helse Bergen, Norway", "Gunnar Jårvik, Nasjonal IKT HF, Norway", "Hilde Karen Ofte, Nordlandssykehuset HF, Norway", "Nils Kolstrup, Skansen Legekontor og Nasjonalt Senter for samhandling og telemedisin, Norway", "Harmony Kosola, Alberta Health Services, Canada", "Anne Kristin Strand, Sykehuspartner HF, Norway", "Robert L'egan, NEHTA, Australia", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Marit Ludvigsen, St Olavs Hospital, Norway", "Colin Macfarlane, Elsevier, United Kingdom", "Siv Marie Lien, DIPS ASA, Norway", "James McClay, University of Nebraska Medical Center, United States", "Hildegard McNicoll, freshEHR Clinical Informatics Ltd., United Kingdom", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Jude Michel, Queensland Health, Australia", "Chris Mitchell, RACGP, Australia", "Lars Morgan Karlsen, DIPS ASA, Norway", "Andrej Orel, Marand d.o.o., Slovenia", "Doug Pankoski, Alberta Health Services, Canada", "Vladimir Pizzo, Clínica Parente Pizzo, Finland", "Jodie Pycroft, Adelaide Northern Division of General Practice Ltd, Australia", "Jussara Rotzsch, Hospital Alemão Oswaldo Cruz, Brazil", "Danielle Santos Alves, ARS Semantica, Brazil", "Anoop Shah, University College London, United Kingdom", "Line Silsand, Universitetssykehuset i Nord-Norge, Norway", "Sam Stokes, Citizen Scientist, United States", "Iztok Stotl, UKCLJ, Slovenia", "Norwegian Review Summary, Norwegian Public Hospitals, Norway", "Nyree Taylor, Ocean Health Systems, Australia", "Tesfay Teame, Folkehelseinstituttet, Norway", "Rowan Thomas, St. Vincent's Hospital Melbourne, Australia", "Anders Thurin, VGR, Sweden", "Gordon Tomes, Australian Institute of Health and Welfare, Australia", "Stian Torleif Varpe, Helse Bergen, Norway", "Richard Townley-O'Neill, NEHTA, Australia (Editor)", "Karl Trygve Kalleberg, Oslo Universitetssykehus, Norway", "Gro-Hilde Ulriksen, Norwegian center for ehealthresearch, Norway", "John Tore Valand, Helse Vest IKT, Norway (openEHR Editor)", "Ines Vaz, UFN, Portugal", "Kylie Young, The Royal Australian College of General Practitioners, Australia", "Iztok Štotl, UKCLJ, Slovenia">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -382,9 +471,9 @@ Norwegian regulations for medication management (Forskrift om legemiddelhåndter
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"C9E42C747C609CC0EFA58335E7E897E5">
-		["build_uid"] = <"16d16b48-d6fa-472d-a640-5c294979c8f5">
-		["revision"] = <"1.1.3-alpha">
+		["MD5-CAM-1.0.1"] = <"B13761A29099D1CB3EBA7A250777A6FC">
+		["build_uid"] = <"f74767ef-02da-4e90-8a7e-21eea5d143c9">
+		["revision"] = <"1.2.4">
 	>
 
 definition
@@ -819,11 +908,11 @@ definition
 					}
 					allow_archetype CLUSTER[at0104] occurrences matches {0..1} matches {    -- Medication details
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication(-[a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.medication(-[a-zA-Z0-9_]+)*\.v2/}
 					}
 					allow_archetype CLUSTER[at0131] occurrences matches {0..1} matches {    -- Amount
 						include
-							archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_supply_amount(-[a-zA-Z0-9_]+)*\.v0|openEHR-EHR-CLUSTER\.medication_supply_amount(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.dosage(-[a-zA-Z0-9_]+)*\.v1/}
+							archetype_id/value matches {/openEHR-EHR-CLUSTER\.medication_supply_amount(-[a-zA-Z0-9_]+)*\.v0|openEHR-EHR-CLUSTER\.medication_supply_amount(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.dosage(-[a-zA-Z0-9_]+)*\.v1|openEHR-EHR-CLUSTER\.dosage(-[a-zA-Z0-9_]+)*\.v2/}
 					}
 					ELEMENT[at0156] occurrences matches {0..1} matches {    -- Clinical indication
 						value matches {
@@ -936,6 +1025,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	term_definitions = <
@@ -2239,7 +2329,7 @@ Coding of the body site with a terminology is preferred, where possible.">
 				["at0025"] = <
 					text = <"Sekvensnummer">
 					description = <"Sekvensnummeret for den spesifikke handlingen som blir registrert.">
-					comment = <"*For example: Vaccine sequence number.(en)">
+					comment = <"For eksempel: En vaksines sekvensnummer/ nummer i en rekkefølge.">
 				>
 				["at0030"] = <
 					text = <"Tree">
@@ -2385,9 +2475,12 @@ Coding of the body site with a terminology is preferred, where possible.">
 					comment = <"For eksempel \"på dag 2 etter kirurgi\".">
 				>
 				["at0156"] = <
-					text = <"*Clinical indication(en)">
-					description = <"*The clinical reason for the medication activity.(en)">
-					comment = <"*For example: 'Angina' or 'Pain'. Coding of the indication with a terminology is preferred, where possible. This data element allows multiple occurrences. If only an ACTION is used to record a medication indication, this data element can be used without additional consideration. However, if a clinical indication is recorded for both the Medication order INSTRUCTION and this Medication management ACTION, be aware that these indications might not be consistent.\"(en)">
+					text = <"Klinisk indikasjon">
+					description = <"Den kliniske årsaken til legemiddeladministrasjonen.">
+					comment = <"For eksempel: \"Angina\" eller \"Smerte\". Koding av indikasjonen med en terminologi er foretrukket, om mulig. Dette dataelementet er repeterbart. 
+
+Dersom bare denne arketypen blir brukt for å dokumentere legemiddeladministeringen, kan dette dataelementet brukes uten å tenke noe mer på det. Men dersom \"Klinisk indikasjon\" er registrert i både Legemiddelordinering (INSTRUCTION.medication_order) og denne Legemiddelhåndtering (ACTION.medication), må man være oppmerksom på at det kan være forskjell i registrert indikasjonen.
+">
 				>
 			>
 		>
@@ -2878,98 +2971,93 @@ Es wird dringend empfohlen, dass das Element \"Arzneimittel\" mit einer Terminol
 		["sv"] = <
 			items = <
 				["at0000"] = <
-					text = <"Hantering av läkemedel">
-					description = <"Alla aktiviteter relaterade till planering, schemaläggning, recepthantering, utdelning, administrering, upphörande, vaccin, näringsprodukt och annan användning av ett läkemedel eller annan behandlings produkt.">
-					comment = <"Detta är inte begränsat till aktiviteter som utförs bara baserat på remiss på läkemedel från kliniker, utan kan också inkludera till exempel övertagande av partikelräknare medicinering.">
+					text = <"Hantering av läkemedelsregim">
+					description = <"Aktiviteter relaterade till planering, schemaläggning, recepthantering, dosering, administrering, avbrott från eller användning av läkemedel, vaccinering, näringspreparat eller annan terapeutisk produkt.">
+					comment = <"Ej begränsat till aktiviteter som utförs baserat på läkemedelsbeställningar från kliniker, utan kan även inkludera exempelvis övertagande av läkemedel.">
 				>
 				["at0002"] = <
-					text = <"Recept utfärdat">
-					description = <"Ett recept har utfärdats för medicinering.">
+					text = <"Utfärdad ordination">
+					description = <"En ordination av läkemedlet har utfärdats.">
 				>
 				["at0003"] = <
-					text = <"Recept utdelat">
-					description = <"Det beställda läkemedlet har delats ut, till exempel från ett apotek till patienten.">
+					text = <"Utdelad ordination">
+					description = <"Det ordinerade läkemedlet har dispenserats, exempelvis från ett apotek till patienten.">
 				>
 				["at0004"] = <
-					text = <"Läkemedels kuren påbörjades">
-					description = <"Läkemedlet har börjats användas eller administrerats till patienten för första gången. i vissa delar av sjukvården registrering av detta betydelsefulla datum räknas som första administrations uppgift. i andra delar såsom primärvård räknas inte det som det tillgängliga specifika administrationsdatum.">
+					text = <"Påbörjad läkemedelsbehandling">
+					description = <"Läkemedlet har tagits av eller administrerats till patienten för första gången. I vissa fall kan startdatum för varje administrationstillfälle finnas tillgängligt, medan det i andra fall (såsom i primärvården) inte gör det.">
 				>
 				["at0005"] = <
-					text = <"Läkemedlet omprövades">
-					description = <"Det enskilda läkemedlet har omvärderats, till exempel om medicinen fortfarande ska tas av patienten. Detta är inte avsett att fånga en översyn av läkemedelslistan.">
+					text = <"Omprövning av läkemedel">
+					description = <"Omprövning av det enskilda läkemedlet, exempelvis huruvida medicineringen ska fortskrida. Syftet är inte att skapa en översyn av läkemedelslistan.">
 				>
 				["at0006"] = <
-					text = <"Dos administrerad">
-					description = <"En enda administrering av läkemedlet har ägt rum.">
+					text = <"Administrerad dos">
+					description = <"Engångsadministrering av läkemedlet.">
 				>
 				["at0007"] = <
-					text = <"Läkemedelskuren slutförd">
-					description = <"Läkemedelskuren har slutförts som planerat.">
+					text = <"Fullföljd läkemedelsbehandling">
+					description = <"Läkemedelsbehandlingen har slutförts som planerat.">
 				>
 				["at0008"] = <
-					text = <"Receptleverans försenad">
-					description = <"Receptet har inte delats ut på grund av ett tekniskt eller farmaceutiskt problem.">
+					text = <"Försenad receptleverans">
+					description = <"Ordinationen har inte delats ut på grund av ett teknisk eller faramaceutiskt leveransproblem.">
 				>
 				["at0009"] = <
-					text = <"Administrationer avstängda">
-					description = <"Administreringen av läkemedlet har avbrutits tills vidare. Inga ytterligare doser ska ges förrän omstartdatumet är bestämt eller villkoren har uppfyllts. När du ställer in datum / villkor för omstart efter avstängning, ska gå från steg 'Administrationer avbryts' tillbaka till 'Läkemedelsstartdatum / tillståndssätt' utföras.
-">
+					text = <"Indragen administrering">
+					description = <"Administreringen av läkemedlet har avbrutits tills vidare. Inga ytterligare doser ska ges förrän ett nytt startdatum har angivits eller villkoren har uppfyllts. Vid inställning av in datum/villkor för omstart, ska stegen från \"Läkemedlets startdatum/fastställda villkor\" till \"Indragen administrering\" utföras på nytt.">
 				>
 				["at0010"] = <
-					text = <"Recept utfärdat på nytt">
-					description = <"Ett recept har utfärdats för en befintlig läkemedelsordination.">
+					text = <"Förnyelse av ordination">
+					description = <"En ordination har utfärdats på nytt för en befintlig läkemedelsorder.">
 				>
 				["at0011"] = <
-					text = <"Receptansökan om godkännande väntar">
-					description = <"Utfärdandet av receptet väntar på godkännande av en läkare.
-">
+					text = <"Återauktorisering av recept inväntas">
+					description = <"Inväntar återauktorisering för ordination av en läkare.">
 				>
 				["at0012"] = <
 					text = <"Avbruten läkemedelsbehandling">
-					description = <"Den planerade medicineringen har avbrutits före administrering.">
+					description = <"Schemalagd läkemedelsbehandling som har avbrutits före administrering.">
 				>
 				["at0013"] = <
-					text = <"läkemedelsbehandling skjutits upp">
-					description = <"Den schemalagda läkemedelskursen har skjutits upp före administrering.">
+					text = <"Uppskjuten läkemedelsbehandling">
+					description = <"Schemalagd läkemedelsbehandling som har blivit uppskjuten före administrering.">
 				>
 				["at0015"] = <
-					text = <"Läkemedels kuren slutade">
-					description = <"Administreringen av läkemedlet har upphört under den planerade kur perioden.
-">
+					text = <"Avbruten läkemedelsbehandling">
+					description = <"Administreringen av läkemedlet har avbrutits under det planerade förloppet.">
 				>
 				["at0016"] = <
-					text = <"Läkemedlets startdatum eller tillstånd inställt">
-					description = <"Tiden för att starta medicinen, eller annat starttillstånd, har ställts in.">
+					text = <"Läkemedlets startdatum/fastställda villkor">
+					description = <"Tid då medicinering startar, eller vid annat startvillkor.">
 				>
 				["at0017"] = <
 					text = <"Tree">
 					description = <"@ internal @">
 				>
 				["at0018"] = <
-					text = <"Administration av dosen är utelämnad">
-					description = <"En administrering av läkemedlets dos har avbrutits. Det förväntas inte att det kommer att utföras klart senare heller, även om det skulle göras enligt den ursprungliga ordinationen.">
+					text = <"Utelämnad dos">
+					description = <"Nekad administrering av läkemedlet. Denna dos förväntas inte att ges vid senare tillfälle, även om en eventuellt nästa dos ska administreras enligt planerat.">
 				>
 				["at0020"] = <
-					text = <"Läkemedelsföremål">
-					description = <"Namnet på medicinen, vaccinet eller andra behandlings/ förskrivningsbara föremål som var fokus för aktiviteten.">
-					comment = <"Till exempel: 'Atenolol 100 mg' eller 'Tenormin tabletter 100 mg'.
-Det rekommenderas starkt att ”Läkemedelsartikeln” är kodad med en terminologi som kan trigga igång beslutsstödet, där det är möjligt. Kodningens omfattning kan variera från det enkla namnet på läkemedelsartikeln till strukturerade detaljer om det faktiska läkemedelspaket som används. Fri textinmatning bör endast användas om det inte finns någon lämplig terminologi tillgänglig.">
+					text = <"Läkemedelsartikel">
+					description = <"Benämning på läkemedlet, vaccinet eller annan terapeutisk/ordinationsbar artikel som aktiviteten gäller.">
+					comment = <"Till exempel: \"Atenolol 100mg\" eller \"Tenormin 100mg\". Om möjligt, benämn läkemedelsartikeln med en terminologi som kan utlösa beslutsstöd. Omfattningen av denna angivelse kan variera från namnet på läkemedelsartikeln till detaljer om det läkemedelspaketet som används. Fri textinmatning bör endast användas om det inte finns någon lämplig terminologi tillgänglig.">
 				>
 				["at0021"] = <
 					text = <"Orsak">
-					description = <"Anledningen till att vägsteget för det identifierade läkemedlet genomfördes.">
-					comment = <"Till exempel: 'Uppskjuten - Patient inte tillgänglig vid administreringstid', 'Avbruten - Biverkning'. Obs: Detta är inte orsaken till medicin instruktionen, utan snarare den specifika anledningen till att ett vårdsteg genomfördes och kommer ofta att användas för att dokumentera en viss avvikelse från den ursprungliga beställningen.">
+					description = <"Anledningen till att steget för det aktuella läkemedlet utfördes.">
+					comment = <"Till exempel: \"Uppskjutning - Patient inte tillgänglig vid administreringstillfälle\", \"Avbrott - Biverkning\". Obs! Detta utgör inte orsaken bakom själva medicineringsanvisningen, utan snarare anledningen till att ett vårdsteg genomförs. Detta användas generellt för att dokumentera avvikelser från den ursprungliga ordern.">
 				>
 				["at0024"] = <
 					text = <"Kommentar">
-					description = <"Ytterligare redogörelse för aktiviteten eller sökvägen som inte har registrerats i andra fält, inklusive information om eventuell avvikelse mellan den avsedda åtgärden och den faktiska utförda åtgärden.">
-					comment = <"Till exempel: 'Patienten var på röntgenavdelningen', 'Oavsiktlig injektion i blodkärlet under IM-administrering'.">
+					description = <"Kommentarer avseende den aktivitet eller det vårdsteg som inte beskrivs i övriga fält, inklusive detaljer om eventuell avvikelse mellan den avsedda åtgärden och den faktiska utförda åtgärden.">
+					comment = <"Till exempel: \"Patienten befann sig på röntgenavdelning\", \"Oavsiktlig injektion i blodkärlet under IM-administrering\".">
 				>
 				["at0025"] = <
 					text = <"Sekvensnummer">
-					description = <"Sekvensnumret som är specifikt för sökvägen">
-					comment = <"Till exempel: Vaccinsekvensnummer.
-">
+					description = <"Det specifika sekvensnumret för det aktuella vårdsteget.">
+					comment = <"Exempelvis dosnummer för vaccinering.">
 				>
 				["at0030"] = <
 					text = <"Tree">
@@ -2977,156 +3065,147 @@ Det rekommenderas starkt att ”Läkemedelsartikeln” är kodad med en terminol
 				>
 				["at0033"] = <
 					text = <"Patientvägledning">
-					description = <"All vägledning, instruktioner eller råd som ges till ämnet vård eller personlig vårdperson vid tidpunkten för vägsteget.">
-					comment = <"Till exempel: 'Undvik grapefrukt', 'Ta minst två timmar före sänggåendet', 'Ta med mat'. Kan kodas med en terminologi när det är kliniskt lämpligt.">
+					description = <"Vägledning, instruktioner eller råd som ges till patienten eller dennes personliga vårdgivare vid tidpunkten för vårdsteget.">
+					comment = <"Till exempel: \"Undvik grapefrukt\", \"Ta minst 2 timmar före sänggåendet\", \"Ta tillsammans med mat\". Om kliniskt lämpligt, benämn med en terminologi.">
 				>
 				["at0039"] = <
-					text = <"Stor förändring i beställning">
-					description = <"En större ändring av beställningen krävdes, vilket resulterade i att denna order stoppades och en ersättnings order startades.
-">
+					text = <"Större orderändring">
+					description = <"Då en större ändring av ordern krävdes, resulterade detta i att denna order stoppades och en ersättningsorder påbörjades.">
 				>
 				["at0041"] = <
-					text = <"Mindre ändring i läkemedelsordination">
-					description = <"Läkemedelsordination har ändrats på ett sätt som inte kräver så att en ny instruktion/ordination ska utfärdas, detta enligt lokala kliniska regler.">
+					text = <"Mindre orderändring">
+					description = <"Läkemedelsordern har ändrats på ett sätt som inte kräver att en ny order ska utfärdas, enligt lokala kliniska regler.">
 				>
 				["at0043"] = <
-					text = <"Ursprungligt schemalagt datum / tid">
-					description = <"Den tidpunkt då medicineringsåtgärden var planerad att inträffa.">
-					comment = <"Används för att jämföra avvikelse från faktisk åtgärdstid där detta inte är lätt att beräkna från original instruktionen.">
+					text = <"Ursprungligt datum/tid">
+					description = <"Tidpunkt då hantering av läkemedelsregim var schemalagd.">
+					comment = <"Används för att jämföra avvikelse från faktisk åtgärdstid.">
 				>
 				["at0044"] = <
-					text = <"Dosadministrationen uppskjuten">
-					description = <"En dos av läkemedlet har försenats men förväntas ges så snart som möjligt.">
+					text = <"Uppskjuten dos">
+					description = <"En dos av läkemedlet har försenats men förväntas administreras så snart som möjligt.">
 				>
 				["at0053"] = <
-					text = <"Ytterligare detaljer">
-					description = <"Ytterligare strukturerade detaljer om aktiviteten, eventuellt specifika för ett vägval.">
+					text = <"Övrig information">
+					description = <"Ytterligare information om åtgärden, eventuellt specifikt för ett särskilt vårdsteg.">
 				>
 				["at0085"] = <
-					text = <"Förlängning">
-					description = <"Ytterligare information krävs för att fånga lokalt innehåll eller för att anpassa sig till andra referensmodeller / formalismer.
-">
-					comment = <"Till exempel: lokala informationskrav eller ytterligare metadata för att anpassa sig till FHIR- eller CIMI-ekvivalenter.
-">
+					text = <"Tilläggsinformation">
+					description = <"Plats för att infoga tilläggsinformation som krävs för lokala anpassningar eller anpassning till andra referensmodeller eller formella krav.">
+					comment = <"Exempelvis lokala informationskrav eller metadata för anpassning till FHIR- eller CIMI-motsvarigheter.">
 				>
 				["at0103"] = <
-					text = <"Order ID">
-					description = <"Unik identifierare för läkemedelsbeställningen.">
-					comment = <"Kommentar: Detta dataelement gör det möjligt att definiera flera förekomster och mer exakt vid körning, om det behövs.">
+					text = <"Beställnings-ID">
+					description = <"Unik identifikator för läkemedelsbeställningen.">
+					comment = <"Detta dataelement möjliggör exakt identifiering av flera ordrar samtidigt.">
 				>
 				["at0104"] = <
 					text = <"Läkemedelsinformation">
-					description = <"Strukturerade detaljer om läkemedlet inklusive styrka, form och beståndsdelar.">
-					comment = <"Använd denna SLOT där den detaljerade beskrivningen av den utdelade, auktoriserade eller administrerade artikeln måste anges uttryckligen. Till exempel: form, styrka, eventuella utspädningsmedel eller blandning av ingredienser.">
+					description = <"Information om läkemedlet inklusive dess styrka, form och beståndsdelar.">
+					comment = <"Använd denna SLOT när detaljerad beskrivning av den dispenserade, auktoriserade eller administrerade artikeln måste anges explicit. Till exempel: form, styrka, eventuella utspädningsmedel eller blandning av ingredienser.">
 				>
 				["at0106"] = <
-					text = <"Receptet godkännts på nytt">
-					description = <"Den ursprungliga läkemedelsordination har godkänts på nytt för att möjliggöra upprepad recept eller utdelning. I vissa jurisdiktioner måste en helt ny beställning utfärdas under dessa situationer.">
+					text = <"Förnyelse av receptbeläggning">
+					description = <"Den ursprungliga läkemedelsorden har godkänts på nytt för att möjliggöra fortsatt dosering. I vissa jurisdiktioner måste en helt ny order utfärdas.">
 				>
 				["at0109"] = <
-					text = <"Läkemedel rekommenderad">
-					description = <"Läkemedlet har rekommenderats men inga åtgärder har vidtagits för att börja med läkemedelsförskrivning.">
+					text = <"Rekommenderat läkemedel">
+					description = <"Rekommenderat läkemedel, ej påbörjad ordination.">
 				>
 				["at0131"] = <
-					text = <"Mängd">
-					description = <"Specifika detaljer om mängden av läkemedelsartikeln.">
-					comment = <"CLUSTER.dosage är avsett att innehålla information om ändringar av läkemedelsbeställningar eller dosadministrationer, medan CLUSTER.medication_supply_amount är avsedd för information om doseringsrelaterad aktivitet.">
+					text = <"Kvantitet">
+					description = <"Kvantitet av läkemedelsartikeln.">
+					comment = <"CLUSTER.dosage är avsedd för information om ändringar av läkemedelsbeställningar eller administrerad dos och CLUSTER.medication_supply_amount är avsedd för information om doseringsrelaterad aktivitet.">
 				>
 				["at0132"] = <
-					text = <"Utbyte">
-					description = <"Ersättningsåtgärder som vidtas av den person som administrerar eller delar ut läkemedlet.">
-					comment = <"I många jurisdiktioner är det möjligt utbyte/ersättning av en beställd artikel som har en generisk form eller med ett annat varumärke. Detta är möjligt om det är tillåtet vid utdelning eller leverans (om det har fastställts som bioekvivalent). I andra fall, klinikern måste uttryckligen begära att inte bytas ut.
-">
+					text = <"Substitution">
+					description = <"Substitutionsåtgärder vidtagna av den person som administrerar eller dispenserar läkemedlet.">
+					comment = <"I många jurisdiktioner är det möjligt att vid dispenseringstillfället ersätta en beställd artikel med en generisk sort eller med ett annat varumärke, förutsatt att bioekvivalens är uppnått. I andra fall antas substitution vara tillåtet, såvida en kliniker explicit inte begär annat.">
 				>
 				["at0133"] = <
-					text = <"Anledningar till byte">
-					description = <"Orsaken eller motiveringen till utbytet är tagen.">
-					comment = <"Till exempel: \"Generiskt alternativ innehåller ett ämne som inte tolereras av patienten.\" Kan kodas med en terminologi när det är kliniskt lämpligt.">
+					text = <"Orsak för substitution">
+					description = <"Anledning eller motivering till den vidtagna substitutionsåtgärden.">
+					comment = <"Till exempel: \"Generiskt alternativ innehåller ett ämne som inte tolereras av patienten.\" Om kliniskt lämpligt, benämn med en terminologi.">
 				>
 				["at0138"] = <
-					text = <"Utbyte utfört">
-					description = <"Ett läkemedel ersattes som är bioekvivalent med det som har beställts.">
+					text = <"Utförd substitution">
+					description = <"Ersättning av läkemedel som är bioekvivalent med det som beställts.">
 				>
 				["at0139"] = <
-					text = <"Ersättning inte utförd">
-					description = <"Även om det tillåts av läkemedelsbeställningen ersattes inte ett bioekvivalent läkemedel.">
+					text = <"Ej utförd substitution">
+					description = <"Trots tillåtelse av läkemedelsordern, ersattes inte ett bioekvivalent läkemedel.">
 				>
 				["at0140"] = <
-					text = <"Administrationsinformation">
-					description = <"Detaljer om lokalisation (hur tas i kroppen) och administrering av medicinen.">
+					text = <"Administreringsinformation">
+					description = <"Information om atomisk lokalisering och administrering av läkemedlet.">
 				>
 				["at0141"] = <
-					text = <"Anatomisk lokalisation">
-					description = <"Strukturerad beskrivning av administrering av den beställda artikeln/medicin">
-					comment = <"Till exempel: \"vänster överarm\", \"intravenös kateter högra hand\". Det föredras kodning av kroppsstället med en terminologi , där det är möjligt.">
+					text = <"Anatomisk lokalisering">
+					description = <"Beskrivning av administrationsstället för den beställda artikeln.">
+					comment = <"Till exempel: \"vänster överarm\", \"intravenös kateter, höger hand\". Om möjligt, benämn den anatomiska lokaliseringen med en terminologi.">
 				>
 				["at0142"] = <
-					text = <"Strukturerad anatomisk lokalisation">
-					description = <"Strukturerad beskrivning av administreringsstället för läkemedlet, vaccinet eller den lämpliga behandlingen.">
+					text = <"Exakt anatomisk lokalisering">
+					description = <"Närmare beskrivning av administrationsstället för läkemedlet, vaccinet eller annan terapeutisk produkt.">
 					comment = <"Till exempel: \"På den mediala hudytan på vänster underarm, från 10 cm till 20 cm distalt från armbågens punkt\".">
 				>
 				["at0143"] = <
-					text = <"Administrations metod">
-					description = <"Tekniken eller anordningen som den beställda artikeln administrerades eller ska administreras.">
-					comment = <"Kommentar: Till exempel: 'via Z-track-injektion'; \"via nebulisator\". Rekommenderas kodning av metoden med en terminologi, där det är möjligt.">
+					text = <"Administreringsmetod">
+					description = <"Den teknik eller utrustning med vilken den beställda artikeln administrerades eller ska administreras.">
+					comment = <"Till exempel: \"via Z-teknik\"; \"via nebulisator\". Om möjligt, benämn metoden med en terminologi.">
 				>
 				["at0144"] = <
-					text = <"Administrations enhet">
-					description = <"Detaljer om den medicinska enheten som används för att hjälpa till med läkemedlet.">
+					text = <"Utrustning för administrering">
+					description = <"Information om den medicinska utrustning som används vid administrering av läkemedlet.">
 				>
 				["at0145"] = <
-					text = <"Förskrivning väntar på auktorisering">
-					description = <"Utkast till förskrivning/recept har utarbetats och väntar på bekräftelse från en auktoriserad läkare. Kan användas där auktorisationer utförs som en uppsättning. Denna careflow_step kan ha statusen \"planerad\" eller \"aktiv\", vilket återspeglar behovet av att hantera nya ordination såväl som obehöriga ordination.
-">
+					text = <"Ordination som inväntar tillstånd">
+					description = <"Förslag på ordination har utarbetats och inväntar bekräftelse från en auktoriserad läkare. Kan användas där återauktorisering utförs som en batch. Detta flödessteg kan ha statusen \"planerad\" eller \"aktiv\", vilket återspeglar behovet av att hantera nya beställningar såväl som återauktoriserade ordrar.">
 				>
 				["at0147"] = <
-					text = <"Väg">
-					description = <"Beskriver genom vilken väg den beställda artikeln ska tas eller ska tas in i anatomisk lokalisation.">
-					comment = <"Kommentar: Till exempel: 'oral', 'intravenös' eller 'aktuell'. Det föredras kodning av vägen med en terminologi, om det finns möjlighet. Flera potentiella vägar kan specificeras.">
+					text = <"Administreringsväg">
+					description = <"Sättet genom vilken den beställda artikeln administrerades eller ska administreras i patientens kropp.">
+					comment = <"Till exempel: \"oralt\", \"intravenöst\" eller \"lokalt\". Om möjligt, benämn administreringsvägen med en terminologi. Flera potentiella administreringsvägar kan specificeras.">
 				>
 				["at0148"] = <
-					text = <"Läkemedel förberedd">
-					description = <"Läkemedlet har förberetts fysiskt. Till exempel: beredning av en intravenös blandning.">
+					text = <"Förberedelse av läkemedel">
+					description = <"Fysisk förberedelse av läkemedlet har genomförs. Exempelvis beredning av en intravenös blandning.">
 				>
 				["at0149"] = <
-					text = <"Dubbelkollade?">
-					description = <"Vägsteget har kontrollerats av en separat person.
-">
-					comment = <"Detaljer om den person som utför dubbelkontrollen kan anges i referensmodellelementet \"Deltagande\".">
+					text = <"Dubbelkontrollerat?">
+					description = <"Vårdsteget har dubbelkontrollerats av annan individ.">
+					comment = <"Information om den person som utför dubbelkontrollen kan anges i referensmodells-elementet \"Deltagande\".">
 				>
 				["at0150"] = <
-					text = <"Recept avbrutet">
-					description = <"Receptet avbröts innan det utfärdades.
-">
+					text = <"Avbruten ordination">
+					description = <"Ordinationen avbröts innan det utfärdades.">
 				>
 				["at0151"] = <
-					text = <"Receptet är ogiltigt eller upphört att gälla">
-					description = <"Receptet har ogiltigförklarats eller har upphört att gälla utan att det har utförts klart.
-">
+					text = <"Ogiltigt eller utgånget recept">
+					description = <"Receptet har ogiltigförklarats eller upphört att gälla.">
 				>
 				["at0152"] = <
-					text = <"Receptet utfört">
-					description = <"Receptet har utförts framgångsrikt.
-">
+					text = <"Uppfyllt recept">
+					description = <"Receptet har framgångsrikt uppfyllts.">
 				>
 				["at0153"] = <
-					text = <"Läkemedlet är godkänt">
+					text = <"Godkännande av läkemedel">
 					description = <"Läkemedlet har formellt godkänts för användning.">
 				>
 				["at0154"] = <
-					text = <"Datum och tid för Omstart">
-					description = <"Datum/tid då läkemedelskuren är inställd på att starta om, enligt tidigare steget \"Administrationer avstängd\".">
+					text = <"Datum/tid för omstart">
+					description = <"Datum/tid för omstart av läkemedelsbehandling, enligt \"Indragen administrering\".">
 					comment = <"Till exempel: 2017-10-29">
 				>
 				["at0155"] = <
-					text = <"Omstart av kriterium">
-					description = <"kriterium som triggar igång så att läkemedelskuren startas om enligt steget \"Administrationer avstängd\".">
-					comment = <"Till exempel: \"På dag 2 efter operationen\".">
+					text = <"Omstartskriterium">
+					description = <"Kriteriet för omstart av läkemedelsbehandling, enligt \"Indragen administrering\".">
+					comment = <"Till exempel: \"Dag 2 efter operation\".">
 				>
 				["at0156"] = <
 					text = <"Klinisk indikation">
-					description = <"Den kliniska orsaken till läkemedelsaktiviteten.">
-					comment = <"Till exempel: 'Angina' eller 'Pain'. Kodning av indikationen med en terminologi rekommenderas. självklart där det går att hitta terminologibindning. Detta dataelement tillåter flera händelser. Om endast en ACTION används för att registrera en medicin indikation kan detta dataelement användas utan adderande hänsyn. Men om en klinisk indikation registreras för både INSTRUKTIONEN för läkemedelsbeställningen och ACTION för läkemedelshantering, var medveten om att dessa indikationer kanske inte är konsekventa. \"">
+					description = <"Klinisk orsak till läkemedelsbehandling.">
+					comment = <"Exempelvis \"Angina pectoris\" eller \"Smärta\". Om möjligt, benämn den kliniska indikationen med en terminologi. Detta dataelement kan förekomma upprepade gånger. Om endast ACTION används för att registrera en klinisk indikation, kan detta dataelement användas utan någon särskild aktning. Om en klinisk indikation i stället registreras för både INSTRUCTION och ACTION, var uppmärksam på att dessa angivelser kanske inte är konsekventa.">
 				>
 			>
 		>
@@ -3370,6 +3449,493 @@ Det rekommenderas starkt att ”Läkemedelsartikeln” är kodad med en terminol
 					text = <"临床适应证">
 					description = <"用药活性的临床原因。">
 					comment = <"例如：“心绞痛”或“疼痛”。 最好尽可能采用术语集来编码适应证。此数据元允许多次重复出现。 如果仅仅利用行动（ACTION）来记录药物适应证，则可直接采用这一数据元，而无需做其他的考虑。不过，如果药物医嘱指令（INSTRUCTION）和当前药物管理行动（ACTION）同时都记录了临床适应证，则应当注意两处的适应证可能并不一致。">
+				>
+			>
+		>
+		["ca"] = <
+			items = <
+				["at0000"] = <
+					text = <"Gestió de la medicació">
+					description = <"Qualsevol activitat relacionada amb la planificació, programació, gestió de prescripció, dispensació, administració, cessament i altre ús d'una medicació, vacuna, producte nutricional o altre article terapèutic.">
+					comment = <"Això no es limita a les activitats realitzades basades en les ordres de medicació dels clínics, sinó que també podria incloure, per exemple, prendre medicació sense prescripció.">
+				>
+				["at0002"] = <
+					text = <"Prescripció expedida">
+					description = <"S'ha expedit una recepta pel medicament.">
+				>
+				["at0003"] = <
+					text = <"Prescripció dispensada">
+					description = <"S'ha dispensat la medicació sol·licitada, per exemple, des d'una farmàcia al pacient.">
+				>
+				["at0004"] = <
+					text = <"Començament de la medicació">
+					description = <"El pacient ha pres o se li ha administrat el medicament per primer cop. Encara que en alguns entorns aquesta data significativa pot ser computable com la primera de diverses administracions, en altres entorns, com l'atenció primària, les dates específiques d'administració no estan fàcilment disponibles.">
+				>
+				["at0005"] = <
+					text = <"Medicació reavaluada">
+					description = <"S'ha reavaluat la medicació individual, per exemple, si s'ha de continuar prenent. No es tracta de revisar la llista de medicaments.">
+				>
+				["at0006"] = <
+					text = <"Dosi administrada">
+					description = <"S'ha fet una única administració de la medicació.">
+				>
+				["at0007"] = <
+					text = <"Curs de medicació completat">
+					description = <"El curs de medicació s'ha completat segons allò previst.">
+				>
+				["at0008"] = <
+					text = <"Retard en el subministrament de medicaments receptats">
+					description = <"La recepta no s'ha dispensat degut a cap problema tècnic o de subministrament farmacèutic.">
+				>
+				["at0009"] = <
+					text = <"Administració suspesa">
+					description = <"S'ha suspès l'administració de la medicació fins a un nou avís. No s'han d'administrar més dosis fins que no es compleixin la data o les condicions de reinici. En establir la data/condicions de reinici després de la suspensió, cal fer un pas des de 'Administració suspesa' i tornar a 'Data d'inici de medicació/condicions establertes'.">
+				>
+				["at0010"] = <
+					text = <"Prescripció reemesa">
+					description = <"S'ha reenviat una recepta per a una ordre de medicació existent.">
+				>
+				["at0011"] = <
+					text = <"Reautorització de prescripció pendent">
+					description = <"L'expedició de la recepta està pendent d'una autorització nova per part d'un metge.">
+				>
+				["at0012"] = <
+					text = <"Curs de medicació cancel·lat">
+					description = <"S'ha cancel·lat la medicació prevista abans de la vostra administració.">
+				>
+				["at0013"] = <
+					text = <"Curs de medicació posposat">
+					description = <"S'ha posposat el curs de medicació programat abans de qualsevol administració.">
+				>
+				["at0015"] = <
+					text = <"Interrupció de la medicació">
+					description = <"S'ha interromput l'administració de la medicació durant el període del curs previst.">
+				>
+				["at0016"] = <
+					text = <"Data d'inici de medicació/condició establerta">
+					description = <"S'ha fixat l'hora d'inici de la medicació o una altra condició d'inici.">
+				>
+				["at0017"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0018"] = <
+					text = <"Administració de dosi omesa">
+					description = <"S'ha retingut una administració de la medicació i no se n'ha administrat. No s'espera que s'administri més tard, encara que la dosi següent (si n'hi hagués) s'ha d'administrar d'acord amb l'ordre original.">
+				>
+				["at0020"] = <
+					text = <"Medicament">
+					description = <"Nom del medicament, vacuna o altre article terapèutic/prescribible en què es va centrar l'activitat.">
+					comment = <"Per exemple: \"Atenolol 100 mg\" o \"Tenormin comprimits 100 mg\".
+Es recomana encaridament que el \"Medicament\" es codifiqui amb una terminologia capaç d'activar el suport a la presa de decisions, sempre que sigui possible. L'abast de la codificació pot variar des del nom del medicament fins a detalls estructurats sobre l'envàs utilitzat. L'entrada de text lliure només cal utilitzar-la si no es disposa de la terminologia adequada.">
+				>
+				["at0021"] = <
+					text = <"Motiu">
+					description = <"Motiu pel qual es va fer la fase de la ruta per al medicament identificat.">
+					comment = <"Per exemple: \"Ajornat - Pacient no disponible en el moment de l'administració\", \"Cancel·lat - Reacció adversa\". Nota: No es tracta del motiu de la instrucció de medicació, sinó de la raó específica per la qual es va fer un pas assistencial, i sovint s'utilitzarà per documentar alguna desviació de l'ordre original.">
+				>
+				["at0024"] = <
+					text = <"Comentaris">
+					description = <"Informació addicional sobre l'activitat o la fase del procés no recollida en altres camps, inclosos els detalls de qualsevol variació entre l'acció prevista i l'acció realment realitzada.">
+					comment = <"Per exemple: \"El pacient era al servei de radiologia\", \"Injecció accidental en un got sanguini durant l'administració d'IM\".">
+				>
+				["at0025"] = <
+					text = <"Seqüència numèrica">
+					description = <"La seqüència numèrica específica de la fase del procés que s'està registrant.">
+					comment = <"Per exemple: Número de seqüència de la vacuna.">
+				>
+				["at0030"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0033"] = <
+					text = <"Orientació al pacient">
+					description = <"Qualsevol orientació, instrucció o consell que s'hagi donat al subjecte d'assistència o al cuidador personal al moment de la fase del procés.">
+					comment = <"Per exemple: \"Evitar l'aranja\", \"Prendre almenys 2 hores abans de ficar-se al llit\", \"Prendre amb menjar\". Es pot codificar amb una terminologia quan sigui clínicament apropiat.">
+				>
+				["at0039"] = <
+					text = <"Canvi important a l'ordre">
+					description = <"Va caldre introduir un canvi important en l'ordre, cosa que va obligar a interrompre'l i iniciar una ordre de reemplaçament.">
+				>
+				["at0041"] = <
+					text = <"Canvi menor a l'ordre">
+					description = <"L'ordre de medicació s'ha modificat de manera que no requereix l'emissió d'una nova instrucció/ordre, d'acord amb les normes clíniques locals.">
+				>
+				["at0043"] = <
+					text = <"Data/hora programada original">
+					description = <"La data en què estava programada l'acció de medicació.">
+					comment = <"S'utilitza per comparar la desviació del temps real quan no es pot calcular fàcilment a partir de la instrucció original.">
+				>
+				["at0044"] = <
+					text = <"Administració de dosi ajornada">
+					description = <"S'ha endarrerit l'administració d'una dosi del medicament, però s'espera que s'administri com més aviat millor.">
+				>
+				["at0053"] = <
+					text = <"Detalls addicionals">
+					description = <"Detalls més estructurats de l'acció, possiblement específics d'una fase del procés.">
+				>
+				["at0085"] = <
+					text = <"Ampliació">
+					description = <"Informació addicional necessària per registrar el contingut local o per alinear-se amb altres models/formalismes de referència.">
+					comment = <"Per exemple: requisits d'informació local o metadades addicionals per alinear-se amb els equivalents de FHIR o CIMI.">
+				>
+				["at0103"] = <
+					text = <"ID de la ordre">
+					description = <"Identificador únic per a la ordre de medicació.">
+					comment = <"Aquest element de dades permet definir múltiples ocurrències de manera més explícita en temps d'execució, si cal.">
+				>
+				["at0104"] = <
+					text = <"Detalls de la medicació">
+					description = <"Dades estructurades sobre el medicament, inclosa la concentració, la forma i les substàncies que el componen.">
+					comment = <"Utilitzeu aquest SLOT quan s'hagi d'indicar explícitament la descripció detallada del producte dispensat, autoritzat o administrat. Per exemple: la forma, la concentració, els diluents o la barreja d'ingredients.">
+				>
+				["at0106"] = <
+					text = <"Prescripció reautoritzada">
+					description = <"L'ordre de medicació original ha estat reautoritzada per permetre la repetició de la prescripció o dispensació. En algunes jurisdiccions cal emetre una ordre completament nova en aquestes circumstàncies.">
+				>
+				["at0109"] = <
+					text = <"Medicació recomanada">
+					description = <"La medicació s'ha recomanat, però no s'ha fet cap pas per iniciar la prescripció.">
+				>
+				["at0131"] = <
+					text = <"Quantitat">
+					description = <"Detalls específics sobre la quantitat de medicament.">
+					comment = <"CLUSTER.dosage està pensat per portar detalls de canvis a l'ordre de medicació o administracions de dosi, mentre que CLUSTER.medication_supply_amount està pensat per a detalls d'activitat relacionada amb la dispensació.">
+				>
+				["at0132"] = <
+					text = <"Substitució">
+					description = <"Mesures de substitució adoptades per la persona que administra o dispensa el medicament.">
+					comment = <"En moltes jurisdiccions, es permet la substitució d'un article sol·licitat com a forma genèrica o amb una marca diferent, que s'hagi determinat com a bioequivalent, al punt de dispensació o subministrament. En altres casos, la substitució es dóna per suposada i el metge ha de sol·licitar explícitament que no se substitueixi.">
+				>
+				["at0133"] = <
+					text = <"Motiu de la substitució">
+					description = <"Motiu o justificació de la mesura de substitució adoptada.">
+					comment = <"Per exemple: “L'alternativa genèrica conté una substància que el pacient no tolera”. Es pot codificar amb una terminologia quan sigui clínicament apropiat.">
+				>
+				["at0138"] = <
+					text = <"Substitució realitzada">
+					description = <"Es va substituir per un medicament bioequivalent al sol·licitat.">
+				>
+				["at0139"] = <
+					text = <"Substitució no realitzada">
+					description = <"Tot i que l'ordre de medicació ho permetia, no es va substituir per un medicament bioequivalent.">
+				>
+				["at0140"] = <
+					text = <"Detalls de l'administració">
+					description = <"Dades sobre la localització corporal i l'administració de la medicació.">
+				>
+				["at0141"] = <
+					text = <"Zona corporal">
+					description = <"Descripció estructurada del lloc d'administració del producte sol·licitat.">
+					comment = <"Per exemple: \"braç esquerre\", \"catèter intravenós mà dreta\".
+Sempre que sigui possible, és preferible codificar el lloc del cos amb una terminologia.">
+				>
+				["at0142"] = <
+					text = <"Zona corporal estructurada">
+					description = <"Descripció estructurada del lloc d'administració del medicament, vacuna o bé terapèutic.">
+					comment = <"Per exemple: \"A la superfície cutània medial de l'avantbraç esquerre, de 10 cm a 20 cm distalment des de la punta del colze\".
+">
+				>
+				["at0143"] = <
+					text = <"Mètode d'administració">
+					description = <"La tècnica o el dispositiu mitjançant el qual es va administrar o administrar l'article sol·licitat.">
+					comment = <"Per exemple: 'mitjançant injecció de via Z'; 'a través de nebulitzador'. És preferible codificar el mètode amb una terminologia, sempre que sigui possible.">
+				>
+				["at0144"] = <
+					text = <"Dispositiu d'administració">
+					description = <"Detalls del dispositiu mèdic utilitzat per ajudar a administrar la medicació.">
+				>
+				["at0145"] = <
+					text = <"Prescripció en espera per autorització">
+					description = <"S'ha preparat l'esborrany de la recepta i està pendent de confirmació per part d'un clínic autoritzat. Es pot utilitzar quan les reautoritzacions es fan per lots. Aquest careflow_step pot tenir un estat \"planificat\" o \"actiu\", cosa que reflecteix la necessitat de gestionar tant noves comandes com comandes reautoritzades.">
+				>
+				["at0147"] = <
+					text = <"Via d'administració">
+					description = <"La via per la qual s'ha administrat o s'administrarà el producte sol·licitat al cos del subjecte.">
+					comment = <"Per exemple: \"oral\", \"intravenosa\" o \"tòpica\". És preferible codificar la via amb una terminologia, sempre que sigui possible. Poden especificar-se múltiples vies potencials.">
+				>
+				["at0148"] = <
+					text = <"Medicació preparada">
+					description = <"El medicament ha estat preparat físicament. Per exemple: preparar una barreja intravenosa.">
+				>
+				["at0149"] = <
+					text = <"Doble comprovació?">
+					description = <"La fase del procés ha estat comprovada per una altra persona.">
+					comment = <"Les dades de la persona que fa el doble control poden figurar a l'element \"Participació\" del Model de Referència.">
+				>
+				["at0150"] = <
+					text = <"Prescripció cancel·lada">
+					description = <"La prescripció mèdica va ser cancel·lada abans de ser emesa">
+				>
+				["at0151"] = <
+					text = <"Prescripció no vàlida o caducada">
+					description = <"La recepta ha estat invalidada o ha caducat sense ser complerta.">
+				>
+				["at0152"] = <
+					text = <"Prescripció realitzada">
+					description = <"La prescripció s'ha fet correctament.">
+				>
+				["at0153"] = <
+					text = <"Medicament autoritzat">
+					description = <"S'ha autoritzat formalment l'ús del medicament.">
+				>
+				["at0154"] = <
+					text = <"Data/hora de reinici">
+					description = <"La data/hora en què el curs de medicació està programat per reiniciar-se, segons la fase del procés “Administració suspesa”.">
+					comment = <"Per exemple: 2017-10-29">
+				>
+				["at0155"] = <
+					text = <"Criteri de reinici">
+					description = <"El criteri que desencadena el reinici del curs de medicació, segons la fase del procés “Administració suspesa”.">
+					comment = <"Per exemple: \"El dia 2 després de lʻoperació\".">
+				>
+				["at0156"] = <
+					text = <"Indicació clínica">
+					description = <"Motiu clínic de l'activitat medicamentosa.">
+					comment = <"Per exemple: \"Angina\" o \"Dolor\". Sempre que sigui possible, es prefereix codificar la indicació amb una terminologia. Aquesta dada permet múltiples ocurrències. Si només utilitzeu una ACTION per registrar una indicació de medicació, aquest element de dades es pot utilitzar sense cap consideració addicional. No obstant això, si es registra una indicació clínica tant per a la INSTRUCTION d'ordre de medicació com per a aquesta ACTION de gestió de la medicació, tingueu en compte que aquestes indicacions podrien no ser coherents.">
+				>
+			>
+		>
+		["es"] = <
+			items = <
+				["at0000"] = <
+					text = <"Gestión de la medicación">
+					description = <"Cualquier actividad relacionada con la planificación, programación, gestión de prescripción, dispensación, administración, cese y otro uso de una medicación, vacuna, producto nutricional u otro artículo terapéutico.">
+					comment = <"Esto no se limita a las actividades realizadas basadas en las órdenes de medicación de los clínicos, sino que también podría incluir, por ejemplo, tomar medicación sin prescripción.">
+				>
+				["at0002"] = <
+					text = <"Prescripción expedida">
+					description = <"Se ha expedido una receta para el medicamento.">
+				>
+				["at0003"] = <
+					text = <"Prescripción dispensada">
+					description = <"Se ha dispensado la medicación solicitada, por ejemplo, desde una farmacia al paciente.">
+				>
+				["at0004"] = <
+					text = <"Comienzo de la medicación">
+					description = <"El paciente ha tomado o se le ha administrado el medicamento por primera vez. Aunque en algunos entornos esta fecha significativa puede ser computable como la primera de varias administraciones, en otros entornos, como la atención primaria, las fechas específicas de administración no están fácilmente disponibles.">
+				>
+				["at0005"] = <
+					text = <"Medicación reevaluada">
+					description = <"Se ha reevaluado la medicación individual, por ejemplo, si debe seguir tomándose. No se trata de revisar la lista de medicamentos.">
+				>
+				["at0006"] = <
+					text = <"Dosis administrada">
+					description = <"Se ha realizado una única administración de la medicación.">
+				>
+				["at0007"] = <
+					text = <"Curso de medicación completado">
+					description = <"El curso de medicación se ha completado según lo previsto.">
+				>
+				["at0008"] = <
+					text = <"Retraso en el suministro de medicamentos recetados">
+					description = <"La receta no se ha dispensado debido a un problema técnico o de suministro farmacéutico.">
+				>
+				["at0009"] = <
+					text = <"Administración suspendida">
+					description = <"Se ha suspendido la administración de la medicación hasta nuevo aviso. No deben administrarse más dosis hasta que se cumplan la fecha o las condiciones de reinicio. Al establecer la fecha/condiciones de reinicio tras la suspensión, debe realizarse un paso desde 'Administración suspendida' y volver a 'Fecha de inicio de medicación/condiciones establecidas'.">
+				>
+				["at0010"] = <
+					text = <"Prescripción remitida">
+					description = <"Se ha reexpedido una receta para una orden de medicación existente.">
+				>
+				["at0011"] = <
+					text = <"Reautorización de prescripción pendiente">
+					description = <"La expedición de la receta está pendiente de una nueva autorización por parte de un médico.">
+				>
+				["at0012"] = <
+					text = <"Curso de medicación cancelado">
+					description = <"Se ha cancelado la medicación prevista antes de su administración.">
+				>
+				["at0013"] = <
+					text = <"Curso de medicación pospuesto">
+					description = <"Se ha pospuesto el curso de medicación programado antes de cualquier administración.">
+				>
+				["at0015"] = <
+					text = <"Interrupción de la medicación">
+					description = <"Se ha interrumpido la administración de la medicación durante el periodo del curso previsto.">
+				>
+				["at0016"] = <
+					text = <"Fecha de inicio de medicación/condición establecida">
+					description = <"Se ha fijado la hora de inicio de la medicación u otra condición de inicio.">
+				>
+				["at0017"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0018"] = <
+					text = <"Administración de dosis omitida">
+					description = <"Se ha retenido una administración de la medicación y no se ha administrado. No se espera que se administre más tarde, aunque la siguiente dosis (si la hubiera) debe administrarse de acuerdo con la orden original.">
+				>
+				["at0020"] = <
+					text = <"Medicamento">
+					description = <"Nombre del medicamento, vacuna u otro artículo terapéutico/prescribible en el que se centró la actividad.">
+					comment = <"Por ejemplo: \"Atenolol 100 mg\" o \"Tenormin comprimidos 100 mg\". 
+Se recomienda encarecidamente que el \"Medicamento\" se codifique con una terminología capaz de activar el apoyo a la toma de decisiones, siempre que sea posible. El alcance de la codificación puede variar desde el simple nombre del medicamento hasta detalles estructurados sobre el envase utilizado. La entrada de texto libre sólo debe utilizarse si no se dispone de la terminología adecuada.">
+				>
+				["at0021"] = <
+					text = <"Motivo">
+					description = <"Motivo por el que se llevó a cabo la fase de la ruta para el medicamento identificado.">
+					comment = <"Por ejemplo: \"Aplazado - Paciente no disponible en el momento de la administración\", \"Cancelado - Reacción adversa\". Nota: No se trata del motivo de la instrucción de medicación, sino de la razón específica por la que se llevó a cabo un paso asistencial, y a menudo se utilizará para documentar alguna desviación de la orden original.">
+				>
+				["at0024"] = <
+					text = <"Comentarios">
+					description = <"Información adicional sobre la actividad o fase del proceso no recogida en otros campos, incluidos los detalles de cualquier variación entre la acción prevista y la acción realmente realizada.">
+					comment = <"Por ejemplo: \"El paciente estaba en el servicio de radiología\", \"Inyección accidental en un vaso sanguíneo durante la administración de IM\".">
+				>
+				["at0025"] = <
+					text = <"Secuencia numérica">
+					description = <"La secuencia numérica específica de la fase del proceso que se está registrando.">
+					comment = <"Por ejemplo: Número de secuencia de la vacuna.">
+				>
+				["at0030"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0033"] = <
+					text = <"Orientación al paciente">
+					description = <"Cualquier orientación, instrucción o consejo que se haya dado al sujeto de asistencia o al cuidador personal en el momento de la fase del proceso.">
+					comment = <"Por ejemplo: \"Evitar el pomelo\", \"Tomar al menos 2 horas antes de acostarse\", \"Tomar con comida\". Puede codificarse con una terminología cuando sea clínicamente apropiado.">
+				>
+				["at0039"] = <
+					text = <"Cambio importante en la orden">
+					description = <"Fue necesario introducir un cambio importante en la orden, lo que obligó a interrumpirlo e iniciar una orden de reemplazo.">
+				>
+				["at0041"] = <
+					text = <"Cambio menor en la orden">
+					description = <"La orden de medicación se ha modificado de forma que no requiere la emisión de una nueva instrucción/orden, de acuerdo con las normas clínicas locales.">
+				>
+				["at0043"] = <
+					text = <"Fecha/hora programada original">
+					description = <"La fecha en la que estaba programada la acción de medicación.">
+					comment = <"Se utiliza para comparar la desviación del tiempo de acción real cuando no se puede calcular fácilmente a partir de la instrucción original.">
+				>
+				["at0044"] = <
+					text = <"Administración de dosis aplazada">
+					description = <"Se ha retrasado la administración de una dosis del medicamento, pero se espera que se administre lo antes posible.">
+				>
+				["at0053"] = <
+					text = <"Detalles adicionales">
+					description = <"Detalles más estructurados de la acción, posiblemente específicos de una etapa del proceso.">
+				>
+				["at0085"] = <
+					text = <"Ampliación">
+					description = <"Información adicional necesaria para registrar el contenido local o para alinearse con otros modelos/formalismos de referencia.">
+					comment = <"Por ejemplo: requisitos de información local o metadatos adicionales para alinearse con los equivalentes de FHIR o CIMI.">
+				>
+				["at0103"] = <
+					text = <"ID de la orden">
+					description = <"Identificador único de la orden de medicación.">
+					comment = <"Este elemento de datos permite definir múltiples ocurrencias de forma más explícita en tiempo de ejecución, si es necesario.">
+				>
+				["at0104"] = <
+					text = <"Detalles de la medicación">
+					description = <"Datos estructurados sobre el medicamento, incluida la concentración, la forma y las sustancias que lo componen.">
+					comment = <"Utilice este SLOT cuando deba indicarse explícitamente la descripción detallada del producto dispensado, autorizado o administrado. Por ejemplo: forma, concentración, diluyentes o mezcla de ingredientes.">
+				>
+				["at0106"] = <
+					text = <"Prescripción reautorizada">
+					description = <"La orden de medicación original ha sido reautorizada para permitir la repetición de la prescripción o dispensación. En algunas jurisdicciones debe emitirse una orden completamente nueva en estas circunstancias.">
+				>
+				["at0109"] = <
+					text = <"Medicación recomendada">
+					description = <"La medicación se ha recomendado, pero no se ha dado ningún paso para iniciar la prescripción.">
+				>
+				["at0131"] = <
+					text = <"Cantidad">
+					description = <"Detalles específicos sobre la cantidad de medicamento.">
+					comment = <"CLUSTER.dosage está pensado para llevar detalles de cambios en la orden de medicación o administraciones de dosis, mientras que CLUSTER.medication_supply_amount está pensado para detalles de actividad relacionada con la dispensación.">
+				>
+				["at0132"] = <
+					text = <"Sustitución">
+					description = <"Medidas de sustitución adoptadas por la persona que administra o dispensa el medicamento.">
+					comment = <"En muchas jurisdicciones, se permite la sustitución de un artículo solicitado como forma genérica o con una marca diferente, que se haya determinado como bioequivalente, en el punto de dispensación o suministro. En otros casos, la sustitución se da por supuesta y el médico debe solicitar explícitamente que no se sustituya.">
+				>
+				["at0133"] = <
+					text = <"Motivo de la sustitución">
+					description = <"Motivo o justificación de la medida de sustitución adoptada.">
+					comment = <"Por ejemplo: \"La alternativa genérica contiene una sustancia que el paciente no tolera\". Puede codificarse con una terminología cuando sea clínicamente apropiado.">
+				>
+				["at0138"] = <
+					text = <"Sustitución realizada">
+					description = <"Se sustituyó por un medicamento bioequivalente al solicitado.">
+				>
+				["at0139"] = <
+					text = <"Sustitución no realizada">
+					description = <"Aunque la orden de medicación lo permitía, no se sustituyó por un medicamento bioequivalente.">
+				>
+				["at0140"] = <
+					text = <"Detalles de la administración">
+					description = <"Datos sobre la localización corporal y la administración de la medicación.">
+				>
+				["at0141"] = <
+					text = <"Zona corporal">
+					description = <"Descripción estructurada del lugar de administración del producto solicitado.">
+					comment = <"Por ejemplo: \"brazo izquierdo\", \"catéter intravenoso mano derecha\". 
+Siempre que sea posible, es preferible codificar el lugar del cuerpo con una terminología.">
+				>
+				["at0142"] = <
+					text = <"Zona corporal estructurada">
+					description = <"Descripción estructurada del lugar de administración del medicamento, vacuna o bien terapéutico.">
+					comment = <"Por ejemplo: \"En la superficie cutánea medial del antebrazo izquierdo, de 10 cm a 20 cm distalmente desde la punta del codo\".">
+				>
+				["at0143"] = <
+					text = <"Método de administración">
+					description = <"La técnica o el dispositivo mediante el cual se administró o se administrará el artículo solicitado.">
+					comment = <"Por ejemplo: 'mediante inyección de vía Z'; 'a través de nebulizador'. Es preferible codificar el método con una terminología, siempre que sea posible.">
+				>
+				["at0144"] = <
+					text = <"Dispositivo de administración">
+					description = <"Detalles del dispositivo médico utilizado para ayudar a la administración de la medicación.">
+				>
+				["at0145"] = <
+					text = <"Prescripción en espera por autorización">
+					description = <"Se ha preparado el borrador de la receta y está pendiente de confirmación por parte de un clínico autorizado. Puede utilizarse cuando las reautorizaciones se realizan por lotes. Este careflow_step puede tener un estado \"planificado\" o \"activo\", lo que refleja la necesidad de gestionar tanto nuevos pedidos como pedidos reautorizados.">
+				>
+				["at0147"] = <
+					text = <"Vía de administración">
+					description = <"La vía por la que se ha administrado o se va a administrar el producto solicitado al cuerpo del sujeto.">
+					comment = <"Por ejemplo: \"oral\", \"intravenosa\" o \"tópica\". Es preferible codificar la vía con una terminología, siempre que sea posible. Pueden especificarse múltiples vías potenciales.">
+				>
+				["at0148"] = <
+					text = <"Medicación preparada">
+					description = <"El medicamento se ha preparado físicamente. Por ejemplo: preparación de una mezcla intravenosa.">
+				>
+				["at0149"] = <
+					text = <"¿Doble comprobación?">
+					description = <"La fase del proceso ha sido comprobada por otra persona.">
+					comment = <"Los datos de la persona que realiza el doble control pueden figurar en el elemento \"Participación\" del Modelo de Referencia.">
+				>
+				["at0150"] = <
+					text = <"Receta anulada">
+					description = <"La receta se anuló antes de ser expedida.">
+				>
+				["at0151"] = <
+					text = <"Prescripción no válida o caducada">
+					description = <"La receta ha sido invalidada o ha caducado sin ser cumplida.">
+				>
+				["at0152"] = <
+					text = <"Prescripción realizada">
+					description = <"La prescripción se ha realizado correctamente.">
+				>
+				["at0153"] = <
+					text = <"Medicamento autorizado">
+					description = <"Se ha autorizado formalmente el uso del medicamento.">
+				>
+				["at0154"] = <
+					text = <"Fecha/hora de reinicio">
+					description = <"La fecha/hora en la que el curso de medicación está programado para reiniciarse, según la fase del proceso \"Administración suspendida\".">
+					comment = <"Por ejemplo: 29/10/2017">
+				>
+				["at0155"] = <
+					text = <"Criterio de reinicio">
+					description = <"El criterio que desencadena el reinicio del curso de medicación, según la fase del proceso \"Administración suspendida\".">
+					comment = <"Por ejemplo: \"El día 2 después de la operación\".">
+				>
+				["at0156"] = <
+					text = <"Indicación clínica">
+					description = <"Motivo clínico de la actividad medicamentosa.">
+					comment = <"Por ejemplo: \"Angina\" o \"Dolor\". Siempre que sea posible, se prefiere codificar la indicación con una terminología. Este dato permite múltiples ocurrencias. Si sólo se utiliza una ACTION para registrar una indicación de medicación, este elemento de datos puede utilizarse sin consideración adicional. Sin embargo, si se registra una indicación clínica tanto para la INSTRUCTION de orden de medicación como para esta ACTION de gestión de la medicación, tenga en cuenta que estas indicaciones podrían no ser coherentes.">
 				>
 			>
 		>

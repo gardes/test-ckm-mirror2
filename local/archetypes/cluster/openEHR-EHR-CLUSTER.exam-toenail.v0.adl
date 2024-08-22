@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=e7544407-e601-4efa-9e33-44b0414e643b)
+﻿archetype (adl_version=1.4; uid=4989cd92-c511-4083-a79f-88ae4f0201dc)
 	openEHR-EHR-CLUSTER.exam-toenail.v0
 specialise
 	openEHR-EHR-CLUSTER.exam.v1
@@ -136,8 +136,8 @@ Use to incorporate the narrative descriptions of clinical findings within existi
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"08F5F008221B9E8E32A7510CC2757BA9">
-		["build_uid"] = <"3e37b46b-de5d-4f24-8a04-b42718355058">
+		["MD5-CAM-1.0.1"] = <"5D7AC1D892F1FDA4625D7C940B640206">
+		["build_uid"] = <"bf16cc6a-9dc8-41ef-aef1-227b228e1cb0">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -209,6 +209,7 @@ definition
 			}
 		}
 	}
+
 
 ontology
 	terminologies_available = <"SNOMED-CT", ...>

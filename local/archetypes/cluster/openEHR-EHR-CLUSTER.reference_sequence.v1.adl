@@ -14,11 +14,19 @@ language
 				["email"] = <"Strauch.Natalia@mh-hannover.de">
 			>
 		>
+		["sv"] = <
+			language = <[ISO_639-1::sv]>
+			author = <
+				["name"] = <"Therese Lindberg">
+				["organisation"] = <"Cambio CDS">
+				["email"] = <"therese.lindberg@cambio.se">
+			>
+		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			author = <
 				["name"] = <"Vebjørn Arntzen, Liv Laugen,">
-				["organisation"] = <"Oslo University Hospital, Norway">
+				["organisation"] = <"Oslo University Hospital, Norway, ​Oslo University Hospital, Norway">
 				["email"] = <"varntzen@ous-hf.no, liv.laugen@ous-hf.no">
 			>
 		>
@@ -38,10 +46,16 @@ description
 			keywords = <"genetische Befunde", "Referenzsequenz", "Gentest", "Identifikation von Varianten", "genomisch", "Variation">
 			misuse = <"">
 		>
+		["sv"] = <
+			language = <[ISO_639-1::sv]>
+			purpose = <"Att registrera detaljer om referenssekvensen som används för att beskriva varianter.">
+			use = <"Denna arketyp har utformats speciellt för att användas i 'Referensgenom' och i 'Transkriptionsreferenssekvens' SLOTS inom CLUSTER.genomic_variant_result-arketypen och i 'Referenssekvens' SLOT inom andra specifika genetiska variantarketyper, såsom CLUSTER. genomic_insertion_variant och CLUSTER.genomic_deletion_variant. Det kan också användas inom andra ENTRY- eller CLUSTER-arketyper, där det är kliniskt lämpligt.">
+			misuse = <"">
+		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
 			purpose = <"For å registrere detaljer om referansesekvensen som brukes for å beskrive varianter.">
-			use = <"Denne arketypen har blitt laget for å brukes i SLOT'et \"Referansegenom\" og i \"Transkriptreferansesekvens\" i arketypen CLUSTER.genomic_variant_result arketypen (Genetisk variant resultat) og i Referansesekvens SLOT'et i de spesifikke genetisk variant arketypene (f.eks. CLUSTER.genomic_insertion_variant, CLUSTER.genomic_deletion_variant. osv). Den kan også brukes i andre ENTRY- eller CLUSTER-arketyper der det er klinisk hensiktsmessig.">
+			use = <"Denne arketypen har blitt laget for å brukes i SLOT'et \"Referansegenom\" og i \"Transkriptreferansesekvens\" i arketypen CLUSTER.genomic_variant_result arketypen (Genetisk variant resultat) og SLOT'et \"Referansesekvens\" i de spesifikke genetisk variant arketypene (f.eks. CLUSTER.genomic_insertion_variant, CLUSTER.genomic_deletion_variant. osv). Den kan også brukes i andre ENTRY- eller CLUSTER-arketyper der det er klinisk hensiktsmessig.">
 			keywords = <"genetiske funn", "referansesekvens", "genetisk testing", "gentester", "variant", "genetikk", "variasjon", "mutasjon", "sekvensering", "mutasjon">
 			misuse = <"">
 		>
@@ -63,9 +77,9 @@ description
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"0FEE7932E7A0DF467E6CE05B0BE6608D">
-		["build_uid"] = <"207536c8-b985-4d2d-ba04-00f090459524">
-		["revision"] = <"1.0.6">
+		["MD5-CAM-1.0.1"] = <"96CF5AA5A83A89FF4CCD34E3278102D1">
+		["build_uid"] = <"d80acb5c-7ce4-4d47-991b-5e1eb8712f4d">
+		["revision"] = <"1.0.9">
 	>
 
 definition
@@ -283,7 +297,7 @@ ontology
 				["at0021"] = <
 					text = <"Versjonsnummer">
 					description = <"Versjonsnummeret til databaseposten (data record) til referansesekvensen.">
-					comment = <"For eksempel;*For example: \"hg38\", \"hg19\".">
+					comment = <"For eksempel: \"hg38\", \"hg19\".">
 				>
 				["at0022"] = <
 					text = <"URL">
@@ -391,7 +405,7 @@ ontology
 				>
 				["at0048"] = <
 					text = <"Referansegenom">
-					description = <"Referansegenomet (reference assembly) som en representativ modell for det menneskelige genomet.">
+					description = <"Referansegenomet (reference assembly) som en representativ modell for det humane genomet.">
 				>
 			>
 		>
@@ -521,6 +535,135 @@ ontology
 				["at0048"] = <
 					text = <"Reference genome assembly">
 					description = <"The reference genome assembled as a representative model of the human genome.">
+				>
+			>
+		>
+		["sv"] = <
+			items = <
+				["at0018"] = <
+					text = <"Referenssekvens">
+					description = <"En sekvensfil som används som referens för att beskriva genetiska varianter som finns i en analyserad sekvens.">
+				>
+				["at0019"] = <
+					text = <"Källnamn">
+					description = <"Namnet på datakällan som innehåller referenssekvensen.">
+				>
+				["at0020"] = <
+					text = <"Anslutningsnummer">
+					description = <"En unik identifierare som hänvisar till en sekvens registrerad i ett sekvensförvar.">
+				>
+				["at0021"] = <
+					text = <"Versionsnummer">
+					description = <"Versionsnumret för dataregistreringen av referenssekvensen.">
+					comment = <"Till exempel: 'hg38', 'hg19'.">
+				>
+				["at0022"] = <
+					text = <"URL">
+					description = <"Nätverksadress.">
+				>
+				["at0023"] = <
+					text = <"Kromosommärkning">
+					description = <"Kromosomidentifierare.">
+				>
+				["at0024"] = <
+					text = <"Kromosom 1">
+					description = <"Kromosom 1.">
+				>
+				["at0025"] = <
+					text = <"Kromosom 2">
+					description = <"Kromosom 2.">
+				>
+				["at0026"] = <
+					text = <"Kromosom 3">
+					description = <"Kromosom 3.">
+				>
+				["at0027"] = <
+					text = <"Kromosom 4">
+					description = <"Kromosom 4.">
+				>
+				["at0028"] = <
+					text = <"Kromosom 5">
+					description = <"Kromosom 5.">
+				>
+				["at0029"] = <
+					text = <"Kromosom 6">
+					description = <"Kromosom 6.">
+				>
+				["at0030"] = <
+					text = <"Kromosom 7">
+					description = <"Kromosom 7.">
+				>
+				["at0031"] = <
+					text = <"Kromosom 8">
+					description = <"Kromosom 8.">
+				>
+				["at0032"] = <
+					text = <"Kromosom 9">
+					description = <"Kromosom 9">
+				>
+				["at0033"] = <
+					text = <"Kromosom 10">
+					description = <"Kromosom 10.">
+				>
+				["at0034"] = <
+					text = <"Kromosom 11">
+					description = <"Kromosom 11.">
+				>
+				["at0035"] = <
+					text = <"Kromosom 12">
+					description = <"Kromosom 12.">
+				>
+				["at0036"] = <
+					text = <"Kromosom 13">
+					description = <"Kromosom 13.">
+				>
+				["at0037"] = <
+					text = <"Kromosom 14">
+					description = <"Kromosom 14.">
+				>
+				["at0038"] = <
+					text = <"Kromosom 15">
+					description = <"Kromosom 15.">
+				>
+				["at0039"] = <
+					text = <"Kromosom 16">
+					description = <"Kromosom 16.">
+				>
+				["at0040"] = <
+					text = <"Kromosom 17">
+					description = <"Kromosom 17.">
+				>
+				["at0041"] = <
+					text = <"Kromosom 18">
+					description = <"Kromosom 18.">
+				>
+				["at0042"] = <
+					text = <"Kromosom 19">
+					description = <"Kromosom 19.">
+				>
+				["at0043"] = <
+					text = <"Kromosom 20">
+					description = <"Kromosom 20.">
+				>
+				["at0044"] = <
+					text = <"Kromosom 21">
+					description = <"Kromosom 21.">
+				>
+				["at0045"] = <
+					text = <"Kromosom 22">
+					description = <"Kromosom 22.">
+				>
+				["at0046"] = <
+					text = <"Kromosom X">
+					description = <"Kromosom X.">
+				>
+				["at0047"] = <
+					text = <"Kromosom Y">
+					description = <"Kromosom Y.">
+				>
+				["at0048"] = <
+					text = <"Hopsättning av referensgenom">
+					description = <"Referensgenomet monterat som en representativ modell för det mänskliga genomet.">
 				>
 			>
 		>

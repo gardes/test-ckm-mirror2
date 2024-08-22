@@ -57,15 +57,15 @@ description
 		>
 	>
 	lifecycle_state = <"in_development">
-	other_contributors = <"Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics, UK", "Åsa Skagerhult, Region Östergötland, Sweden (openEHR Editor)", "Erik Sundvall, Region Östergötland + Linköping University, Sweden (openEHR Editor)">
+	other_contributors = <"Ian McNicoll, freshEHR Clinical Informatics, UK", "Heather Leslie, Atomica Informatics, Australia">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"52E7AE6E308A47B8436D6A9D4AFC69CA">
-		["build_uid"] = <"9698704e-b831-4dcc-9f5f-95081cbadc71">
+		["MD5-CAM-1.0.1"] = <"EB35384930A3C9471F6C43E2C2D2B773">
+		["build_uid"] = <"e71a528c-347d-4688-a0cb-2c7a871303da">
 		["revision"] = <"0.0.1-alpha">
 	>
 

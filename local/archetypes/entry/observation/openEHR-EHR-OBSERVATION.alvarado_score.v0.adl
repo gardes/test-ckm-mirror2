@@ -79,8 +79,8 @@ McKay R, Shepherd J. The use of the clinical scoring system by Alvarado in the d
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"81CD2B92FC438C97AE8C460D34207768">
-		["build_uid"] = <"5e889a46-8fa0-4f33-a272-e83dff7c6c80">
+		["MD5-CAM-1.0.1"] = <"040354CC247D57E2E8569F37700C5478">
+		["build_uid"] = <"40c42695-658c-445d-8da8-4e3526ba3880">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -167,6 +167,7 @@ definition
 		}
 	}
 
+
 ontology
 	term_definitions = <
 		["en"] = <
@@ -174,7 +175,6 @@ ontology
 				["at0000"] = <
 					text = <"Alvarado score">
 					description = <"Clinical scoring system used to determine the likelihood of appendicitis based on symptoms, signs and laboratory test results.">
-					testing = <"tester">
 				>
 				["at0001"] = <
 					text = <"Event Series">
@@ -191,7 +191,6 @@ ontology
 				["at0004"] = <
 					text = <"Right lower quadrant tenderness?">
 					description = <"Score 2 if positive.">
-					testing = <"tester score 2 if positive">
 				>
 				["at0005"] = <
 					text = <"Elevated temperature (>37.3°C or 99.1°F)?">
