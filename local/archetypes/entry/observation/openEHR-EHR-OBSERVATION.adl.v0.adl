@@ -5,6 +5,16 @@ concept
 	[at0000]	-- ADL assessment
 language
 	original_language = <[ISO_639-1::en]>
+	translations = <
+		["sq"] = <
+			language = <[ISO_639-1::sq]>
+			author = <
+				["name"] = <"Mr Ocean">
+				["organisation"] = <"Ocean Informatics">
+				["email"] = <"sebastian.garde@oceaninformatics.com">
+			>
+		>
+	>
 description
 	original_author = <
 		["name"] = <"Heather Leslie">
@@ -22,6 +32,14 @@ Record one instance of the archetype for each identified activity.">
 			misuse = <"Not to be used to record the results of formal instruments, scores or scales, assessing capability for activities of daily living, such as the Barthel Index - use specific archetypes for each score or scale, such as OBSERVATION.modified_barthel_index.">
 			copyright = <"© openEHR Foundation">
 		>
+		["sq"] = <
+			language = <[ISO_639-1::sq]>
+			purpose = <"*To record details about an individual's ability to perform an identified activity of daily living.(en)">
+			use = <"*Use to record details about an individual's ability to perform an identified activity of daily living.
+
+Record one instance of the archetype for each identified activity.(en)">
+			misuse = <"*Not to be used to record the results of formal instruments, scores or scales, assessing capability for activities of daily living, such as the Barthel Index - use specific archetypes for each score or scale, such as OBSERVATION.modified_barthel_index.(en)">
+		>
 	>
 	lifecycle_state = <"in_development">
 	other_contributors = <>
@@ -32,8 +50,8 @@ Record one instance of the archetype for each identified activity.">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"65C487F1E244EF67297888F8BE846145">
-		["build_uid"] = <"31a849fd-61d7-4676-bfb5-0368225dbfd8">
+		["MD5-CAM-1.0.1"] = <"E4F701786E305854E829C358853568A3">
+		["build_uid"] = <"f96cec48-164c-4e6b-8571-fc5e682f3517">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -190,6 +208,82 @@ ontology
 					text = <"Extension">
 					description = <"Additional information required to extend the model with local content or to align with other reference models or formalisms.">
 					comment = <"For example: local information requirements; or additional metadata to align with FHIR.">
+				>
+			>
+		>
+		["sq"] = <
+			items = <
+				["at0000"] = <
+					text = <"*ADL assessment(en)">
+					description = <"*Details about an individual's ability to perform an identified activity of daily living.(en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event(en)">
+					description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Activity name(en)">
+					description = <"*The name of the activity of daily living.(en)">
+				>
+				["at0005"] = <
+					text = <"*Clinical description(en)">
+					description = <"*Narrative description about the individual's ability to perform the activity.(en)">
+				>
+				["at0006"] = <
+					text = <"*Capability(en)">
+					description = <"*Category of the ability for the individual to perform the identified activity.(en)">
+				>
+				["at0007"] = <
+					text = <"*Independent(en)">
+					description = <"*The individual is able to perform the activity independently.(en)">
+				>
+				["at0008"] = <
+					text = <"f">
+					description = <"*The individual is able to perform the activity with the assistance of equipment or aids.(en)">
+				>
+				["at0009"] = <
+					text = <"*Requires assistance(en)">
+					description = <"*The individual requires active support to perform the activity.(en)">
+				>
+				["at0010"] = <
+					text = <"*Dependent(en)">
+					description = <"*The individual is not able to perform the activity by themselves.(en)">
+				>
+				["at0011"] = <
+					text = <"*Support description(en)">
+					description = <"*Description about the support required to carry out the activity.(en)">
+				>
+				["at0012"] = <
+					text = <"*Equipment description(en)">
+					description = <"*Description about the equipment or aide required to carry out the activity.(en)">
+				>
+				["at0013"] = <
+					text = <"*Equipment(en)">
+					description = <"*Structured details about the equipment required.(en)">
+				>
+				["at0014"] = <
+					text = <"*Additional details(en)">
+					description = <"*Additional structured details about the ability to perform the activity.(en)">
+				>
+				["at0015"] = <
+					text = <"*Comment(en)">
+					description = <"*Additional narrative about the individual's ability to perform the activity not captured in other fields.(en)">
+				>
+				["at0016"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0017"] = <
+					text = <"*Extension(en)">
+					description = <"*Additional information required to extend the model with local content or to align with other reference models or formalisms.(en)">
 				>
 			>
 		>
