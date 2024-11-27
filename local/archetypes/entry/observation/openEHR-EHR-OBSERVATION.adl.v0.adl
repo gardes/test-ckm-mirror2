@@ -50,8 +50,8 @@ Record one instance of the archetype for each identified activity.(en)">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"E4F701786E305854E829C358853568A3">
-		["build_uid"] = <"f96cec48-164c-4e6b-8571-fc5e682f3517">
+		["MD5-CAM-1.0.1"] = <"CB64C72354B15D2C80C38D32466B6BC5">
+		["build_uid"] = <"73c1d335-0a1f-4faf-8c8c-85a20766e2f5">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -262,7 +262,7 @@ ontology
 					description = <"*Description about the support required to carry out the activity.(en)">
 				>
 				["at0012"] = <
-					text = <"*Equipment description(en)">
+					text = <"*Equipment description(en)ddddd">
 					description = <"*Description about the equipment or aide required to carry out the activity.(en)">
 				>
 				["at0013"] = <
