@@ -54,7 +54,7 @@ description
 			copyright = <"© Australian Digital Health Agency, openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -65,8 +65,8 @@ description
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"6F0BB279B34D92A8EFAC7BC04978B8F7">
-		["build_uid"] = <"26efe54d-ff18-4211-8efd-1f3c37f42b53">
-		["revision"] = <"1.0.2-alpha">
+		["build_uid"] = <"dd7b1014-a014-4998-91af-0f68693085e4">
+		["revision"] = <"1.0.2">
 	>
 
 definition
