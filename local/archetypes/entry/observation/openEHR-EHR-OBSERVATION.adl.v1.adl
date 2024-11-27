@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=64e6c887-ddb7-4ca9-ab27-3d32d50bee74)
-	openEHR-EHR-OBSERVATION.adl.v0
+﻿archetype (adl_version=1.4; uid=12656e54-1f27-455a-a738-8d396a3e5843)
+	openEHR-EHR-OBSERVATION.adl.v1
 
 concept
 	[at0000]	-- ADL assessment
@@ -41,7 +41,7 @@ Record one instance of the archetype for each identified activity.(en)">
 			misuse = <"*Not to be used to record the results of formal instruments, scores or scales, assessing capability for activities of daily living, such as the Barthel Index - use specific archetypes for each score or scale, such as OBSERVATION.modified_barthel_index.(en)">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -50,9 +50,9 @@ Record one instance of the archetype for each identified activity.(en)">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"CB64C72354B15D2C80C38D32466B6BC5">
-		["build_uid"] = <"73c1d335-0a1f-4faf-8c8c-85a20766e2f5">
-		["revision"] = <"0.0.1-alpha">
+		["MD5-CAM-1.0.1"] = <"AE0FBF8E205EF3AE837986312F191122">
+		["build_uid"] = <"28114456-459e-4030-b624-7fdea9a3e3c9">
+		["revision"] = <"1.0.0">
 	>
 
 definition
