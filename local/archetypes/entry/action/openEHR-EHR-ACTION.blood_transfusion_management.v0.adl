@@ -39,7 +39,6 @@ Timings related to a transfusion can be managed in one of two ways:
 			misuse = <"Not to be used to record the order for a transfusion. Use the INSTRUCTION.service_request.v1 archetype for this purpose.
 
 Not to be used to record other types of transfusions (Bone Marrow Transfusions (Transplants), Stem Cell Transfusions, Immunoglobulin Therapy, Platelet-Rich Plasma (PRP) Injections and Clotting Factor Concentrates).">
-			copyright = <"© openEHR Foundation">
 		>
 		["ca"] = <
 			language = <[ISO_639-1::ca]>
@@ -88,8 +87,8 @@ No debe utilizarse para registrar otros tipos de transfusiones (transfusiones de
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"BC0DBEA24CE30E94E804C6C46CDE05DC">
-		["build_uid"] = <"7ac396c1-9256-4799-b570-d708f2d5ad53">
+		["MD5-CAM-1.0.1"] = <"1A538A04B12285D3814D04B51D9001BA">
+		["build_uid"] = <"5def7c39-1428-47c6-92c1-9952206c85fc">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -277,6 +276,17 @@ definition
 							[local::at0062]    -- Blood products ordered
 						}
 					}
+				}
+				reason cardinality matches {0..*} matches {
+					DV_CODED_TEXT[at0500] occurrences matches {0..*} matches {
+						defining_code matches {
+							[local::
+							at0501, 	-- Reason one
+							at0502, 	-- Reason two
+							at0503] 	-- Reason three
+						}
+					}
+					DV_TEXT[at0504] occurrences matches {0..*} matches {*}
 				}
 			}
 			ISM_TRANSITION[at0063] matches {    -- Blood products delivered
@@ -663,6 +673,26 @@ ontology
 					text = <"Transfusion completed">
 					description = <"All blood products have been administered.">
 				>
+				["at0500"] = <
+					text = <"Reason DV Coded Text id">
+					description = <"">
+				>
+				["at0501"] = <
+					text = <"Reason One">
+					description = <"Test description of Reason 1">
+				>
+				["at0502"] = <
+					text = <"Reason Two">
+					description = <"">
+				>
+				["at0503"] = <
+					text = <"Reason Three">
+					description = <"">
+				>
+				["at0504"] = <
+					text = <"Reason Text id">
+					description = <"">
+				>
 			>
 		>
 		["ca"] = <
@@ -820,6 +850,26 @@ ontology
 					text = <"Transfusió completada">
 					description = <"*All blood products have been administered. (en)">
 				>
+				["at0500"] = <
+					text = <"Reason DV Coded Text id">
+					description = <"">
+				>
+				["at0501"] = <
+					text = <"Reason One">
+					description = <"Test description of Reason 1">
+				>
+				["at0502"] = <
+					text = <"Reason Two">
+					description = <"">
+				>
+				["at0503"] = <
+					text = <"Reason Three">
+					description = <"">
+				>
+				["at0504"] = <
+					text = <"Reason Text id">
+					description = <"">
+				>
 			>
 		>
 		["es"] = <
@@ -976,6 +1026,26 @@ ontology
 				["at0042"] = <
 					text = <"Transfusión completada">
 					description = <"Todos los productos sanguíneos han sido administrados.">
+				>
+				["at0500"] = <
+					text = <"Reason DV Coded Text id">
+					description = <"">
+				>
+				["at0501"] = <
+					text = <"Reason One">
+					description = <"Test description of Reason 1">
+				>
+				["at0502"] = <
+					text = <"Reason Two">
+					description = <"">
+				>
+				["at0503"] = <
+					text = <"Reason Three">
+					description = <"">
+				>
+				["at0504"] = <
+					text = <"Reason Text id">
+					description = <"">
 				>
 			>
 		>
