@@ -1,5 +1,5 @@
-﻿archetype (adl_version=1.4; uid=9462aaa2-2f5f-4caa-8eb6-6884e7433af5)
-	openEHR-EHR-ADMIN_ENTRY.three_delays_model.v0
+﻿archetype (adl_version=1.4; uid=0e0c8f56-0f71-4834-be55-f072bf978870)
+	openEHR-EHR-ADMIN_ENTRY.three_delays_model.v1
 
 concept
 	[at0000]	-- Three Delays Model (3DM)
@@ -21,7 +21,7 @@ description
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"in_development">
+	lifecycle_state = <"published">
 	other_contributors = <>
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -32,10 +32,10 @@ Shah B, Krishnan N, Kodish SR, et al. Applying the Three Delays Model to underst
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"0868ACA1E16F36BC7156A5EBE38B989C">
-		["build_uid"] = <"b2eb0a78-c49d-451b-8e56-8c2c4cd40c17">
+		["MD5-CAM-1.0.1"] = <"2AF7F1000FCB690ADF924B2702AEFEB0">
+		["build_uid"] = <"27e0e748-ea89-4954-bc7b-fe0bc016506f">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
-		["revision"] = <"0.0.1-alpha">
+		["revision"] = <"1.0.0">
 	>
 
 definition
