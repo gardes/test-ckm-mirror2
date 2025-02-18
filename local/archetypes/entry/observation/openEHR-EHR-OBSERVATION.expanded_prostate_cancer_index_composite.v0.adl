@@ -99,8 +99,8 @@ Norwegian translation: Fosså, S. D., Storås, A. H., Steinsvik, E. A., Myklebus
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"5E6980C762C492553122FFEC328BFAD9">
-		["build_uid"] = <"ca021fbc-4cfc-4edd-96df-c521374fbd49">
+		["MD5-CAM-1.0.1"] = <"409F5C4FD434DBF1A44FF0B4A9CF229A">
+		["build_uid"] = <"b2d7efab-9217-4dbe-897c-fd5f0bbefe2b">
 		["ip_acknowledgements"] = <"While openEHR archetypes are all freely available under an open license, the specific content of this Expanded Prostate cancer Index Composite (EPIC) archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. Commercial use license inquiries can be directed to the University of Michigan as outlined below.  Copyright statement: © 2000 The Regents of the University of Michigan, Regents of the University of California, Emory University and Cedars-Sinai. All rights reserved.  Copyright information: MImeasures@umich.edu">
 		["revision"] = <"0.0.1-alpha">
 	>
@@ -691,7 +691,7 @@ ontology
 					description = <"">
 					epic_item_id = <"23">
 					domain = <"Urinary">
-					subscale = <"Urinary function">
+					subscale = <"Urinary function test">
 					subscale2 = <"Incontinence">
 					epic_2_2002_number = <"1">
 					sf_6_2002_number = <"1">
@@ -1430,8 +1430,8 @@ ontology
 					description = <"">
 				>
 				["at0162"] = <
-					text = <"Over the past 4 weeks, how often have you urinated blood?">
-					description = <"">
+					text = <"Over the past 4 weeks, how often have you urinated blood? tst2">
+					description = <"tst add">
 					epic_item_id = <"24">
 					domain = <"Urinary">
 					subscale = <"Irritative/Obstructive">
