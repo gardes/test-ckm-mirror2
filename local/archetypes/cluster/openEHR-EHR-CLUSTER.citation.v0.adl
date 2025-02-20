@@ -79,11 +79,160 @@ Este arquétipo está deliberadamente projetado como uma classe de arquétipo CL
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To enable specific sections of health information that are stored elsewhere to be included within the current clinical record.">
+			purpose = <"To enable specific sections of health information that are stored elsewhere to be included within the current clinical record.
+
+## Blockquotes
+
+> Markdown is a lightweight markup language with plain-text-formatting syntax, created in 2004 by John Gruber with Aaron Swartz.
+> > Markdown double indented is a lightweight markup language with plain-text-formatting syntax.
+> > > Markdown triple indented is a lightweight markup language with plain-text-formatting syntax.">
 			use = <"Use to reference information that is stored elsewhere in the same EHR or external to the active EHR, so that it can be included in the current document or message that is being created.  For example, a discharge summary may include the summary report of a laboratory test through the use of this citation archetype, rather than duplicating the whole laboratory report.
-This archetype is deliberately designed as a CLUSTER class archetype so that the citation can be made via insertion into a slot within the context of other archetypes, or as a standalone instance within the specific EVALUATION.citation archetype.">
+This archetype is deliberately designed as a CLUSTER class archetype so that the citation can be made via insertion into a slot within the context of other archetypes, or as a standalone instance within the specific EVALUATION.citation archetype.
+
+# Markdown syntax guide
+
+*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)
+
+## Emphasis
+
+*This text will be italic*  
+_This will also be italic_
+
+**This text will be bold**  
+__This will also be bold__
+
+_You **can** combine them_
+
+But what happens if you just start **bold but do not end.
+**And what if you do this at the beginning of a line?
+
+## Lists
+
+H~2~O 
+x^2^
+
+## Using html tags:
+
+H<sub>2</sub>O
+x<sup>2</sup>
+
+
+For example, in hey ~~you~~, you will be rendered as strikethrough text.
+
+This might be used for <u>underline</u>.
+
+
+### Unordered
+
+* Item 1
+* Item 2
+* Item 2a
+* Item 2b
+    * Item 3a
+    * Item 3b
+
+### Unordered using hyphen
+
+- Item 1 
+- Item 2
+    - Item 2.1
+    - Item 2.2
+- Item 3
+ 
+ 
+- Test sublists without markup as sometimes used in archetypes: for example http://127.0.0.1:8889/ckm/archetypes/1013.1.4439 procedure Screening
+--- sublist 1
+--- sublist 2
+
+See what happens after translation
+
+ 
+ 
+Use cases include, but are not limited to:
+- simultaneously record the chronological age and adjusted age alongside child growth parameters;
+- record the age of an individual at the time of recording as context for the other content in a document, such as the age of a child at the time of referral;
+- record the age of the mother (designated as the subject of care at ENTRY level) at the time of recording within a newborn's record; or
+- the age of an individual at the time of filling out a health assessment questionnaire.
+- the basis for calculated reference values for physiological measurements. For example in the CHA₂DS₂-VASc score archetype.
+
+ 
+
+### Ordered
+
+1. Item 1
+2. Item 2
+3. Item 3
+    1. Item 3a
+    2. Item 3b
+
+## Images
+
+![This is an alt text.](http://127.0.0.1:8889/ckm/picture?assetname=logo-header \"This is a sample image.\")
+
+## Links
+
+You may be using [Markdown Live Preview](https://markdownlivepreview.com/).
+
+Testing a div. This is not supposed to be interpreted as html.
+Bold via b tag - again, should this be just interpreted as such? no...
+Underline via u tag - should we allow this? maybe...
+
+## Blockquotes
+
+> Markdown is a lightweight markup language with plain-text-formatting syntax, created in 2004 by John Gruber with Aaron Swartz.
+
+&gt;&gt; Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
+
+## Tables
+
+| Left columns  | Right columns |
+| ------------- |:-------------:|
+| left foo      | right foo     |
+| left bar      | right bar     |
+| left baz      | right baz     |
+
+## Headers
+
+# This is a Heading h1
+## This is a Heading h2
+###### This is a Heading h6
+
+
+# now some ways to represent a hr
+
+***
+
+---
+
+_________________
+
+
+## Blocks of code
+
+```
+let message = 'Hello world';
+test(message);
+```
+
+## Inline code
+
+This web site is using `markedjs/marked`. test.">
 			keywords = <"citation", "reference">
-			misuse = <"">
+			misuse = <"Some examples that should not be supported, nasty html tags.
+			
+			
+
+
+
+  
+  Submit
+  
+
+
+
+
+
+			">
 			copyright = <"© copyright (c) 2010 openEHR Foundation, openEHR Foundation">
 		>
 		["ar-sy"] = <
@@ -115,8 +264,8 @@ This archetype is deliberately designed as a CLUSTER class archetype so that the
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"79A932331C2792107C0451AFE708108A">
-		["build_uid"] = <"6129194a-81ae-4611-a3cb-8e2fa25a9190">
+		["MD5-CAM-1.0.1"] = <"E48DFFE586FED0D292AE224374A10184">
+		["build_uid"] = <"8b8660fb-39ef-4707-aa11-70f9ea017a89">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -149,23 +298,58 @@ definition
 		}
 	}
 
-
-
 ontology
 	term_definitions = <
 		["en"] = <
 			items = <
 				["at0000"] = <
 					text = <"Citation">
-					description = <"Reference to information held elsewhere, in the same EHR or external to the EHR.">
+					description = <"Reference to information held elsewhere, in the same EHR or external to the EHR. 
+*This text will be italic*  
+_This will also be italic_
+
+**This text will be bold**  
+__This will also be bold__
+
+_You **can** combine them_
+
+## Lists
+
+H~2~O 
+x^2^
+">
 				>
 				["at0001"] = <
 					text = <"Citation">
-					description = <"Representation of the citation.">
+					description = <"Representation of the citation.
+
+_You **can** combine them_
+
+But what happens if you just start **bold but do not end.
+**And what if you do this at the beginning of a line?
+
+## Lists
+
+H~2~O 
+x^2^">
 				>
 				["at0002"] = <
 					text = <"URI to original data">
-					description = <"Link to the original data.">
+					description = <"Link to the original data. 
+*This text will be italic*  
+_This will also be italic_
+
+**This text will be bold**  
+__This will also be bold__
+
+_You **can** combine them_
+
+## Lists
+
+H~2~O 
+x^2^">
+					comment = <"A comment  about the citation with a few chars 
+	test < fe > dwfer & test ' test ' ' test \" test.">
 				>
 				["at0003"] = <
 					text = <"Comment">
@@ -173,7 +357,11 @@ ontology
 				>
 				["at0004"] = <
 					text = <"Description">
-					description = <"Description about the citation.">
+					description = <"Description about the citation.
+
+## Blockquotes
+
+> Markdown is a lightweight markup language with plain-text-formatting syntax, created in 2004 by John Gruber with Aaron Swartz.">
 				>
 			>
 		>
