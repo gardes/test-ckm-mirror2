@@ -202,9 +202,9 @@ Not to be used for recording the results of an imaging examination - use the CLU
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"9F3C098DFD4BEE33E3CF2E689073E0F7">
-		["build_uid"] = <"466121bf-8a23-47c0-a984-21356d4367bd">
+		["build_uid"] = <"83b8af4a-75ee-4cc1-84d4-e6b704fdc0be">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
-		["revision"] = <"2.0.8">
+		["revision"] = <"2.0.9">
 	>
 
 definition
