@@ -264,8 +264,8 @@ This archetype is deliberately designed as a CLUSTER class archetype so that the
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"E48DFFE586FED0D292AE224374A10184">
-		["build_uid"] = <"8b8660fb-39ef-4707-aa11-70f9ea017a89">
+		["MD5-CAM-1.0.1"] = <"B6C39777F1E39CD778C5B221267D3FAD">
+		["build_uid"] = <"d2164095-bbcb-4182-a44f-2ac0d9924602">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -354,6 +354,18 @@ x^2^">
 				["at0003"] = <
 					text = <"Comment">
 					description = <"Comment about the citation.">
+					comment = <"Comment field with markdown that should NOT be interpreted as markdown at the moment: *This text will be italic*  
+_This will also be italic_
+
+**This text will be bold**  
+__This will also be bold__
+
+_You **can** combine them_
+
+## Lists
+
+H~2~O 
+x^2^">
 				>
 				["at0004"] = <
 					text = <"Description">
