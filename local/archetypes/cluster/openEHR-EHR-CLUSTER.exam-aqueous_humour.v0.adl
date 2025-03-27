@@ -76,6 +76,7 @@ Use to incorporate the narrative descriptions of clinical findings within existi
 		["build_uid"] = <"dabd9171-300a-49d5-a8f1-85d3bcf0c9de">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2021-03-05T03:08:40Z">
 	>
 
 definition

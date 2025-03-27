@@ -194,6 +194,7 @@ V3 DCModels R1 I1 2010 Sep - Glasgow Coma Scale v0.75 [Internet]. Health Level S
 		["MD5-CAM-1.0.1"] = <"6C9DE7307EE72E4041258332EA705382">
 		["build_uid"] = <"661d7a86-424d-403e-8040-d2db2d8bee42">
 		["revision"] = <"1.2.0">
+		["revision_date"] = <"2020-04-05T09:57:15Z">
 	>
 
 definition

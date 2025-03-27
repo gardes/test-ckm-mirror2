@@ -229,6 +229,7 @@ Si cet archétype est utilisé dans d'autres archétypes où le sujet de soins s
 		["MD5-CAM-1.0.1"] = <"E44329D7ED80902D20F8490D1DD97F31">
 		["build_uid"] = <"ddf968d7-cfa7-4ee9-930c-55efd1afc2b7">
 		["revision"] = <"1.2.6">
+		["revision_date"] = <"2024-07-01T18:34:36Z">
 	>
 
 definition

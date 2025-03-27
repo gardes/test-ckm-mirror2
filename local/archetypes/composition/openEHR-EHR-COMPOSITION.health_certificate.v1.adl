@@ -97,6 +97,7 @@ Use cases asserted by a healthcare professional include, but are not limited to:
 		["MD5-CAM-1.0.1"] = <"2B3CB0C5E69EAAB446A04927F70E6002">
 		["build_uid"] = <"553c3f10-2917-4487-a7dd-c7417983ed96">
 		["revision"] = <"1.0.0">
+		["revision_date"] = <"2023-06-16T08:56:48Z">
 	>
 
 definition

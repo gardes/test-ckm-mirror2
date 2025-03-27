@@ -199,6 +199,7 @@ Norwegian translation by Bjøro (1998), from Metode for å redusere forekomst av
 		["build_uid"] = <"50c4784a-2779-4afa-b53f-9ec7f56e2ef8">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2019-10-08T05:55:10Z">
 	>
 
 definition

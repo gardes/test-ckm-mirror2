@@ -54,6 +54,7 @@ Fleisher L, Beckman J, Brown K, Calkins H, Chaikof E, Fleischmann K, Freeman W, 
 		["build_uid"] = <"79019d0a-61ec-4108-b7f6-c1378317498a">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["revision"] = <"1.0.0">
+		["revision_date"] = <"2024-04-22T13:31:07Z">
 	>
 
 definition

@@ -157,6 +157,7 @@ Not to be used to record information about appropriate medication use under clin
 		["MD5-CAM-1.0.1"] = <"52609E1B6CB58FB9C74D4B7944A5EC77">
 		["build_uid"] = <"b1a64fc7-5a23-470d-9cbf-52389d9b9f3e">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2024-06-14T13:25:20Z">
 	>
 
 definition

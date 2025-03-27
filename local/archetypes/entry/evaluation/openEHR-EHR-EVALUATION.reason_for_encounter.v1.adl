@@ -143,6 +143,7 @@ No debe ser utilizado para registrar diagnósticos. Para eso utilizar el arqueti
 		["MD5-CAM-1.0.1"] = <"8F5F414D89192FFF36DB35A41CBCB740">
 		["build_uid"] = <"7b026d2d-41e6-4911-a964-11a9ce4fba26">
 		["revision"] = <"1.0.2">
+		["revision_date"] = <"2023-07-07T08:31:01Z">
 	>
 
 definition

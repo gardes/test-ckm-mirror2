@@ -80,6 +80,7 @@ Multiple transfer of care summaries may be required to accompany the subject in 
 		["MD5-CAM-1.0.1"] = <"0712A2A1FBF1AB594DD2247C102E6BD6">
 		["build_uid"] = <"90fd0b31-8e28-4135-bdd8-9f303947861e">
 		["revision"] = <"1.0.1">
+		["revision_date"] = <"2019-11-07T07:11:36Z">
 	>
 
 definition

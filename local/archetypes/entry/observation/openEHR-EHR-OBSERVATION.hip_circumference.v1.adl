@@ -86,6 +86,7 @@ Not to be used to record the circumference of another body part. Use OBSERVATION
 		["MD5-CAM-1.0.1"] = <"D577CAFE4DB1A8609E4806C0D2D607E9">
 		["build_uid"] = <"1caa66e6-8549-4036-b014-e7cdaa107d8e">
 		["revision"] = <"1.0.0">
+		["revision_date"] = <"2018-12-04T07:53:51Z">
 	>
 
 definition

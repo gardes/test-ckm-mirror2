@@ -169,6 +169,7 @@ Not to be used to record an observation about the use of a medication - use OBSE
 		["MD5-CAM-1.0.1"] = <"50B8849AB9B274AB2D8E0456FA33FF85">
 		["build_uid"] = <"0c00cb63-d882-4789-83b5-9e27946b84d8">
 		["revision"] = <"1.0.1">
+		["revision_date"] = <"2023-03-20T18:49:59Z">
 	>
 
 definition

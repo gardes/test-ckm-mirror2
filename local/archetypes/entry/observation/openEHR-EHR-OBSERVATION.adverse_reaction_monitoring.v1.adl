@@ -80,6 +80,7 @@ Not to be used to record details about an adverse reaction event. Use the CLUSTE
 		["MD5-CAM-1.0.1"] = <"38C87FBCF4068550376ADE5764F00EF7">
 		["build_uid"] = <"2d44aaf2-abcb-41b7-b411-ae860434b4a4">
 		["revision"] = <"1.0.1">
+		["revision_date"] = <"2024-06-04T16:18:05Z">
 	>
 
 definition

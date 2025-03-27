@@ -94,6 +94,7 @@ Example use cases include, but are not limited to:
 		["MD5-CAM-1.0.1"] = <"EBB583DE22FE245E3A2A686E2CD7A206">
 		["build_uid"] = <"0cc5df9d-9303-4852-a91f-27fd3a8fdd1f">
 		["revision"] = <"1.0.1">
+		["revision_date"] = <"2022-06-23T10:33:34Z">
 	>
 
 definition

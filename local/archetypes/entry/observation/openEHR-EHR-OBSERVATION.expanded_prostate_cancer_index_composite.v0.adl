@@ -103,6 +103,7 @@ Norwegian translation: Fosså, S. D., Storås, A. H., Steinsvik, E. A., Myklebus
 		["build_uid"] = <"b2d7efab-9217-4dbe-897c-fd5f0bbefe2b">
 		["ip_acknowledgements"] = <"While openEHR archetypes are all freely available under an open license, the specific content of this Expanded Prostate cancer Index Composite (EPIC) archetype is copyright protected. Any use of this archetype within implementations must be in compliance with the terms established by the copyright owners. Commercial use license inquiries can be directed to the University of Michigan as outlined below.  Copyright statement: © 2000 The Regents of the University of Michigan, Regents of the University of California, Emory University and Cedars-Sinai. All rights reserved.  Copyright information: MImeasures@umich.edu">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2025-02-18T12:17:38Z">
 	>
 
 definition

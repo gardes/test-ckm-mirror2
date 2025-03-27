@@ -36,6 +36,7 @@ This archetype is intended to be used within the COMPOSITION.lifestyle_factors o
 		["MD5-CAM-1.0.1"] = <"999CF2285FE14684F1D9B29CC45BAD80">
 		["build_uid"] = <"ea00fe88-bf89-4309-bdab-282608d73be6">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2020-10-28T00:22:36Z">
 	>
 
 definition

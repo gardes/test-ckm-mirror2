@@ -134,6 +134,7 @@ Modified Early Warning Score (NT RMP), draft archetype, NEHTA Clinical Knowledge
 		["MD5-CAM-1.0.1"] = <"5B18DB0AF362723C40700F5F152507C5">
 		["build_uid"] = <"c28674a9-a10f-4f16-b3f9-78dffb3771eb">
 		["revision"] = <"1.2.2">
+		["revision_date"] = <"2023-07-11T11:10:03Z">
 	>
 
 definition

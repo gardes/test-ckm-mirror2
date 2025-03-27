@@ -40,6 +40,7 @@ HL7 FHIR Resource - ImagingStudy v4.0.1 R4 [Internet]. Health Level Seven Intern
 		["MD5-CAM-1.0.1"] = <"3E5A09A665FE2306863572A4BF5F2363">
 		["build_uid"] = <"446cfc60-18f0-4d7e-8ec0-96344fc6c25b">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2022-02-08T07:15:37Z">
 	>
 
 definition

@@ -64,6 +64,7 @@ Not to be used to record characteristics that might affect the quality of a test
 		["MD5-CAM-1.0.1"] = <"F8F9B29C6C302EBE3E1A84145174D31A">
 		["build_uid"] = <"e66ebbc2-d2d8-4a1a-8936-c7426929ae49">
 		["revision"] = <"2.0.0-alpha">
+		["revision_date"] = <"2025-03-13T12:35:58Z">
 	>
 
 definition

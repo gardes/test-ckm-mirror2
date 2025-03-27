@@ -89,6 +89,7 @@ This archetype is intended to be nested in the 'Specific details' SLOT within ei
 		["MD5-CAM-1.0.1"] = <"E39F106284172E536F5DDD79A62CA873">
 		["build_uid"] = <"4178054c-28f8-4191-a60c-173b5522e0c2">
 		["revision"] = <"1.0.2">
+		["revision_date"] = <"2023-09-08T06:12:57Z">
 	>
 
 definition

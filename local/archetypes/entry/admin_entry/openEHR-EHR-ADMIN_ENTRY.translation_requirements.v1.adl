@@ -68,6 +68,7 @@ Not to be used to record details about an interpretation that was performed - us
 		["MD5-CAM-1.0.1"] = <"82E2B88773B988D9567B89FC37210DC5">
 		["build_uid"] = <"1a268ac7-6f79-4c16-bf4e-f28c485fb81d">
 		["revision"] = <"1.1.1">
+		["revision_date"] = <"2023-07-11T12:29:31Z">
 	>
 
 definition

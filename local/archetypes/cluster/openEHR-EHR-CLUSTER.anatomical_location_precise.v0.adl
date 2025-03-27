@@ -38,6 +38,7 @@ DICOM Standards Committee, Working Groups 26, Pathology.">
 		["MD5-CAM-1.0.1"] = <"AB7A3217725E14E6A0A8E6545A3F37FE">
 		["build_uid"] = <"bd82c868-7c22-452a-a584-57c729df676e">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2019-09-24T04:19:20Z">
 	>
 
 definition

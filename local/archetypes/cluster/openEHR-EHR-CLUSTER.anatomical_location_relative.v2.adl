@@ -207,6 +207,7 @@ Not to be used to represent location of anatomical features at the microscopic l
 		["build_uid"] = <"3ead758e-ab77-4b0a-8979-23821aa53050">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["revision"] = <"2.2.0">
+		["revision_date"] = <"2024-06-10T17:15:14Z">
 	>
 
 definition

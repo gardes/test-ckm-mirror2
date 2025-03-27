@@ -119,6 +119,7 @@ Derived from: ASA-klassifikasjon, Publisert arketype [Internet]. Nasjonal IKT, N
 		["build_uid"] = <"e92dde61-d053-45f1-9f2a-6a6c045ca80b">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["revision"] = <"1.0.0">
+		["revision_date"] = <"2021-12-16T14:41:18Z">
 	>
 
 definition

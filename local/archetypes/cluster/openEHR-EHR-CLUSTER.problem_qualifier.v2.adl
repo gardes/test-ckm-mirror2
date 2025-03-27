@@ -243,6 +243,7 @@ Not to be used to represent diagnostic certainty - use the 'Diagnostic certainty
 		["build_uid"] = <"7a1123f6-17d4-4ff7-b3df-1fabf2b87e31">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"2.0.0">
+		["revision_date"] = <"2022-12-13T07:41:25Z">
 	>
 
 definition

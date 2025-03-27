@@ -100,6 +100,7 @@ In use cases where it can be safely assumed that an activity should be carried o
 		["MD5-CAM-1.0.1"] = <"95309E1587F2F9A3D1845B07B1011799">
 		["build_uid"] = <"2ef82baf-6b4f-4485-9308-810aaae13914">
 		["revision"] = <"1.1.2">
+		["revision_date"] = <"2023-02-07T11:20:15Z">
 	>
 
 definition

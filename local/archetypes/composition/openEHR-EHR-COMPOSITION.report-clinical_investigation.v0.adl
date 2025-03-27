@@ -251,6 +251,7 @@ The main Sections/Content component has been deliberately left unconstrained. Th
 		["MD5-CAM-1.0.1"] = <"AA1A96183879AD044D29E236B926E0A0">
 		["build_uid"] = <"f3f0ef12-2f22-4771-8d2a-2a67c83849ac">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2022-11-28T08:44:12Z">
 	>
 
 definition

@@ -69,6 +69,7 @@ Terms and conditions for use: https://www.healthmeasures.net/images/PROMIS/Terms
 		["MD5-CAM-1.0.1"] = <"16C840F2BED47304E6A9D274CCE0F9DD">
 		["build_uid"] = <"9a550b7e-9ab8-40e9-9e84-afc8f947756f">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2020-06-16T12:18:33Z">
 	>
 
 definition

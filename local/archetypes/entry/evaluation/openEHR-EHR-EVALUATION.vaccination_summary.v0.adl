@@ -117,6 +117,7 @@ Not to be used for recording screening question/answer pairs regarding vaccinati
 		["MD5-CAM-1.0.1"] = <"C38C4BB99823EE9749557C5A8C5734A0">
 		["build_uid"] = <"d2ac7768-edc8-4130-be1f-760bcccc681b">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2024-02-19T10:01:33Z">
 	>
 
 definition

@@ -105,6 +105,7 @@ Leone FP, Timmerman D, Bourne T, Valentin L, Epstein E, Goldstein SR, Marret H, 
 		["build_uid"] = <"dc0ed4ad-032b-4a64-8cca-be039732021d">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2022-10-24T07:16:15Z">
 	>
 
 definition

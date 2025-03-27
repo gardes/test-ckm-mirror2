@@ -54,6 +54,7 @@ This archetype is intended to be used as one component of complex COMPOSITION ar
 		["MD5-CAM-1.0.1"] = <"9EF496CE2674C98DB69128A66A43D030">
 		["build_uid"] = <"fb64dfbe-3ac5-444e-80b2-368695b42d66">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2019-04-12T07:44:37Z">
 	>
 
 definition

@@ -148,6 +148,7 @@ Not to be used for procedures that are recorded as part of a nursing progress no
 		["MD5-CAM-1.0.1"] = <"2A789520F48E91960C4825733C8BA68F">
 		["build_uid"] = <"97c014c4-b3c3-461c-821f-0f387ec9ea43">
 		["revision"] = <"1.0.2">
+		["revision_date"] = <"2020-04-02T09:26:48Z">
 	>
 
 definition

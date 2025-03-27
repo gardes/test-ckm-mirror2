@@ -75,6 +75,7 @@ This archetype is intended to be nested within any relevant COMPOSITION archetyp
 		["MD5-CAM-1.0.1"] = <"B56CBA0918CF02D45FDF310C8876C63D">
 		["build_uid"] = <"c2f502cd-6b9f-4477-9938-044d3ca0e4a0">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2020-10-29T01:25:20Z">
 	>
 
 definition

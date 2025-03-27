@@ -64,6 +64,7 @@ https://helse-bergen.no/seksjon/Kvinneklinikken/Documents/Ultralydkurs%20vekst%2
 		["build_uid"] = <"d9e41a2f-0f4d-434d-ace4-e554579dfbc4">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["revision"] = <"1.0.2">
+		["revision_date"] = <"2022-10-13T07:04:40Z">
 	>
 
 definition

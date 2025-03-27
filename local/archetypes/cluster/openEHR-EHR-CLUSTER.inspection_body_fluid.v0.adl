@@ -146,6 +146,7 @@ Not to be used to record the details about examination of faeces - use the CLUST
 		["MD5-CAM-1.0.1"] = <"91ACD3D83FE57B07C01AAA6B8E46B872">
 		["build_uid"] = <"b0c76a3b-d9a9-4535-a610-32e3287980f3">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2020-02-03T06:25:23Z">
 	>
 
 definition

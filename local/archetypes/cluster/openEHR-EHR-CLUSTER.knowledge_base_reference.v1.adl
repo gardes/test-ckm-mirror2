@@ -71,6 +71,7 @@ This archetype is intended to be nested within other ENTRY or CLUSTER archetypes
 		["MD5-CAM-1.0.1"] = <"F575F2A1D95C3F61355D0B99753647AD">
 		["build_uid"] = <"536c2967-1de3-4ef3-a591-d7d59238cc4f">
 		["revision"] = <"1.0.1">
+		["revision_date"] = <"2021-05-20T07:40:14Z">
 	>
 
 definition

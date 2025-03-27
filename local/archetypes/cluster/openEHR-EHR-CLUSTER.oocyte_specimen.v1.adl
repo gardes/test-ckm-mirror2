@@ -55,6 +55,7 @@ This archetype has been designed to document more specific details about a harve
 		["MD5-CAM-1.0.1"] = <"F7B0133EEF992BFC92E60191270A2B8E">
 		["build_uid"] = <"2eab0b11-4210-458c-89bf-4edd6c1614d3">
 		["revision"] = <"1.0.0">
+		["revision_date"] = <"2023-11-23T10:45:38Z">
 	>
 
 definition

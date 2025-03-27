@@ -38,6 +38,7 @@ Other CLUSTER archetypes can be inserted into the SLOTs to extend this generic a
 		["MD5-CAM-1.0.1"] = <"0B61FC138DCD04219DC8E97AB49A636F">
 		["build_uid"] = <"31822ca5-96dd-4ff3-9d85-220b450db65a">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2017-07-26T03:51:10Z">
 	>
 
 definition

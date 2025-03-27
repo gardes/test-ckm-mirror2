@@ -127,6 +127,7 @@ HL7 FHIR Resource - Organization v4.0.1: R4 [Internet]. Health Level Seven Inter
 		["MD5-CAM-1.0.1"] = <"5B0F3DD7C67AD080CB799BBBD819A16E">
 		["build_uid"] = <"879bd52f-9a1e-4d77-a7e4-419577dd6b96">
 		["revision"] = <"1.1.0">
+		["revision_date"] = <"2023-07-20T02:34:37Z">
 	>
 
 definition

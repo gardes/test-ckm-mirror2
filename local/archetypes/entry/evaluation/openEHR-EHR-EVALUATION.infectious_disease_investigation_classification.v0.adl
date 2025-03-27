@@ -34,6 +34,7 @@ Use a separate instance of this archetype to record the conclusion for each susp
 		["MD5-CAM-1.0.1"] = <"E77CF6A070E552E67528364D2CC18500">
 		["build_uid"] = <"eeee9931-c5ce-47bc-8970-98a1610e8370">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2023-10-29T08:34:04Z">
 	>
 
 definition

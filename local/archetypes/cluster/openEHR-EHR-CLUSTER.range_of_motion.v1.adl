@@ -62,6 +62,7 @@ Common motions around a joint have been added to the DV_CODED_TEXT data type in 
 		["MD5-CAM-1.0.1"] = <"AFF2B50F9803DB3A81DE95E991760200">
 		["build_uid"] = <"9a6768f4-250f-4422-bfa5-20c0835b8c82">
 		["revision"] = <"1.0.0">
+		["revision_date"] = <"2024-01-08T09:50:26Z">
 	>
 
 definition

@@ -39,6 +39,7 @@ The Neonatal Skin Risk Assessment Scale (NSRAS) should only be used to assess ne
 		["MD5-CAM-1.0.1"] = <"F69B1DD5EE61A5E3763D8BE112F526BA">
 		["build_uid"] = <"95daac4d-9012-4cf6-b740-270228d0c3ff">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2019-10-08T05:02:15Z">
 	>
 
 definition

@@ -111,6 +111,7 @@ Not to be used for recording the clinical history of a lesion - use specific OBS
 		["MD5-CAM-1.0.1"] = <"A3BDBE1A73307DC1822D5345C80A1160">
 		["build_uid"] = <"9cff9ed1-b4f0-44c7-8edf-1ce524d66662">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2022-01-12T08:59:10Z">
 	>
 
 definition

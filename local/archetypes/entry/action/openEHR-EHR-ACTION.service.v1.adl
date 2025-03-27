@@ -232,6 +232,7 @@ Let op dat er in het openEHR Referentiemodel een attribuut 'Tijd' is, dat bedoel
 		["MD5-CAM-1.0.1"] = <"AD593E18455631079CCA895C6A3612C5">
 		["build_uid"] = <"f596dd3a-2cba-4dec-9d40-ecfefe33b142">
 		["revision"] = <"1.0.1">
+		["revision_date"] = <"2023-06-14T11:41:24Z">
 	>
 
 definition

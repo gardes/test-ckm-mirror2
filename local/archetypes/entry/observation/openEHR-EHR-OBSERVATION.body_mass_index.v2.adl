@@ -330,6 +330,7 @@ Tzamaloukas AH, Patron A, Malhotra D. Body Mass Index in Amputees. Journal of Pa
 		["build_uid"] = <"558871bf-2ff2-4fa7-bb0d-8ebe003d3d18">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"2.0.6">
+		["revision_date"] = <"2020-09-10T12:08:58Z">
 	>
 
 definition

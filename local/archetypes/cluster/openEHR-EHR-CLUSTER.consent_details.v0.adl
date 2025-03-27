@@ -36,6 +36,7 @@ Use to optionally record additional details about the status of the request for 
 		["MD5-CAM-1.0.1"] = <"13ED6C748476FE1C40BF7BD0E26A88C8">
 		["build_uid"] = <"8381acfd-0fda-495b-9eb5-28f40b2afa99">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2018-09-10T06:50:10Z">
 	>
 
 definition

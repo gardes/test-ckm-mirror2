@@ -36,6 +36,7 @@ This archetype has been designed primarily to capture a simple amount of details
 		["MD5-CAM-1.0.1"] = <"4BFAFEA92ACB71BE3934D2451AE8851C">
 		["build_uid"] = <"596e1ba3-d36f-468d-80d5-c76a58e0674c">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2017-09-29T07:19:26Z">
 	>
 
 definition

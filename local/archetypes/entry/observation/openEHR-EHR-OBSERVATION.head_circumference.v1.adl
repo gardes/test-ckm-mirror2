@@ -111,6 +111,7 @@ This archetype can also be used for recording an approximation of the head circu
 		["MD5-CAM-1.0.1"] = <"EECEB738A2D2841EA677E01DA20B4618">
 		["build_uid"] = <"6cdbe5b0-d6ad-4c58-9de9-3feafb56bb35">
 		["revision"] = <"1.0.3">
+		["revision_date"] = <"2021-02-10T04:23:59Z">
 	>
 
 definition

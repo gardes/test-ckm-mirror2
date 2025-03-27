@@ -186,6 +186,7 @@ Exclusion statement, Deprecated Archetype [Internet]. openEHR Foundation, openEH
 		["MD5-CAM-1.0.1"] = <"94A7237B611A8FAB5C0F0DBEA236C3F9">
 		["build_uid"] = <"d7bd414b-824b-4271-b19c-bfd7b610757b">
 		["revision"] = <"1.1.4">
+		["revision_date"] = <"2020-05-11T06:31:51Z">
 	>
 
 definition

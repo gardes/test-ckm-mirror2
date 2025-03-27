@@ -84,6 +84,7 @@ Not to be used to record information about tandem repeats. Use the CLUSTER.genom
 		["MD5-CAM-1.0.1"] = <"811AEF4A98143C4B70BA9CD97316F80F">
 		["build_uid"] = <"aa20f6e1-9456-4bfc-b836-f3ef4238e780">
 		["revision"] = <"1.1.0">
+		["revision_date"] = <"2022-12-22T09:41:13Z">
 	>
 
 definition

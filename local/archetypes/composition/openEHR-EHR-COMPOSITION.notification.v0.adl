@@ -60,6 +60,7 @@ Both the notifier and the receiver could be either healthcare provider or a clin
 		["MD5-CAM-1.0.1"] = <"953EEA16669197D15BED60CB0D0D8BAD">
 		["build_uid"] = <"7c86e883-a5ea-457b-a168-f0ef44e27c4d">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2018-09-03T07:21:59Z">
 	>
 
 definition

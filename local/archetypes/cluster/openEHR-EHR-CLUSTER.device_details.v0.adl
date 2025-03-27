@@ -90,6 +90,7 @@ Guidelines for 64-bit Global Identifier (EUI-64) [Internet]. IEEE Standards Asso
 		["MD5-CAM-1.0.1"] = <"A585C08AA295D79F2248D2E61472C89C">
 		["build_uid"] = <"41f9352f-9d5b-4a60-a34a-a2c8f43da327">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2019-09-24T03:49:10Z">
 	>
 
 definition

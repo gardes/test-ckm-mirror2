@@ -82,6 +82,7 @@ description
 		["custodian_namespace"] = <"org.openehr">
 		["build_uid"] = <"f3e02a6f-69d2-4754-acea-30e7bebdf7d2">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2022-10-13T08:47:47Z">
 	>
 
 definition

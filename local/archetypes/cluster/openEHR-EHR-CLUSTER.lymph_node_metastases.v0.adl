@@ -67,6 +67,7 @@ Use as a component archetype in the context of a suite of archetypes that make u
 		["MD5-CAM-1.0.1"] = <"D6C2E5F77D40BB372823802AC8A9EBEA">
 		["build_uid"] = <"59cd1be8-a3db-430f-8dd8-154d8138468a">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2019-11-01T09:55:47Z">
 	>
 
 definition

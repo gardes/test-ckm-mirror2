@@ -116,6 +116,7 @@ Not to be used to specify a relative location of a physical site in the body, su
 		["MD5-CAM-1.0.1"] = <"678618E29451E816512E7B0093C25FA1">
 		["build_uid"] = <"3e5b2e15-09a4-4182-a3e9-95a35a2e7995">
 		["revision"] = <"1.1.0">
+		["revision_date"] = <"2024-06-10T18:20:59Z">
 	>
 
 definition

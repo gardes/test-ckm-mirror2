@@ -411,6 +411,7 @@ Standards for medication and medical device records – technical annex [Interne
 		["MD5-CAM-1.0.1"] = <"F116C050DE9CF44A61E064FEEA0494DE">
 		["build_uid"] = <"b3d018f2-28c7-4d2c-ab3f-3ef146701037">
 		["revision"] = <"3.1.0">
+		["revision_date"] = <"2023-05-15T12:00:48Z">
 	>
 
 definition

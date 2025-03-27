@@ -54,6 +54,7 @@ Medication order status valueset[Internet]. HL7 FHIR , HL7 FHIR DSTU2 [cited: 20
 		["MD5-CAM-1.0.1"] = <"265C1CDDA945CB118C70D38BB4E9E0C2">
 		["build_uid"] = <"64291c7b-e4f0-496f-a3b2-43114624cbd5">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2018-02-14T11:17:09Z">
 	>
 
 definition

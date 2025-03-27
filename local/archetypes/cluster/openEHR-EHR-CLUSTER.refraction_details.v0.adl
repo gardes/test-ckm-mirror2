@@ -73,6 +73,7 @@ DICOM Supplement 30 [Internet]. [cited 2012 Sep 26]. Available from: http://medi
 		["MD5-CAM-1.0.1"] = <"7AEF92C688CD13F85B78F9C263160847">
 		["build_uid"] = <"1ff298a7-9698-40ba-a272-61784df6d0f4">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2021-02-17T13:36:32Z">
 	>
 
 definition

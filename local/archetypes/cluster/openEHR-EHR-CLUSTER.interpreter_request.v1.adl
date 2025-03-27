@@ -67,6 +67,7 @@ Not to be used to record administrative information about the ability of the hea
 		["MD5-CAM-1.0.1"] = <"AB43D3BD1278B53DC41E6FA396191893">
 		["build_uid"] = <"985c6a90-c4cd-4c4c-9bd0-19184b0b808f">
 		["revision"] = <"1.0.0">
+		["revision_date"] = <"2019-01-21T14:15:26Z">
 	>
 
 definition

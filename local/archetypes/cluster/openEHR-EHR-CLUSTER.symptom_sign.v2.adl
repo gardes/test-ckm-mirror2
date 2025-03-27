@@ -274,6 +274,7 @@ Not to be used to record a formal and repeatable severity scale such as VAS or N
 		["build_uid"] = <"74cfa31e-e26e-4fe9-8101-a52864cad6f1">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["revision"] = <"2.1.1">
+		["revision_date"] = <"2024-02-05T12:24:41Z">
 	>
 
 definition

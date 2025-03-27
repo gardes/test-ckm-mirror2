@@ -79,13 +79,7 @@ Este arquétipo está deliberadamente projetado como uma classe de arquétipo CL
 		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
-			purpose = <"To enable specific sections of health information that are stored elsewhere to be included within the current clinical record.
-
-## Blockquotes
-
-> Markdown is a lightweight markup language with plain-text-formatting syntax, created in 2004 by John Gruber with Aaron Swartz.
-> > Markdown double indented is a lightweight markup language with plain-text-formatting syntax.
-> > > Markdown triple indented is a lightweight markup language with plain-text-formatting syntax.">
+			purpose = <"To enable specific sections of health information that are stored elsewhere to be included within the current clinical record.">
 			use = <"Use to reference information that is stored elsewhere in the same EHR or external to the active EHR, so that it can be included in the current document or message that is being created.  For example, a discharge summary may include the summary report of a laboratory test through the use of this citation archetype, rather than duplicating the whole laboratory report.
 This archetype is deliberately designed as a CLUSTER class archetype so that the citation can be made via insertion into a slot within the context of other archetypes, or as a standalone instance within the specific EVALUATION.citation archetype.
 
@@ -103,9 +97,6 @@ __This will also be bold__
 
 _You **can** combine them_
 
-But what happens if you just start **bold but do not end.
-**And what if you do this at the beginning of a line?
-
 ## Lists
 
 H~2~O 
@@ -118,8 +109,6 @@ x<sup>2</sup>
 
 
 For example, in hey ~~you~~, you will be rendered as strikethrough text.
-
-This might be used for <u>underline</u>.
 
 
 ### Unordered
@@ -139,13 +128,6 @@ This might be used for <u>underline</u>.
     - Item 2.2
 - Item 3
  
- 
-- Test sublists without markup as sometimes used in archetypes: for example http://127.0.0.1:8889/ckm/archetypes/1013.1.4439 procedure Screening
---- sublist 1
---- sublist 2
-
-See what happens after translation
-
  
  
 Use cases include, but are not limited to:
@@ -173,15 +155,15 @@ Use cases include, but are not limited to:
 
 You may be using [Markdown Live Preview](https://markdownlivepreview.com/).
 
-Testing a div. This is not supposed to be interpreted as html.
-Bold via b tag - again, should this be just interpreted as such? no...
-Underline via u tag - should we allow this? maybe...
+<div>Testing a div. This is not supposed to be interpreted as html.</div>
+<b>Bold via b tag - again, should this be just interpreted as such? no...</b>
+<u>Underline via u tag - should we allow this? maybe...</u>
 
 ## Blockquotes
 
 > Markdown is a lightweight markup language with plain-text-formatting syntax, created in 2004 by John Gruber with Aaron Swartz.
-
-&gt;&gt; Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
+>
+>> Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
 
 ## Tables
 
@@ -211,28 +193,14 @@ _________________
 
 ```
 let message = 'Hello world';
-test(message);
+alert(message);
 ```
 
 ## Inline code
 
-This web site is using `markedjs/marked`. test.">
+This web site is using `markedjs/marked`.">
 			keywords = <"citation", "reference">
-			misuse = <"Some examples that should not be supported, nasty html tags.
-			
-			
-
-
-
-  
-  Submit
-  
-
-
-
-
-
-			">
+			misuse = <"">
 			copyright = <"© copyright (c) 2010 openEHR Foundation, openEHR Foundation">
 		>
 		["ar-sy"] = <
@@ -264,9 +232,10 @@ This archetype is deliberately designed as a CLUSTER class archetype so that the
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"B6C39777F1E39CD778C5B221267D3FAD">
-		["build_uid"] = <"d2164095-bbcb-4182-a44f-2ac0d9924602">
+		["MD5-CAM-1.0.1"] = <"79A932331C2792107C0451AFE708108A">
+		["build_uid"] = <"c492d310-5779-41ad-8d0c-a29b63736573">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2025-03-27T11:42:43Z">
 	>
 
 definition
@@ -321,17 +290,7 @@ x^2^
 				>
 				["at0001"] = <
 					text = <"Citation">
-					description = <"Representation of the citation.
-
-_You **can** combine them_
-
-But what happens if you just start **bold but do not end.
-**And what if you do this at the beginning of a line?
-
-## Lists
-
-H~2~O 
-x^2^">
+					description = <"Representation of the citation.">
 				>
 				["at0002"] = <
 					text = <"URI to original data">
@@ -354,26 +313,10 @@ x^2^">
 				["at0003"] = <
 					text = <"Comment">
 					description = <"Comment about the citation.">
-					comment = <"Comment field with markdown that should NOT be interpreted as markdown at the moment: *This text will be italic*  
-_This will also be italic_
-
-**This text will be bold**  
-__This will also be bold__
-
-_You **can** combine them_
-
-## Lists
-
-H~2~O 
-x^2^">
 				>
 				["at0004"] = <
 					text = <"Description">
-					description = <"Description about the citation.
-
-## Blockquotes
-
-> Markdown is a lightweight markup language with plain-text-formatting syntax, created in 2004 by John Gruber with Aaron Swartz.">
+					description = <"Description about the citation.">
 				>
 			>
 		>

@@ -220,6 +220,7 @@ Not to be used for test or assessment results that are recorded as part of a con
 		["MD5-CAM-1.0.1"] = <"2A64B8463AA11FF22EA7977CDF0E9959">
 		["build_uid"] = <"337cfbb1-2078-4f74-a475-ab94da9959cc">
 		["revision"] = <"1.0.4">
+		["revision_date"] = <"2021-02-10T04:41:37Z">
 	>
 
 definition

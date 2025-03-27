@@ -70,6 +70,7 @@ Not to be used for ratings where the scale is inverted, for example where 10 is 
 		["MD5-CAM-1.0.1"] = <"AFDDD37CBFCFA08C0414D77BF4393F50">
 		["build_uid"] = <"13b85f69-2f1d-4096-82c9-e1ce2476ba0e">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2023-11-10T12:01:58Z">
 	>
 
 definition

@@ -159,6 +159,7 @@ INSTRUCTION.medication is suggested as the best archetype to represent a Medicat
 		["MD5-CAM-1.0.1"] = <"D9A0BF65B696B4A73E68E4F2A7D6C74F">
 		["build_uid"] = <"29ba71d4-6666-4306-8a3b-71897754b27b">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2020-10-28T08:01:20Z">
 	>
 
 definition

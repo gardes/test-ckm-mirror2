@@ -198,6 +198,7 @@ Sheshadri A, Keus L, Blanco D, Lei X, Kellner C, Shannon VR, Balachandran DD, Ji
 		["build_uid"] = <"c92d5ec3-921f-4162-8bc8-4ba4ff57b49a">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["revision"] = <"2.0.1">
+		["revision_date"] = <"2024-02-05T10:59:57Z">
 	>
 
 definition

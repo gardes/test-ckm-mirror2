@@ -113,6 +113,7 @@ Oncoline [Online]. Integraal Kankercentrum Nederland. Appendix 1 - Karnofsky/ECO
 		["build_uid"] = <"0f9accd7-cc76-4dcd-bcfb-56d69c797828">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["revision"] = <"1.0.2">
+		["revision_date"] = <"2023-03-31T09:03:18Z">
 	>
 
 definition

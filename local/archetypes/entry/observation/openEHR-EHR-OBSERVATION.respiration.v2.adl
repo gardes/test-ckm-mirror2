@@ -245,6 +245,7 @@ Niet te gebruiken voor de registratie van details, als de persoon beademing onde
 		["build_uid"] = <"8c2f9dcd-9b39-4d0a-b6c0-696895e84125">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"2.0.10">
+		["revision_date"] = <"2021-09-10T11:42:46Z">
 	>
 
 definition

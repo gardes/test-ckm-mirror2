@@ -423,6 +423,7 @@ Niet te gebruiken om een FHIR-bron met eenzelfde naam te representeren - dan is 
 		["MD5-CAM-1.0.1"] = <"327A8885F97587660404644C3C6053B6">
 		["build_uid"] = <"30585164-60c3-4512-8fb0-65551f8eaf50">
 		["revision"] = <"1.0.8">
+		["revision_date"] = <"2024-04-19T10:30:18Z">
 	>
 
 definition

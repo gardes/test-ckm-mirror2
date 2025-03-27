@@ -75,6 +75,7 @@ Not to be used to record chest circumference or chest expansion. Use the OBSERVA
 		["build_uid"] = <"55414a11-eb83-439e-84b7-624c5fb88a17">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2019-07-21T06:18:31Z">
 	>
 
 definition

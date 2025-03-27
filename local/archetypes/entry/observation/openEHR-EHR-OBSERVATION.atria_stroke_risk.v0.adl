@@ -57,6 +57,7 @@ Råvärden genereras med hjälp av separata arketyper för respektive faktor. Sj
 		["MD5-CAM-1.0.1"] = <"DF585DAD0F22EA48A82FF3021D9D57F4">
 		["build_uid"] = <"3f09b7ad-374b-4342-940d-ae20bdd41450">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2021-02-10T04:05:20Z">
 	>
 
 definition

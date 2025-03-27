@@ -243,6 +243,7 @@ Not to be used to record fluid balance calculations. Use OBSERVATION.fluid_balan
 		["MD5-CAM-1.0.1"] = <"BA764C976130B917F30B881297B90D5A">
 		["build_uid"] = <"b8031664-09af-4810-b2ac-01aecbae1fe1">
 		["revision"] = <"1.0.2">
+		["revision_date"] = <"2020-04-06T10:59:54Z">
 	>
 
 definition

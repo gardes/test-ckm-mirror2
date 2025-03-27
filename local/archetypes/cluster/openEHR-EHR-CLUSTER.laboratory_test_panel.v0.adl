@@ -80,6 +80,7 @@ Hl7 FHIR Observation resource: HL7 [Internet]; [cited 2017 Jun 27]. Available fr
 		["MD5-CAM-1.0.1"] = <"16ACB1FB473C63B4BC99E2DDF970BED2">
 		["build_uid"] = <"0d4d4802-dd56-45e3-accf-96ac97c242b3">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2019-05-16T10:16:23Z">
 	>
 
 definition

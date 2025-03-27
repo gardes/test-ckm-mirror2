@@ -38,6 +38,7 @@ While openEHR archetypes are all freely available under an open license, the spe
 		["MD5-CAM-1.0.1"] = <"FEE4163BA9CDA888DA8607D885CAE136">
 		["build_uid"] = <"428f51d4-0729-4d18-89c5-dd87a963b599">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2021-03-01T00:56:43Z">
 	>
 
 definition

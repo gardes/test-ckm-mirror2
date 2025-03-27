@@ -82,6 +82,7 @@ Not to be used to represent specimen storage - use EVALUATION.specimen_summary f
 		["MD5-CAM-1.0.1"] = <"C89FF9E2CDDE633A47ECCE539B0EFD75">
 		["build_uid"] = <"0d0690ae-d84b-4648-9802-aa9eaaca3728">
 		["revision"] = <"1.0.1">
+		["revision_date"] = <"2023-10-18T08:52:26Z">
 	>
 
 definition

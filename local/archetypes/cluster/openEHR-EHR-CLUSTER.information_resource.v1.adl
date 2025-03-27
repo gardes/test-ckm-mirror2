@@ -142,6 +142,7 @@ The context of each resource should be contained within the parent archetype. Fo
 		["MD5-CAM-1.0.1"] = <"18B0E225BDDF278C582A18722A201C85">
 		["build_uid"] = <"78ad7f22-a366-449e-9d68-63480f7b8f2d">
 		["revision"] = <"1.0.1">
+		["revision_date"] = <"2021-08-10T20:31:48Z">
 	>
 
 definition

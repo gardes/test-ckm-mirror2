@@ -56,6 +56,7 @@ This archetype has been designed to be a framework that will be adequate for ord
 		["MD5-CAM-1.0.1"] = <"4405B4E8EB3A5E4A99CA68AFA23F7992">
 		["build_uid"] = <"48c7eeee-d848-4f55-bc78-a5c3b7ff3165">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2023-02-16T15:53:30Z">
 	>
 
 definition

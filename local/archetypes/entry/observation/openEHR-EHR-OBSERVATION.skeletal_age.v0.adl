@@ -55,6 +55,7 @@ The skeletal age can be determined by several different methods including but no
 		["MD5-CAM-1.0.1"] = <"DC19A22461EA2024424C34F5886C0AA2">
 		["build_uid"] = <"a822e12b-acdb-4d58-ba48-f03745d9ff83">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2020-04-17T13:47:30Z">
 	>
 
 definition

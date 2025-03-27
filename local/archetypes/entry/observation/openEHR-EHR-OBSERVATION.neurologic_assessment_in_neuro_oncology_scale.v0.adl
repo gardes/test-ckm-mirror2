@@ -58,6 +58,7 @@ The ordinal value '99' is included to represent the non-numerical values 'Not as
 		["MD5-CAM-1.0.1"] = <"A36AC1C83F05677BC1AB408BA3EFE43A">
 		["build_uid"] = <"b132c423-aee6-4622-be3e-15e06bff6817">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2024-06-06T13:09:38Z">
 	>
 
 definition

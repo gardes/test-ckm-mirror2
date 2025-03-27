@@ -78,6 +78,7 @@ Not to be used to record the results of visual acuity testing - use OBSERVATION.
 		["build_uid"] = <"9a06ad79-abae-49e8-b567-a5eb57e51ed5">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2021-01-27T02:21:30Z">
 	>
 
 definition

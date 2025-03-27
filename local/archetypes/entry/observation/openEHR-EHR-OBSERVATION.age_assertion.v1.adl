@@ -165,6 +165,7 @@ Not to be used to record an estimated age in a forensic report or for an unconsc
 		["MD5-CAM-1.0.1"] = <"7D6137034CEBDDBFFB3C84B8E741B421">
 		["build_uid"] = <"858b8fca-0d49-4d40-af48-3836c247b5be">
 		["revision"] = <"1.0.5-alpha">
+		["revision_date"] = <"2025-02-20T13:33:57Z">
 	>
 
 definition

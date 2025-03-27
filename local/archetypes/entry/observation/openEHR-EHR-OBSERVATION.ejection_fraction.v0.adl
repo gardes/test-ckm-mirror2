@@ -58,6 +58,7 @@ Measurements of ejection fraction for the same chamber, but by different modalit
 		["MD5-CAM-1.0.1"] = <"3F599DCC940FB904615E85371C64F7DA">
 		["build_uid"] = <"58a4e5f2-78b3-4cd2-9f22-80e3bff1d0c3">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2023-08-09T08:49:33Z">
 	>
 
 definition

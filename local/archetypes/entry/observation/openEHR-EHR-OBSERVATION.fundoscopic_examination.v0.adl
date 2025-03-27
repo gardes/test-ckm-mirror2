@@ -71,6 +71,7 @@ Li HK, Horton M, Bursell SE, Cavallerano J, Zimmer-Galler I, Tennant M, Abramoff
 		["build_uid"] = <"23e01ad1-ea04-4677-ab3c-3e54df77881d">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2018-05-14T07:29:55Z">
 	>
 
 definition

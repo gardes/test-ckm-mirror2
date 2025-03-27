@@ -34,6 +34,7 @@ This archetype has been designed to be nested within the 'Delay details' SLOT in
 		["MD5-CAM-1.0.1"] = <"A1817BA67D0CB0FDA54F852C65506E88">
 		["build_uid"] = <"e3e74110-0ee6-4b02-9cae-37abc106a486">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2022-08-01T05:58:13Z">
 	>
 
 definition

@@ -55,6 +55,7 @@ This archetype has been designed to document more specific details about zygotes
 		["MD5-CAM-1.0.1"] = <"6D7E4CED638F3D0FC2D7A99F01E7BB51">
 		["build_uid"] = <"303bba27-e2d4-4c5c-8038-21ab67ef374d">
 		["revision"] = <"1.0.0">
+		["revision_date"] = <"2023-11-23T10:43:48Z">
 	>
 
 definition

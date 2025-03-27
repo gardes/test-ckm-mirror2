@@ -73,6 +73,7 @@ This archetype has specifically been designed to be used in the 'Detail' SLOT wi
 		["MD5-CAM-1.0.1"] = <"A76B97FA164830629EA15341E9229D7C">
 		["build_uid"] = <"252b7c71-387a-41d0-93ec-87cd7ee23cc8">
 		["revision"] = <"1.0.5">
+		["revision_date"] = <"2019-08-07T10:26:11Z">
 	>
 
 definition

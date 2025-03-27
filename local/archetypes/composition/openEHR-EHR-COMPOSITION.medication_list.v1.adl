@@ -266,6 +266,7 @@ Niet te gebruiken voor het vastleggen van vaccinatietoediening - gebruik voor di
 		["MD5-CAM-1.0.1"] = <"006E9F209FD9F3691A5B9EFF0BAC3B5B">
 		["build_uid"] = <"44f78433-ca2e-4e79-a4c8-d520b8de0cd6">
 		["revision"] = <"1.0.3">
+		["revision_date"] = <"2021-05-18T01:42:37Z">
 	>
 
 definition

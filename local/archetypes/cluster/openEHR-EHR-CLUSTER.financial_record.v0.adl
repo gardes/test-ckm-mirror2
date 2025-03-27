@@ -77,6 +77,7 @@ These data elements are not intended to form a true and complete financial recor
 		["MD5-CAM-1.0.1"] = <"6F9BDF3349BB094BC3E70E03EBE1654F">
 		["build_uid"] = <"14192aeb-d231-4948-8aa4-9e8fd4de1d2e">
 		["revision"] = <"0.0.1-alpha">
+		["revision_date"] = <"2020-11-11T03:07:30Z">
 	>
 
 definition
