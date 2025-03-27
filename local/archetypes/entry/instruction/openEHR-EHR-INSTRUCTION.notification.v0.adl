@@ -34,7 +34,6 @@ description
 		["MD5-CAM-1.0.1"] = <"E6D74E5744C64C64A83F35F401CD4440">
 		["custodian_namespace"] = <"org.openehr">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["revision_date"] = <"2016-05-04T06:34:52Z">
 	>
 
 definition

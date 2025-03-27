@@ -63,7 +63,6 @@ Mbaeri TU, Orakwe JC, Nwofor AM, Oranusi CK, Mbonu OO. Ultrasound measurements o
 		["build_uid"] = <"d29f09dd-9b12-41bd-bcb6-5e98142bcc71">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"1.0.0">
-		["revision_date"] = <"2018-06-21T07:03:21Z">
 	>
 
 definition

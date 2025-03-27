@@ -71,7 +71,6 @@ Not to be used to record details about a health-related event - use CLUSTER.heal
 		["MD5-CAM-1.0.1"] = <"4751813D85A87CDCDDAA63FE44C4CA17">
 		["build_uid"] = <"4bded9c5-dd5c-4ba4-919e-22152c702f79">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2023-04-26T11:47:37Z">
 	>
 
 definition

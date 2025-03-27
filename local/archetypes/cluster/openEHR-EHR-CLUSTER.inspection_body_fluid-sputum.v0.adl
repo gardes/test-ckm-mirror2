@@ -118,7 +118,6 @@ Not to be used for recording the clinical history - use specific OBSERVATION and
 		["MD5-CAM-1.0.1"] = <"FD0B806F2040EC6B5C1087EF1F842C6A">
 		["build_uid"] = <"7e6fa172-db89-4024-a0e1-296bded46223">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2020-02-03T06:40:15Z">
 	>
 
 definition

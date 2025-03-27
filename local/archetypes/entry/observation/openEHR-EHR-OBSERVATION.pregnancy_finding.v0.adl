@@ -63,7 +63,6 @@ Not to be used to record details about procedures performed during a pregnancy, 
 		["build_uid"] = <"d15b62a5-5e0e-4cd5-b6dd-6f3892995045">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2022-05-05T08:01:25Z">
 	>
 
 definition

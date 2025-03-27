@@ -35,7 +35,6 @@ This archetype has been designed to be nested in the 'Lesion detail' SLOT within
 		["MD5-CAM-1.0.1"] = <"CA5F3B1D57660A88A79B9E352E102626">
 		["build_uid"] = <"f1b21513-fb42-4ee0-b1fa-d27074fa3386">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2022-11-17T00:23:01Z">
 	>
 
 definition

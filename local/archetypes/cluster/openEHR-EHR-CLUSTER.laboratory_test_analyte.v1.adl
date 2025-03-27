@@ -209,7 +209,6 @@ HL7 FHIR Resource - Observation V1.8.0 FHIR STU3 [Internet]. Health Level Seven 
 		["MD5-CAM-1.0.1"] = <"2C3F38DD3585D55E2EE0A3210BAF13D4">
 		["build_uid"] = <"bcb96bdf-9e91-4454-97cd-25444223b7af">
 		["revision"] = <"1.1.7">
-		["revision_date"] = <"2024-03-14T10:15:51Z">
 	>
 
 definition

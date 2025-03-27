@@ -38,7 +38,6 @@ If the note requires association with a healthcare provider, then participations
 		["MD5-CAM-1.0.1"] = <"D6EA5C6700AB7364E7847D3CC47302C9">
 		["custodian_namespace"] = <"org.openehr">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["revision_date"] = <"2016-05-04T06:48:13Z">
 	>
 
 definition

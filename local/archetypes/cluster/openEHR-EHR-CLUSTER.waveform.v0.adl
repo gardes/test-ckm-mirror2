@@ -85,7 +85,6 @@ HL7 International, Implementation Guide for CDA Release 2.0 Personal Healthcare 
 		["MD5-CAM-1.0.1"] = <"FE339E15DAFA5073B42CEF6C836D04E4">
 		["build_uid"] = <"9f1d918e-f020-4bee-9cdf-4b83a9b47dd0">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2018-06-14T06:07:26Z">
 	>
 
 definition

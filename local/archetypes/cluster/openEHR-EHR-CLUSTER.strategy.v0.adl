@@ -36,7 +36,6 @@ Designed to be used within the INSTRUCTION.request archetype, but may be used wi
 		["MD5-CAM-1.0.1"] = <"99BEDB3FDD7DFDC244EDEC3F680D5449">
 		["build_uid"] = <"afac28e0-c1ec-496e-92ae-c5c6299fdb58">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2019-03-13T07:11:22Z">
 	>
 
 definition

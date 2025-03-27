@@ -42,7 +42,6 @@ Caruso, L. Distúrbios do trato digestório. In: Cuppari, L. Guias de medicina a
 		["MD5-CAM-1.0.1"] = <"CDA06FE00BB25C035338B234B56A52AF">
 		["custodian_namespace"] = <"org.openehr">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["revision_date"] = <"2017-03-21T09:52:53Z">
 	>
 
 definition

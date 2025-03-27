@@ -41,7 +41,6 @@ Not to be used to record details of preoperative medications - use ACTION.medica
 		["MD5-CAM-1.0.1"] = <"B93994A7F68A0918526C6B421AB1AB36">
 		["build_uid"] = <"b1b9d5bb-87f0-4a57-af38-5309e22da79b">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2019-11-21T01:43:30Z">
 	>
 
 definition

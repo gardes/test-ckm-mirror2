@@ -34,7 +34,6 @@ This archetype has been specifically designed to be used in the 'Examination fin
 		["MD5-CAM-1.0.1"] = <"8F58A91CABC48D8D9A84F1D1A6B9EED9">
 		["build_uid"] = <"511f33f2-8f2a-4ef9-8f51-26342cff3ef9">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2019-07-31T07:26:57Z">
 	>
 
 definition

@@ -34,7 +34,6 @@ This archetype has been designed to capture information about a possible date of
 		["MD5-CAM-1.0.1"] = <"11D58C2052C5237C080D832CBE2D6F29">
 		["build_uid"] = <"1c9b818e-a87f-4f3e-b5c9-baf83b1e264c">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2022-04-14T07:17:55Z">
 	>
 
 definition

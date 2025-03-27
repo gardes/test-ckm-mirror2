@@ -34,7 +34,6 @@ The heart rate and pulse rate should be each be recorded separately, using the O
 		["MD5-CAM-1.0.1"] = <"B200B742D13E1210DC200806942B69D0">
 		["custodian_namespace"] = <"org.openehr">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["revision_date"] = <"2015-11-22T23:21:38Z">
 	>
 
 definition

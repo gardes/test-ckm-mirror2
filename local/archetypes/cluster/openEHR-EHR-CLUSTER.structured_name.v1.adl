@@ -130,7 +130,6 @@ HL7 FHIR Resource - Person v4.0.1: R4 [Internet]. Health Level Seven Internation
 		["MD5-CAM-1.0.1"] = <"4C91B974D7EE4B40B0579711D6B62439">
 		["build_uid"] = <"efeed73f-bc3f-4b27-a1f9-f2ac5d082e4a">
 		["revision"] = <"1.0.1">
-		["revision_date"] = <"2022-10-25T13:03:55Z">
 	>
 
 definition

@@ -36,7 +36,6 @@ Shah B, Krishnan N, Kodish SR, et al. Applying the Three Delays Model to underst
 		["build_uid"] = <"27e0e748-ea89-4954-bc7b-fe0bc016506f">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["revision"] = <"1.0.0">
-		["revision_date"] = <"2025-02-06T11:02:57Z">
 	>
 
 definition

@@ -35,7 +35,6 @@ This archetype is intended for use as a component of an INSTRUCTION or ACTION, f
 		["MD5-CAM-1.0.1"] = <"5003C1DAAC67043D8331F2C8758F81F2">
 		["build_uid"] = <"9366f86f-1c6b-4d2e-bee6-f39c6ea3c475">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2019-11-21T00:46:06Z">
 	>
 
 definition

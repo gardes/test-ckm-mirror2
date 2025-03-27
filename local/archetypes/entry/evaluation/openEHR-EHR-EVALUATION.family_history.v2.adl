@@ -288,7 +288,6 @@ HL7 Version 3 Standard: Clinical Genomics; Pedigree, Release 1. ANSI/HL7 V3 CGPE
 		["build_uid"] = <"b6538ffe-b16e-4b06-8e26-43758f9fc501">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"2.0.5-alpha">
-		["revision_date"] = <"2024-01-02T14:09:54Z">
 	>
 
 definition

@@ -100,7 +100,6 @@ Not to be used for recording the clinical history - use specific OBSERVATION and
 		["build_uid"] = <"2c2b8c2b-17a0-4f8b-a58f-74ae0f4db48f">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2024-06-13T09:14:02Z">
 	>
 
 definition

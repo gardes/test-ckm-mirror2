@@ -179,7 +179,6 @@ Poiché i fattori di rischio possono essere identificati gradualmente nel tempo 
 		["build_uid"] = <"8208638f-87b8-4c47-ae09-8ce3545fb34e">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"1.1.8">
-		["revision_date"] = <"2020-04-23T05:06:01Z">
 	>
 
 definition

@@ -158,7 +158,6 @@ Not to be used to record fluid balance calculations or to record the calculation
 		["MD5-CAM-1.0.1"] = <"0F684951213ADBA2EAB0423C8F80C30D">
 		["build_uid"] = <"ca41a4da-e6be-4415-8a88-926751403eba">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2019-11-15T04:28:31Z">
 	>
 
 definition

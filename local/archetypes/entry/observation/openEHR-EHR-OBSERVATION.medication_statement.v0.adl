@@ -211,7 +211,6 @@ Not to be used to record information about medical devices that are used or impl
 		["MD5-CAM-1.0.1"] = <"AA0BE8C0835250EE579F834B51A6633C">
 		["build_uid"] = <"c4e8c89d-fafe-4384-819a-0934b3d4abcb">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2024-02-22T10:59:21Z">
 	>
 
 definition

@@ -97,7 +97,6 @@ For example, the CLUSTER.nyha_heart_failure archetype is most commonly used to p
 		["MD5-CAM-1.0.1"] = <"D2DAC3686CCA50254BAE94AAACD4BB96">
 		["build_uid"] = <"8f9e36f3-9373-4b05-9a8c-5a9c789a55f7">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2023-04-26T11:37:52Z">
 	>
 
 definition

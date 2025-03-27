@@ -71,7 +71,6 @@ CKM:  http://www.openehr.org/knowledge/">
 		["build_uid"] = <"b115156b-c2a5-46ab-ad0c-d0d99c0f979d">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"1.0.0">
-		["revision_date"] = <"2018-05-14T06:30:58Z">
 	>
 
 definition

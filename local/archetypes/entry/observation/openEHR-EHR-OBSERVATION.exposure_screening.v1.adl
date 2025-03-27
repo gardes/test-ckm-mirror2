@@ -139,7 +139,6 @@ Not to be used to record information about substance use such as cigarette smoki
 		["build_uid"] = <"824ebb2d-599b-4e87-aafd-70e9919e0023">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["revision"] = <"1.0.1">
-		["revision_date"] = <"2023-09-12T11:48:26Z">
 	>
 
 definition

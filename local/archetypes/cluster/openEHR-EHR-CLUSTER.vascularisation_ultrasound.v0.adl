@@ -34,7 +34,6 @@ This archetype is intended to be nested within relevant imaging archetypes - for
 		["MD5-CAM-1.0.1"] = <"07783C1F64BDE0F54FF6FC6E814085BF">
 		["build_uid"] = <"73710c69-ad1f-4817-a1ec-0cc616fbc788">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2022-11-17T00:06:31Z">
 	>
 
 definition

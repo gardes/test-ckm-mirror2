@@ -155,7 +155,6 @@ Not to be used for recording the results of an imaging examination - use the CLU
 		["build_uid"] = <"077eeb0c-c5bd-4333-86a1-e30a18ea73d8">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2023-05-23T04:52:49Z">
 	>
 
 definition

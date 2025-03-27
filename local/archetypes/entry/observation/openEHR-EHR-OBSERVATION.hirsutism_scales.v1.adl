@@ -68,7 +68,6 @@ Yildiz, B.O., et al., Visually scoring hirsutism. Human Reproduction Update, 201
 		["build_uid"] = <"e22a0f2b-4636-4cd0-8f10-9dc35cdc5d47">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["revision"] = <"1.0.0">
-		["revision_date"] = <"2021-12-22T12:39:23Z">
 	>
 
 definition

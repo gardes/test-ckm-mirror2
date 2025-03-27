@@ -61,7 +61,6 @@ Use the MSFC Manual for further scoring instructions, formulas and background in
 		["MD5-CAM-1.0.1"] = <"C2E3543CEF6E93E0C929C718B2308564">
 		["custodian_namespace"] = <"org.openehr">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["revision_date"] = <"2017-03-14T03:28:47Z">
 	>
 
 definition

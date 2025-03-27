@@ -55,7 +55,6 @@ This archetype has been specifically designed to be used in the 'Structured deta
 		["MD5-CAM-1.0.1"] = <"4C7933C02F879864FC54A31737ABEBD3">
 		["custodian_namespace"] = <"org.openehr">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["revision_date"] = <"2016-01-13T07:21:43Z">
 	>
 
 definition

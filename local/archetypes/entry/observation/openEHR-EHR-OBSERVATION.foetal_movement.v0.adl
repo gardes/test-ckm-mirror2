@@ -90,7 +90,6 @@ Not to be used to represent formal fetal heart rate monitoring eg using cardioto
 		["MD5-CAM-1.0.1"] = <"BAB7DA649117B08FFFFE93C2F5672ECF">
 		["build_uid"] = <"3bfca613-3d98-46fa-981f-af0804120101">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2022-10-13T07:10:57Z">
 	>
 
 definition

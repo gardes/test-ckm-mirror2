@@ -70,7 +70,6 @@ Todorovic, Vera, Russell, Christine, Elia, Marinos (2011): The ‘MUST’explana
 		["build_uid"] = <"f478ac45-d50e-4a27-bc39-6002a63fe76b">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2018-05-14T07:56:56Z">
 	>
 
 definition

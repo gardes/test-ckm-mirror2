@@ -64,7 +64,6 @@ Beyer J, Villarruel A, Denyes M (2009). The Oucher: User's Manual and Technical 
 		["MD5-CAM-1.0.1"] = <"DDA4CDFF3CF49B0DD527AA98BC601E77">
 		["custodian_namespace"] = <"org.openehr">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["revision_date"] = <"2016-09-26T01:16:20Z">
 	>
 
 definition

@@ -131,7 +131,6 @@ EUDAMED - European Database on Medical Devices - [Internet]; [accessed 2022-04-2
 		["MD5-CAM-1.0.1"] = <"86469A298616E7CE233B12A8019966B0">
 		["build_uid"] = <"699acb36-5140-43d7-96b1-7cd2b2a6b7d0">
 		["revision"] = <"1.0.0">
-		["revision_date"] = <"2022-06-21T10:28:31Z">
 	>
 
 definition

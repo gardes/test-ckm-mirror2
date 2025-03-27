@@ -304,7 +304,6 @@ Guidelines for 64-bit Global Identifier (EUI-64) [Internet]. IEEE Standards Asso
 		["MD5-CAM-1.0.1"] = <"D1349AAD9444365B34B1BAFDE9F0BD4A">
 		["build_uid"] = <"fdf1b399-f40d-488c-9a16-281daae7d28c">
 		["revision"] = <"1.1.4">
-		["revision_date"] = <"2024-07-02T16:28:47Z">
 	>
 
 definition

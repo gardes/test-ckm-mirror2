@@ -38,7 +38,6 @@ This archetype may be extended using specific CLUSTER archetypes that represent 
 		["MD5-CAM-1.0.1"] = <"3B3DAE542C2D25B7A481A834E147A252">
 		["build_uid"] = <"e43d119c-2687-4d8a-85ea-80269962e86f">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2017-06-29T06:56:02Z">
 	>
 
 definition

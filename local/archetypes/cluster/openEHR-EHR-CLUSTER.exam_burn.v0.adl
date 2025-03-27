@@ -45,7 +45,6 @@ Not to be used to record stand-alone clinical observations or measurements or te
 		["MD5-CAM-1.0.1"] = <"99575EF249EB2BE525EA2E40B53E3A2A">
 		["custodian_namespace"] = <"org.openehr">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["revision_date"] = <"2015-06-25T04:17:15Z">
 	>
 
 definition

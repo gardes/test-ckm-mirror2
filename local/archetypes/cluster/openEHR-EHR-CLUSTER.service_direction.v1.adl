@@ -115,7 +115,6 @@ The CLUSTER can be renamed in template or at run-time to represent a specific se
 		["MD5-CAM-1.0.1"] = <"0EE9628D2B91CB934A0F3D31546F727F">
 		["build_uid"] = <"40cda3d0-9891-468c-86a2-c9a024383b2a">
 		["revision"] = <"1.0.1">
-		["revision_date"] = <"2022-12-15T12:39:46Z">
 	>
 
 definition

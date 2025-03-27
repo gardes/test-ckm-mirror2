@@ -54,7 +54,6 @@ Ely EW, Truman B, Shintani A, Thomason JW, Wheeler AP, Gordon S, Francis J, Sper
 		["MD5-CAM-1.0.1"] = <"F6D949667A98B43C75E240D5AB9DC9F4">
 		["custodian_namespace"] = <"org.openehr">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["revision_date"] = <"2016-09-23T05:24:13Z">
 	>
 
 definition

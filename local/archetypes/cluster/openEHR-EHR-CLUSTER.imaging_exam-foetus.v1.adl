@@ -96,7 +96,6 @@ Not to be used to record details related to the overall findings, context or tec
 		["build_uid"] = <"654fe353-e6a7-48ef-91dd-0a2770e08780">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["revision"] = <"1.0.0">
-		["revision_date"] = <"2022-10-20T06:17:22Z">
 	>
 
 definition

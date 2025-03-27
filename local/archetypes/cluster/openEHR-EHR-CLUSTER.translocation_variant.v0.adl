@@ -67,7 +67,6 @@ This archetype has been specifically designed to be used in the 'Variant' SLOT w
 		["MD5-CAM-1.0.1"] = <"8745C8D1D9C1569BEE1714EB866630E8">
 		["build_uid"] = <"2ea5bd94-ad81-469b-863a-6a51e730a124">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2021-02-10T04:18:27Z">
 	>
 
 definition

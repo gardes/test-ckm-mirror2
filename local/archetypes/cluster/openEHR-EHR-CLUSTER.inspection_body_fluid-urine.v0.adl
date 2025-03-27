@@ -121,7 +121,6 @@ Not to be used to record the results of a urinalysis test - use OBSERVATION.urin
 		["MD5-CAM-1.0.1"] = <"8F04028B59F32E5C517699ED8A3EA50D">
 		["build_uid"] = <"d2ab31c7-c451-480a-9e68-820832897c23">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2020-02-03T06:27:47Z">
 	>
 
 definition

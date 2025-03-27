@@ -78,7 +78,6 @@ This archetype has been designed to be nested within the EVALUATION.living_arran
 		["MD5-CAM-1.0.1"] = <"DC18277C90D0B0B9A3B8336FF126F3D8">
 		["build_uid"] = <"3fecff24-da07-4e3e-8b32-b715fd5b1147">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2023-05-15T09:51:26Z">
 	>
 
 definition

@@ -61,7 +61,6 @@ This archetype may be specialised to represent specific triage assessment tools.
 		["MD5-CAM-1.0.1"] = <"F87F4AE8EA7D5C74FE254B72C50F3FDF">
 		["build_uid"] = <"f12d328c-cd2d-47d8-a967-9afa3ba2ff28">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2023-11-01T08:17:03Z">
 	>
 
 definition

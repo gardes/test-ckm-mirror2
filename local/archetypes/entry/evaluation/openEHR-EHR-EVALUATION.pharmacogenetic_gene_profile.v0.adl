@@ -47,7 +47,6 @@ Cpicpgx.Org, 2023, http://cpicpgx.org/wp-content/uploads/2016/02/CPIC-Term-Stand
 		["build_uid"] = <"5d0a752f-a2e2-4f12-9308-aae97d6e8617">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2023-12-01T14:31:33Z">
 	>
 
 definition

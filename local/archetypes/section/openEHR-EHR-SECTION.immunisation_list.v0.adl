@@ -41,7 +41,6 @@ This list can be comprised of three types of statements, each represented by spe
 		["MD5-CAM-1.0.1"] = <"6D33ECAE951870774131B9C6BB600560">
 		["build_uid"] = <"4cb62ae4-0f0c-4a80-bdb2-ad6427834dc3">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2020-10-28T07:52:51Z">
 	>
 
 definition

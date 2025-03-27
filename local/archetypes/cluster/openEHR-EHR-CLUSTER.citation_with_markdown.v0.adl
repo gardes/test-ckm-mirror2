@@ -268,7 +268,6 @@ This archetype is deliberately designed as a CLUSTER class archetype so that the
 		["MD5-CAM-1.0.1"] = <"DEC7E070EBA207520213F12DBBDC3DA0">
 		["build_uid"] = <"8f38a0e6-566e-45c5-bd61-d9c2090a0c35">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2025-02-17T15:31:06Z">
 	>
 
 definition

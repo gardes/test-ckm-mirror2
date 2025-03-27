@@ -57,7 +57,6 @@ The scope of this archetype has deliberately focused on identifying a pragmatic 
 		["MD5-CAM-1.0.1"] = <"859E3E1B5E2CC7F763194716F7A8660B">
 		["build_uid"] = <"ef89065a-33cb-47ff-8f03-941bff0e7a87">
 		["revision"] = <"1.0.0">
-		["revision_date"] = <"2023-09-11T12:43:03Z">
 	>
 
 definition

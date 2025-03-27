@@ -145,7 +145,6 @@ Not to be used to record formal diagnostic test results - use appropriate OBSERV
 		["build_uid"] = <"828dbb29-01dd-400c-a9c4-009cc2f2f707">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["revision"] = <"1.1.2">
-		["revision_date"] = <"2023-06-30T10:57:25Z">
 	>
 
 definition

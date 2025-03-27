@@ -96,7 +96,6 @@ Het SECTION.care_plan archetype is een voorbeeld van een kader voor klinische in
 		["MD5-CAM-1.0.1"] = <"13D55DE5073CB5A79B7527DCB7E65582">
 		["build_uid"] = <"cfd4c0aa-e83a-4a8f-9967-1b98724a229f">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2024-01-24T12:51:26Z">
 	>
 
 definition

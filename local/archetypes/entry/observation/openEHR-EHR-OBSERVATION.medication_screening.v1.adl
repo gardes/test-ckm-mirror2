@@ -194,7 +194,6 @@ Not to be used to record details about a simple selection list where a question 
 		["build_uid"] = <"dcd86caa-80f4-4dbf-9162-cc61880219ad">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["revision"] = <"1.0.2">
-		["revision_date"] = <"2023-08-09T08:37:14Z">
 	>
 
 definition

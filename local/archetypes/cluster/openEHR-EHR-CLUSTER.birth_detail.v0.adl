@@ -37,7 +37,6 @@ This archetype has been designed to be nested:
 		["MD5-CAM-1.0.1"] = <"1281A10F9571D51164CAFCED7273DCFF">
 		["build_uid"] = <"2ebb9b84-bbf3-4eb3-add2-b927f029496d">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2023-07-20T08:07:48Z">
 	>
 
 definition

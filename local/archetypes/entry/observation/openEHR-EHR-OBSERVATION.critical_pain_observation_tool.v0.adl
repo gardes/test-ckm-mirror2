@@ -57,7 +57,6 @@ Pudas-Tähkä SM, Axelin A, Aantaa R, Lund V, Salanterä S. Pain assessment tool
 		["MD5-CAM-1.0.1"] = <"6FF6C80EF4B60576C5BF3D828E94AC7A">
 		["custodian_namespace"] = <"org.openehr">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["revision_date"] = <"2016-09-28T05:21:26Z">
 	>
 
 definition

@@ -36,7 +36,6 @@ This archetype is intended to be nested within the COMPOSITION.request or any re
 		["MD5-CAM-1.0.1"] = <"7DAA69B9A4F026B57C71629C1B49D260">
 		["build_uid"] = <"cac8073d-4bf0-45b2-9dc8-39829125c1e5">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2020-10-28T05:08:37Z">
 	>
 
 definition

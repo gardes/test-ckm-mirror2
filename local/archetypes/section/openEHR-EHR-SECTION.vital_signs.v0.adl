@@ -108,7 +108,6 @@ This archetype is intended to be used within a template in which the content is 
 		["MD5-CAM-1.0.1"] = <"19FEDB8EB9D83F76587DE9C7D7A30872">
 		["build_uid"] = <"b282c3ad-df60-4d19-9602-505ab079b7b9">
 		["revision"] = <"0.0.1-alpha">
-		["revision_date"] = <"2020-10-28T13:10:33Z">
 	>
 
 definition

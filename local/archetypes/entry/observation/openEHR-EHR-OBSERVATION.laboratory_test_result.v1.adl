@@ -393,7 +393,6 @@ Hl7 FHIR Diagnostic Report resource: HL7 fhir; Available from http://www.hl7.org
 		["MD5-CAM-1.0.1"] = <"AB458098681E9505986ADFCEC7FEC742">
 		["build_uid"] = <"0dbb47f7-fb53-4622-9a90-7b91c3778c3b">
 		["revision"] = <"1.2.5">
-		["revision_date"] = <"2024-03-14T10:14:07Z">
 	>
 
 definition

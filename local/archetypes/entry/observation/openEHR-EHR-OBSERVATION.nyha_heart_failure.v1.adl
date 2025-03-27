@@ -101,7 +101,6 @@ American Heart Association [Internet]. Dallas, Texas: American Heart Association
 		["build_uid"] = <"f4a6296c-5726-49e1-aed1-f48f42c818af">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomedct or info@snomed.org.">
 		["revision"] = <"1.0.2">
-		["revision_date"] = <"2019-07-25T12:11:34Z">
 	>
 
 definition
