@@ -155,15 +155,15 @@ Use cases include, but are not limited to:
 
 You may be using [Markdown Live Preview](https://markdownlivepreview.com/).
 
-<div>Testing a div. This is not supposed to be interpreted as html.</div>
+Testing a div. This is not supposed to be interpreted as html.
 <b>Bold via b tag - again, should this be just interpreted as such? no...</b>
 <u>Underline via u tag - should we allow this? maybe...</u>
 
 ## Blockquotes
 
 > Markdown is a lightweight markup language with plain-text-formatting syntax, created in 2004 by John Gruber with Aaron Swartz.
->
->> Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
+&gt;
+&gt;&gt; Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
 
 ## Tables
 
@@ -199,7 +199,7 @@ alert(message);
 ## Inline code
 
 This web site is using `markedjs/marked`.">
-			keywords = <"citation", "reference">
+			keywords = <"citation", "reference", "other">
 			misuse = <"">
 			copyright = <"© copyright (c) 2010 openEHR Foundation, openEHR Foundation">
 		>
@@ -232,8 +232,8 @@ This archetype is deliberately designed as a CLUSTER class archetype so that the
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"79A932331C2792107C0451AFE708108A">
-		["build_uid"] = <"c492d310-5779-41ad-8d0c-a29b63736573">
+		["MD5-CAM-1.0.1"] = <"C67646B900C18CA1629A3E331EEBDE3F">
+		["build_uid"] = <"47a32e36-4d95-4bb3-9eee-141ab358858c">
 		["revision"] = <"0.0.1-alpha">
 	>
 
