@@ -1,0 +1,296 @@
+﻿archetype (adl_version=1.4; uid=1e47338e-af9c-4fae-be24-b1a1d205c14c)
+	openEHR-EHR-OBSERVATION.onews.v1
+
+concept
+	[at0000]	-- ONEWS
+language
+	original_language = <[ISO_639-1::nb]>
+description
+	original_author = <
+		["name"] = <"Marit Alice Venheim">
+		["organisation"] = <"Helse Vest IKT">
+		["email"] = <"marit.alice.venheim@helse-vest-ikt.no">
+		["date"] = <"2019-01-18">
+	>
+	details = <
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			purpose = <"For å registrere en sammensatt skåring, basert på et sett med vitale parametre som registreres systematisk, objektivt og regelmessig for å fange opp sykdomsutvikling på et tidlig tidspunkt, samt å kunne følge utvikling av en mulig sykdom hos en kvinne fra svangerskapets start til og med seks uker postpartum.
+">
+			use = <"Brukes for å registrere en sammensatt skåring, basert på et sett med vitale parametre som registreres systematisk, objektivt og regelmessig for å fange opp sykdomsutvikling på et tidlig tidspunkt, samt å kunne følge utvikling av en mulig sykdom hos en kvinne fra svangerskapets start til og med seks uker postpartum.">
+			keywords = <"Varsling", "triage", "ONEWS", "forverring", "graviditet", "fødsel", "preeklampsi", "risikovurdering", "svangerskap", "barsel", "komplikasjon", "NEWS", "gravid", "sepsis", "skåring", "scoring", "HELLP">
+			misuse = <"Anvendes ikke for registering av hvert enkelt fysiologisk parameter eller klinisk observasjon. Bruk spesifikke OBSERVATION-arketyper for dette formål – OBSERVATION.blood_pressure (Blodtrykk), OBSERVATION.pulse (Puls/hjertefrekvens), OBSERVATION.respirations (Åndedrett), OBSERVATION.body_temperature (Kroppstemperatur), OBSERVATION.avpu-and_confusion, CLUSTER.ambient_oxygen (Innåndet oksygen) og OBSERVATION.indirect_oximetry (Pulsoksymetri).
+
+Benyttes ikke før svangerskapsstart og etter seks uker postpartum. Bruk egen arketype for dette formålet, for eksempel OBSERVATION.news2 (NEWS2 Skår).
+
+Benyttes ikke i aktiv fødsel eller når obstetrisk pasient er innlagt intensiv/ overvåkingsenhet.">
+			copyright = <"© Nasjonal IKT HF">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Vebjørn Arntzen, Oslo universitetssykehus HF, Norway (Nasjonal IKT redaktør)", "Heidi Aursand, Oslo universitetssykehus, Norway", "Silje Ljosland Bakke, Nasjonal IKT HF, Norway (Nasjonal IKT redaktør)", "Einar Engtrø, DIPS AS, Norway", "Peter Fedorcsak, Oslo universitetssykehus, Norway", "Mikkel Gaup Grønmo, FSE, Helse Nord, Norway (Nasjonal IKT redaktør)", "Nils Kolstrup, Skansen Legekontor og Nasjonalt Senter for samhandling og telemedisin, Norway", "Anne Hedvig Mellbye Pfeffer, OUS, Norway", "Tove Stenquist, Helseforetak, Norway", "Trine Strand, Oslo Universitetssykehus (OUS), Norway", "Chen Sun, Haukeland universitetssykehus, Norway", "Micaela Thierley, Helse Bergen/Haraldsplass sykehus, Norway", "John Tore Valand, Haukeland Universitetssjukehus, Norway (Nasjonal IKT redaktør)", "Ørjan Vermeer, Haukeland Universitetssjukehus, Kvinneklinikken, Norway", "Eva Øverland, Kvinneklinikken, Ahus, Norway">
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"Nasjonal IKT">
+		["references"] = <"The Confidential Enquiries into Maternal and Child Health (CEMACH), Saving mother`s life. (UK, 2007, 2011, 2018)
+www.npeu.ox.ac.uk/mbrrace-uk/reports
+
+The Irish Maternity Early Warning System (IMEWS) Clinical Practice Guideline
+https://www.hse.ie/eng/services/publications/clinical-strategy-and-programmes/imews-guidelines.pdf
+
+The Irish Maternity Early Warning System (IMEWS) National Clinical Guideline No. 4
+http://health.gov.ie/wp-content/uploads/2015/01/National-Clinical-Guideline-No.-4-IMEWS-Nov2014.pdf
+
+Maternal bacteremia and the Irish maternity early warning system.
+Maguire PJ, Turner MJ et al Int J Gynaecol Obstet. 2015 May;129(2):142-5. doi: 10.1016/j.ijgo.2014.11.022. Epub 2015 Feb 4.
+
+A validation study of the CEMACH recommended modified early obstetric warning system (MEOWS)  Anaesthesia Volume 67, Issue 1, pages 12-18, 9 NOV 2011DOI: 10.1111/j.1365-2044.2011.06896.x
+http://onlinelibrary.wiley.com/doi/10.1111/j.1365-2044.2011.06896.x/full#fa1
+
+A validation study of the CEMACH recommended modified early obstetric warning system (MEOWS) Singh, S. , McGlennan, A. , England, A. and Simons, R. (2012) 
+Anaesthesia, 67: 12-18. doi:10.1111/j.1365-2044.2011.06896.x
+
+Øverland Eva A. “ONEWS Obstetric Norwegian Early Warning Score System.” Gynekologen, Medlemsblad for Norsk Gynekologisk Forening. Vol. 4 2018). 5 februar 2019. Hentet fra: https://www.legeforeningen.no/contentassets/74fe2eab0fa64290aad0d42e6d46a246/gynekologen-4-2018-interactive-oppslag.pdf
+
+Norsk Gynekologisk forening, Veileder i fødselshjelp (2020) ONEWS: Obstetric Norwegian Early Warning Score System. Hentet fra: https://www.legeforeningen.no/foreningsledd/fagmed/norsk-gynekologisk-forening/veiledere/veileder-i-fodselshjelp-2020/onews/">
+		["original_namespace"] = <"no.nasjonalikt">
+		["original_publisher"] = <"Nasjonal IKT">
+		["custodian_namespace"] = <"no.nasjonalikt">
+		["MD5-CAM-1.0.1"] = <"12451EE0FE95330991D140A7C6EDAD49">
+		["build_uid"] = <"7c08da95-82c5-425b-ada1-c40892c6d88f">
+		["revision"] = <"1.0.1-alpha">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- ONEWS
+		data matches {
+			HISTORY[at0001] matches {    -- Event Series
+				events cardinality matches {1..*; unordered} matches {
+					POINT_EVENT[at0002] occurrences matches {0..*} matches {    -- Uspesifisert tidspunkthendelse
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0044] occurrences matches {0..1} matches {    -- Respirasjon
+										value matches {
+											1|[local::at0046],
+											2|[local::at0047],
+											3|[local::at0048]
+										}
+									}
+									ELEMENT[at0045] occurrences matches {0..1} matches {    -- Oksygenmetning
+										value matches {
+											1|[local::at0049],
+											3|[local::at0050]
+										}
+									}
+									ELEMENT[at0051] occurrences matches {0..1} matches {    -- Kroppstemperatur
+										value matches {
+											1|[local::at0052],
+											2|[local::at0053],
+											3|[local::at0054]
+										}
+									}
+									ELEMENT[at0055] occurrences matches {0..1} matches {    -- Systolisk blodtrykk
+										value matches {
+											1|[local::at0056],
+											2|[local::at0057],
+											3|[local::at0058]
+										}
+									}
+									ELEMENT[at0059] occurrences matches {0..1} matches {    -- Diastolisk blodtrykk
+										value matches {
+											1|[local::at0060],
+											2|[local::at0061],
+											3|[local::at0062]
+										}
+									}
+									ELEMENT[at0063] occurrences matches {0..1} matches {    -- Puls
+										value matches {
+											1|[local::at0064],
+											2|[local::at0065],
+											3|[local::at0066]
+										}
+									}
+									ELEMENT[at0067] occurrences matches {0..1} matches {    -- Bevissthetsgrad
+										value matches {
+											1|[local::at0069],
+											3|[local::at0068]
+										}
+									}
+									ELEMENT[at0012] occurrences matches {0..1} matches {    -- Antall gule registreringer
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..5|}
+											}
+										}
+									}
+									ELEMENT[at0013] occurrences matches {0..1} matches {    -- Antall røde registreringer
+										value matches {
+											DV_COUNT matches {
+												magnitude matches {|0..7|}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		protocol matches {
+			ITEM_TREE[at0038] matches {    -- ItemTree
+				items cardinality matches {0..*; unordered} matches {
+					allow_archetype CLUSTER[at0070] occurrences matches {0..*} matches {    -- Tilleggsinformasjon
+						include
+							archetype_id/value matches {/.*/}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["nb"] = <
+			items = <
+				["at0000"] = <
+					text = <"ONEWS">
+					description = <"ONEWS (Obstetric Norwegian Early Warning System) er et skåringsverktøy for tidlig oppdagelse, samt for å kunne følge utvikling av en mulig sykdom hos en kvinne fra svangerskapets start til og med seks uker postpartum.">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Uspesifisert tidspunkthendelse">
+					description = <"Uspesifisert tidspunkt som kan defineres mer eksplisitt i en templat eller i en applikasjon.">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0012"] = <
+					text = <"Antall gule registreringer">
+					description = <"Antall registreringer av Gul ONEWS-parameter.">
+				>
+				["at0013"] = <
+					text = <"Antall røde registreringer">
+					description = <"Antall registreringer av Rød ONEWS-parameter.">
+				>
+				["at0038"] = <
+					text = <"ItemTree">
+					description = <"@ internal @">
+				>
+				["at0044"] = <
+					text = <"Respirasjon">
+					description = <"Kvinnens respirasjonsfrekvens.">
+				>
+				["at0045"] = <
+					text = <"Oksygenmetning">
+					description = <"Kvinnens oksygenmetning.">
+				>
+				["at0046"] = <
+					text = <"Rød: ≤10 eller ≥25">
+					description = <"Respirasjonsfrekvens mindre enn eller lik 10 pust per min, eller større enn eller lik 25 pust per min; skåres som Rød.">
+				>
+				["at0047"] = <
+					text = <"Gul: 20 - 24">
+					description = <"Respirasjonsfrekvens fra og med 20 til og med 24 pust per min; skåres som Gul.">
+				>
+				["at0048"] = <
+					text = <"Hvit: 11 - 19">
+					description = <"Respirasjonsfrekvens fra og med 11 til og med 19 pust per min; skåres som Hvit.">
+				>
+				["at0049"] = <
+					text = <"Rød: ≤95">
+					description = <"Oksygenmetning mindre enn eller lik 95 prosent; skåres som Rød.">
+				>
+				["at0050"] = <
+					text = <"Hvit: ≥96">
+					description = <"Oksygenmetning større enn eller lik 99 prosent; skåres som Hvit.">
+				>
+				["at0051"] = <
+					text = <"Kroppstemperatur">
+					description = <"Kvinnens kroppstemperatur.">
+				>
+				["at0052"] = <
+					text = <"Rød: ≤35,0 eller ≥38,0">
+					description = <"Kroppstemperatur mindre enn eller lik 35,0 grader Celsius og større enn eller lik 38,0 grader Celcius; skåres som Rød.">
+				>
+				["at0053"] = <
+					text = <"Gul: 35,1 - 35,9 eller 37,5 - 37,9">
+					description = <"Kroppstemperatur fra og med 35,1 til og med 35,9 grader Celsius eller fra og med 37,5 og til og med 37,9 grader Celcius; skåres som Gul.">
+				>
+				["at0054"] = <
+					text = <"Hvit: 36,0 - 37,4">
+					description = <"Kroppstemperatur fra og med 36,0 til og med 37,4 grader Celsius; skåres som Hvit.">
+				>
+				["at0055"] = <
+					text = <"Systolisk blodtrykk">
+					description = <"Kvinnens systoliske blodtrykk.">
+				>
+				["at0056"] = <
+					text = <"Rød: <90 eller ≥160">
+					description = <"Systolisk blodtrykk mindre enn 90 mmHg og over eller lik 160 mmHg; skåres som Rød.">
+				>
+				["at0057"] = <
+					text = <"Gul: 90 - 99 eller 140 - 159">
+					description = <"Systolisk blodtrykk fra og med 90 til og med 99 mmHg eller fra og med 140 til og med 159 mmHg; skåres som Gul.">
+				>
+				["at0058"] = <
+					text = <"Hvit: 100 - 139">
+					description = <"Systolisk blodtrykk fra og med 100 til og med 139 mmHg; skåres som Hvit.">
+				>
+				["at0059"] = <
+					text = <"Diastolisk blodtrykk">
+					description = <"Kvinnens diastoliske blodtrykk.">
+				>
+				["at0060"] = <
+					text = <"Rød: <40 eller ≥100">
+					description = <"Diastolisk blodtrykk mindre enn 40 mmHg eller større eller lik 100 mmHg; skåres som Rød.">
+				>
+				["at0061"] = <
+					text = <"Gul: 40 - 49 eller 90 - 99">
+					description = <"Diastolisk blodtrykk fra og med 40 til og med 49 mmHg eller fra og med 90 til og med 99 mmHg; skåres som Gul.">
+				>
+				["at0062"] = <
+					text = <"Hvit: 50 - 89">
+					description = <"Diastolisk blodtrykk fra og med 50 til og med 89 mmHg; skåres som Hvit.">
+				>
+				["at0063"] = <
+					text = <"Puls">
+					description = <"Kvinnens puls.">
+				>
+				["at0064"] = <
+					text = <"Rød: ≤50 eller ≥120">
+					description = <"Puls mindre enn eller lik 50 pulsslag per min og større enn eller lik 120 pulsslag per min; skåres som Rød.">
+				>
+				["at0065"] = <
+					text = <"Gul: 51 – 60 eller 100 – 119">
+					description = <"Puls fra og med 51 til og med 60 pulsslag per min eller fra og med 100 til og med 119 pulsslag per min; skåres som Gul.">
+				>
+				["at0066"] = <
+					text = <"Hvit: 61 – 99">
+					description = <"Puls fra og med 61 til og med 99 pulsslag per min; skåres som Hvit.">
+				>
+				["at0067"] = <
+					text = <"Bevissthetsgrad">
+					description = <"Observert kategori for ACVPU scoring av kvinnens bevissthetstilstand.">
+				>
+				["at0068"] = <
+					text = <"Hvit: A">
+					description = <"Pasienten er våken og orientert; skåres som Hvit.">
+				>
+				["at0069"] = <
+					text = <"Rød: C, V, P eller U">
+					description = <"C- Er desorientert, V - Reagerer på lyd/tiltale, P - Reagerer på smerte, U - reagerer ikke; skåres som Rød.">
+				>
+				["at0070"] = <
+					text = <"Tilleggsinformasjon">
+					description = <"Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.">
+					comment = <"For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR eller CIMI.">
+				>
+			>
+		>
+	>
