@@ -86,7 +86,9 @@ Este arquétipo está deliberadamente projetado como uma classe de arquétipo CL
 
 > Markdown is a lightweight markup language with plain-text-formatting syntax, created in 2004 by John Gruber with Aaron Swartz.
 > > Markdown double indented is a lightweight markup language with plain-text-formatting syntax.
-> > > Markdown triple indented is a lightweight markup language with plain-text-formatting syntax.">
+> > > Markdown triple indented is a lightweight markup language with plain-text-formatting syntax.
+
+test">
 			use = <"Use to reference information that is stored elsewhere in the same EHR or external to the active EHR, so that it can be included in the current document or message that is being created.  For example, a discharge summary may include the summary report of a laboratory test through the use of this citation archetype, rather than duplicating the whole laboratory report.
 This archetype is deliberately designed as a CLUSTER class archetype so that the citation can be made via insertion into a slot within the context of other archetypes, or as a standalone instance within the specific EVALUATION.citation archetype.
 
@@ -266,7 +268,7 @@ This archetype is deliberately designed as a CLUSTER class archetype so that the
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"DEC7E070EBA207520213F12DBBDC3DA0">
-		["build_uid"] = <"8f38a0e6-566e-45c5-bd61-d9c2090a0c35">
+		["build_uid"] = <"85543dc8-2f84-42a2-bd27-41ac003b5966">
 		["revision"] = <"0.0.1-alpha">
 	>
 
