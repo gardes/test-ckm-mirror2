@@ -82,7 +82,7 @@ Not to be used to record results from trans-oesophageal electrophysiological stu
 			copyright = <"© openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Morten Aas, Diakonhjemmet Sykehus, Norway", "Marit Alice Venheim, Helse Vest IKT, Norway (Nasjonal IKT redaktør)", "Ole Andreas Bjordal, Webmed, Norway", "Erling Are Hole, Helse Bergen, Norway", "Vebjørn Arntzen, Oslo University Hospital, Norway", "Koray Atalag, University of Auckland, New Zealand", "Heidi Aursand, Oslo universitetssykehus, Norway", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "Ivar Berge, Oslo Universitetssykehus, Norway", "Greg Burch, Tiny Medical Apps, United Kingdom", "Marja Buur, Medisch Centrum Alkmaar/ Code24, Netherlands", "Tamsin Cockayne, Australia", "Marc Cotran, identity vision systems, Canada", "Lisbeth Dahlhaug, Helse Midt - Norge IT, Norway", "Einar Engtrø, DIPS AS, Norway", "Heather Grain, Llewelyn Grain Informatics, Australia", "Sam Heard, Ocean Informatics, Australia", "Eugene Igras, IRIS Systems, Inc., Canada", "Lars Ivar Mehlum, Nasjonal IKT HF, Norway", "Tom Jarl Jakobsen, Helse Bergen, Norway", "Mikkel Johan Gaup Grønmo, Forvaltningssenter EPJ, Helse Nord, Norway (Nasjonal IKT redaktør)", "Aljoscha Kindermann, University Hospital of Heidelberg, Germany", "Nils Kolstrup, Skansen Legekontor og Nasjonalt Senter for samhandling og telemedisin, Norway", "Anette Larsson, Tieto Sweden AB, Sweden", "Liv Laugen, Oslo universitetssykehus, Norway (Nasjonal IKT redaktør)", "Øygunn Leite Kallevik, Helse Bergen, Norway", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Siv Marie Lien, DIPS ASA, Norway", "Hildegard McNicoll, freshEHR Clinical Informatics Ltd., United Kingdom", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Lars Morgan Karlsen, Nordlandssykehuset Bodø, Norway", "Jayashree Panickar, Karolinska Institute, Sweden", "Line Silsand, Universitetssykehuset i Nord-Norge, Norway", "Raymond Simkus, Brookswood Family Practice, Canada", "Niclas Skyttberg, Karolinska Institutet, Sweden", "Trine Strand, Oslo Universitetssykehus (OUS), Norway", "Tim Sturgill, United States", "Norwegian Review Summary, Nasjonal IKT HF, Norway", "Andreas Sundstrom, Capio S:t Gorans Hospital, Sweden", "Nyree Taylor, Ocean Informatics, Australia", "Micaela Thierley, Helse Vest IKT, Norway", "Rowan Thomas, St. Vincent's Hospital Melbourne, Australia", "Anders Thurin, VGR, Sweden", "John Tore Valand, Haukeland Universitetssjukehus, Norway (Nasjonal IKT redaktør)", "Stian Torleif Varpe, Helse Vest IKT, Norway", "Jesus Trigo, Public University of Navarre, Spain", "Karl Trygve Kalleberg, Oslo Universitetssykehus, Norway">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -100,9 +100,9 @@ Nelwan SP, Meij SH, van Dam TB, Kors JA. Correction of ECG variations caused by 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"F0CDAB35DB0614EC716AE837F7A2B378">
-		["build_uid"] = <"b9a39035-9b21-4cd4-952a-c7782a384370">
-		["revision"] = <"1.0.4">
+		["MD5-CAM-1.0.1"] = <"4F41D28174B6DA9B0AF7FA9B701BFFFB">
+		["build_uid"] = <"6e931e95-2083-4afb-923c-d34eacdb0875">
+		["revision"] = <"1.0.5-alpha">
 	>
 
 definition
@@ -123,13 +123,6 @@ definition
 										value matches {
 											C_DV_QUANTITY <
 												property = <[openehr::382]>
-												list = <
-													["1"] = <
-														units = <"/min">
-														magnitude = <|>=0.0|>
-														precision = <|0|>
-													>
-												>
 											>
 										}
 									}
@@ -837,10 +830,6 @@ definition
 			}
 		}
 	}
-
-
-
-
 
 ontology
 	term_definitions = <
