@@ -47,12 +47,12 @@ description
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
 		["references"] = <"Derived from: Care plan, Draft Archetype [Internet]. Australian Digital Health Agency, Australian Digital Health Agency Clinical Knowledge Manager [cited: 2016-08-22]. No longer available.">
-		["current_contact"] = <"Heather Leslie, Atomica Informatics<heather.leslie@atomicainformatics.com>">
+		["current_contact"] = <"Hrbert Lom>">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"79CCC1762AFD328C6AB3C495A8B89C3C">
-		["build_uid"] = <"5ddc05d4-8a3c-4677-a696-230455786f3e">
+		["build_uid"] = <"1bcffd37-efcc-4a03-a87f-e4c2c78fba11">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -105,7 +105,6 @@ definition
 			}
 		}
 	}
-
 
 ontology
 	term_definitions = <
