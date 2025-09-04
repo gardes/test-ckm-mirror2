@@ -1,0 +1,221 @@
+﻿archetype (adl_version=1.4; uid=19a48448-4d49-4997-9fbd-26040ee9c05d)
+	openEHR-EHR-OBSERVATION.nips.v0
+
+concept
+	[at0000]	-- NIPS
+language
+	original_language = <[ISO_639-1::en]>
+description
+	original_author = <
+		["date"] = <"2023-11-02">
+	>
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"">
+			use = <"">
+			misuse = <"">
+			copyright = <"© openEHR Foundation">
+		>
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"74260F79AEEB57ACCE74EE214887DCB2">
+		["build_uid"] = <"c94e8a40-7e7e-41b7-8703-c296ddd9a6e0">
+		["revision"] = <"0.0.1-alpha">
+	>
+
+definition
+	OBSERVATION[at0000] matches {    -- NIPS
+		data matches {
+			HISTORY[at0001] matches {    -- History
+				events cardinality matches {1..*; unordered} matches {
+					EVENT[at0002] occurrences matches {0..*} matches {    -- Any event
+						data matches {
+							ITEM_TREE[at0003] matches {    -- Tree
+								items cardinality matches {0..*; unordered} matches {
+									ELEMENT[at0004] occurrences matches {0..1} matches {    -- Facial Expresion
+										value matches {
+											0|[local::at0005],
+											1|[local::at0006]
+										}
+									}
+									ELEMENT[at0007] occurrences matches {0..1} matches {    -- Cry
+										value matches {
+											0|[local::at0008],
+											1|[local::at0009],
+											2|[local::at0010]
+										}
+									}
+									ELEMENT[at0011] occurrences matches {0..1} matches {    -- Breathing Pattern
+										value matches {
+											0|[local::at0012],
+											1|[local::at0013]
+										}
+									}
+									ELEMENT[at0014] occurrences matches {0..1} matches {    -- Arms
+										value matches {
+											0|[local::at0015],
+											0|[local::at0016],
+											1|[local::at0017],
+											1|[local::at0018]
+										}
+									}
+									ELEMENT[at0019] occurrences matches {0..1} matches {    -- Legs
+										value matches {
+											0|[local::at0020],
+											0|[local::at0021],
+											1|[local::at0022],
+											1|[local::at0023]
+										}
+									}
+									ELEMENT[at0024] occurrences matches {0..1} matches {    -- State of Arousal
+										value matches {
+											0|[local::at0025],
+											0|[local::at0026],
+											1|[local::at0027]
+										}
+									}
+									ELEMENT[at0028] occurrences matches {0..1} matches {    -- Total Score
+										value matches {
+											DV_COUNT matches {*}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"NIPS">
+					description = <"NIPS">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Any event">
+					description = <"@ internal @">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"Facial Expresion">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Relaxed">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Grimace">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Cry">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"No Cry">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Whimper">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Vigorous Crying">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Breathing Pattern">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Relaxed">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Change in Breathing">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Arms">
+					description = <"">
+				>
+				["at0015"] = <
+					text = <"Restrained">
+					description = <"">
+				>
+				["at0016"] = <
+					text = <"Relaxed">
+					description = <"">
+				>
+				["at0017"] = <
+					text = <"Fixed">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"Extended">
+					description = <"">
+				>
+				["at0019"] = <
+					text = <"Legs">
+					description = <"">
+				>
+				["at0020"] = <
+					text = <"Restrained">
+					description = <"">
+				>
+				["at0021"] = <
+					text = <"Relaxed">
+					description = <"">
+				>
+				["at0022"] = <
+					text = <"Flexed">
+					description = <"">
+				>
+				["at0023"] = <
+					text = <"Extended">
+					description = <"">
+				>
+				["at0024"] = <
+					text = <"State of Arousal">
+					description = <"">
+				>
+				["at0025"] = <
+					text = <"Sleeping">
+					description = <"">
+				>
+				["at0026"] = <
+					text = <"Awake">
+					description = <"">
+				>
+				["at0027"] = <
+					text = <"Fusy">
+					description = <"">
+				>
+				["at0028"] = <
+					text = <"Total Score">
+					description = <"">
+				>
+			>
+		>
+	>
