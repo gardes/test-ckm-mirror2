@@ -94,7 +94,7 @@ Het SECTION.care_plan archetype is een voorbeeld van een kader voor klinische in
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"7C0AE61251A1846DCB265C25DCD93F07">
-		["build_uid"] = <"c3ecad75-7aab-4c98-ad17-b6e8fcbe87d9">
+		["build_uid"] = <"3be11490-f5a4-4456-84b2-2ece8838ea7c">
 		["revision"] = <"0.0.1-alpha">
 	>
 
