@@ -224,7 +224,7 @@ This archetype is deliberately designed as a CLUSTER class archetype so that the
 		>
 	>
 	lifecycle_state = <"in_development">
-	other_contributors = <"Heather Leslie, Ocean Informatics, Australia", "Ian McNicoll, Ocean Informatics, Australia">
+	other_contributors = <"Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR-SG Editor)", "Heather Leslie, Ocean Informatics, Australia", "Herbert Lom, Chief Inspector Charles Dreyfus of the French National Police, France (openEHR-SG Editor)", "Ian McNicoll, Ocean Informatics, Australia", "Mr Ocean, Ocean Informatics, Germany (openEHR-SG Editor)", "John Tore Valand, Helse Vest IKT, Norway (openEHR-SG Editor)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
@@ -232,8 +232,8 @@ This archetype is deliberately designed as a CLUSTER class archetype so that the
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"79A932331C2792107C0451AFE708108A">
-		["build_uid"] = <"68683ac6-2d00-404d-8be0-015d28214537">
+		["MD5-CAM-1.0.1"] = <"C67646B900C18CA1629A3E331EEBDE3F">
+		["build_uid"] = <"84819d03-371f-4499-8b9f-fca7640f202c">
 		["revision"] = <"0.0.1-alpha">
 	>
 
