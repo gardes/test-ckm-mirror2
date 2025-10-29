@@ -54,7 +54,7 @@ This archetype has been designed to be a framework that will be adequate for ord
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"4405B4E8EB3A5E4A99CA68AFA23F7992">
-		["build_uid"] = <"145c3ad8-cbf4-4dfe-9aa2-791c3023d5d7">
+		["build_uid"] = <"edf94566-214b-4392-9794-d252aa32a72f">
 		["revision"] = <"0.0.1-alpha">
 	>
 
