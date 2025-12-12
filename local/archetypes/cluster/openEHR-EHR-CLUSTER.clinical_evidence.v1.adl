@@ -30,6 +30,14 @@ language
 				["email"] = <"silje.ljosland.bakke@nasjonalikt.no, liv.laugen@ous-hf.no">
 			>
 		>
+		["ak"] = <
+			language = <[ISO_639-1::ak]>
+			author = <
+				["name"] = <"Mr Ocean">
+				["organisation"] = <"Ocean Informatics">
+				["email"] = <"sebastian.garde@oceaninformatics.com">
+			>
+		>
 	>
 description
 	original_author = <
@@ -58,7 +66,7 @@ Nicht zur Dokumentation von zusammenfassenden Details über ein identifiziertes 
 
 Nicht zur Dokumentation von zusammenfassende Einzelheiten über eine identifizierte Kontraindikation verwenden - verwenden Sie dazu die Datei EVALUATION.contraindication.
 ">
-			copyright = <"*© openEHR Foundation, Nasjonal IKT HF (en)">
+			copyright = <"© openEHR Foundation, Nasjonal IKT HF">
 		>
 		["sv"] = <
 			language = <[ISO_639-1::sv]>
@@ -76,7 +84,7 @@ De kliniska bevisen kan matas in direkt i denna arketyp som en \"Finding\", elle
 Är inte utformad för att registrera sammanfattande detaljer om en identifierad hälsorisk - använd EVALUATION.health_risk för detta ändamål.
 
 Är inte utformad för att registrera sammanfattande detaljer om en identifierad kontraindikation - använd EVALUATION.-kontraindikationen för detta ändamål.">
-			copyright = <"*© openEHR Foundation, Nasjonal IKT HF (en)">
+			copyright = <"© openEHR Foundation, Nasjonal IKT HF">
 		>
 		["nb"] = <
 			language = <[ISO_639-1::nb]>
@@ -116,6 +124,18 @@ Not to be used to record summary details about an identified health risk - use t
 Not to be used to record summary details about an identified contraindication - use the EVALUATION.contraindication for this purpose.">
 			copyright = <"© openEHR Foundation, Nasjonal IKT HF">
 		>
+		["ak"] = <
+			language = <[ISO_639-1::ak]>
+			purpose = <"*To record an explicit finding in support of a clinical assertion, such as a problem/diagnosis, adverse reaction risk, health risk assessment, or contraindication.(en)">
+			use = <"dws">
+			misuse = <"*Not to be used to record summary details about an identified problem or diagnosis - use the EVALUATION.problem_diagnosis for this purpose.
+
+Not to be used to record summary details about an identified adverse reaction risk - use the EVALUATION.adverse_reaction_risk for this purpose.
+
+Not to be used to record summary details about an identified health risk - use the EVALUATION.health_risk for this purpose.
+
+Not to be used to record summary details about an identified contraindication - use the EVALUATION.contraindication for this purpose.(en)">
+		>
 	>
 	lifecycle_state = <"published">
 	other_contributors = <"Morten Aas, Oslo Universitetssykehus, Norway", "Ole Andreas Bjordal, Webmed, Norway", "Stein Arne Rimehaug, Sunnaas sykehus, Norway", "Vebjørn Arntzen, Oslo University Hospital, Norway", "Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)", "Kristian Berg, Universitetssykehuset Nord Norge, Norway", "SB BHATTACHARYYA, Sudisa Consultancy Services, India", "SBhusan Bhattacharyya, Sudisa Consultancy Services, India", "Bjørn Christensen, Helse Bergen HF, Norway", "Chris Dickson, NHS Digital, United Kingdom", "Hildegard Franke, freshEHR Clinical Informatics Ltd., United Kingdom", "Bente Gjelsvik, Helse Bergen, Norway", "Evelyn Hovenga, EJSH Consulting, Australia", "Hanne Joensen, Helse Bergen HUS, Norway", "Siri Larønningen, Kreftregisteret, Norway", "Heather Leslie, Ocean Informatics, Australia (openEHR Editor)", "Hallvard Lærum, Direktoratet for e-helse, Norway", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Lars Morgan Karlsen, DIPS ASA, Norway", "Bjørn Næss, DIPS ASA, Norway", "Andrej Orel, Marand d.o.o., Slovenia", "Vladimir Pizzo, Hospital Sírio Libanês, Brazil", "Navin Ramachandran, NHS, United Kingdom", "Raymond Simkus, Brookswood Family Practice, Canada", "Iztok Stotl, UKCLJ, Slovenia", "Norwegian Review Summary, Nasjonal IKT HF, Norway", "Nyree Taylor, Ocean Informatics, Australia", "John Tore Valand, Haukeland Universitetssjukehus, Norway (Nasjonal IKT redaktør)", "Mette Wam, Esito AS, Norway">
@@ -126,9 +146,9 @@ Not to be used to record summary details about an identified contraindication - 
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"B54C8E41D6A32E4A769F4F9240A53D63">
-		["build_uid"] = <"b232c874-ef6f-46fc-90d1-787d4876e5c0">
-		["revision"] = <"1.2.1">
+		["MD5-CAM-1.0.1"] = <"4EA6B1F74145A014D1ED2B49A8BB50BE">
+		["build_uid"] = <"aa95dce8-2674-4586-bb27-dab018671eda">
+		["revision"] = <"1.2.2">
 	>
 
 definition
@@ -179,6 +199,7 @@ definition
 			}
 		}
 	}
+
 
 
 ontology
@@ -388,6 +409,54 @@ ontology
 				["at0024"] = <
 					text = <"*Additional details (en)">
 					description = <"*Additional structured details about findings. (en)">
+				>
+			>
+		>
+		["ak"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Clinical evidence(en)">
+					description = <"*Details about findings that support a clinical assertion.(en)">
+				>
+				["at0001"] = <
+					text = <"*Method description(en)">
+					description = <"*Narrative description of the method/s used to identify the evidence.(en)">
+				>
+				["at0003"] = <
+					text = <"*Finding(en)">
+					description = <"*Identification of the finding that supports the assertion.(en)">
+				>
+				["at0004"] = <
+					text = <"*Finding description(en)">
+					description = <"*Narrative description of the finding.(en)">
+				>
+				["at0005"] = <
+					text = <"*Result(en)">
+					description = <"*Measurement or value associated with the finding.(en)">
+				>
+				["at0006"] = <
+					text = <"*Date identified(en)">
+					description = <"*The date on which the finding was clinically identified.(en)">
+				>
+				["at0007"] = <
+					text = <"*Citation(en)">
+					description = <"*Detailed data available about the evidence held in another part of the health record.(en)">
+				>
+				["at0018"] = <
+					text = <"*Multimedia representation(en)">
+					description = <"*Digital image, video or diagram representing the clinical evidence.(en)">
+				>
+				["at0022"] = <
+					text = <"*Method(en)">
+					description = <"*Type of examination or investigation used to identify the evidence.(en)">
+				>
+				["at0023"] = <
+					text = <"*Comment(en)">
+					description = <"*Additional narrative about the finding not captured in other fields.(en)">
+				>
+				["at0024"] = <
+					text = <"*Additional details(en)">
+					description = <"*Additional structured details about the finding.(en)">
 				>
 			>
 		>
