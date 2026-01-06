@@ -159,9 +159,9 @@ Not to be used to record a Family Pedigree chart of health problems/diagnoses. U
 		["original_publisher"] = <"closedEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"047417925A11C761DCAA785BA9C8F1A2">
-		["build_uid"] = <"868de44b-d04a-4c5f-9544-aaaf3e48953b">
+		["build_uid"] = <"c1418ac3-f713-4881-ab79-a0d9cb4bffd0">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
-		["revision"] = <"1.5.0">
+		["revision"] = <"1.5.1">
 	>
 
 definition
