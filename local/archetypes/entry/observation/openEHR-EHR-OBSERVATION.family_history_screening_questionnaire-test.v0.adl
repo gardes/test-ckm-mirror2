@@ -24,6 +24,14 @@ language
 				["email"] = <"silje.ljosland.bakke@helse-vest-ikt.no, marit.alice.venheim@helse-vest-ikt.no, john.tore.valand@helse-bergen.no, john.tore.valand@helse-vest-ikt.no, liv.laugen@ous-hf.no, varntzen@ous-hf.no, hanne.marte.sandal.barholm@helse-vest-ikt.no, kanika.kuwelker@helse-vest-ikt.no">
 			>
 		>
+		["af"] = <
+			language = <[ISO_639-1::af]>
+			author = <
+				["name"] = <"Mr Ocean">
+				["organisation"] = <"Ocean Informatics">
+				["email"] = <"sebastian.garde@oceaninformatics.com">
+			>
+		>
 	>
 description
 	original_author = <
@@ -111,6 +119,14 @@ Denne arketypen er laget for å bli brukt i et spørreskjema eller for å regist
 Brukes ikke som basis for et slektstre over helseproblemer og diagnoser. Bruk arketypen EVALUATION.family_history (Familieanamnese) for dette formålet.">
 			copyright = <"© closedEHR Foundation, openEHR Foundation">
 		>
+		["af"] = <
+			language = <[ISO_639-1::af]>
+			purpose = <"*To create a framework for recording answers to pre-defined screening questions about health-related problems found in both genetic and non-genetic family members.(en)">
+			use = <"23">
+			misuse = <"*Not to be used to record details about the presence or absence of a family-related problem outside of a screening context. Use EVALUATION.family_history or EVALUATION.exclusion_specific for these purposes.
+
+Not to be used to record a Family Pedigree chart of health problems/diagnoses. Use the EVALUATION.family_history archetype for this purpose.(en)">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To create a framework for recording answers to pre-defined screening questions about health-related problems found in both genetic and non-genetic family members.">
@@ -158,10 +174,10 @@ Not to be used to record a Family Pedigree chart of health problems/diagnoses. U
 		["original_namespace"] = <"closed.openehr">
 		["original_publisher"] = <"closedEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"C4CF2955745502C1519889F1C4B5BB5B">
-		["build_uid"] = <"9832cd32-0df2-46a5-ad12-02a7f1651278">
+		["MD5-CAM-1.0.1"] = <"C3D9F6971D01A96A4746089DE240EFD0">
+		["build_uid"] = <"9aeb8704-c7a9-4db1-9bb3-2140a94d0b66">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
-		["revision"] = <"0.5.0-alpha">
+		["revision"] = <"0.0.1-alpha">
 	>
 
 definition
@@ -902,6 +918,166 @@ Beispiel: Gibt es in Ihrer Familie Diabetes?">
 				["at0.8"] = <
 					text = <"Unsicher">
 					description = <"">
+				>
+			>
+		>
+		["af"] = <
+			items = <
+				["at0.1"] = <
+					text = <"*Yes(en)">
+					description = <"">
+				>
+				["at0.2"] = <
+					text = <"*No(en)">
+					description = <"">
+				>
+				["at0.3"] = <
+					text = <"*Unknown(en)">
+					description = <"">
+				>
+				["at0.4"] = <
+					text = <"*Unsure(en)">
+					description = <"">
+				>
+				["at0.5"] = <
+					text = <"*Yes(en)">
+					description = <"">
+				>
+				["at0.6"] = <
+					text = <"*No(en)">
+					description = <"">
+				>
+				["at0.7"] = <
+					text = <"*Unknown(en)">
+					description = <"">
+				>
+				["at0.8"] = <
+					text = <"*Unsure(en)">
+					description = <"">
+				>
+				["at0000.1"] = <
+					text = <"*Family history screening questionnaire(en)">
+					description = <"*Series of questions and associated answers used to screen for health-related problems found in genetic and non-genetic family members.(en)">
+				>
+				["at0001"] = <
+					text = <"History">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any event(en)">
+					description = <"*Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time.(en)">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*Screening purpose(en)">
+					description = <"*The context or reason for screening.(en)">
+				>
+				["at0009"] = <
+					text = <"*Specific relationship(en)">
+					description = <"*Details about an identified problem or diagnosis in a specific relationship or relationship degree.(en)">
+				>
+				["at0009.1"] = <
+					text = <"*Mother(en)">
+					description = <"*Details about an identified problem or diagnosis in a specific relationship or relationship degree.(en)">
+				>
+				["at0009.2"] = <
+					text = <"*Father(en)">
+					description = <"*Details about an identified problem or diagnosis in a specific relationship or relationship degree.(en)">
+				>
+				["at0010"] = <
+					text = <"*Presence?(en)">
+					description = <"*Is there a history of a problem or diagnosis in family members?(en)">
+				>
+				["at0011"] = <
+					text = <"*Yes(en)">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"*No(en)">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"*Unknown(en)">
+					description = <"">
+				>
+				["at0018"] = <
+					text = <"*Relationship(en)">
+					description = <"*The relationship of the family member to the individual.(en)">
+				>
+				["at0021"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0028"] = <
+					text = <"*Comment(en)">
+					description = <"*Additional narrative about the specific problem, diagnosis or family member, not captured in other fields.(en)">
+				>
+				["at0029"] = <
+					text = <"*Extension(en)">
+					description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
+				>
+				["at0035"] = <
+					text = <"*Problem/diagnosis name(en)">
+					description = <"*Identification of a problem or diagnosis, or grouping of problems or diagnoses in the family.(en)">
+				>
+				["at0036"] = <
+					text = <"*Additional details(en)">
+					description = <"*Structured details or questions about the specific problem or diagnosis.(en)">
+				>
+				["at0038"] = <
+					text = <"*Description(en)">
+					description = <"*Narrative description about the history of any problem or diagnosis in the family.(en)">
+				>
+				["at0039"] = <
+					text = <"*Additional details(en)">
+					description = <"*Structured details or questions about screening for significant problems or diagnoses in family members.(en)">
+				>
+				["at0041"] = <
+					text = <"*Unsure(en)">
+					description = <"">
+				>
+				["at0042"] = <
+					text = <"*Any family member(en)">
+					description = <"*Presence of a specific problem or diagnosis in any family member.(en)">
+				>
+				["at0042.1"] = <
+					text = <"*Any family member(en)">
+					description = <"*Presence of a specific problem or diagnosis in any family member.(en)">
+				>
+				["at0043"] = <
+					text = <"*Problem/diagnosis name(en)">
+					description = <"*Identification of a specific problem or diagnosis, or a grouping of problems or diagnoses, in the family.(en)">
+				>
+				["at0044"] = <
+					text = <"*Presence?(en)">
+					description = <"*Is there a history of a problem or diagnosis, or grouping of problems or diagnoses in the family?(en)">
+				>
+				["at0045"] = <
+					text = <"*Yes(en)">
+					description = <"">
+				>
+				["at0046"] = <
+					text = <"*No(en)">
+					description = <"">
+				>
+				["at0047"] = <
+					text = <"*Unknown(en)">
+					description = <"">
+				>
+				["at0048"] = <
+					text = <"*Unsure(en)">
+					description = <"">
+				>
+				["at0049"] = <
+					text = <"*Timing(en)">
+					description = <"*Indication of timing related to the problem or diagnosis.(en)">
+				>
+				["at0050"] = <
+					text = <"*Comment(en)">
+					description = <"*Additional narrative about the specific problem or diagnosis in the family, not captured in other fields.(en)">
 				>
 			>
 		>
