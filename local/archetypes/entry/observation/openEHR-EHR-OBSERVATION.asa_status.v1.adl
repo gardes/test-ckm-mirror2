@@ -116,9 +116,9 @@ Derived from: ASA-klassifikasjon, Publisert arketype [Internet]. Nasjonal IKT, N
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"F1897007CA8536499DA80ED6AD971A5F">
-		["build_uid"] = <"370cefa9-7b8d-4123-b6da-2f2274a934f6">
+		["build_uid"] = <"235847aa-be2b-4706-9baf-dab7c5dc1fc7">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
-		["revision"] = <"1.0.1-alpha">
+		["revision"] = <"1.0.2-alpha">
 	>
 
 definition
