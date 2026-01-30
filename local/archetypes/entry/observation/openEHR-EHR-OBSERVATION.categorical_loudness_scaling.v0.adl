@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=1a296f82-89b1-4a68-a7f0-0228d521daa4)
+﻿archetype (adl_version=1.4; uid=fdb248ff-f77e-4481-bc5a-67745f8be412)
 	openEHR-EHR-OBSERVATION.categorical_loudness_scaling.v0
 
 concept
@@ -27,7 +27,7 @@ Not to be used to record other auditory assessments such as:
 - Transient Evoked Otoacoustic Emission (TEOAE); and
 - Distortion Product Otoacoustic Emission (DPOAE).
 These assessments need to be recorded in specific archetypes for the purpose.">
-			copyright = <"© openEHR Foundation, HiGHmed, Hearing4all, openEHR Foundation">
+			copyright = <"© openEHR Foundation, HiGHmed, Hearing4all, openEHR Foundation, openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
@@ -35,14 +35,16 @@ These assessments need to be recorded in specific archetypes for the purpose.">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["references"] = <"Brand, T., & Hohmann, V. (2002). An adaptive procedure for categorical loudness scaling. The Journal of the Acoustical Society of America, 112(4), 1597-1604.
+		["references"] = <"Categorical loudness scaling, Draft archetype [Internet]. openEHR Foundation, test intl Clinical Knowledge Manager [cited: 2026-01-30]. Available from: https://ckm.openehr.org/archetypes/1013.1.7511
+
+Brand, T., & Hohmann, V. (2002). An adaptive procedure for categorical loudness scaling. The Journal of the Acoustical Society of America, 112(4), 1597-1604.
 Hellbrück, J., & Moser, L. M. (1986). Psychophysical measurements of inner ear processes with category scaling of loudness. ORL, 48(2), 135-136.
 ">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"DA01E5BD983FDF757155D2D677CD6403">
-		["build_uid"] = <"e596e028-c47f-401d-9319-a63fd834269e">
+		["MD5-CAM-1.0.1"] = <"7C71199AD8B402D698A5B08836C2A9EB">
+		["build_uid"] = <"46d6da04-76c6-4f5a-ba05-9bdc39818b03">
 		["revision"] = <"0.0.1-alpha">
 	>
 
