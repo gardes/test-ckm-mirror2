@@ -38,6 +38,13 @@ description
 			misuse = <"">
 			copyright = <"© Nasjonal IKT HF">
 		>
+		["pt-br"] = <
+			language = <[ISO_639-1::pt-br]>
+			purpose = <"Registrar a responsividade de um paciente, como uma indicação do seu nível de consciência.">
+			use = <"Usar para registrar, como parte de uma avaliação de rastreamento da responsividade de um paciente, como uma indicação do seu nível de consicência.">
+			keywords = <"avda", "alerta", "voz", "dor", "arresponsivo">
+			misuse = <"">
+		>
 		["en"] = <
 			language = <[ISO_639-1::en]>
 			purpose = <"To record an individual's level of consciousness.">
@@ -45,13 +52,6 @@ description
 			keywords = <"avpu", "alert", "voice", "pain", "unresponsive", "awake", "speech", "pain", "unconscious", "voice", "consciousness", "verbal", "verbal response", "semicomatose", "conscious", "level of consciousness", "comatose">
 			misuse = <"">
 			copyright = <"© Australian Digital Health Agency, openEHR Foundation, Nasjonal IKT HF">
-		>
-		["pt-br"] = <
-			language = <[ISO_639-1::pt-br]>
-			purpose = <"Registrar a responsividade de um paciente, como uma indicação do seu nível de consciência.">
-			use = <"Usar para registrar, como parte de uma avaliação de rastreamento da responsividade de um paciente, como uma indicação do seu nível de consicência.">
-			keywords = <"avda", "alerta", "voz", "dor", "arresponsivo">
-			misuse = <"">
 		>
 	>
 	lifecycle_state = <"in_development">
