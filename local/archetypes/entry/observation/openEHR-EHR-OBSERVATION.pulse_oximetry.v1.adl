@@ -445,9 +445,6 @@ definition
 		}
 	}
 
-
-
-
 ontology
 	terminologies_available = <"SNOMED-CT", "LOINC">
 	term_definitions = <
