@@ -117,7 +117,7 @@ Ne pas utiliser pour enregistrer des détails spécifiques sur la structure du l
 Ne pas utiliser pour enregistrer l'adresse physique où vit un individu - utiliser les archétypes démographiques à cette fin, ou CLUSTER.address dans le CLUSTER.housing_record, ou un archétype similaire, si l'adresse de l'individu doit être enregistrée dans le dossier médical.">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Amund Aakerholt, Helse Stavanger, KORFOR, Norway", "Morten Aas, Diakonhjemmet Sykehus, Norway", "Erling Are Hole, Helse Bergen, Norway", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR-CKM-EDITORDESC Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR-CKM-EDITORDESC Editor)", "Carrick Gillespie, Omniq AB, Sweden", "Heather Grain, Llewelyn Grain Informatics, Australia", "Lars Morgan Karlsen, DIPS ASA, Norway", "Nils Kolstrup, Skansen Legekontor og Nasjonalt Senter for samhandling og telemedisin, Norway", "Ronald Krawec, Alberta Health Services, Canada", "Anita Lagos, Haraldsplass Diakonale Sykehus, Norway", "Liv Laugen, ​Oslo University Hospital, Norway, Norway (openEHR-CKM-EDITORDESC Editor)", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Herbert Lom, Chief Inspector Charles Dreyfus of the French National Police, France (openEHR-CKM-EDITORDESC Editor)", "Andrej Orel, Marand d.o.o., Slovenia", "Ragnhild Sandvold, Vestre Viken HF, Norway", "Line Silsand, Universitetssykehuset i Nord-Norge, Norway", "Norwegian Review Summary, Norwegian Public Hospitals, Norway", "John Tore Valand, Helse Vest IKT, Norway (openEHR-CKM-EDITORDESC Editor)", "Ingrid Vange, Helse Bergen, Norway", "Marit Alice Venheim, Helse Vest IKT, Norway (openEHR-CKM-EDITORDESC Editor)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
@@ -128,8 +128,8 @@ Ne pas utiliser pour enregistrer l'adresse physique où vit un individu - utilis
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
 		["MD5-CAM-1.0.1"] = <"C022D02286D85B17E5EB317A9656C2CB">
-		["build_uid"] = <"7e1c1365-eec4-4a98-8c22-96216b127cc9">
-		["revision"] = <"1.0.3">
+		["build_uid"] = <"7b33bd4f-d488-4632-beb9-39bdff9e12ea">
+		["revision"] = <"1.0.4-alpha">
 	>
 
 definition
