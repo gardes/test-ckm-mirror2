@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <template xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="openEHR/v1/Template">
   <id>3548aaa2-52d7-4f8e-9091-56aa7cb5a28a</id>
-  <name>test with reason</name>
+  <name>TÄßt with reason</name>
   <description>
     <lifecycle_state>Initial</lifecycle_state>
     <details>
@@ -62,6 +62,6 @@
   </description>
   <definition xsi:type="ACTION" archetype_id="openEHR-EHR-ACTION.blood_transfusion_management.v0" concept_name="Blood transfusion management" />
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-ACTION.blood_transfusion_management.v0">
-    <digest id="MD5-CAM-1.0.1">BC0DBEA24CE30E94E804C6C46CDE05DC</digest>
+    <digest id="MD5-CAM-1.0.1">1A538A04B12285D3814D04B51D9001BA</digest>
   </integrity_checks>
 </template>
