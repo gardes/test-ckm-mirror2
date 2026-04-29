@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=d2581551-5b20-414a-b573-7e9340c13eb8)
+﻿archetype (adl_version=1.4; uid=6a66bb8b-8e6f-4b24-a7e5-f4e010f186bc)
 	openEHR-EHR-OBSERVATION.vaccination_screening.v0
 
 concept
@@ -51,11 +51,12 @@ Not to be used to create a framework for recording answers to pre-defined screen
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Vaccination screening questionnaire, Draft archetype [Internet]. openEHR Foundation, openEHR International Clinical Knowledge Manager [cited: 2026-04-29]. Available from: https://ckm.openehr.org/ckm/archetypes/1013.1.6555">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"CC64E686AE011FB4FBE24EBA2CC720A1">
-		["build_uid"] = <"c3c50535-784f-40c7-8c86-9804eaee1e27">
+		["MD5-CAM-1.0.1"] = <"C2D7B6B79CC0506DAF58D84157658892">
+		["build_uid"] = <"82208e56-9e3d-48d0-8d47-7b16fa594f26">
 		["ip_acknowledgements"] = <"This artefact includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyrighted material of the International Health Terminology Standards Development Organisation (IHTSDO). Where an implementation of this artefact makes use of SNOMED CT content, the implementer must have the appropriate SNOMED CT Affiliate license - for more information contact https://www.snomed.org/snomed-ct/get-snomed or info@snomed.org.">
 		["revision"] = <"0.0.1-alpha">
 	>
