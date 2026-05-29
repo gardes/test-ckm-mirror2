@@ -19,48 +19,22 @@ description
 			use = <"Use to record details about the supply of medical equipment at clinically relevant events in the intervention lifecycle, from planning to completion, and including deviations or interruptions.
 
 The scope of this archetype is focused on the supply of general medical equipment, assistive technologies, consumables, and disposables to the individual. It includes, but is not limited to:
-- Mobility and communication aids
-  -- Wheelchairs
-  -- Walkers
-  -- Crutches
-  -- Hearing aid
-- Diagnostic equipment
-  -- Blood pressure monitors
-  -- Blood glucose meter
-  -- Pulse oximeters
-- Therapeutic devices
-  -- CPAP machine
-  -- Nebuliser
-  -- TENS unit
-  -- Insulin pump
-- Hospital beds and accessories
-  -- Bed rails
-  -- Pressure mattress
-- Home care supplies
-  -- Oxygen concentrators
-  -- IV stands and pumps
-  -- Blood glucose test strips
-  -- Incontinence pads
-  -- Oxygen tubing and masks
-  -- Sharps container
-- Prosthetics and orthotics
-  -- Artificial limb
-  -- Braces and supports
-- Home safety equipment or modifications
-  -- Shower chairs
-  -- Grab bars
-  -- Ramps
-  -- Stair lifts
-- Vehicle modifications
+- Mobility and communication aids, such as wheelchairs, walkers, crutches, or a hearing aid
+- Diagnostic equipment, such as blood pressure monitors, a blood glucose meter, or a pulse oximeter
+- Therapeutic devices, such as CPAP machine, a nebuliser, a TENS unit, or an insulin pump
+- Hospital beds and accessories, such as bed rails, or a pressure mattress
+- Home care supplies, such as oxygen concentrators, IV stands and pumps, blood glucose test strips, incontinence pads, oxygen tubing and masks, or a sharps container
+- Prosthetics and orthotics, such as an artificial limb, or braces and supports
+- Safety equipment or modifications, such as shower chairs, grab bars, ramps, stair lifts or vehicle modifications
 
-If the equipment to be supplied consists of a single component, the 'Equipment supply delivered' and the 'Equipment supply completed' careflow step may be recorded simultaneously. However, if the supply consists of multiple components, record a separate instance of the 'Equipment supply delivered' careflow step for each component delivered, and record the 'Equipment supply completed' step only after the final component has been delivered.">
+Record one instance per careflow step or event for each specified type of medical equipment, in a health record. If the equipment to be supplied consists of a single component, the 'Equipment supply delivered' and the 'Equipment supply completed' careflow step may be recorded simultaneously. However, if the supply consists of multiple components, record a separate instance of the 'Equipment supply delivered' careflow step for each component delivered, and record the 'Equipment supply completed' step only after the final component has been delivered.">
 			keywords = <"assistive, mobility, communication, aid, device, diagnostic, prosthetic, orthotic, safety, modification", ...>
 			misuse = <"Not to be used to information about implantation of devices - use the ‘Procedure’ or ‘Implanted device summary’ archetypes for this purpose.
 
 Not to be used to record a summary or longitudinal history about the use of an assistive device, such as a hearing aid or wheelchair. The need for a specific archetype for this purpose is acknowledged but has not yet been developed.
 
 Not to be used to record details about supply chain or logistics beyond the supply of an identified piece of equipment to an individual. The recording of supply chain logistics is out of scope for archetypes.">
-			copyright = <" © Sparked AU FHIR accelerator, openEHR Foundation, openEHR Foundation">
+			copyright = <" © Sparked AU FHIR accelerator, openEHR Foundation">
 		>
 	>
 	lifecycle_state = <"in_development">
@@ -68,13 +42,13 @@ Not to be used to record details about supply chain or logistics beyond the supp
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
-		["references"] = <"Clinically identified requirements informed by routine practice; not supported by a formal reference.">
+		["references"] = <"Requirements identified by clinicians, reflecting current clinical practice and workflows.">
 		["current_contact"] = <"Heather Leslie, Atomica Informatics<heather.leslie@atomicainformatics.com>">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"403B1FCEF7390491ED2378A8B21827A9">
-		["build_uid"] = <"e6d13fd3-ddbe-4709-b2ed-c1dc9fc8b1de">
+		["MD5-CAM-1.0.1"] = <"E0CD78BF033A125BF0CCC96E77E45AD3">
+		["build_uid"] = <"3becd1c2-3d74-4a20-bb9b-28284eb46694">
 		["revision"] = <"0.0.1-alpha">
 	>
 
@@ -352,15 +326,15 @@ ontology
 				>
 				["at0010"] = <
 					text = <"Equipment supply planned">
-					description = <"An intent to initiate the equipment supply process has been recognised; the supply process is not yet active.">
+					description = <"An intent or need to initiate the equipment supply process has been recognised; active careflow steps have not commenced.">
 				>
 				["at0011"] = <
 					text = <"Equipment supply request sent">
-					description = <"A request to initiate the equipment supply process has been submitted; the supply process is not yet active.">
+					description = <"A request to initiate the equipment supply process has been submitted; active careflow steps have not commenced.">
 				>
 				["at0012"] = <
 					text = <"Equipment supply postponed">
-					description = <"The planned equipment supply has been temporarily stopped; the supply process is not yet active.">
+					description = <"The planned equipment supply has been temporarily stopped; active careflow steps have not commenced.">
 				>
 				["at0013"] = <
 					text = <"Item tree">
@@ -368,29 +342,29 @@ ontology
 				>
 				["at0014"] = <
 					text = <"Equipment supply cancelled">
-					description = <"The planned equipment supply has been permanently stopped; the supply process is not yet active.">
+					description = <"The planned equipment supply has been permanently stopped; active careflow steps have not commenced.">
 				>
 				["at0015"] = <
 					text = <"Equipment supply scheduled">
-					description = <"A date and/or time has been scheduled for the planned equipment supply; the supply process is not yet active.">
+					description = <"A date and/or time has been scheduled for the planned equipment supply; active careflow steps have not commenced.">
 				>
 				["at0016"] = <
 					text = <"Equipment supply delivered">
-					description = <"The equipment has been provided.">
+					description = <"The equipment has been provided; active careflow steps are in process.">
 					comment = <"If the equipment to be supplied consists of a single component, this careflow step and the 'Equipment supply completed' step may be recorded simultaneously.
 If the equipment to be supplied consists of multiple components, record a separate instance of this careflow step for each component delivered, and record the 'Equipment supply completed' step only after the final component has been delivered.">
 				>
 				["at0017"] = <
 					text = <"Equipment supply suspended">
-					description = <"The active equipment supply process has been temporarily stopped; it was previously active but is now on hold.">
+					description = <"The active equipment supply process has been temporarily stopped; active careflow steps have been put on hold.">
 				>
 				["at0018"] = <
 					text = <"Equipment supply abandoned">
-					description = <"The active equipment supply process has been permanently stopped; it was previously active but is now aborted.">
+					description = <"The active equipment supply process has been permanently stopped; active careflow steps have been aborted.">
 				>
 				["at0019"] = <
 					text = <"Equipment supply completed">
-					description = <"All components of the equipment supply have been delivered; the supply process is now complete.">
+					description = <"All components of the equipment supply have been delivered; active careflow steps have been completed.">
 					comment = <"If the equipment to be supplied consists of a single component, this careflow step and the 'Equipment supply delivered' step may be recorded simultaneously.">
 				>
 				["at0020"] = <
