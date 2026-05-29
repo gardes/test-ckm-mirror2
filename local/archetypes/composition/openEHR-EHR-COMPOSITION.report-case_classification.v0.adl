@@ -1,4 +1,4 @@
-﻿archetype (adl_version=1.4; uid=4f624d13-588c-493b-ac05-b221b5db4e79)
+﻿archetype (adl_version=1.4; uid=95010d6d-1aaa-4d34-b1a0-72e481de4b48)
 	openEHR-EHR-COMPOSITION.report-case_classification.v0
 specialise
 	openEHR-EHR-COMPOSITION.report.v1
@@ -244,12 +244,13 @@ The main Sections/Content component has been deliberately left unconstrained. Th
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
 		["custodian_organisation"] = <"openEHR Foundation">
+		["references"] = <"Case classification report, Draft archetype [Internet]. openEHR Foundation, openEHR International Clinical Knowledge Manager [cited: 2026-05-29]. Available from: https://ckm.openehr.org/ckm/archetypes/1013.1.6616">
 		["current_contact"] = <"Heather Leslie, Ocean Informatics, heather.leslie@oceaninformatics.com">
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"79C98917A26378147AC057229082E613">
-		["build_uid"] = <"dbc08042-a412-4211-8631-6f3a67ea3c89">
+		["MD5-CAM-1.0.1"] = <"88F6B515F24860B10FD0568C79137BE3">
+		["build_uid"] = <"26661172-4e87-4ffa-a596-1ad8cf3691f8">
 		["revision"] = <"0.0.1-alpha">
 	>
 
