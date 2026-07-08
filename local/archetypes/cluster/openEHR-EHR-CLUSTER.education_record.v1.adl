@@ -23,6 +23,14 @@ language
 				["email"] = <"john.tore.valand@helse-bergen.no">
 			>
 		>
+		["eo"] = <
+			language = <[ISO_639-1::eo]>
+			author = <
+				["name"] = <"Mr Ocean">
+				["organisation"] = <"Ocean Informatics">
+				["email"] = <"sebastian.garde@oceaninformatics.com">
+			>
+		>
 	>
 description
 	original_author = <
@@ -79,6 +87,20 @@ This archetype has been specifically designed to be used in the 'Education recor
 Not to be used to record information about the education or training of an individual at a specific point in time (for example, on June 16, 2014) or during a relative interval of time (for example 'in the past 30 days'. Use an appropriate OBSERVATION archetype for this purpose.">
 			copyright = <"© openEHR Foundation">
 		>
+		["eo"] = <
+			language = <[ISO_639-1::eo]>
+			purpose = <"*To record details about a single period of formal education or training undertaken by an individual, which will contribute to an overview of their educational background.(en)">
+			use = <"*Use to record details about a single period of formal education or training undertaken by an individual, which will contribute to an overview of their educational background.
+
+An individual may undertake multiple training courses simultaniously, or overlapping. Each education or training should be recorded in a separate instance of this archetype. Multiple instances of this archetype captured over time will build a cumulative history of past and present education and training.
+
+Current education or training may be implied from a 'Date commenced' but no 'Milestone achieved'.
+
+This archetype has been specifically designed to be used in the 'Education record' SLOT within the EVALUATION.education_summary archetype, but can also be used within any other ENTRY or CLUSTER archetypes, where clinically appropriate.(en)">
+			misuse = <"*Not to be used for detailed descriptions of health risks or exposure to hazardous substances during the education or training. Use the archetypes EVALUATION.health_risk or EVALUATION.exposure for this purpose.
+
+Not to be used to record information about the education or training of an individual at a specific point in time (for example, on June 16, 2014) or during a relative interval of time (for example 'in the past 30 days'. Use an appropriate OBSERVATION archetype for this purpose.(en)">
+		>
 	>
 	lifecycle_state = <"published">
 	other_contributors = <"Amund Aakerholt, Helse Stavanger, KORFOR, Norway", "Erling Are Hole, Helse Bergen, Norway", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Nasjonal IKT HF, Norway (openEHR Editor)", "SB Bhattacharyya, Sudisa Consultancy Services, India", "Linda Bokn, Helse Fonna, Norway", "Are Edvardsen, SKDE, Helse Nord RHF, Norway", "Mikkel Gaup Grønmo, FSE, Helse Nord, Norway (Nasjonal IKT redaktør)", "Heather Grain, Llewelyn Grain Informatics, Australia", "Evelyn Hovenga, EJSH Consulting, Australia", "Ronald Krawec, Alberta Health Services, Canada", "Anita Lagos, Haraldsplass Diakonale Sykehus, Norway", "Liv Laugen, Oslo universitetssykehus, Norway", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Erhard Lohse, Fjell kommune, Norway", "Paul Miller, SCIMP NHS Scotland, United Kingdom", "Lars Morgan Karlsen, Nordlandssykehuset Bodø, Norway", "Andrej Orel, Marand d.o.o., Slovenia", "Jayashree Panickar, Karolinska Institute, Sweden", "Gro-Hilde Severinsen, Norwegian center for ehealthresearch, Norway", "Norwegian Review Summary, Nasjonal IKT HF, Norway", "Tesfay Teame, Folkehelseinstituttet, Norway", "Micaela Thierley, Helse Bergen/Haraldsplass sykehus, Norway", "Susanne Trønnes, Norway", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)">
@@ -89,9 +111,9 @@ Not to be used to record information about the education or training of an indiv
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"EC3D78EFDD96860369EDC6734B065A52">
-		["build_uid"] = <"640205c9-1afa-400d-a54b-33565c69089d">
-		["revision"] = <"1.0.1">
+		["MD5-CAM-1.0.1"] = <"2C07C4DBD06A3D9AD7F8A9BC5FABD506">
+		["build_uid"] = <"9edc16f3-be15-4550-b229-183d07a6a101">
+		["revision"] = <"1.0.2">
 	>
 
 definition
@@ -284,6 +306,50 @@ ontology
 				["at0010"] = <
 					text = <"Kommentar">
 					description = <"Zusätzliche Informationen über die Bildungsstationen, die nicht in anderen Feldern erfasst werden.">
+				>
+			>
+		>
+		["eo"] = <
+			items = <
+				["at0000"] = <
+					text = <"*Education record(en)">
+					description = <"*Record of a period of education or training undertaken by an individual.(en)">
+				>
+				["at0001"] = <
+					text = <"*Educational institution(en)">
+					description = <"*Name of the facility, institution or school where the education or training took place.(en)">
+				>
+				["at0002"] = <
+					text = <"*Organisation details(en)">
+					description = <"*Structured details about the facility, institution or school.(en)">
+				>
+				["at0003"] = <
+					text = <"*Milestone(en)">
+					description = <"*Name of the education milestone or academic qualification achieved.(en)">
+				>
+				["at0004"] = <
+					text = <"*Field of study(en)">
+					description = <"*The field of study covered by the education or training.(en)">
+				>
+				["at0005"] = <
+					text = <"*Date started(en)">
+					description = <"*The date when the individual commenced the education or training.(en)">
+				>
+				["at0006"] = <
+					text = <"*Date ended(en)">
+					description = <"*The date when the milestone was achieved or the individual ceased the education or training.(en)">
+				>
+				["at0008"] = <
+					text = <"*Description(en)">
+					description = <"*Narrative description about the education or training undertaken by the individual.(en)">
+				>
+				["at0009"] = <
+					text = <"*Additional details(en)">
+					description = <"*Further details about the education record.(en)">
+				>
+				["at0010"] = <
+					text = <"*Comment(en)">
+					description = <"*Additional narrative about the education record not captured in other fields.(en)">
 				>
 			>
 		>
