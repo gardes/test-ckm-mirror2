@@ -6,6 +6,14 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
+		["aa"] = <
+			language = <[ISO_639-1::aa]>
+			author = <
+				["name"] = <"Mr Ocean">
+				["organisation"] = <"Ocean Informatics">
+				["email"] = <"sebastian.garde@oceaninformatics.com">
+			>
+		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			author = <
@@ -47,6 +55,16 @@ description
 		["date"] = <"2018-02-01">
 	>
 	details = <
+		["aa"] = <
+			language = <[ISO_639-1::aa]>
+			purpose = <"*To record an individual's level of consciousness.(en)">
+			use = <"*Use to make a simple assessment of an individual's level of consciousness, especially suitable for assessment in emergency situations.
+
+This scale is a refinement of the original AVPU, updated in 2017 by adding 'C', where C represents 'a new onset or worsening confusion, delirium or any other altered mentation'.
+
+This scale is now published as a component of NEWS2.(en)">
+			misuse = <"">
+		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"Zur Aufzeichnung des Grades des Bewusstseins eines Individuums.">
@@ -115,8 +133,8 @@ National Early Warning Score (NEWS) 2. Pasientsikkerhetsprogrammet [cited 2019.0
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"8A256DAD4500E0D52C2B2547210C2362">
-		["build_uid"] = <"69f28e3e-64bf-4e85-9e37-37d175953393">
+		["MD5-CAM-1.0.1"] = <"A69D8BA4BA9FB6E14A9AD45C65BD720E">
+		["build_uid"] = <"a500467e-3052-45d1-8919-d361aace4286">
 		["revision"] = <"1.0.4-alpha">
 	>
 
@@ -454,6 +472,62 @@ ontology
 				["at0015"] = <
 					text = <"Verwirrtheit">
 					description = <"Ein neuer Krankheitsbeginn oder eine sich verschlimmernde Verwirrtheit, ein Delirium oder eine andere veränderte Mentalität.">
+				>
+			>
+		>
+		["aa"] = <
+			items = <
+				["at0000"] = <
+					text = <"*ACVPU scale(en)">
+					description = <"*Simple scale used as part of an assessment to measure and record an individual's level of consciousness.(en)">
+				>
+				["at0001"] = <
+					text = <"Event Series">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"*Any point in time event(en)">
+					description = <"*Default, unspecified point in time event which may be explicitly defined in a template or at run-time.(en)">
+				>
+				["at0003"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0004"] = <
+					text = <"*ACVPU(en)">
+					description = <"*The assessment of the patient's level of consciousness.(en)">
+				>
+				["at0005"] = <
+					text = <"*Alert(en)">
+					description = <"*Fully awake. Spontaneous opening of the eyes, responds to voice and have motor function.(en)">
+				>
+				["at0006"] = <
+					text = <"*Voice(en)">
+					description = <"*Any verbal, motor or eye response to a voice stimulus.(en)">
+				>
+				["at0007"] = <
+					text = <"*Pain(en)">
+					description = <"*Any verbal, motor or eye response to a pain stimulus.(en)">
+				>
+				["at0008"] = <
+					text = <"*Unresponsive(en)">
+					description = <"*No response to voice or pain stimuli.(en)">
+				>
+				["at0009"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0011"] = <
+					text = <"*Extension(en)">
+					description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
+				>
+				["at0013"] = <
+					text = <"Tree">
+					description = <"@ internal @">
+				>
+				["at0015"] = <
+					text = <"*Confusion(en)">
+					description = <"*A new onset or worsening confusion, delirium or any other altered mentation.(en)">
 				>
 			>
 		>
