@@ -6,27 +6,12 @@ concept
 language
 	original_language = <[ISO_639-1::en]>
 	translations = <
-		["aa"] = <
-			language = <[ISO_639-1::aa]>
-			author = <
-				["name"] = <"Test Test">
-				["email"] = <"test@testtesttest.de3">
-			>
-		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			author = <
 				["name"] = <"Antje Wulff">
 				["organisation"] = <"PLRI for Medical Informatics Medical School Hannover and TU Braunschweig">
 				["email"] = <"wulff.antje@mh-hannover.de">
-			>
-		>
-		["es-hn"] = <
-			language = <[ISO_639-1::es-hn]>
-			author = <
-				["name"] = <"Mr Ocean">
-				["organisation"] = <"Ocean Informatics">
-				["email"] = <"sebastian.garde@oceaninformatics.com">
 			>
 		>
 		["sv"] = <
@@ -43,14 +28,6 @@ language
 				["name"] = <"Silje Ljosland Bakke; John Tore Valand">
 				["organisation"] = <"Nasjonal IKT HF; Helse Bergen HF">
 				["email"] = <"john.tore.valand@helse-bergen.no">
-			>
-		>
-		["af"] = <
-			language = <[ISO_639-1::af]>
-			author = <
-				["name"] = <"Mr Ocean">
-				["organisation"] = <"Ocean Informatics">
-				["email"] = <"sebastian.garde@oceaninformatics.com">
 			>
 		>
 		["pt-br"] = <
@@ -70,16 +47,6 @@ description
 		["date"] = <"2018-02-01">
 	>
 	details = <
-		["aa"] = <
-			language = <[ISO_639-1::aa]>
-			purpose = <"*To record an individual's level of consciousness.(en)">
-			use = <"*Use to make a simple assessment of an individual's level of consciousness, especially suitable for assessment in emergency situations.
-
-This scale is a refinement of the original AVPU, updated in 2017 by adding 'C', where C represents 'a new onset or worsening confusion, delirium or any other altered mentation'.
-
-This scale is now published as a component of NEWS2.(en)">
-			misuse = <"">
-		>
 		["de"] = <
 			language = <[ISO_639-1::de]>
 			purpose = <"Zur Aufzeichnung des Grades des Bewusstseins eines Individuums.">
@@ -89,16 +56,6 @@ Diese Skala ist eine Verfeinerung der ursprünglichen AVPU, die 2017 durch Hinzu
 
 Diese Skala wird jetzt als Bestandteil von NEWS2 veröffentlicht, um den Grad des Bewusstseins einer Person zu erfassen.">
 			keywords = <"avpu", "Alarm", "Stimme", "Schmerz", "nicht ansprechbar", "wach", "Rede", "Schmerz", "unbewusst", "Stimme", "Bewusstsein", "verbal", "halbkomatös", "bewusst", "Bewusstseinsebene", "komatös", "Verwirrung", "news2">
-			misuse = <"">
-		>
-		["es-hn"] = <
-			language = <[ISO_639-1::es-hn]>
-			purpose = <"tge">
-			use = <"*Use to make a simple assessment of an individual's level of consciousness, especially suitable for assessment in emergency situations.
-
-This scale is a refinement of the original AVPU, updated in 2017 by adding 'C', where C represents 'a new onset or worsening confusion, delirium or any other altered mentation'.
-
-This scale is now published as a component of NEWS2.(en)">
 			misuse = <"">
 		>
 		["sv"] = <
@@ -142,7 +99,7 @@ This scale is now published as a component of NEWS2.">
 			copyright = <"© Apperta UK, openEHR Foundation, openEHR Foundation">
 		>
 	>
-	lifecycle_state = <"published">
+	lifecycle_state = <"in_development">
 	other_contributors = <"Erling Are Hole, Helse Bergen, Norway", "Vebjørn Arntzen, Oslo University Hospital, Norway (openEHR Editor)", "Silje Ljosland Bakke, Helse Vest IKT AS, Norway (openEHR Editor)", "SB Bhattacharyya, Sudisa Consultancy Services, India", "Gunn Elin Blakkisrud, DIPS ASA, Norway", "Grant Forrest, NHS Scotland, United Kingdom", "Mikkel Gaup Grønmo, FSE, Helse Nord, Norway (Nasjonal IKT redaktør)", "Heather Grain, Llewelyn Grain Informatics, Australia", "Evelyn Hovenga, EJSH Consulting, Australia", "Morten Hørthe, DIPS, Norway", "Nils Kolstrup, Skansen Legekontor og Nasjonalt Senter for samhandling og telemedisin, Norway", "Liv Laugen, Oslo universitetssykehus, Norway", "Heather Leslie, Atomica Informatics, Australia (openEHR Editor)", "Ian McNicoll, freshEHR Clinical Informatics, United Kingdom (openEHR Editor)", "Svenne Naumann, Finnmarkssykehuset, Norway", "Andrej Orel, Marand d.o.o., Slovenia", "Terje Sagmyr, DIPS AS, Norway", "Gro-Hilde Severinsen, Norwegian center for ehealthresearch, Norway", "Line Silsand, Universitetssykehuset i Nord-Norge, Norway", "Arild Stangeland, Helse Bergen, Norway", "Norwegian Review Summary, Nasjonal IKT HF, Norway", "June Susanne Berge, DIPS AS, Norway", "Nyree Taylor, Ocean Informatics, Australia", "Marianne Thorbjørnsen, Oslo Universitetssykehus, Norway", "Karl Trygve Kalleberg, Oslo Universitetssykehus, Norway", "John Tore Valand, Helse Bergen, Norway (openEHR Editor)", "Ingrid Vange, Helse Bergen, Norway", "Marit Alice Venheim, Helse Vest IKT, Norway (openEHR Editor)">
 	other_details = <
 		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
@@ -158,9 +115,9 @@ National Early Warning Score (NEWS) 2. Pasientsikkerhetsprogrammet [cited 2019.0
 		["original_namespace"] = <"org.openehr">
 		["original_publisher"] = <"openEHR Foundation">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"B251EE3E466234769F10FE781F184ED2">
-		["build_uid"] = <"4a6a6e2e-1a2a-4570-856d-d032fbc5a58d">
-		["revision"] = <"1.0.3">
+		["MD5-CAM-1.0.1"] = <"8A256DAD4500E0D52C2B2547210C2362">
+		["build_uid"] = <"69f28e3e-64bf-4e85-9e37-37d175953393">
+		["revision"] = <"1.0.4-alpha">
 	>
 
 definition
@@ -497,174 +454,6 @@ ontology
 				["at0015"] = <
 					text = <"Verwirrtheit">
 					description = <"Ein neuer Krankheitsbeginn oder eine sich verschlimmernde Verwirrtheit, ein Delirium oder eine andere veränderte Mentalität.">
-				>
-			>
-		>
-		["es-hn"] = <
-			items = <
-				["at0000"] = <
-					text = <"*ACVPU scale(en)">
-					description = <"*Simple scale used as part of an assessment to measure and record an individual's level of consciousness.(en)">
-				>
-				["at0001"] = <
-					text = <"Event Series">
-					description = <"@ internal @">
-				>
-				["at0002"] = <
-					text = <"*Any point in time event(en)">
-					description = <"*Default, unspecified point in time event which may be explicitly defined in a template or at run-time.(en)">
-				>
-				["at0003"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0004"] = <
-					text = <"*ACVPU(en)">
-					description = <"*The assessment of the patient's level of consciousness.(en)">
-				>
-				["at0005"] = <
-					text = <"*Alert(en)">
-					description = <"*Fully awake. Spontaneous opening of the eyes, responds to voice and have motor function.(en)">
-				>
-				["at0006"] = <
-					text = <"*Voice(en)">
-					description = <"*Any verbal, motor or eye response to a voice stimulus.(en)">
-				>
-				["at0007"] = <
-					text = <"*Pain(en)">
-					description = <"*Any verbal, motor or eye response to a pain stimulus.(en)">
-				>
-				["at0008"] = <
-					text = <"*Unresponsive(en)">
-					description = <"*No response to voice or pain stimuli.(en)">
-				>
-				["at0009"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0011"] = <
-					text = <"*Extension(en)">
-					description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
-				>
-				["at0013"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0015"] = <
-					text = <"*Confusion(en)">
-					description = <"*A new onset or worsening confusion, delirium or any other altered mentation.(en)">
-				>
-			>
-		>
-		["aa"] = <
-			items = <
-				["at0000"] = <
-					text = <"*ACVPU scale(en)">
-					description = <"*Simple scale used as part of an assessment to measure and record an individual's level of consciousness.(en)">
-				>
-				["at0001"] = <
-					text = <"Event Series">
-					description = <"@ internal @">
-				>
-				["at0002"] = <
-					text = <"*Any point in time event(en)">
-					description = <"*Default, unspecified point in time event which may be explicitly defined in a template or at run-time.(en)">
-				>
-				["at0003"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0004"] = <
-					text = <"*ACVPU(en)">
-					description = <"*The assessment of the patient's level of consciousness.(en)">
-				>
-				["at0005"] = <
-					text = <"*Alert(en)">
-					description = <"*Fully awake. Spontaneous opening of the eyes, responds to voice and have motor function.(en)">
-				>
-				["at0006"] = <
-					text = <"*Voice(en)">
-					description = <"*Any verbal, motor or eye response to a voice stimulus.(en)">
-				>
-				["at0007"] = <
-					text = <"*Pain(en)">
-					description = <"*Any verbal, motor or eye response to a pain stimulus.(en)">
-				>
-				["at0008"] = <
-					text = <"*Unresponsive(en)">
-					description = <"*No response to voice or pain stimuli.(en)">
-				>
-				["at0009"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0011"] = <
-					text = <"*Extension(en)">
-					description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
-				>
-				["at0013"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0015"] = <
-					text = <"*Confusion(en)">
-					description = <"*A new onset or worsening confusion, delirium or any other altered mentation.(en)">
-				>
-			>
-		>
-		["af"] = <
-			items = <
-				["at0000"] = <
-					text = <"*ACVPU scale(en)">
-					description = <"*Simple scale used as part of an assessment to measure and record an individual's level of consciousness.(en)">
-				>
-				["at0001"] = <
-					text = <"Event Series">
-					description = <"@ internal @">
-				>
-				["at0002"] = <
-					text = <"*Any point in time event(en)">
-					description = <"*Default, unspecified point in time event which may be explicitly defined in a template or at run-time.(en)">
-				>
-				["at0003"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0004"] = <
-					text = <"*ACVPU(en)">
-					description = <"*The assessment of the patient's level of consciousness.(en)">
-				>
-				["at0005"] = <
-					text = <"*Alert(en)">
-					description = <"*Fully awake. Spontaneous opening of the eyes, responds to voice and have motor function.(en)">
-				>
-				["at0006"] = <
-					text = <"*Voice(en)">
-					description = <"*Any verbal, motor or eye response to a voice stimulus.(en)">
-				>
-				["at0007"] = <
-					text = <"*Pain(en)">
-					description = <"*Any verbal, motor or eye response to a pain stimulus.(en)">
-				>
-				["at0008"] = <
-					text = <"*Unresponsive(en)">
-					description = <"*No response to voice or pain stimuli.(en)">
-				>
-				["at0009"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0011"] = <
-					text = <"*Extension(en)">
-					description = <"*Additional information required to capture local content or to align with other reference models/formalisms.(en)">
-				>
-				["at0013"] = <
-					text = <"Tree">
-					description = <"@ internal @">
-				>
-				["at0015"] = <
-					text = <"*Confusion(en)">
-					description = <"*A new onset or worsening confusion, delirium or any other altered mentation.(en)">
 				>
 			>
 		>
