@@ -21,7 +21,7 @@
                 <value>2024-03-18</value>
             </item>
         </original_author>
-        <lifecycle_state>in_development</lifecycle_state>
+        <lifecycle_state>published</lifecycle_state>
         <details/>
         <other_details>
             <item>
@@ -50,7 +50,7 @@
             </item>
             <item>
                 <key>build_uid</key>
-                <value>5a2e9bba-53eb-4a8d-bbe7-99f5acd82daf</value>
+                <value>682f50db-7792-462d-bdf5-66f1dec0f076</value>
             </item>
             <item>
                 <key>original_language</key>
